@@ -2,7 +2,7 @@
 
 ## Overview
 - What: Autonomous trading bot challenge
-- Starting capital: ~$10,000 (PAPER account — no real money at risk until
+- Starting capital: ~$1,000,000 (PAPER account — no real money at risk until
   explicitly switched to live)
 - Platform: Alpaca
 - Duration: [your challenge window]

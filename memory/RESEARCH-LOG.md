@@ -34,31 +34,29 @@ TRADE or HOLD (default HOLD if no edge)
 
 ### Account
 - Equity: $1,000,000
-- Cash: $1,000,000 (100%)
-- Buying power: $4,000,000 (margin, unused)
+- Cash: $1,000,000
+- Buying power: $4,000,000 (margin, unused — 0 positions)
 - Daytrade count: 0
-- No open positions, no open orders (Day 1 — fresh launch)
 
 ### Market Context
-- WTI: ~$71.41 (-0.93%) / Brent: ~$76.01 (-0.38%), off recent highs but elevated on U.S.-Iran tension (Strait of Hormuz risk premium, Brent briefly spiked toward $77-79)
-- S&P 500 futures: ~7,594 (-0.34%), "taking a breather" after last week's gains
-- VIX: 15.03 (Fri close) — low/complacent, but geopolitical tail risk (Iran) not fully priced
-- Today's catalysts: Treasury Budget release; Q2 earnings season kicks off (big banks GS/JPM/WFC report Tue); SK Hynix US debut +14% (AI-chip demand strong); Iran ceasefire breakdown driving oil bid
-- Earnings before open today: none major (FBK, small-caps only per Nasdaq calendar)
-- Economic calendar: no CPI/PPI/FOMC/jobs today — June CPI prints tomorrow (7/14, consensus ~4.2% y/y), a likely volatility catalyst
-- Sector momentum: rotation into defensives/cyclicals — Consumer Staples, Industrials, Materials, Energy leading; Real Estate/Utilities improving; Healthcare weakening; Tech/Comms/Discretionary/Financials lagging despite YTD gains
+- WTI / Brent: WTI $71.41 (-0.9%); Brent ~$76-79, up on US-Iran tensions / Strait of Hormuz risk
+- S&P 500 futures: ~7,594, -0.34%
+- VIX: 15.03 (calm, low vol)
+- Today's catalysts: US-Iran tension flare pushing oil up 6-7% this week; Treasury Budget release; Q2 earnings season kicks off next week (big banks report Tue); SK Hynix IPO debut +14%; July FOMC hike odds jumped to 31% (from 17%), Sept to 84%, on oil-driven inflation fears
+- Earnings before open: nothing major confirmed; FB Financial (FBK, regional bank) reporting
+- Economic calendar: no CPI/PPI/FOMC/jobs today. June CPI prints tomorrow (Tue 7/14, 8:30am ET), consensus 3.8% YoY vs 4.2% prior — key catalyst
+- Sector momentum: Energy + Consumer Staples leading YTD (defensive/inflation-hedge rotation); Tech/Comm Services/Discretionary/Financials lagging; Healthcare weakening; Real Estate/Utilities improving
 
-### Trade Ideas (watchlist only — not acted on)
-1. XLE / energy majors — catalyst: Iran-driven oil spike + sector momentum leadership; wait for pullback entry, stop ~7-8% below entry, target 2:1 R:R. Needs live quote confirmation (data feed down, see Risk Factors).
-2. XLI or select industrials — catalyst: momentum leadership + no single-name earnings risk this week. Same entry/stop framework pending quote access.
-3. Defer bank exposure (JPM/GS/WFC) until after Tue earnings print — avoid entering into binary event.
+### Trade Ideas
+1. XOM — catalyst: Iran/Strait of Hormuz oil spike + Energy sector YTD leadership, entry ~market, stop -8%, target +16%, R:R 2:1 (WAIT for CPI print first)
+2. CVX — same Energy-momentum catalyst as XOM, entry ~market, stop -8%, target +16%, R:R 2:1 (WAIT for CPI print first)
+3. PG or KO — Consumer Staples flight-to-safety/inflation-hedge rotation, entry ~market, stop -7%, target +14%, R:R 2:1 (WAIT for CPI print first)
 
 ### Risk Factors
-- Day 1 launch — no track record, no calibration on execution yet
-- CPI print tomorrow (7/14) — high-vol catalyst, avoid sizing up into it
-- Iran/Strait of Hormuz headline risk — oil and broad market gap risk both ways
-- Alpaca market-data quote endpoint (data.alpaca.markets) blocked at network/proxy level (403 CONNECT tunnel, "policy denial") for all tickers — trading API (paper-api.alpaca.markets) unaffected. Could not confirm live entry prices; needs infra fix (proxy allowlist) before any live order can be sized
-- Big bank earnings Tue — sector-wide financials volatility
+- June CPI prints tomorrow (7/14) — major volatility event, could reverse sector rotation fast
+- Iran/oil headline risk cuts both ways — de-escalation would slam Energy longs
+- Rate-hike odds repricing (31% July, 84% Sept) — rising oil = rising inflation = hawkish Fed = broad equity headwind
+- Day 0 — zero positions, zero live P&L data to validate any read yet
 
 ### Decision
-HOLD — Day 1, no positions to manage, CPI print tomorrow argues for patience. Quote data feed also needs to be fixed before any order can be sized/placed. Will revisit post-CPI with live pricing restored.
+HOLD — Day 0, no positions. CPI print tomorrow is the key catalyst; entering Energy/Staples momentum names ahead of it is unnecessary risk. Patience > activity. Revisit trade ideas post-CPI.

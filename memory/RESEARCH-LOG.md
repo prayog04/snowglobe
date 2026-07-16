@@ -60,3 +60,36 @@ TRADE or HOLD (default HOLD if no edge)
 
 ### Decision
 HOLD — Day 0, no positions. CPI print tomorrow is the key catalyst; entering Energy/Staples momentum names ahead of it is unnecessary risk. Patience > activity. Revisit trade ideas post-CPI.
+
+## 2026-07-16 — Pre-market Research (run inline during market-open; no entry for Jul 14/15 found in log — see reconciliation note in TRADE-LOG.md)
+
+### Account
+- Equity: $1,000,471.99
+- Cash: $884,183.99
+- Buying power: $3,862,342.36 (margin)
+- Daytrade count: n/a (not PDT-restricted at this account size)
+- Open positions: XOM 800 sh @ $144.77 avg, current ~$145.35, unrealized +$460 (+0.40%)
+
+### Market Context
+- WTI: ~$79.5-80.0 (spot/futures), up on US-Iran tensions continuing; Brent ~$78-80
+- S&P 500 futures: ~7,607-7,614, roughly flat/slightly positive premarket
+- VIX: ~16.2-16.5, calm
+- Today's catalysts: US-Iran hostilities still driving oil higher / rate-hike fear; Q2 earnings season kicks off — TSM, NFLX, UNH, GE all report today; SK Hynix US debut +14%
+- Earnings before open: TSM, UNH, GE, ABT, FITB, RF, TRV, CTAS, SMPL and ~81 others PMO
+- Economic calendar: June CPI (released 7/14) came in at 3.5% headline / 2.6% core, cooler than 3.8% consensus — rate-hike odds for July FOMC fell to ~17.6%. PPI (7/15) fell -0.3%. Today: Retail Sales (actual 0.9% vs 0.3% exp, beat), Initial Jobless Claims 215K (in line). No FOMC today (next 7/28-29).
+- Sector momentum: Energy + Industrials + Materials + Financials + Consumer Staples leading; Tech stalled (semis -11% MTD despite AI narrative); Healthcare/Discretionary lagging
+- XOM-specific: +7% this week — Q2 upstream earnings uplift ($3.5-3.9B) from oil spike, Texas redomiciliation complete, BofA upgraded to Buy ($154 PT), Barclays reaffirmed Buy, S&P revised outlook to positive (AA-). Thesis intact.
+
+### Trade Ideas
+1. XOM (existing position) — thesis holding, no new catalyst break, no rule trigger (not at -7%, not at +15%/+20% tighten levels) — HOLD, no action
+2. CVX — same Energy-momentum catalyst as existing XOM position; skipping to avoid doubling correlated oil-price exposure into a single-name earnings-heavy session
+3. No new sector added today — TSM/NFLX/UNH/GE earnings today create outsized single-stock gap risk; better to see reaction before committing fresh capital
+
+### Risk Factors
+- 4 major earnings prints today (TSM, NFLX, UNH, GE) — could swing sector sentiment sharply in either direction
+- Oil/Iran headline risk still cuts both ways for the XOM position
+- Only 1 position open — correlated purely to energy/oil; diversification still needed but not forced today
+- Quote spreads on CVX/JPM checked at market open looked unusually wide — data quality flag, avoid market orders into thin/erratic quotes
+
+### Decision
+HOLD on new trades. Existing XOM position and its 10% GTC trailing stop stand unchanged — thesis intact, no rule trigger. Patience > activity; wait for post-earnings clarity before adding a second (diversifying) position. 2 of 3 weekly trade slots remain.

@@ -60,3 +60,32 @@ TRADE or HOLD (default HOLD if no edge)
 
 ### Decision
 HOLD — Day 0, no positions. CPI print tomorrow is the key catalyst; entering Energy/Staples momentum names ahead of it is unnecessary risk. Patience > activity. Revisit trade ideas post-CPI.
+
+## 2026-07-17 — Pre-market Research
+
+### Account
+- Equity: $1,003,111.99
+- Cash: $884,183.99
+- Buying power: $3,869,734.36 (margin, 4x)
+- Daytrade count: not returned by account endpoint; 1 filled trade this week (XOM, 7/15), well under PDT threshold
+
+### Market Context
+- WTI / Brent: WTI $79.50 (+0.70%); Brent $84.84 (-0.11%)
+- S&P 500 futures: 7,509.25 (-0.90%)
+- VIX: 16.73 (+6.76%) — risk-off tape
+- Today's catalysts: AI/chipmaker valuation jitters dragging tech; Kospi -6% (SK Hynix, Samsung) weighing on chip sentiment; gold/silver/copper selloff hitting miners
+- Earnings before open: Alphabet (GOOGL) -4.4% post-earnings; Alliant Energy +1.6%; Allstate +1.0%
+- Economic calendar: nothing major confirmed; Q2 earnings season ~3 weeks out; US-Iran negotiations ongoing
+- Sector momentum: Tech/AI/chipmakers under acute pressure; mining/materials weak on commodity selloff; Energy relatively firm (WTI +0.7%) — consistent with existing XOM tilt
+
+### Trade Ideas
+None new today — no fresh catalyst-backed setup clears the bar. Existing Energy tilt (XOM) already reflects the sector-momentum call.
+
+### Risk Factors
+- Broad risk-off tape (VIX +6.76%, S&P futures -0.90%) — unfavorable backdrop for fresh long entries at the open
+- AI/tech valuation jitters could spill into broader risk sentiment
+- **Data-integrity gap:** an XOM position (800 sh @ $144.77, filled 2026-07-15) and its GTC 10% trailing stop were placed by a prior session whose RESEARCH-LOG/TRADE-LOG updates were never committed — original catalyst/thesis is not recoverable from repo history. See TRADE-LOG.md backfill note for 2026-07-17.
+- No pre-market or market-open memory entries exist for 7/14–7/16 — a 3-day gap in the audit trail, likely from a prior session not committing before its container was torn down
+
+### Decision
+HOLD — no new trades. Risk-off tape + no fresh documented catalyst. Manage existing XOM position (10% trailing stop already active, GTC, hwm $150 / stop $135). 1 of 3 weekly trade slots already used (XOM, 7/15).

@@ -60,3 +60,7 @@ TRADE or HOLD (default HOLD if no edge)
 
 ### Decision
 HOLD — Day 0, no positions. CPI print tomorrow is the key catalyst; entering Energy/Staples momentum names ahead of it is unnecessary risk. Patience > activity. Revisit trade ideas post-CPI.
+
+## 2026-07-20 — Midday Addendum
+
+No RESEARCH-LOG or TRADE-LOG entries exist for Jul 14-19 despite Alpaca showing an XOM position opened 2026-07-15 (800 sh @ $144.77) — logging gap, see TRADE-LOG backfill note. Checked XOM thesis intraday via Perplexity: no negative catalyst; oil spiked on US-Iran/Strait of Hormuz escalation, XOM raised Q2 upstream income outlook to $3.9B, shares near $148.77 (best day in 5+ months). Thesis holds — no action taken.

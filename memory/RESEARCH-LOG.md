@@ -124,3 +124,37 @@ HOLD — Day 0, no positions. CPI print tomorrow is the key catalyst; entering E
 
 ### Decision
 HOLD — CVX and PEP/DAL earnings this week are the real triggers; no name today clears the "specific catalyst" checklist item pre-print. Flag for next session: account is materially under-deployed (11.8% vs 75-85% target, 1 of 5-6 max positions) — once CVX/PEP earnings clarify, prioritize adding 1-2 positions per the 3-trades/week allowance rather than sitting fully idle again.
+
+## 2026-07-21 — Pre-market Research (run inline during market-open; entry was missing)
+
+### Account
+- Equity: $1,003,263.99
+- Cash: $884,183.99
+- Buying power: $3,870,159.96 (margin, 4x)
+- Positions: 1 (XOM, 800 sh), deployed $119,080 = **11.9%** of equity — still well below 75-85% target
+- Daytrade count: not reported by API (0 day trades taken)
+- Trades this week (since Mon 7/20): 0
+
+### Market Context
+- WTI ~$82 (-0.6%), Brent ~$88-90 (flat/slightly down) — Iran ceasefire-mediation headlines easing the risk premium slightly
+- S&P 500 futures: ~7,485-7,526, +0.5-0.6% premarket on Iran ceasefire hopes + earnings focus
+- VIX: ~17.6-18.6, down from Monday's 18.65-18.77 — vol easing
+- Today's catalysts: semiconductor/AI-infra earnings pop (NVDA +6.2% premarket, AVGO +7.8% premarket on strong data-center/Tier-1 guidance), GM beat + Panasonic-Tesla Cybertruck battery deal, Shopify layoffs + AI capex reallocation; 87% of 54 S&P reporters beating so far
+- Earnings before open: GM, MMM, NOC, GPC (none in our Energy/Materials/Staples momentum lane)
+- Economic calendar: no CPI/PPI/FOMC/jobs today; next FOMC 7/29, next CPI 8/12; weekly jobless claims Thu
+- Sector momentum YTD: Energy #1 (+22-30%), Materials #2 (+11-17%), Consumer Staples #3 (+11-16%), Industrials #4 (+12-16%) leading; Tech (-3.4% price YTD, despite today's AI pop), Financials, Consumer Discretionary lagging
+- CVX correction: no CVX earnings printed 7/20 as prior log assumed — Q2 report now confirmed for 7/31; Monday's 1.2% CVX gain was oil-price/sentiment driven, not an earnings reaction
+- XOM (existing position): ~$148.6, +1.0% — Iraq requested to buy $350M stake in an Exxon oilfield (positive); activist investor proxy fight pushing for new leadership vs CEO Woods, and Trump said he's "inclined to keep Exxon out" of Venezuela (both headline noise, not thesis-breaking). Goldman Hold $157 PT; Piper Sandler/Jefferies Buy; avg PT $166.90
+
+### Trade Ideas
+1. No new name today — today's hottest movers (NVDA, AVGO semis pop) sit in Tech, our weakest YTD sector; chasing a one-day AI rally there contradicts the "follow sector momentum" rule and the account's Energy/Materials/Staples-leadership framework.
+2. GM/MMM/NOC earnings beats are real but sit in Discretionary/Industrials-adjacent names with no tie to our current thesis or a 2:1 R:R setup screened yet — watchlist only, not actionable today.
+3. Materials (LIN/FCX/XLB) — still the #2 YTD sector, but no company-specific dated catalyst today — doesn't clear the entry checklist.
+
+### Risk Factors
+- CVX earnings pushed to 7/31 — prior log's assumption of a 7/20 print was wrong; don't treat CVX as an imminent catalyst until confirmed closer to date
+- XOM headline noise (activist proxy fight, Venezuela comments) — governance overhang worth monitoring but not thesis-breaking; no action needed, stop still 10% GTC trailing (stop $135, hwm $150)
+- Still only 1 of 5-6 target positions, 11.9% deployed vs 75-85% target for a second straight session — under-deployment flagged twice now with no new catalyst clearing the bar; watch for the risk of "patience" drifting into pure inertia if this persists past this week without a genuine dated catalyst
+
+### Decision
+HOLD — no new trades today. XOM thesis intact, stop active. No name clears the specific-catalyst + sector-momentum bar; today's AI/semis rally is a Tech (laggard sector) event, not aligned with strategy. Materials/Staples remain the more strategy-aligned watchlist candidates pending a dated trigger.

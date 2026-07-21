@@ -124,3 +124,37 @@ HOLD — Day 0, no positions. CPI print tomorrow is the key catalyst; entering E
 
 ### Decision
 HOLD — CVX and PEP/DAL earnings this week are the real triggers; no name today clears the "specific catalyst" checklist item pre-print. Flag for next session: account is materially under-deployed (11.8% vs 75-85% target, 1 of 5-6 max positions) — once CVX/PEP earnings clarify, prioritize adding 1-2 positions per the 3-trades/week allowance rather than sitting fully idle again.
+
+## 2026-07-21 — Pre-market Research
+
+### Account
+- Equity: $1,002,815.99
+- Cash: $884,183.99
+- Buying power: $3,868,905.56 (margin, 4x)
+- Daytrade count: 0 (not returned by API; no day trades taken)
+- Deployed: $118,632 in XOM only = **11.8%** of equity — still well below 75-85% target
+- Open position: XOM 800sh @ $144.77, current $148.29, unrealized +$2,816 (+2.4%), GTC trailing-stop 10% live (stop $135, hwm $150)
+- Open orders: 1 (XOM trailing-stop sell, unchanged)
+
+### Market Context
+- WTI ~$82.1-83.2 (flat/-0.4%), Brent ~$88.4-88.9 (flat/-0.8%) — Iran/Strait of Hormuz risk premium persists but has stopped climbing this week
+- S&P 500 futures: ~7,527, +0.57% premarket — Nasdaq 100 futures +1.3%, led by a semiconductor rebound (NVDA +6.2%, AVGO +7.8% premarket) on confirmed AWS capex increases (~$8.2B) and AVGO's Q3 guidance beat ($16.8B rev, +12% vs consensus)
+- VIX: 17.58, down from 18.65 Monday close — vol easing back after last week's uptick
+- Today's catalysts: chip/AI-infra rebound (NVDA, AVGO, IREN +18% on new AI cloud contracts) reversing last week's AI-capex anxiety; Eli Lilly down on a failed GLP-1 trial (biotech drag); Apple/Tesla lagging the Nasdaq; new US tariffs on Canadian goods in focus; Fed Chair Warsh testified before House Financial Services Committee 10am ET yesterday (hawkish-leaning, "prices too high")
+- Earnings before open: none major confirmed for today — GM, Starbucks, AT&T, VF Corp all reported Monday 7/20; next real test is later this week
+- Economic calendar: nothing major today — June CPI already printed 7/14 (3.5% YoY, cooled from 4.2%, core flat MoM); next CPI not until 8/12; no FOMC this week
+- Sector momentum YTD: Energy (+15.9-23%) and Materials (+15.9-17.4%) still leading, Consumer Staples (+11-15%) and Industrials improving; Technology YTD still negative-to-flat (-3.4% to +2.9%) despite today's sharp semis bounce; Financials/Discretionary/Comm Services lagging
+
+### Trade Ideas
+1. XOM (existing position) — thesis intact: Hormuz premium holding, Energy still #1 YTD sector, Wells Fargo raised PT to $158, Morgan Stanley to $137. No new entry needed; stop unchanged at $135 (10% GTC trailing, hwm $150).
+2. AVGO/semis — catalyst is real (confirmed AWS capex, strong Q3 guide) but the move already happened premarket (+7.8%); chasing a gap that size violates "never buy blind" discipline, and Tech remains a YTD sector laggard despite the bounce — doesn't clear the sector-momentum checklist item. Watchlist only; would need a pullback to a defensible entry with a fresh catalyst.
+3. Materials (LIN/FCX) — YTD momentum leader, but no company-specific dated catalyst today — same gap as prior sessions. Watchlist only.
+
+### Risk Factors
+- Still only 1 of 5-6 target positions, 11.8% deployed vs 75-85% target — third consecutive session flagging under-deployment; no new trade has cleared the full entry checklist (specific catalyst + sector momentum + defensible entry) since XOM
+- Today's semis rally is a single-day, gap-driven move — high chase risk, easy to reverse if AI-capex skepticism resurfaces (as it did last week)
+- Middle East/oil headline risk still cuts both ways for the XOM thesis — a de-escalation headline would remove the premium quickly
+- VIX pulled back to 17.58 (from 18.65) — no acute stress signal, but Warsh's hawkish tone keeps macro uncertainty alive into next month's CPI/FOMC
+
+### Decision
+HOLD — no new trades today. XOM position (11.8% of equity) has an intact thesis and active 10% GTC trailing stop. Today's best-looking setup (AVGO/semis) already gapped up sharply pre-market with no pullback entry, so it doesn't meet the "never chase" discipline; Materials still lacks a dated, company-specific catalyst. Patience > activity — continue watching AVGO/semis and Materials for a cleaner entry, and revisit the under-deployment gap once one clears the checklist.

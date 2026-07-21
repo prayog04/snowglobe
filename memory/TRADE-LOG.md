@@ -14,13 +14,12 @@ No positions yet. Bot launches tomorrow.
 
 **Notes:** First trading day since launch. Account sat fully in cash with zero positions and zero orders — no trades executed today. Portfolio flat at $1,000,000, matching the pre-launch baseline exactly. No research or entries logged yet; next session should begin sourcing candidates per the strategy rulebook.
 
-### Jul 20 — Midday Scan (Day 6, Monday) — BACKFILL + CHECK
-**Portfolio:** $1,002,871.99 | **Cash:** $884,183.99 (88%) | **Day P&L:** +$800.00 | **Phase P&L:** +$2,871.99 (+0.29%)
+### Jul 15 — BUY (backfilled 2026-07-20, see note)
+| Ticker | Side | Shares | Entry | Stop | Thesis | Target | R:R |
+|---|---|---|---|---|---|---|---|
+| XOM | Buy | 800 | $144.77 | 10% trailing GTC (stop $135, hwm $150 as of 7/20) | Strait of Hormuz supply-risk premium on US-Iran tensions + Energy sector #1 YTD momentum; XOM guided Q2 net income ~3x Q1 | +16% (~$168) | ~2:1 |
 
-| Ticker | Shares | Entry | Current | Day Chg | Unrealized P&L | Stop |
-|---|---|---|---|---|---|---|
-| XOM | 800 | 144.77 | 148.36 | +0.68% | +$2,872 (+2.48%) | Trailing 10%, GTC, hwm $150 |
+**Note:** This trade filled live on Alpaca (2026-07-15 13:42 UTC) and its trailing stop was placed the same session, but neither was ever committed to this log — no market-open/pre-market entries exist for 7/14 through 7/19. Backfilled from live order history during the 2026-07-20 market-open run. Flagging as a scheduled-workflow reliability gap (see RESEARCH-LOG 2026-07-20).
 
-**Notes:** GAP FOUND — no memory/ commits between Jul 13 and today (Jul 20); this entry is the first log record of the XOM position even though Alpaca shows the order was created 2026-07-15 and last updated 2026-07-17. Prior scheduled workflows (market-open/midday/EOD for Jul 14-19) either didn't run or ran without persisting — original thesis reconstructed from the 7/13 RESEARCH-LOG entry (Iran/Strait of Hormuz oil spike, Energy sector momentum). Only 1 of max 5-6 positions open, ~12% capital deployed vs. 75-85% target.
-
-**Midday scan (Jul 20):** No losers (XOM +2.48%, well above -7% cut line). No tightening triggers (not yet at +15%/+20%). Thesis check via Perplexity: XOM catalyst intact — Iran/Hormuz-driven oil spike + raised Q2 upstream income outlook ($3.9B), stock near $148.77, best day in 5+ months, no negative catalyst today. No action taken.
+### Jul 20 — Market-open check
+No new trades. 1 open position (XOM), thesis intact, stop active. See RESEARCH-LOG 2026-07-20 for full context — HOLD decision, no dated catalyst for a new name.

@@ -158,3 +158,38 @@ HOLD — CVX and PEP/DAL earnings this week are the real triggers; no name today
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact, stop active. No name clears the specific-catalyst + sector-momentum bar; today's AI/semis rally is a Tech (laggard sector) event, not aligned with strategy. Materials/Staples remain the more strategy-aligned watchlist candidates pending a dated trigger.
+
+## 2026-07-22 — Pre-market Research
+
+### Account
+- Equity: $1,006,591.99
+- Cash: $884,183.99
+- Buying power: $3,879,478.36 (margin, 4x)
+- Positions: 1 (XOM, 800 sh), deployed $122,408 = **12.2%** of equity — 4th straight session under the 75-85% target
+- Daytrade count: not reported by API (0 day trades taken)
+- Trades this week (since Mon 7/20): 0/3
+- XOM: 800sh @ $144.77 avg, current $153.01, unrealized +$6,592 (+5.69%), GTC trailing-stop 10% live (stop $136.58, hwm $151.76) — well short of the +15%/+20% tighten thresholds, no stop action needed
+
+### Market Context
+- WTI ~$85-88 (+2-7% depending on source/timestamp), Brent ~$91-95 — sharp multi-day oil rally, 9th straight night of US strikes on Iran, Strait of Hormuz risk premium building further vs. yesterday
+- S&P 500 futures: mixed, roughly flat to slightly down (~7,481-7,542 range across sources); cash S&P closed +0.89% at 7,509.20 Tuesday on chip-stock recovery + earnings
+- VIX: ~17.0-17.6, down from Monday's 18.65 — vol easing even as oil/geopolitical risk escalates, a bit of a disconnect worth flagging
+- Today's catalysts: heavy Q2 earnings flow (Tesla, IBM, ServiceNow, Texas Instruments, Alphabet, AT&T on deck this week; GM/3M beat Tuesday); AI/semis rally continuing (SMCI reported $60B+ incoming orders, VanEck Semi ETF +4-5%); Fed July 28 meeting is next week's macro catalyst
+- Earnings before open: calendar data was inconsistent/conflicting across sources (some entries appear to be stale JPM/bank-earnings dates from mid-July) — no confirmed BMO report today in our Energy/Materials/Staples lane; treat today's earnings list as unverified
+- Economic calendar: no CPI/PPI/FOMC/jobs today; June CPI already printed 7/14 (3.5% YoY, cooler than forecast); next CPI 8/12; next FOMC 7/28 (6 days out)
+- Sector momentum YTD: Energy, Materials, Consumer Staples, Industrials leading; Tech, Financials, Consumer Discretionary lagging (despite this week's short-term AI/semis pop in Tech)
+- XOM (existing position): $153.01, near recent highs, driven by the oil/Strait-of-Hormuz rally; Q2 earnings confirmed for 7/31 — no new thesis-breaking news
+
+### Trade Ideas
+1. No new name today — the oil/Hormuz rally accelerating further is a continuation of the existing XOM thesis, not a fresh dated catalyst for a second Energy name (CVX earnings still 7/31, no other Energy ticker has a company-specific trigger today).
+2. Materials (LIN/FCX/XLB) — still #2 YTD sector, no company-specific dated catalyst clears the entry checklist today; watchlist only.
+3. Consumer Staples — #3 YTD sector, no confirmed reporter today; watchlist only pending a dated trigger.
+
+### Risk Factors
+- Geopolitical/VIX disconnect: oil is spiking on real escalation (9 straight nights of US-Iran strikes) while VIX is falling — possible complacency; a de-escalation headline or further escalation could both move markets sharply
+- FOMC 7/28 is now within a week — positioning risk into the meeting
+- Deployment stuck at ~12% vs. 75-85% target for a 4th consecutive session with 0/3 trades used this week — flagged repeatedly with no action; risk of "patience" drifting into pure inertia continues to build. Next session should treat this as a decision point rather than deferring again if still no dated catalyst appears.
+- Earnings-calendar tool data was contradictory across sources today — don't trust it blind; cross-check any earnings-driven trade idea against a primary source before acting
+
+### Decision
+HOLD — no new trades today. XOM thesis intact and strengthening (+5.69% unrealized) on the oil rally; stop active, well below any tightening threshold. No name clears the specific-catalyst + sector-momentum bar — oil's move is a continuation of the existing thesis, not a new trigger for a second position. Flagging under-deployment as a real, recurring issue (4 straight sessions) rather than a one-off note.

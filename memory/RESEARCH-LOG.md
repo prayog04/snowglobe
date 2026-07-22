@@ -158,3 +158,38 @@ HOLD — CVX and PEP/DAL earnings this week are the real triggers; no name today
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact, stop active. No name clears the specific-catalyst + sector-momentum bar; today's AI/semis rally is a Tech (laggard sector) event, not aligned with strategy. Materials/Staples remain the more strategy-aligned watchlist candidates pending a dated trigger.
+
+## 2026-07-22 — Pre-market Research (run inline during market-open; entry was missing)
+
+### Account
+- Equity: $1,006,815.99
+- Cash: $884,183.99
+- Buying power: $3,880,105.56 (margin, 4x)
+- Positions: 1 (XOM, 800 sh @ $144.77, current ~$153.29, unrealized +$6,812 / +5.88%), deployed $122,632 = **12.2%** of equity — still well below 75-85% target
+- GTC trailing stop live on XOM: stop $138.69, hwm $154.10
+- Daytrade count: not reported by API (0 day trades taken)
+- Trades this week (since Mon 7/20): 0/3
+
+### Market Context
+- WTI ~$85-88 (+2.5-4%), Brent ~$91-93 (+2-2.5%) — six-week highs. Iran ceasefire has collapsed; Secretary Rubio said Iran is "not serious" about peace talks, reversing the de-escalation that had pressured oil lower
+- S&P 500 futures: ~7,520, -0.3-0.4% premarket — Dow/S&P soft, Nasdaq -0.7-0.8% (chip-stock weakness), ahead of Alphabet/Tesla/IBM/Texas Instruments earnings after today's close
+- VIX: ~18.8
+- Today's catalysts: Iran ceasefire collapse driving oil to 6-week highs; energy shares leading global gains; Big Tech (GOOGL, TSLA, IBM, TXN, GE Vernova, PM, T) all report after the close — AI-momentum test, not a premarket item
+- Earnings before open: none clearly confirmed in our sector lane; big reports are after-hours today
+- Economic calendar: no CPI/PPI/FOMC/jobs before open; UK CPI overnight (not a US market mover)
+- Sector momentum YTD: Energy #1 (+29-30%, some sources 23%), Materials #2 (+9-17% depending on source), Consumer Staples top-3 — Energy leadership reconfirmed and extended by today's ceasefire-collapse headline
+- XOM (existing position): $153.29, up another leg on the same oil move; institutional buying reported (Jennison Associates raised stake), Q2 earnings confirmed for 7/31 (not today) — thesis fully intact, no new action needed beyond the existing trailing stop
+
+### Trade Ideas (evaluated, not taken)
+1. CVX — catalyst real and dated (ceasefire collapse, oil 6-wk highs, Wolfe upgraded to Outperform 7/2 $210 PT, consensus PT ~$206-216, 52-wk high $214.71). BUT current price already ~$191-193, up from ~$165 three weeks ago — most of the move is already priced in. Upside to consensus PT is only ~+10-12%; against our mandatory 10% trailing stop that's a ~1:1 R:R, well short of the 2:1 minimum on the entry checklist. Wide/erratic quote spread (bid $182.83 / ask $195) also a data-quality flag this morning. PASS — chasing, not entering.
+2. OXY — same oil catalyst, current ~$57.58, consensus PT ~$64.2-64.5 (+11-12%), 52-wk high $67.45 (+17%). Analyst consensus is only "Hold" (10 buy/16 hold), weaker conviction than CVX/XOM. Similar ~1:1 R:R against the 10% trailing stop. PASS.
+3. No Energy name today clears 2:1 R:R from current (already-elevated) levels. Watchlist for a pullback entry into CVX/OXY if oil gives back some of today's spike and price resets closer to the $170s/$50s.
+
+### Risk Factors
+- Oil/Iran headline risk cuts both ways — any de-escalation headline would reverse today's Energy tailwind fast, as it already did earlier this month (CVX/XOM fell 4-7% on the last ceasefire announcement)
+- Big Tech earnings after the close (GOOGL, TSLA, IBM, TXN) could swing broad-market sentiment/VIX into tomorrow's session regardless of our Energy positioning
+- Still only 1 of 5-6 target positions, 12.2% deployed vs 75-85% target for a fourth straight session — under-deployment remains flagged, but today's Energy names don't clear the R:R bar at current (post-rally) prices; forcing a marginal-R:R trade just to hit a deployment number would violate the discipline the checklist exists to enforce
+- XOM has no new company-specific risk; governance/proxy-fight noise from 7/21 unchanged
+
+### Decision
+HOLD — no new trades today. XOM thesis intact and strengthening on the same catalyst; existing 10% GTC trailing stop stands (stop $138.69, hwm $154.10). CVX/OXY both have a genuine, dated catalyst but neither clears 2:1 R:R at today's already-elevated prices — flagged as pullback watchlist candidates, not chased. Patience > activity; under-deployment (12.2% vs 75-85%) stays an open flag for a session with a fresh setup at a better entry price.

@@ -193,3 +193,37 @@ HOLD — no new trades today. XOM thesis intact, stop active. No name clears the
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+5.69% unrealized) on the oil rally; stop active, well below any tightening threshold. No name clears the specific-catalyst + sector-momentum bar — oil's move is a continuation of the existing thesis, not a new trigger for a second position. Flagging under-deployment as a real, recurring issue (4 straight sessions) rather than a one-off note.
+
+## 2026-07-23 — Pre-market Research (run inline during market-open; entry was missing)
+
+### Account
+- Equity: $1,010,071.99
+- Cash: $884,183.99
+- Buying power: $884,183.99
+- Positions: 1 (XOM, 800 sh), deployed $125,888 = **12.5%** of equity — 5th straight session under the 75-85% target
+- Daytrade count: not reported by API (0 day trades taken)
+- Trades this week (since Mon 7/20): 0/3
+- XOM: 800sh @ $144.77 avg, current $157.36, unrealized +$10,072 (+8.70%), GTC trailing-stop 10% live (stop $141.79, hwm $157.54) — approaching but not yet at the +15% tighten-to-7% threshold
+
+### Market Context
+- WTI ~$88-91, Brent ~$96-98.5 — sharp continued oil rally, 11th straight night of US strikes on Iran, Strait of Hormuz risk premium still building
+- S&P 500 futures: down ~0.4-0.6% premarket (~7,495-7,510) on Big Tech AI-spend anxiety (post-earnings) + oil spike; Nasdaq futures down further (~-0.8%)
+- VIX: ~16.6-17.4, essentially flat/slightly down — still a geopolitical/vol disconnect similar to prior sessions
+- Earnings before open: LMT and RTX both reported. LMT beat big — EPS $7.94 vs $7.23 est, revenue $20.1B vs $19.37B est, record backlog $230B, book-to-bill 3.2x, raised FY guidance; stock gapped up premarket (+4.86% to $539.50, last regular close $514.50) on the print plus Iran-conflict Tomahawk-replenishment demand narrative. TMO, TMUS, CMCSA, BX, UNP also reported (none in our sector lane)
+- Economic calendar: no CPI/PPI/FOMC/jobs today; just weekly jobless claims (208K, better than 210K est) and Chicago Fed National Activity Index; next FOMC 7/28-29
+- Sector momentum YTD: sources conflict but consistently show Energy and Industrials/Materials near the top; Tech shows strong recent momentum too but remains volatile on AI-spend headlines; Consumer Discretionary/Financials lagging
+- XOM (existing position): $157.36, +8.7% unrealized, riding the oil/Hormuz rally; Q2 earnings confirmed for 7/31, no new thesis-breaking news
+
+### Trade Ideas
+1. LMT — real, dated catalyst (Q2 beat + raised guidance + record backlog, Iran-conflict replenishment demand) and sits in Industrials, one of our momentum-leading sectors. NOT actionable today: the gap-up already happened pre-market (already +4.7-5%+ before we can act), and the Alpaca quote right now shows an abnormally wide bid/ask ($528.58 bid / $596.40 ask) — a market order into that spread risks a very poor fill. Chasing an already-realized earnings pop violates "patience > activity" and good entry discipline. Watchlist for a pullback/consolidation entry, not today's open.
+2. Energy — no second name clears the catalyst bar; oil's continued spike is a further extension of the existing XOM thesis, not a fresh dated trigger for a new ticker (CVX earnings still 7/31).
+3. Materials/Consumer Staples — still no company-specific dated catalyst today; watchlist only.
+
+### Risk Factors
+- LMT bid/ask spread ($528.58/$596.40) at check time suggests thin/unsettled post-earnings price discovery — do not market-order into this name until spread normalizes
+- Oil/VIX disconnect persists — vol pricing hasn't caught up to 11 straight nights of escalation; a sharp headline (either direction) could move Energy fast
+- Big Tech AI-spend anxiety is pressuring futures broadly — market-wide risk-off tone into the open, a headwind for any new long entry today regardless of sector
+- Deployment stuck at ~12.5% vs. 75-85% target for a 5th consecutive session, 0/3 trades used this week — flagged repeatedly; today's LMT setup is close to actionable but the entry timing/spread issue is a real, not manufactured, reason to wait rather than force it
+
+### Decision
+HOLD — no new trades today. XOM thesis intact and strengthening (+8.7% unrealized), stop active, still below the +15% tighten threshold (watch for tighten-to-7% if it clears $166.48). LMT is the most credible new-name catalyst seen in weeks (real earnings beat + sector momentum + geopolitical tailwind) but the entry itself fails discipline today — already-gapped price plus an abnormally wide post-earnings spread. Flag for next session: revisit LMT once price/spread stabilize; do not chase.

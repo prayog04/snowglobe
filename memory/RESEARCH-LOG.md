@@ -193,3 +193,39 @@ HOLD — no new trades today. XOM thesis intact, stop active. No name clears the
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+5.69% unrealized) on the oil rally; stop active, well below any tightening threshold. No name clears the specific-catalyst + sector-momentum bar — oil's move is a continuation of the existing thesis, not a new trigger for a second position. Flagging under-deployment as a real, recurring issue (4 straight sessions) rather than a one-off note.
+
+## 2026-07-23 — Pre-market Research
+
+### Account
+- Equity: $1,009,383.99
+- Cash: $884,183.99
+- Buying power: $884,183.99 (regt, not returning margin multiplier today)
+- Positions: 1 (XOM, 800 sh), deployed $125,200 = **12.4%** of equity — 6th straight session under the 75-85% target
+- Daytrade count: not reported by API (0 day trades taken)
+- Trades this week (since Mon 7/20): 0/3
+- XOM: 800sh @ $144.77 avg, current ~$156.50, unrealized +$9,384 (+8.10%), GTC trailing-stop 10% live (stop $139.32, hwm $154.80) — below the +15%/+20% tighten thresholds, no stop action needed
+
+### Market Context
+- WTI ~$87-90 (+2-4%), Brent ~$93-96 (+3-4%) — oil rally extending further; one source cites 11 straight nights of US strikes on Iran with Tomahawk-missile replenishment orders as the near-term catalyst; Strait of Hormuz risk premium still building
+- S&P 500 futures: ~7,510-7,516, down ~-0.4% premarket — Alphabet's after-hours selloff on record 2026 capex guidance ($180-190B) weighing on sentiment despite the number itself being bullish for AI infra
+- VIX: ~17.4-17.6, up from prior close 16.64 (+4.8%) — modest uptick, still moderate
+- Today's catalysts: Alphabet capex shock rippling through tech/semis; Intel earnings today framed as "make-or-break" for the AI/chip bid; continuing heavy Q2 earnings season (Tesla, GOOGL reported this week)
+- Earnings before open: GM, NOC, ALLY, WST, OFG, PEBO, FOR, GD, T, RTX, TMUS, NOK, INFY — none in our Energy/Materials/Staples lane
+- Economic calendar: no CPI/PPI/FOMC/jobs data today; June CPI already printed 7/14 (3.5% YoY, cooler than forecast); next CPI 8/12; next FOMC 7/28 (5 days out)
+- Sector momentum YTD: Energy (~+15.9%), Materials (~+11.7%), Consumer Staples, Industrials leading; Financials, Consumer Discretionary, Tech, Communication Services lagging on a YTD basis (though Tech has near-term AI-capex momentum from this week's earnings)
+- XOM (existing position): ~$154.50-156.62, up 1.8-3.2% this week on the oil rally + pre-earnings positioning; company confirmed **Q2 2026 results report on 7/31** — same date CVX is expected — no thesis-breaking news
+
+### Trade Ideas
+1. No new Energy name today — oil's continued rally is a further extension of the existing XOM thesis, not a fresh dated catalyst for a second Energy position; CVX earnings still 7/31 (same day as XOM) — wait for the print.
+2. Materials (LIN/FCX/XLB) — still #2 YTD sector, no company-specific dated catalyst today; watchlist only.
+3. Consumer Staples — #3 YTD sector, no confirmed reporter in our lane today; watchlist only pending a dated trigger.
+
+### Risk Factors
+- Oil/Iran escalation continuing (11 straight nights of strikes per one source) — double-edged; a de-escalation headline could reverse the Energy tailwind fast
+- Alphabet's capex-driven tech selloff plus Intel earnings today could swing broad-market sentiment even though neither is in our lane
+- XOM (and CVX) earnings now confirmed for 7/31 — avoid initiating any new pre-earnings position too close to the print without a defined plan
+- Deployment stuck at ~12.4% vs. 75-85% target for a 6th consecutive session with 0/3 trades used this week — flagged repeatedly with no action; this is now the longest under-deployment stretch logged since launch
+- FOMC 7/28 is 5 days out — positioning risk into the meeting
+
+### Decision
+HOLD — no new trades today. XOM thesis intact and strengthening (+8.10% unrealized) on the extending oil rally; stop active, well below any tightening threshold. No name clears the specific-catalyst + sector-momentum bar. Under-deployment (12.4%, 6 straight sessions, 0/3 trades this week) remains a real, recurring issue — next session should treat this as a decision point rather than deferring again if still no dated catalyst appears.

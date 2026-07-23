@@ -43,3 +43,12 @@ No new trades. 1 open position (XOM), thesis intact, GTC trailing stop active (s
 | XOM | 800 | $144.77 | $151.80 | +2.32% | +$5,624.00 (+4.86%) | $136.58 GTC trailing 10% (hwm $151.76) |
 
 **Notes:** Quiet no-trade day, as previewed in the market-open check. XOM continued its run, up 2.3% intraday to $151.80, pushing the trailing stop's high-water mark to $151.76 and the stop itself up to $136.58 — the position is now up nearly 5% unrealized. Portfolio gained $2,680 (+0.27%) on the day, all from XOM's move; cash sat untouched at $884,184 (87.9%). Zero trades today, zero trades this week (0/3), and deployment remains stuck at ~12% vs. the 75-85% target for a third straight session — the bot continues to wait for a dated catalyst outside the weak Tech rally rather than force a trade.
+
+### Jul 23 — EOD Snapshot (Day 9, Thursday)
+**Portfolio:** $1,009,735.99 | **Cash:** $884,183.99 (87.6%) | **Day P&L:** +$1,992.00 (+0.20%) | **Phase P&L:** +$9,735.99 (+0.97%)
+
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|
+| XOM | 800 | $144.77 | $156.94 | +1.61% | +$9,736.00 (+8.41%) | $142.71 GTC trailing 10% (hwm $158.57) |
+
+**Notes:** Logging gap — no EOD snapshot exists for Jul 22 (Wednesday); this routine did not run that day, though the Jul 22 pre-market research log shows equity around $1,006,592 that morning, consistent with the day's continued gain into today's close. XOM kept climbing on the ongoing oil/Strait-of-Hormuz rally, closing at $156.94 (+1.6% today, +8.4% unrealized since entry), pushing the trailing stop's high-water mark to $158.57 and the stop itself up to $142.71. Zero trades today, zero trades this week (0/3). Deployment remains ~12.4% vs. the 75-85% target for a fifth straight session — still no second name has cleared the dated-catalyst bar. Position is approaching but has not yet hit the +15% unrealized threshold that would tighten the trail to 7%.

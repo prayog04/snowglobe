@@ -193,3 +193,31 @@ HOLD — no new trades today. XOM thesis intact, stop active. No name clears the
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+5.69% unrealized) on the oil rally; stop active, well below any tightening threshold. No name clears the specific-catalyst + sector-momentum bar — oil's move is a continuation of the existing thesis, not a new trigger for a second position. Flagging under-deployment as a real, recurring issue (4 straight sessions) rather than a one-off note.
+
+## 2026-07-24 — Pre-market Research (run inline during market-open; entry was missing)
+
+### Account
+- Equity: $1,009,951.99
+- Cash: $884,183.99
+- Buying power: $3,888,886.36 (margin, 4x)
+- Positions: 1 (XOM, 800 sh), deployed $125,768 = **12.5%** of equity — 6th straight session under the 75-85% target
+- Daytrade count: not reported by API (0 day trades taken)
+- Trades this week (since Mon 7/20): 0/3
+- XOM: 800sh @ $144.77 avg, current $157.21, unrealized +$9,952 (+8.59%), GTC trailing-stop 10% live (stop $142.71, hwm $158.57) — approaching but not yet at the +15% tighten threshold, no stop action needed
+
+### Market Context
+- Perplexity research came back materially unreliable and internally contradictory: within a single query, WTI/Brent quotes ranged from ~$68.67 to ~$97.71 and VIX prints ranged ~15.8-20.95, several tagged with mismatched dates (some snippets stamped Feb 2026). No verified S&P 500 level, no verified earnings-before-open calendar, no verified economic calendar could be obtained today.
+- Falling back to the last confirmed sector framework (7/22): Energy, Materials, Consumer Staples, Industrials leading YTD; Tech, Financials, Consumer Discretionary lagging.
+- XOM (existing position): $157.21, continuing to grind higher; no thesis-breaking news encountered.
+
+### Trade Ideas
+1. No new name today — research tooling returned unreliable/contradictory data (see above), so no candidate can clear the "specific, dated catalyst" checklist item. Not forcing a trade on unusable inputs.
+
+### Risk Factors
+- Research data-quality failure today: Perplexity results were internally inconsistent (implausible price/VIX ranges, mismatched dates) — same class of issue flagged 7/22 ("don't trust it blind"), now severe enough to block any new-name evaluation entirely rather than just a caveat.
+- Deployment stuck at ~12.5% vs. 75-85% target for a 6th consecutive session, 0/3 trades used this week — recurring gap continues to build with no action taken.
+- No RESEARCH-LOG or TRADE-LOG market-open entry exists for 2026-07-23 (Thursday) — a second scheduled-run logging gap, on top of the earlier 7/14-7/19 gap already documented on 7/20.
+- XOM unrealized +8.59%, getting closer to the +15% trail-tighten trigger (would tighten to 7%) — watch next session.
+
+### Decision
+HOLD — no new trades. Research tooling failed to produce usable market data today (contradictory prices/VIX/dates), so no candidate can clear the catalyst checklist; not forcing a trade on unreliable inputs. XOM position intact, GTC stop active, well below the tighten threshold. Flagging both the data-quality failure and the 6th-session deployment gap for review.

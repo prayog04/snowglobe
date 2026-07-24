@@ -193,3 +193,38 @@ HOLD — no new trades today. XOM thesis intact, stop active. No name clears the
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+5.69% unrealized) on the oil rally; stop active, well below any tightening threshold. No name clears the specific-catalyst + sector-momentum bar — oil's move is a continuation of the existing thesis, not a new trigger for a second position. Flagging under-deployment as a real, recurring issue (4 straight sessions) rather than a one-off note.
+
+## 2026-07-24 — Pre-market Research
+
+### Account
+- Equity: $1,009,303.99
+- Cash: $884,183.99
+- Buying power: $3,887,071.96 (margin, 4x)
+- Positions: 1 (XOM, 800 sh), deployed $125,120 = **12.4%** of equity — 6th straight session under the 75-85% target
+- Daytrade count: not reported by API (0 day trades taken)
+- Trades this week (since Mon 7/20): 0/3 — today is the last trading day of this week's allowance
+- XOM: 800sh @ $144.77 avg, current $156.40, unrealized +$9,304 (+8.03%), GTC trailing-stop 10% live (stop $142.71, hwm $158.57) — well short of the +15%/+20% tighten thresholds, no stop action needed
+
+### Market Context
+- WTI ~$71 (-2.9%), Brent ~$75 (-3.0%) — sharp reversal lower vs. Tuesday's $85-88 WTI / $91-95 Brent spike; Iran/Strait-of-Hormuz risk premium that drove this week's oil rally appears to be unwinding fast
+- S&P 500 futures: mixed/roughly flat (~7,550-7,580 across sources, -0.15% to +0.5% depending on source/timing)
+- VIX: source data was unusually contradictory today (readings from 16.9 to 20.95 across snapshots, several clearly stale-dated) — treat as elevated/uncertain rather than trusting a single print; one source flagged an ongoing tech selloff tied to AI-spending skepticism
+- Today's catalysts: dense Friday earnings slate before open (American Express, Verizon, HCA Healthcare, Charter Communications, SLB, NextEra Energy, Tenet Healthcare, Gentex, First Citizens BancShares); preliminary July PMIs (US/Japan/Germany/Eurozone/UK), Japan CPI, US new home sales, Bank of Russia rate decision; broad tech selloff continuing on AI-monetization doubts even as Intel reportedly beat estimates after hours
+- Economic calendar: PPI MoM/Core PPI at 12:30pm ET, Building Permits Final, New Home Sales — no CPI or FOMC today; FOMC meeting is 7/28-29 (4 days out)
+- Sector momentum YTD: Energy still #1 (+16-27% across sources), Materials #2 (+10-17%), Consumer Staples #3 (+11-16%), Industrials #4 (+10-14%) leading; Tech (-3% to -6%), Financials (-5% to -7%), Consumer Discretionary (-4%) lagging
+- XOM (existing position): live Alpaca price $156.40 (new hwm $158.57) continuing to climb even as oil itself reverses sharply lower today — a notable divergence worth watching; web search results for XOM price were stale/conflicting ($136-140, dated mid-July), live Alpaca data is the trustworthy source here. SLB (Energy oilfield-services peer) reports before today's open — relevant sector read-through, not a signal to act on pre-print
+
+### Trade Ideas
+1. No new name today — oil's sharp reversal (WTI -15-20% from Tuesday's spike) undercuts the geopolitical-premium thesis that has been driving Energy-sector strength; adding a second Energy position into a reversing commodity does not clear the bar. Watch, don't chase.
+2. SLB earnings this morning — same Energy sector as XOM, no independent catalyst for a new position; WAIT for print + reaction, do not buy blind into earnings (per strategy rule)
+3. Materials/Consumer Staples — still #2/#3 YTD sectors, no company-specific dated catalyst today that clears the entry checklist; watchlist only
+
+### Risk Factors
+- Oil's sharp reversal breaks the immediate rationale for further Energy-sector adds; XOM's continued strength despite the oil pullback is a divergence to monitor — if oil keeps falling and XOM follows with a lag, the 10% trailing stop (currently $142.71) is the built-in defense, no manual action needed unless price approaches it
+- Today's web/Perplexity data was noticeably noisier than usual (VIX and XOM price snapshots contradicted each other and mixed in stale mid-July dates) — cross-checked account and position figures against live Alpaca data rather than trusting search results at face value
+- Broad tech selloff on AI-spending skepticism could weigh on overall sentiment even though our book (Energy) isn't directly exposed
+- FOMC 7/28-29 is 4 trading days out — positioning risk building into next week
+- Deployment stuck at 12.4% vs. 75-85% target for a 6th consecutive session, and this week closes today with 0/3 trades used — flagged repeatedly with no action; next week should be treated as a genuine decision point on whether the "wait for a dated catalyst" bar is calibrated too high given how long the account has sat underweight
+
+### Decision
+HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.

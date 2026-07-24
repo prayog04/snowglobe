@@ -46,3 +46,12 @@ No new trades. 1 open position (XOM), thesis intact, GTC trailing stop active (s
 | XOM | 800 | $144.77 | $151.80 | +2.32% | +$5,624.00 (+4.86%) | $136.58 GTC trailing 10% (hwm $151.76) |
 
 **Notes:** Quiet no-trade day, as previewed in the market-open check. XOM continued its run, up 2.3% intraday to $151.80, pushing the trailing stop's high-water mark to $151.76 and the stop itself up to $136.58 — the position is now up nearly 5% unrealized. Portfolio gained $2,680 (+0.27%) on the day, all from XOM's move; cash sat untouched at $884,184 (87.9%). Zero trades today, zero trades this week (0/3), and deployment remains stuck at ~12% vs. the 75-85% target for a third straight session — the bot continues to wait for a dated catalyst outside the weak Tech rally rather than force a trade.
+
+### Jul 24 — EOD Snapshot (Day 10, Friday)
+**Portfolio:** $1,009,863.99 | **Cash:** $884,183.99 (87.6%) | **Day P&L:** +$168.00 (+0.02%) | **Phase P&L:** +$9,863.99 (+0.99%)
+
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|
+| XOM | 800 | $144.77 | $157.10 | +0.13% | +$9,864.00 (+8.52%) | $142.84 GTC trailing 10% (hwm $158.71) |
+
+**Notes:** Another quiet no-trade day, consistent with today's market-open HOLD (unreliable Perplexity research data, no verified catalyst). XOM drifted up slightly to $157.10, keeping the trailing stop's high-water mark at $158.71 (stop $142.84) and unrealized gain at +8.52% — still short of the +15% trail-tighten trigger. Day P&L computed from Alpaca's last_equity ($1,009,695.99, balance as of Jul 23 close) since no EOD snapshot exists for Jul 22 or Jul 23 — a third logging gap on top of the earlier Jul 14-19 and Jul 23 gaps; this routine did not run those two prior sessions. Cash unchanged at $884,184 (87.6% of portfolio), deployment still ~12% vs. the 75-85% target, five trading days into the position with no new names added. Trades today: none. Trades this week: 0/3.

@@ -255,3 +255,40 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-07-27 — Pre-market Research
+
+### Account
+- Equity: $1,005,778.95 (last_equity $1,009,735.99 — down ~$3,957 since Friday's close)
+- Cash: $884,183.99
+- Buying power: $3,877,201.85 (margin, 4x)
+- Positions: 1 (XOM, 800 sh), deployed $121,594.96 = **12.1%** of equity — 7th+ straight session under the 75-85% target
+- Daytrade count: not reported by API (0 day trades taken)
+- Trades this week: 0/3 (new week starts today, Mon 7/27)
+- XOM: 800sh @ $144.77 avg, current $151.99, unrealized +$5,778.96 (+4.99%), down -3.15% intraday from Friday's $156.94 close; GTC trailing-stop 10% live (stop $142.84, hwm $158.71) — well short of the +15%/+20% tighten thresholds, no stop action needed
+
+### Market Context
+- WTI ~$71-73, Brent ~$74-78 — oil continues to slide off last week's Hormuz-premium spike; multiple Indian/Asian market reports today cite a "48-hour US-Iran calm" and oil down ~5% as the driver of a broad risk-on tone overseas
+- S&P 500 futures: mixed/inconclusive across sources (readings from -0.15% to +0.56%), no reliable single print
+- VIX: source data contradicted itself again (16.9 to 23.93 across snapshots, several stale-dated); directionally, CNBC/other coverage notes the S&P had its "biggest one-day drop in a month" last Friday on Alphabet/Tesla AI-capex jitters, so treat vol as modestly elevated, not calm
+- Today's/this week's catalysts: **FOMC meeting this week** (widely flagged as the single biggest catalyst); mega-cap earnings wave — Microsoft, Meta, Amazon report Wed/Thu, Apple also this week — AI-capex commentary in focus after Alphabet's post-earnings selloff Thursday; Middle East de-escalation (oil sliding on Iran-calm reports) is easing the geopolitical premium that drove Energy's YTD leadership
+- Earnings before open today: unresolved/contradictory — Nasdaq's calendar tool says "no reports on this date," one other source lists AstraZeneca, Welltower, Nucor for Mon 7/27 BMO. Not confirmed reliably; no name in our Energy/Materials/Staples lane either way.
+- Economic calendar: Durable Goods Orders reportedly due 8:30am ET per one source (unverified against a primary calendar); no CPI/PPI/jobs print today — June CPI/PPI already out; next major macro event is this week's FOMC decision
+- Sector momentum YTD: Energy still #1 (+15.9-23%), Materials #2 (+11.7-17.4%), Consumer Staples #3 (+11.3-15.6%), Industrials #4 (+14.1%) leading; Tech (-3.3%), Consumer Discretionary (-3.8%), Communication Services (-1.2%), Financials (-2.3% to -6.9%) lagging
+- XOM (existing position): live Alpaca price $151.99 (down from Friday's $156.94 close); web sources show scattered/stale price snapshots ($136-$140s) — Alpaca is the trustworthy figure. Analyst coverage mixed (Buy/Hold/Neutral across firms), no fresh thesis-breaking news. **XOM Q2 earnings were previously flagged for 7/31 — that falls inside this trading week**, a real event-risk date to track for the existing position.
+
+### Trade Ideas
+1. No new name today — oil's continued slide (on Iran-de-escalation reports) further weakens the case for adding a second Energy position; existing XOM thesis holds but isn't reinforced by today's data. Watch, don't chase.
+2. Materials/Consumer Staples — still #2/#3 YTD sectors, no company-specific dated catalyst today that clears the entry checklist; watchlist only.
+3. No pre-market earnings-driven idea — today's before-open earnings calendar could not be verified reliably across sources; not acting on unconfirmed data.
+
+### Risk Factors
+- **FOMC meeting this week** is the single largest scheduled catalyst — positioning risk into the decision; avoid initiating new size right before it without a specific, dated reason
+- **Mega-cap tech earnings (MSFT/META/AMZN/AAPL) Wed/Thu** — AI-capex skepticism already hit Alphabet/Tesla last week; a repeat could pressure the broader tape/VIX even though our book is Energy-only
+- **XOM earnings ~7/31, inside this week** — real event risk on the existing position; the 10% GTC trailing stop ($142.84) is the built-in defense, no manual pre-earnings action planned absent new information
+- Oil's slide off the Hormuz-premium highs continues (Iran-calm reports) — this is the second straight week the geopolitical catalyst behind Energy's YTD leadership has been unwinding; if XOM starts following oil lower with a lag, the trailing stop is the mechanism, not a discretionary call
+- Data quality: VIX and earnings-calendar sources were contradictory again today (same class of issue flagged repeatedly) — cross-checked account/position figures against live Alpaca data rather than search results
+- Under-deployment: ~12.1% vs. 75-85% target persists into a new week (0/3 trades used) — long-running pattern, not new, but now compounded by a week containing both FOMC and mega-cap earnings, which argues for continued caution rather than forcing size in
+
+### Decision
+HOLD — no new trades today. XOM position intact (+4.99% unrealized), GTC trailing stop active well below any tighten threshold. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar; oil's continued de-escalation-driven slide argues against adding Energy exposure, not for it. This week carries real event risk (FOMC decision + mega-cap earnings + XOM's own 7/31 print) — patience is the right call, not inertia. Under-deployment remains a standing, previously-flagged issue; no new action taken.

@@ -255,3 +255,36 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-07-27 — Pre-market Research (run inline during market-open; entry was missing)
+
+### Account
+- Equity: $1,007,247.99
+- Cash: $884,183.99
+- Buying power: $3,881,315.16 (margin, 4x)
+- Positions: 1 (XOM, 800 sh), deployed $123,064 = **12.2%** of equity — new week, still well below 75-85% target
+- Daytrade count: not reported by API (0 day trades taken)
+- Trades this week (Mon 7/27 start): 0/3
+- XOM: 800sh @ $144.77 avg, current $153.83, unrealized +$7,248 (+6.26%), GTC trailing-stop 10% live (stop $142.84, hwm $158.71) — pulled back today (-1.98% intraday) with oil, well short of the +15%/+20% tighten thresholds, no stop action needed
+
+### Market Context
+- WTI ~$88.68 (-5.55%), Brent ~$81.80 (-4.35%) — sharp reversal lower after US-Iran military strikes paused over the weekend on renewed diplomatic optimism; the Strait-of-Hormuz risk premium that has driven Energy-sector/XOM strength is unwinding fast, mirroring the 7/24 reversal but larger
+- S&P 500: prior session closed ~7,412-7,454 (+0.05% to +0.57% depending on source); pre-market described as a broad relief rally (Dow futures +408pts, Nasdaq 100 futures +1.46%) on the Iran pause
+- VIX: ~18.58 at prior close
+- Today's catalysts: US-Iran ceasefire/de-escalation relief rally; FOMC 2-day meeting begins today, rate decision Wednesday 7/29; megacap tech earnings (Amazon, Meta, Microsoft, Apple, Qualcomm) loom later this week — outside our Energy/Materials/Staples lane
+- Earnings before open today: SCCO (Southern Copper, Materials) and GTLS (Chart Industries, Materials/Industrials) — neither previously screened, no established thesis
+- Economic calendar: FOMC meeting starts today (decision 7/29); no CPI/PPI/jobs today
+- Sector momentum: could not verify a current YTD ranking table today; last confirmed framework (7/24) — Energy #1, Materials #2, Consumer Staples #3, Industrials #4 leading; Tech/Financials/Discretionary lagging. Today's oil reversal is a live threat to Energy's #1 spot continuing
+
+### Trade Ideas
+1. No new name today — the oil/Hormuz de-escalation directly undercuts the geopolitical-premium thesis behind our only sector of strength (Energy); adding a second Energy name into a reversing commodity fails the bar. SCCO/GTLS (Materials, reporting this AM) are unscreened with no dated thesis — not actionable same-day off an earnings print with no prior research.
+2. Consumer Staples (KO, MDLZ, ECL, SHW, ITW, CL) report tomorrow (7/28) — genuine dated catalysts, but arrive one day before the FOMC decision; WAIT for prints + reaction, don't pre-position into event risk.
+
+### Risk Factors
+- Oil's sharp reversal (WTI -5.55%, Brent -4.35%) is the second such reversal in a week (see 7/24) and is now tied to an actual de-escalation headline, not just a data blip — XOM's thesis is weakening; the 10% GTC trailing stop (currently $142.84, hwm $158.71) is the built-in defense if this continues
+- FOMC meeting starts today, decision Wednesday 7/29 — do not add fresh risk into a two-day Fed event window without an exceptional catalyst
+- Megacap tech earnings this week could move the broad tape sharply; not our sector but a source of volatility
+- Deployment still ~12% vs 75-85% target; 0/3 trades used this week (new week) — no forced trade today given the FOMC + oil-reversal risk backdrop
+
+### Decision
+HOLD — no new trades today. XOM thesis intact but weakening as the Iran ceasefire unwinds the oil risk premium; stop active and untouched, no tighten needed. No name clears the specific-catalyst + sector-momentum bar, and FOMC starting today argues against adding new positions into event risk. Revisit Materials/Staples names after their prints (7/28) once the FOMC outcome is known.

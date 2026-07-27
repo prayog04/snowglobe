@@ -255,3 +255,18 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-07-27 — Midday Scan Addendum
+
+### Account / Position Check
+- Positions: 1 (XOM, 800 sh @ $144.77 avg), current $154.78, unrealized +$8,008 (+6.91%) — down from Friday's close ($156.94, intraday -1.38% today)
+- GTC trailing stop live: trail 10%, hwm $158.71, stop $142.839 — not at either tighten threshold (+15%/+20%); no action taken
+- No losers at -7% (only 1 position, and it's a winner) — no cuts
+- Note: no market-open/pre-market entry exists for today (2026-07-27) in this log — recurring scheduled-run gap, consistent with prior 7/14-7/19 and 7/23 gaps already flagged
+
+### Intraday Check (XOM pullback from hwm)
+- Perplexity: today's softness is oil/positioning-driven, not an XOM-specific negative. Exxon's Q2 pre-announcement (higher liquids prices, ~$3.5-3.9B sequential upstream lift) still stands; company also flagged a smaller war-related earnings drag (~$0.6-0.8B upstream, ~$0.2-0.4B Energy Products) already known context, not new. No downgrade, guidance cut, or legal shock found. Market likely positioning ahead of Q2 earnings print on 7/31.
+- Thesis check: intact. Pullback from hwm is normal volatility ahead of earnings, not a thesis break — no manual cut warranted.
+
+### Decision
+HOLD — no trades, no stop changes. XOM thesis intact; -1.38% intraday move is oil/positioning noise ahead of 7/31 earnings, not a fundamental break. Trailing stop doing its job below current price. No ClickUp notification sent (no action taken, per Step 7 rule).

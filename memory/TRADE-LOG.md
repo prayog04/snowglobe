@@ -46,3 +46,12 @@ No new trades. 1 open position (XOM), thesis intact, GTC trailing stop active (s
 | XOM | 800 | $144.77 | $151.80 | +2.32% | +$5,624.00 (+4.86%) | $136.58 GTC trailing 10% (hwm $151.76) |
 
 **Notes:** Quiet no-trade day, as previewed in the market-open check. XOM continued its run, up 2.3% intraday to $151.80, pushing the trailing stop's high-water mark to $151.76 and the stop itself up to $136.58 — the position is now up nearly 5% unrealized. Portfolio gained $2,680 (+0.27%) on the day, all from XOM's move; cash sat untouched at $884,184 (87.9%). Zero trades today, zero trades this week (0/3), and deployment remains stuck at ~12% vs. the 75-85% target for a third straight session — the bot continues to wait for a dated catalyst outside the weak Tech rally rather than force a trade.
+
+### Jul 28 — EOD Snapshot (Day 12, Tuesday)
+**Portfolio:** $1,006,743.99 | **Cash:** $884,183.99 (87.8%) | **Day P&L:** -$1,256.00 (-0.12%) | **Phase P&L:** +$6,743.99 (+0.67%)
+
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|
+| XOM | 800 | $144.77 | $153.20 | -1.01% | +$6,744.00 (+5.82%) | $142.84 GTC trailing 10% (hwm $158.71) |
+
+**Notes:** Logging gap — no EOD snapshots or market-open entries exist for Jul 22-23, 25, or 27; this routine appears not to have run those sessions. XOM pulled back 1.0% today off Tuesday's $154.77 prior close to $153.20, trimming the position's unrealized gain to +5.82% ($6,744) and pulling its trailing stop's high-water mark down from where it stood on Jul 24 ($158.57 then, now $158.71 per Alpaca — essentially flat over the gap). Portfolio equity is $1,006,743.99 vs. yesterday's Alpaca-reported close of $1,007,999.99, a -$1,256 (-0.12%) day; phase P&L stands at +$6,743.99 (+0.67%) since the $1M baseline. Cash unchanged at $884,184 (87.8%), zero new orders today, zero trades this week (0/3). Deployment remains stuck at ~12% vs. the 75-85% target with only 1 of 5-6 target positions open — still waiting on a dated catalyst before adding a second name.

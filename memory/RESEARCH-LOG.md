@@ -255,3 +255,39 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-07-28 — Pre-market Research
+
+### Account
+- Equity: $1,006,686.15
+- Cash: $884,183.99
+- Buying power: $3,879,742.01 (margin, 4x)
+- Positions: 1 (XOM, 800 sh), deployed $122,502 = **12.2%** of equity — 7th+ consecutive session under the 75-85% target
+- Daytrade count: not reported by API (0 day trades taken)
+- Trades this week (since Mon 7/27): 0/3
+- XOM: 800sh @ $144.77 avg, current $153.13, unrealized +$6,686 (+5.77%), GTC trailing-stop 10% live (stop $142.84, hwm $158.71) — well below the +15%/+20% tighten thresholds, no stop action needed
+- Note: no market-open/pre-market entry exists for Mon 7/27 — another scheduled-run logging gap on top of the ones already flagged 7/20 and 7/24
+
+### Market Context
+- WTI ~$71-74, Brent ~$74-78 (source spread persists as usual) — oil holding lower vs. last Tuesday's $85-88/$91-95 spike; catalyst-query confirms US and Iran have **paused strikes in the Strait of Hormuz**, and the drop in oil lifted global risk sentiment Monday (7/27), snapping a 5-day equity losing streak. The geopolitical premium that drove XOM's rally is actively unwinding.
+- S&P 500 futures: roughly flat to modestly higher (~7,570-7,580 range across sources); index snapped a losing streak Monday on the oil-driven sentiment lift
+- VIX: source data contradictory again today (16.1-20.95 range, several stale/mismatched dates) — same recurring data-quality issue flagged 7/22 and 7/24; treat as elevated/uncertain, don't trust a single print
+- Today's catalysts: **FOMC meeting concludes Wednesday 7/29** (1 day out) — the single biggest catalyst this week; mega-cap earnings wave continues (MSFT, META, AAPL, AMZN report Wed/Thu) after Alphabet/Tesla's AI-capex-driven selloff Friday (S&P's biggest one-day drop in a month); today's BMO earnings include Visa, Coca-Cola, Boeing, UPS, Mondelez, Barclays, Bloom Energy, NXP Semiconductors — none in our Energy/Materials/Staples lane
+- Economic calendar: no CPI/PPI/jobs today (next CPI 8/12 — later than previously logged); Conference Board Consumer Confidence and Case-Shiller/FHFA home-price data due today; FOMC decision tomorrow
+- Sector momentum YTD: Energy still #1 (roughly +16-24% across sources, wide spread), Materials/Consumer Staples/Industrials next tier (~+9-20%); Financials and Consumer Discretionary continue lagging; Tech readings inconsistent across sources (one shows a partial YTD rebound, others still negative) — not reliable enough to act on
+- XOM (existing position): search results show stale $136-140 quotes (dated mid-July); live Alpaca price $153.13 is the trustworthy figure per established practice. News flow: Citi cut price target to $155 from $175 (still above current price, kept Neutral); no company-specific negative catalyst; Q2 earnings still set for 7/31 (3 days out)
+
+### Trade Ideas
+1. No new name today — FOMC decision lands tomorrow (7/29) and mega-cap tech earnings hit Wed/Thu; adding a new position into this event-risk window, on top of oil's active unwind of the thesis that's been driving our only sector (Energy), doesn't clear the bar.
+2. Materials/Consumer Staples — still top-tier YTD sectors, no dated company-specific catalyst today; watchlist only.
+3. XOM Q2 earnings (7/31, Friday) — do not add or trim ahead of print; let the existing GTC trailing stop ($142.84) manage risk through the event per strategy rules (no blind earnings entries).
+
+### Risk Factors
+- Oil's continued reversal (Strait of Hormuz strikes paused) removes the geopolitical premium behind XOM's rally — position remains up +5.77% and the trailing stop is well clear, but this is the second straight session flagging this divergence risk
+- FOMC (tomorrow) + mega-cap AI-capex earnings (Wed/Thu) stack two major macro/market-risk events into this week — elevated event risk for the broader market even though our book is Energy-only
+- VIX data unreliable again today (16-21 range, mismatched dates) — third straight session with this exact issue; don't trust a single print
+- XOM earnings 7/31 (Friday) — no action pre-print per strategy; stop is the risk control
+- Deployment stuck at 12.2% vs. 75-85% target for a 7th+ consecutive session, 0/3 trades used this new week — recurring gap, now compounded by a missing 7/27 log entry (third logging gap this cycle, after 7/14-7/19 and 7/23)
+
+### Decision
+HOLD — no new trades today. Two major macro catalysts (FOMC tomorrow, mega-cap earnings Wed/Thu) argue for staying put rather than adding risk into the event window; oil's active reversal is undercutting the XOM thesis's tailwind but the position is still comfortably profitable with its stop well clear ($142.84 vs $153.13 current). No candidate clears the specific-catalyst + sector-momentum + 2:1 R:R bar. Persistent issues to flag: VIX/oil data quality unreliable for a third straight session, and a third distinct scheduled-run logging gap (7/27) has appeared alongside the still-unresolved 12%+ under-deployment.

@@ -255,3 +255,35 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-07-28 — Pre-market Research (run inline during market-open; entry was missing)
+
+### Account
+- Equity: $1,008,463.99
+- Cash: $884,183.99
+- Buying power: $3,884,719.96 (margin, 4x)
+- Positions: 1 (XOM, 800 sh), deployed $124,280 = **12.3%** of equity — 8th straight session under the 75-85% target
+- Daytrade count: not returned by account endpoint (0 day trades taken)
+- Trades this week (since Mon 7/27): 0/3
+- XOM: 800sh @ $144.77 avg, current ~$155.32, unrealized +$8,464 (+7.31%), GTC trailing-stop 10% live (stop $142.71, hwm $158.57) — down from last session's +8.59%/+8.03% highs on today's oil pullback; still well below the +15%/+20% tighten thresholds, no stop action needed
+
+### Market Context
+- WTI ~$81.16 (-1.8%), Brent ~$86.89 (-1.7%) — both sliding to their lowest levels since 7/20, continuing the reversal off last week's Iran/Hormuz spike; Perplexity data was again internally inconsistent across snippets (a competing Brent quote of $89.08 and several stale/mismatched-date entries), so treating $81/$87 as the best-supported read and flagging low confidence
+- S&P 500 futures: not obtainable from today's research query — no reliable source returned
+- VIX: not obtainable from today's research query — no reliable source returned
+- Today's catalysts: **FOMC meeting begins today, decision tomorrow (7/29)** — the dominant macro catalyst for the next two sessions; continued oil pullback is itself a catalyst (bearish for further Energy adds, inflation-expectations relief)
+- Earnings before open: not obtainable from today's research query — no reliable calendar source returned
+- Economic calendar: FOMC 7/28-29 confirmed; no other reliable prints obtained today
+- Sector momentum: not re-confirmed today (data unavailable); falling back to last verified framework (7/22) — Energy/Materials/Consumer Staples/Industrials leading YTD, Tech/Financials/Consumer Discretionary lagging
+
+### Trade Ideas
+1. No new name today — research tooling again returned incomplete/unreliable data (no S&P futures, VIX, earnings calendar, or sector momentum confirmed), so no candidate can clear the "specific, dated catalyst" checklist item. FOMC decision lands tomorrow (7/29) — adding fresh risk into a position the session before a major rate decision is exactly the kind of avoidable risk the strategy's "patience > activity" rule exists for.
+
+### Risk Factors
+- FOMC decision tomorrow (7/29) is a binary macro event — no new positions should be added today regardless of any single-name catalyst, per prior practice of not adding risk into FOMC-adjacent volatility
+- Oil's continued slide (now 2nd straight session of declines, lowest since 7/20) is a genuine headwind for XOM/Energy-momentum thesis; position still comfortably profitable (+7.3%) and the 10% GTC trailing stop ($142.71) is the built-in defense if the pullback continues — no manual action needed unless price approaches it
+- Research data-quality failure recurring for a 3rd session (7/24 backfill entry, 7/24 same-day entry, now 7/28) — Perplexity consistently failing to return S&P futures/VIX/earnings-calendar data; flagging as a persistent tooling issue rather than a one-off
+- Deployment stuck at ~12.3% vs 75-85% target for an 8th consecutive session, 0/3 trades used this week — recurring gap, but forcing a trade into FOMC-eve with no verified data would violate the discipline this account is built on
+
+### Decision
+HOLD — no new trades today. XOM thesis intact, unrealized +7.3%, GTC trailing stop active well below any tighten threshold. FOMC decision tomorrow is reason enough on its own to avoid new risk today; research tooling also failed to confirm S&P futures/VIX/earnings/sector data for a 3rd session running, so no candidate could clear the catalyst checklist even absent FOMC. Flagging both the FOMC-eve timing and the repeated data-quality gap for the next session.

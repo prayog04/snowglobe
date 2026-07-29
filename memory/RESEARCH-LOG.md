@@ -221,6 +221,40 @@ HOLD — no new trades today. XOM thesis intact and strengthening (+5.69% unreal
 
 ### Decision
 HOLD — no new trades. Research tooling failed to produce usable market data today (contradictory prices/VIX/dates), so no candidate can clear the catalyst checklist; not forcing a trade on unreliable inputs. XOM position intact, GTC stop active, well below the tighten threshold. Flagging both the data-quality failure and the 6th-session deployment gap for review.
+## 2026-07-29 — Pre-market Research (run inline during market-open; entry was missing)
+
+### Account
+- Equity: $1,009,991.99
+- Cash: $884,183.99
+- Buying power: $3,888,998.36 (margin, 4x)
+- Positions: 1 (XOM, 800 sh), deployed $125,808 = **12.46%** of equity — well below 75-85% target
+- Daytrade count: not reported by API (0 day trades taken)
+- Trades this week (since Mon 7/27): 0/3
+- XOM: 800sh @ $144.77 avg, current $157.26, unrealized +$9,992 (+8.63%), GTC trailing-stop 10% live — still below the +15% tighten threshold, no stop action needed
+
+### Market Context
+- WTI ~$82.6-82.7 (+4.2-4.3%), Brent ~$85.3 (+3.9%) — sharp renewed oil rally this morning (7:50am ET quotes), consistent with continuing Iran/Strait-of-Hormuz risk-premium theme underlying the XOM thesis
+- S&P 500 futures: no reliable premarket print obtained — search results returned no verified S&P futures quote today
+- VIX: ~18.91 (+3.84% vs prior close 18.21), snapshot ~9:14am ET — moderate and rising, consistent with pre-FOMC caution
+- Today's catalysts: **FOMC decision day** — July 28-29 meeting concludes with a 2pm ET rate decision and presser this afternoon
+- Earnings before open: not verified — no usable calendar returned
+- Economic calendar: FOMC decision/presser 2pm ET is the dominant event; no other major prints confirmed
+- Sector momentum: not independently verified today (no YTD sector table returned); falling back to last-confirmed framework — Energy/Materials/Consumer Staples/Industrials leading, Tech/Financials/Consumer Discretionary lagging
+- XOM (existing position): $157.26, thesis intact, no thesis-breaking news
+
+### Trade Ideas
+1. No new name today — oil's renewed spike is a continuation of the existing XOM thesis, not a fresh dated catalyst for a new position. No other name clears the specific-catalyst + sector-momentum + 2:1 R:R bar on today's (partially unverified) data.
+
+### Risk Factors
+- **FOMC decision 2pm ET today** — the single largest binary macro event of the month; entering fresh risk pre-decision is the opposite of "patience > activity"
+- Research data quality inconsistent again: WTI/VIX quotes varied across sources (same class of issue flagged 7/24); no verified S&P futures, earnings calendar, or sector table today
+- Apparent scheduled-workflow logging gap: no RESEARCH-LOG/TRADE-LOG entries found for 7/22, 7/23, 7/27, 7/28 — consistent with the recurring gap pattern already flagged multiple times this month
+- Deployment still ~12.5% vs 75-85% target — long-running pattern, not treated as urgent absent a real catalyst
+- XOM +8.63% unrealized, below (not at) the +15% trail-tighten trigger — watch next session
+
+### Decision
+HOLD — no new trades. No verified, dated catalyst clears the entry checklist for a new name, and today's 2pm ET FOMC decision is a major binary event best not entered into with fresh risk pre-announcement. XOM position and 10% GTC trailing stop remain intact and undisturbed.
+
 ## 2026-07-24 — Pre-market Research
 
 ### Account

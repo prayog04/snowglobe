@@ -255,3 +255,40 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-07-29 — Pre-market Research
+
+### Account
+- Equity: $1,009,399.99
+- Cash: $884,183.99
+- Buying power: $3,887,340.76 (margin, 4x)
+- Positions: 1 (XOM, 800 sh), deployed $125,216 = **12.4%** of equity — 7th+ straight session under the 75-85% target
+- Daytrade count: not reported by API (0 day trades taken)
+- Trades this week (since Mon 7/27): 0/3 — no market-open/research entries exist for 7/27 or 7/28, a third logging gap on top of the earlier 7/14-7/19 and 7/23 gaps
+- XOM: 800sh @ $144.77 avg, live Alpaca price $156.52, unrealized +$9,400 (+8.12%), GTC trailing-stop 10% live (stop $142.84, hwm $158.71) — still short of the +15%/+20% tighten thresholds, no stop action needed
+
+### Market Context
+- **Today is an FOMC decision day** — Fed meeting 7/28-29, rate decision at 2:00pm ET; consensus expects the benchmark rate held at 3.50%-3.75% (Polymarket ~26% priced a hike per one source, an outlier read worth treating skeptically)
+- **Microsoft and Meta report after today's close** — flagged across multiple sources as "the market's most critical day of the year," with AI-capex/cloud-growth scrutiny as the swing factor; Apple reports tomorrow (7/30)
+- WTI/Brent: sources wildly inconsistent again (WTI quotes from $67-$75, Brent $70-$80, with several stale-dated snippets mixed in) — recurring data-quality issue, same as 7/22 and 7/24 sessions. Best-supported recent read: oil "rebounded sharply overnight" on Iran tension per a same-day source, consistent with the ongoing geopolitical risk premium underpinning the XOM thesis
+- S&P 500 futures: roughly flat, slightly negative (~7,580, -0.15%); cash S&P closed higher Tuesday on Boeing/Coca-Cola strength, offsetting a chip-stock selloff ahead of this week's tech earnings
+- VIX: sources again contradictory (16.1-20.95 range, multiple stale/mismatched dates) — same reliability problem flagged repeatedly this month; treat as elevated/uncertain, not a specific level
+- Earnings before open: no clean BMO list obtained (tooling returned mostly stale/no-data results); known reporters this week include PG, QCOM, SBUX, FTNT, ARM, WING (today, timing unconfirmed) — none in Energy/Materials/Staples lane with a same-day catalyst for us
+- Economic calendar: no new CPI/PPI/jobs print today (last CPI was June, next is mid-August); the FOMC decision itself is the day's economic event
+- Sector momentum YTD: Energy remains #1 (roughly +15-24% across sources), Technology has climbed into a strong #2 (+16-23%, boosted by AI trade), Industrials/Materials/Consumer Staples still solidly positive; Financials, Consumer Discretionary, Health Care lagging
+- XOM (existing position): live Alpaca price $156.52 is the trustworthy figure — external search results were badly stale/scattered ($136-$140 range, mixed old dates). Citi cut its PT to $155 from $175 (Neutral) — now below spot, a soft signal but not thesis-breaking on its own; Piper Sandler still Buy, RBC Hold. No new negative catalyst found; general Big Oil headline noise (DOJ gasoline-pricing probe mention) is old news already reflected in price
+
+### Trade Ideas
+1. No new name today — FOMC decision at 2pm ET is a binary macro event that can whipsaw any sector in either direction within hours; initiating a new position ahead of it doesn't clear the "specific, dated stock catalyst" bar and adds unnecessary event risk. Reassess after the decision + press conference digest, ideally next session.
+2. Energy peers (CVX, etc.) — no company-specific catalyst today; oil's reported overnight bounce is a continuation of the existing XOM thesis, not a fresh trigger for a second name.
+3. Tech now YTD #2 sector, but MSFT/META report after tonight's close — far too binary/earnings-adjacent to enter pre-print in any name; watchlist only, reassess after prints land.
+
+### Risk Factors
+- **FOMC 2pm ET decision + MSFT/META earnings after close** — today is explicitly flagged across sources as the highest-stakes single session in recent weeks; expect elevated intraday volatility across the board, including in Energy/XOM via general risk-sentiment spillover even without a rate surprise
+- Data-quality problem is now a recurring, multi-session pattern (oil and VIX figures internally inconsistent again, same as 7/22 and 7/24) — cross-checked account/position figures against live Alpaca data rather than trusting search results
+- XOM +8.12% unrealized, getting closer to the +15% trail-tighten trigger — watch next session, no action needed yet (stop already active at $142.84)
+- Citi's XOM PT cut to $155 (below current $156.52 spot) is a mild caution flag on further near-term upside from analysts' view, though not a sell signal
+- Deployment still ~12.4% vs 75-85% target, 0/3 trades this week — recurring gap, now compounded by missing log entries for 7/27 and 7/28 (worth confirming the scheduled workflow ran those days and just didn't log, vs. didn't run at all)
+
+### Decision
+HOLD — no new trades today. FOMC decision (2pm ET) and MSFT/META earnings (after close) make this a high-event-risk session; adding a position ahead of a binary macro catalyst breaks the "specific stock catalyst" discipline for no edge. XOM thesis intact, unrealized +8.12%, GTC trailing stop active at $142.84 (well clear of current price) and will handle any FOMC-driven drawdown mechanically without manual intervention. Reassess new-name entries next session once the Fed decision and mega-cap earnings reactions are known.

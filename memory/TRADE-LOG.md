@@ -46,3 +46,12 @@ No new trades. 1 open position (XOM), thesis intact, GTC trailing stop active (s
 | XOM | 800 | $144.77 | $151.80 | +2.32% | +$5,624.00 (+4.86%) | $136.58 GTC trailing 10% (hwm $151.76) |
 
 **Notes:** Quiet no-trade day, as previewed in the market-open check. XOM continued its run, up 2.3% intraday to $151.80, pushing the trailing stop's high-water mark to $151.76 and the stop itself up to $136.58 — the position is now up nearly 5% unrealized. Portfolio gained $2,680 (+0.27%) on the day, all from XOM's move; cash sat untouched at $884,184 (87.9%). Zero trades today, zero trades this week (0/3), and deployment remains stuck at ~12% vs. the 75-85% target for a third straight session — the bot continues to wait for a dated catalyst outside the weak Tech rally rather than force a trade.
+
+### Jul 30 — EOD Snapshot (Day 14, Thursday)
+**Portfolio:** $1,010,486.15 | **Cash:** $884,183.99 (87.5%) | **Day P&L:** +$3,870.16 (+0.38%) | **Phase P&L:** +$10,486.15 (+1.05%)
+
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|
+| XOM | 800 | $144.77 | $157.88 | +0.72% | +$10,486.16 (+9.05%) | $143.16 GTC trailing 10% (hwm $159.07) |
+
+**Notes:** Another significant logging gap — no market-open or EOD entries exist for Jul 22-29 (six trading days), continuing the pattern already flagged on 7/20 and 7/24; this routine has not run reliably over that stretch. Alpaca's live history confirms no new trades were placed in the gap: still just the single XOM position and its original GTC trailing-stop order (now resting at $143.16, trailed up from a $159.07 high). Day P&L computed from Alpaca's own last_equity ($1,006,615.99, Wed Jul 29 close) rather than the stale Jul 21 log line, per the same convention used on 7/20. XOM is now up +9.05% unrealized, still short of the +15% trail-tighten trigger. Cash sits at $884,184 (87.5%) — deployment remains stuck at ~12.5% vs. the 75-85% target, now roughly two and a half weeks running with only one position and 0/3 trades used this week. Zero trades today.

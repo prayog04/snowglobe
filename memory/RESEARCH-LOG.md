@@ -255,3 +255,38 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-07-30 — Pre-market Research (run inline during market-open; entries missing 7/25-7/29)
+
+### Account
+- Equity: $1,009,079.99
+- Cash: $884,183.99
+- Buying power: $3,886,444.76 (margin, 4x)
+- Positions: 1 (XOM, 800 sh), deployed $124,896 = **12.4%** of equity — still well under the 75-85% target
+- Daytrade count: not reported by API (0 day trades taken)
+- Trades this week (since Mon 7/27): 0/3 — verified via full Alpaca order history (only the original 7/15 XOM buy + its GTC trailing stop exist, no other orders)
+- XOM: 800sh @ $144.77 avg, current $156.12, unrealized +$9,080 (+7.84%), GTC trailing-stop 10% live (stop $143.16, hwm $159.07) — below +15%/+20% tighten thresholds, no stop action needed
+
+### Market Context
+- WTI ~$71-75, Brent ~$75-78 (source spread as usual) — Middle East/Iran tension still a live risk premium on oil per today's catalyst summary
+- S&P 500 futures: modestly higher premarket (~+0.5-0.7% depending on source) after Wednesday's sharp selloff
+- VIX: source disagreement again (17-24 range across snapshots) — treat as elevated/uncertain, don't trust a single print
+- Fed held rates at 3.5-3.75% Wednesday; market sold off hard same day on inflation-containment concerns; AI/semis extended their decline (SOX -5.3%, Micron -9.9%)
+- Today's macro: Q2 GDP advance, Core PCE, personal income/spending, employment cost index, jobless claims — all 8:30am ET, high-impact
+- Earnings before open: Mastercard (MA), Altria (MO) confirmed pre-market; CVS, Cigna, Valero (VLO), Comcast, AbbVie, BMS, PBF Energy also listed same-day (time unconfirmed). Apple/Amazon report after close today.
+- Sector momentum YTD (unchanged from 7/22-7/24 framework): Energy #1 (+22-26%), Materials/Consumer Staples #2/#3 (+16-18%), Industrials #4 (+10-14%) leading; Tech (-3-6%), Financials (-6-7%), Consumer Discretionary (-4%) lagging
+- XOM (existing position): web/Perplexity price data stale again ($137 quote dated 7/3) — live Alpaca price ($156.12) is the trustworthy source. Citi cut PT to $155 (from $175, Neutral) — below current price but not thesis-breaking; no company-specific news today.
+
+### Trade Ideas
+1. No new name today — Altria (MO, Staples) and Valero (VLO, Energy) both report before today's open in our momentum sectors, but per strategy rule we wait for the print + reaction, not buy blind into earnings.
+2. GDP/Core PCE at 8:30am ET is a real macro risk event on top of Wednesday's rate-hold selloff — poor day to initiate a new position ahead of data.
+3. No other Energy/Materials/Staples name has an independent dated catalyst today.
+
+### Risk Factors
+- **Reliability gap**: no RESEARCH-LOG or TRADE-LOG entries exist for 7/25 through 7/29 (5 trading days) — the scheduled market-open/pre-market routines appear not to have run over that stretch. Verified via Alpaca order history that no trades were missed/unlogged during the gap (only 2 total orders exist, both from 7/15). This is now a recurring pattern (prior gaps: 7/14-7/19, 7/23) and should be escalated as an operational issue, not just noted.
+- GDP/PCE data + Fed's rate-hold stance creates elevated macro volatility risk today; VIX readings inconsistent but trending higher than last week
+- Deployment stuck at ~12% vs 75-85% target — now well over a dozen sessions under target; XOM's trailing stop is the only active risk control
+- Two of today's momentum-sector earnings (MO, VLO) are watch-only per the no-blind-earnings rule; revisit post-print if reaction is strong and thesis-clean
+
+### Decision
+HOLD — no new trades. Both today's on-thesis-sector earnings (Altria/Staples, Valero/Energy) require waiting for print+reaction, not entering blind. GDP/Core PCE due at 8:30am ET adds macro risk on top of Wednesday's rate-hold selloff — not a day to initiate new exposure ahead of data. XOM position intact, thesis unbroken (Citi PT cut noted, not thesis-breaking), GTC trailing stop active well below tighten thresholds. Flagging the 7/25-7/29 logging/scheduling gap as a recurring operational issue needing attention outside of trading logic.

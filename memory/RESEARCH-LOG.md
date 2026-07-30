@@ -255,3 +255,40 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-07-30 — Pre-market Research
+
+### Account
+- Equity: $1,008,983.99
+- Cash: $884,183.99
+- Buying power: $3,886,175.96 (margin, 4x)
+- Positions: 1 (XOM, 800 sh), deployed $124,800 = **12.4%** of equity — deployment gap unchanged
+- Daytrade count: not reported by API (0 day trades taken)
+- Trades this week (since Mon 7/27): 0/3
+- XOM: 800sh @ $144.77 avg, current $156.00 (live Alpaca; matches WSJ close $156.75 as of 7/29 4:04pm ET), unrealized +$8,984 (+7.76%), GTC trailing-stop 10% live (stop $143.16, hwm $159.07) — well short of +15%/+20% tighten thresholds, no stop action needed
+
+### Market Context
+- WTI ~$71.10 (-2.9%), Brent ~$74.76 (-3.0%) — reversal from the mid-July Hormuz spike continues, roughly stable vs. late last week
+- S&P 500 futures: mixed/roughly flat, ~7,465 on the most current quote (range 7,460-7,580 across sources/timing)
+- VIX: data unusable again today — one snippet shows 20.95 but is mismatched/stale-dated (tagged Feb 2026), other sources show mid-to-high teens (16-19); third consecutive session this metric has come back contradictory (flagged 7/22, 7/24) — not citing a specific level, treat vol as unconfirmed
+- Fed: FOMC held rates yesterday (7/29), no dot plot this meeting — event is now behind us, not a forward risk
+- Today's econ calendar is a heavy data day: Q2 GDP advance estimate, June Core PCE, Personal Income/Spending, Initial + Continuing Jobless Claims, Employment Cost Index, Chicago PMI, Michigan Consumer Sentiment (final) — no CPI/PPI today (both already printed earlier in the month)
+- Earnings before open: Mastercard, Altria, Bristol-Myers, Southern Co, Exelon, CVS, AB InBev; Valero (VLO, Energy refiner) also reports today per one source, timing unconfirmed. Apple and Amazon report after today's close — mega-cap, not our sector, but a likely driver of broad sentiment/volatility into tomorrow
+- Sector momentum YTD: Energy remains #1 across all sources (range +16-24% depending on source/date) — still the clearest leader; ranking of #2-4 spots is noisy and inconsistent across sources as in prior sessions (one source shows Tech #2 YTD despite this week's tech-selloff headlines) — treat sub-rankings with caution, Energy leadership is the one durable signal
+- XOM: no thesis-breaking news. Citi cut its price target to $155 (from $175, still Neutral) and Goldman reiterated Hold at $157 — both targets now sit essentially at the current $156 price, signaling the Street sees limited near-term re-rating upside from here; Piper Sandler maintains Buy. Divergent analyst views, no consensus downgrade
+
+### Trade Ideas
+1. No new name today — VLO earnings this morning is Energy-sector-adjacent but not an independent catalyst for a new position; wait for print + reaction, don't buy blind into earnings (per strategy rule).
+2. XOM: Citi/Goldman price targets now clustered near the current price — not a catalyst to add to the existing position or open a second Energy name; a genuine new dated catalyst is still needed. Monitor for any downgrade follow-through.
+3. Materials/Consumer Staples — no company-specific dated catalyst today that clears the entry checklist; watchlist only.
+
+### Risk Factors
+- Heavy macro data morning (Q2 GDP advance + June Core PCE + jobless claims, all pre-open) — real risk of a sharp broad-market move on the print; a reason for extra caution on any new entry today, not less
+- AAPL/AMZN report after today's close — broad market volatility risk carrying into tomorrow's session even though neither is in our sector
+- VIX data has now come back contradictory/unusable for a third straight flagged session (7/22, 7/24, 7/30) — this metric may need a single pinned source going forward rather than trusting aggregated Perplexity search results
+- Sell-side price targets on XOM (Citi $155, GS $157) now sitting at/below the live price — limited further re-rating tailwind from analysts; the 10% trailing stop remains the actual risk control and needs no adjustment yet
+- Scheduled-run logging gap: no RESEARCH-LOG or TRADE-LOG entries exist for 7/27, 7/28, or 7/29 — a third gap this month (after 7/14-7/19 and 7/23) — routine reliability continues to be an unresolved, recurring issue
+- Deployment remains stuck at 12.4% vs. 75-85% target; the 7/24 flag to treat this as an active decision point next week produced no documented action during the (unlogged) 7/27-7/29 stretch — repeating the flag, but today's GDP/PCE data risk argues for patience over forcing a trade, not urgency
+
+### Decision
+HOLD — no new trades. XOM thesis intact (+7.76% unrealized), stop safely below at $143.16, well short of any tighten trigger. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — VLO earnings is Energy-adjacent but requires waiting for the print; today's GDP/Core PCE data risk further argues against forcing a new entry into an unsettled macro morning. Flagging (again) the persistent under-deployment and the newly-identified 7/27-7/29 logging gap for review.

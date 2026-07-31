@@ -255,3 +255,29 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-07-31 — Midday Scan (afternoon addendum; no pre-market entry exists for 7/25-7/31)
+
+### Account
+- Equity: $1,008,047.99
+- Cash: $884,183.99
+- Buying power: $3,883,555.16 (margin, 4x)
+- Positions: 1 (XOM, 800 sh), deployed $123,864 = **~12.3%** of equity — still far under the 75-85% target
+- Trades this week: 0/3 (week context uncertain due to missing 7/27-7/30 logs)
+- XOM: 800sh @ $144.77 avg, current $154.69, unrealized +$7,936 (+6.85%), GTC trailing-stop 10% live (stop $143.16, hwm $159.07) — below +15%/+20% tighten thresholds, not at -7% cut
+
+### Market Context
+- XOM reported Q2 2026 earnings before today's open: adjusted EPS $3.52 (missed est. $3.68 by 4.3%), revenue $116B (beat est. $95.8B by 21.1%), net income $14.5B (>2x YoY), operating cash flow $23.6B, free cash flow $17.2B, $9.4B shareholder distributions
+- Reported 10% upstream production loss from Middle East disruptions, offset by record non-Middle-East production — consistent with the original Strait-of-Hormuz supply-risk thesis, not a break of it
+- Stock reaction: down ~1.4-2.4% intraday on the EPS-miss headline (revenue/cash-flow strength not the focus of the initial move) — a normal earnings-day pullback on otherwise strong fundamentals
+
+### Trade Ideas
+- None evaluated this session — midday scan is position-management only, not a new-candidate search
+
+### Risk Factors
+- **Logging gap:** no RESEARCH-LOG or TRADE-LOG entries exist for 7/25 through 7/30 (5 trading days) — scheduled runs appear not to have executed or logged over that stretch, compounding the earlier 7/14-7/19 and 7/23 gaps already flagged. This is now a repeated reliability issue across multiple weeks, not isolated incidents.
+- Deployment stuck at ~12% vs. 75-85% target for well over a week with 0 new trades logged — recurring pattern, previously flagged as needing an active decision, still unresolved.
+- XOM's EPS miss could pressure near-term sentiment further; trailing stop ($143.16) is the built-in defense, no manual action warranted on today's data.
+
+### Decision
+HOLD — no new trades, no stop changes. XOM thesis intact (Middle East disruption + oil premium confirmed by the print itself); today's EPS-miss-driven pullback is a normal earnings reaction, not a thesis break, and the position remains well above its trailing stop. Flagging the 7/25-7/30 logging gap and the persistent under-deployment as issues for the next session/review to address directly rather than defer again.

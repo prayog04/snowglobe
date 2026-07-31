@@ -46,3 +46,12 @@ No new trades. 1 open position (XOM), thesis intact, GTC trailing stop active (s
 | XOM | 800 | $144.77 | $151.80 | +2.32% | +$5,624.00 (+4.86%) | $136.58 GTC trailing 10% (hwm $151.76) |
 
 **Notes:** Quiet no-trade day, as previewed in the market-open check. XOM continued its run, up 2.3% intraday to $151.80, pushing the trailing stop's high-water mark to $151.76 and the stop itself up to $136.58 — the position is now up nearly 5% unrealized. Portfolio gained $2,680 (+0.27%) on the day, all from XOM's move; cash sat untouched at $884,184 (87.9%). Zero trades today, zero trades this week (0/3), and deployment remains stuck at ~12% vs. the 75-85% target for a third straight session — the bot continues to wait for a dated catalyst outside the weak Tech rally rather than force a trade.
+
+### Jul 31 — EOD Snapshot (Day 15, Friday)
+**Portfolio:** $1,009,464.07 | **Cash:** $884,183.99 (87.6%) | **Day P&L:** -$295.92 (-0.03%) | **Phase P&L:** +$9,464.07 (+0.95%)
+
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|
+| XOM | 800 | $144.77 | $156.60 | -0.24% | +$9,464.08 (+8.17%) | $143.16 GTC trailing 10% (hwm $159.07) |
+
+**Notes:** Major logging gap — no scheduled runs (market-open, EOD, or research) landed anything to memory between Jul 24 and today; last committed entry before this one was the Jul 24 market-open HOLD. Alpaca's own order/position history confirms nothing changed operationally in that window: still exactly 1 position (XOM, 800sh, same $144.77 entry), only 1 order on the book (the original Jul 15 GTC trailing stop, now trailing at $143.16 off a $159.07 high), no fills recorded. Day P&L computed off Alpaca's last_equity ($1,009,759.99, balance as of 7/30) since no fresher EOD snapshot exists; portfolio essentially flat today (-0.03%) on a small XOM pullback (-0.24%), with cumulative phase P&L still positive at +0.95% since the $1,000,000 baseline. Deployment remains stuck at ~12.4% vs. the 75-85% target and 0/3 trades used this week (Jul 27-31) — now compounded by a full week of missed scheduled runs. Flagging the reliability gap as the top priority: verify the market-open/midday/EOD cron schedule is actually firing before treating "no trades" as a strategy decision rather than a workflow failure.

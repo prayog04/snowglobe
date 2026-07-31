@@ -255,3 +255,36 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-07-31 — Pre-market Research (run inline during market-open; entry was missing)
+
+### Account
+- Equity: $1,006,519.99
+- Cash: $884,183.99
+- Buying power: $3,879,276.76 (margin, 4x)
+- Positions: 1 (XOM, 800 sh), deployed $122,336 = **12.2%** of equity — under the 75-85% target for an extended multi-week stretch
+- Daytrade count: not reported by API (0 day trades taken)
+- Trades this week (since Mon 7/27): 0/3 — confirmed via live closed-order history (empty)
+
+### Market Context
+- WTI ~$71-73, Brent ~$75-76 — sources still somewhat inconsistent, but broadly lower vs. mid-July spike highs
+- S&P 500 futures: +0.5% premarket (ES ~7,499, +0.35%), Nasdaq 100 +1.1% — lifted by strong Amazon and Microsoft AI/cloud earnings; Apple reaction softer
+- VIX: ~18 (WSJ delayed print 17.98); other sources still noisy (15.8-20.95 range with stale/mismatched dates) — same data-quality caveat as prior sessions
+- Today's catalysts: dense mega-cap + Energy earnings morning — XOM, CVX, ABBV, LIN, ETN, SMFG all reported before open; Employment Cost Index (Q2) 8:30am, Chicago PMI and Michigan Sentiment final later in the morning; no CPI/PPI/FOMC today
+- Sector momentum YTD: Energy #1 (+22.3%), Consumer Staples (+16.0%), Materials (+15.7%), Industrials (+11.9%) leading; Financials (-5.7%), Consumer Discretionary (-4.6%), Tech (-3.8%) lagging — unchanged leadership from recent sessions
+- XOM (existing position): reported Q2 this morning — adjusted EPS $3.52, revenue $116.0B beat consensus ($109.9B), but adjusted net income $14.7B came in below the ~$15.7B analyst estimate cited by Reuters. Stock down ~2.6% today to $152.92 on the mixed print; position still +5.6% unrealized overall. GTC trailing stop live and unaffected: stop $143.16, hwm $159.07 (well above current price).
+- CVX: reported Q2 this morning — EPS $6.11 beat, revenue $70.06B beat, FCF $18.1B, strong print. Reaction reported as positive but magnitude wildly inconsistent across sources (+0.5% to +2.7% cited). Live Alpaca quote showed an abnormally wide bid/ask spread on both CVX (~$182 bid / ~$193-205 ask) and XOM (~$146 bid / $157 ask), both flagged with condition "R" — not a safe basis for a market order right now.
+
+### Trade Ideas
+1. CVX — Q2 beat (EPS, revenue, FCF all above estimates), Energy-sector momentum still #1 YTD — clears catalyst + sector-momentum criteria on paper, but live quote spread is too wide/unreliable to execute safely today; WATCH, do not buy blind into earnings on bad execution data. Revisit once spread normalizes, entry ~market, stop -8%, target +16%, R:R 2:1 if conditions clean up.
+2. XOM (existing) — thesis still intact overall (+5.6% unrealized) despite today's earnings-day pullback on a mixed print; no action needed, stop unaffected.
+3. Materials/Consumer Staples — no fresh company-specific dated catalyst today; watchlist only.
+
+### Risk Factors
+- Quote-data reliability: both XOM and CVX showing abnormally wide, likely-erroneous bid-ask spreads (condition "R") on live Alpaca quotes this morning, right after both companies' earnings — same class of data-quality issue flagged 7/24 with Perplexity; not treating this as tradeable until it normalizes.
+- XOM's own Q2 print was a mixed/slight miss vs. the higher $15.7B consensus despite a clear revenue beat — stock down 2.6% today; watching for thesis-breaking follow-through, though position remains net positive (+5.6%) and the GTC stop is untouched.
+- VIX/oil readings from Perplexity remain noisy across sources — treat as elevated/uncertain, not a precise print.
+- Deployment stuck at ~12% vs. 75-85% target for an extended multi-week stretch — continuing to flag, not forcing a trade on unreliable execution data to close the gap.
+
+### Decision
+HOLD — no new trades today. CVX clears the catalyst + sector-momentum checklist on paper (Q2 beat, Energy leadership intact) but live quote spreads on both CVX and XOM are abnormally wide right after their earnings releases — not a safe basis for a market order, so not forcing it. XOM thesis intact despite today's earnings-day pullback; GTC trailing stop active and unaffected. Revisit CVX next session once quote data normalizes.

@@ -255,3 +255,35 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-07-31 — Pre-market Research
+
+### Account
+- Equity: $1,007,583.99 | Cash: $884,183.99 (87.8%) | Buying power: $3,882,255.96 (margin, 4x)
+- Positions: 1 (XOM, 800 sh), market value $123,400 = **12.25%** deployed — logging gap 7/25-7/30 means no session ran, but live order history confirms 0 new trades placed since 7/15; still 0/3 used this week (new week started Mon 7/27)
+- Daytrade count: not reported (0 day trades)
+- XOM: 800sh @ $144.77 avg, current $154.25 (lastday $156.97, -1.73% intraday), unrealized +$7,584 (+6.55%), GTC trailing-stop 10% live (stop $143.16, hwm $159.07) — below +15%/+20% tighten thresholds, no stop action needed
+
+### Market Context
+- **XOM (our position) reports Q2 earnings before today's open** — flagged as a known dated catalyst back on 7/22, now live. CVX (Energy peer) also reports premarket. This is the session's single biggest catalyst for our book.
+- Big-cap tech earnings whipsaw dominating tape: AMZN beat and surging premarket (lifting Nasdaq futures broadly), AAPL missed on Services/China revenue and fell — mixed tech signal, not a directional read for our Energy-only book
+- Oil: WTI ~$71, Brent ~$75 (sources noisy, range ~$69-74/$74-78) — roughly flat vs. last week's post-spike reversal level, no fresh directional move
+- S&P/Nasdaq futures: higher premarket, driven by AMZN reaction; source spread wide (~7,465-7,580) as usual — read as "modestly higher," not a precise level
+- VIX: data was again internally contradictory across sources (readings 16-21 with several stale-dated snippets) — same recurring data-quality issue as 7/22 and 7/24; treat as "moderate, un-pinned" rather than trusting a single print
+- Econ calendar today: Employment Cost Index (Q2) 8:30am, Chicago PMI 9:45am, final Univ. of Michigan consumer sentiment + inflation expectations 10am — no CPI/PPI/FOMC (FOMC was earlier this week, 7/28-29)
+- Sector momentum YTD: Energy still #1, Materials/Consumer Staples/Industrials next — consistent with prior sessions; Tech YTD figures still contradictory across sources but full-week AI-earnings strength (AMZN, TSMC, Arm) is a short-term pop, not a change to the momentum-leadership framework
+- XOM-specific news search returned stale/contradictory prices (mixing Jan-Jul dated snippets) — live Alpaca price ($154.25) is the trustworthy figure, not the search results
+
+### Trade Ideas
+1. No new name today — the one live, dated catalyst in our lane (XOM earnings) is on an existing position, not a new entry; per strategy, do not add or resize around an earnings print. WAIT for the print + reaction; GTC trailing stop ($143.16) is the built-in risk control regardless of outcome.
+2. CVX earnings (Energy peer, premarket) — no independent trigger for a new position; would also be a same-day-earnings entry, which the strategy explicitly avoids. Watchlist only.
+3. AMZN/AAPL tech divergence — Tech remains the weakest YTD sector under our momentum framework; a one-day earnings-driven pop/drop in mega-cap tech doesn't clear the sector-momentum bar for a new name.
+
+### Risk Factors
+- XOM reports Q2 earnings this morning — expect elevated intraday volatility on our only position; do not move the stop down or react preemptively pre-print, per hard rules
+- Research data-quality issue recurs for a third time (VIX, oil, and XOM price snapshots all internally inconsistent/stale-dated) — cross-checked account/position figures against live Alpaca data instead
+- Research-log gap: no pre-market/market-open entries exist for 7/25, 7/27-7/30 — a full week of missed scheduled runs (live order history confirms no trades were missed, only logging); worth a review of whether the scheduled workflow is firing reliably
+- Deployment still ~12.25% vs. 75-85% target, unchanged for over a week with 0/3 trades used this week — same recurring under-deployment flag as prior sessions, no action taken yet
+
+### Decision
+HOLD — no new trades today. XOM's Q2 earnings print this morning is the one real catalyst in play, and it's on the existing position, not a new-entry candidate; per strategy, don't buy or add blind into an earnings print. GTC trailing stop (stop $143.16, hwm $159.07) is the risk control for whatever the reaction is. No other name clears the specific-catalyst + sector-momentum + 2:1 R:R bar. Under-deployment (12.25% vs 75-85%) and the 7/25-7/30 logging gap are both flagged again, still unresolved.

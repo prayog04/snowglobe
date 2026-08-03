@@ -255,3 +255,39 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-08-03 — Pre-market Research
+
+### Account
+- Equity: $1,006,843.19
+- Cash: $884,183.99
+- Buying power: $3,880,181.72 (margin, 4x)
+- Positions: 1 (XOM, 800 sh), deployed $122,659 = **12.2%** of equity — still well under the 75-85% target
+- Daytrade count: not reported by API (0 day trades taken)
+- Trades this week (new week starting today): 0/3
+- XOM: 800sh @ $144.77 avg, current $153.32, unrealized +$6,843 (+5.91%), GTC trailing-stop 10% live (stop $143.16, hwm $159.07) — price has pulled back ~3.6% off its high; stop cushion is ~6.6% below current price, no action needed, never at the +15%/+20% tighten thresholds
+
+### Market Context
+- WTI ~$71 (Brent ~$75), consistent with last Friday's level — no fresh oil catalyst today; several stale/conflicting snapshots as usual, treated the most-recent dated ones as authoritative
+- S&P 500 futures: ~7,571, +0.56% premarket
+- VIX: source data contradictory again (readings spanning 16.9-20.95 across snapshots, some clearly stale-dated) — same recurring data-quality issue flagged repeatedly; treat as elevated/uncertain, don't trust a single print
+- Today's catalysts: Amazon's blowout Q2 (AWS +37% YoY to $42.2B) reviving the AI/cloud trade, lifting broad tech/cloud sentiment; ISM Manufacturing PMI, final S&P Global Manufacturing PMI, and construction spending all due at 10am ET; Palantir reports today (high-valuation Tech name, not our lane); China manufacturing PMI unexpectedly contracted (soft global cyclical signal); Fed held rates at the 7/29 meeting with a perceived dovish tone from Powell, three dissents
+- Earnings before open: no confirmed Energy/Materials/Staples reporter today; Clorox, TKO Group, Palantir, Williams Cos sit outside our momentum lane
+- Economic calendar: ISM Manufacturing PMI + S&P Global Manufacturing PMI final + construction spending today (10am ET); no CPI/PPI print today (next CPI later this month); this week's headline event is Friday's July nonfarm payrolls jobs report
+- Sector momentum YTD: Energy still #1 (+23.3%), Materials #2 (+17.4%), Consumer Staples #3 (+15.6%), Industrials #4 (+14.1%) leading; Financials (-6.9%), Consumer Discretionary (-3.8%), Tech (-3.3%) lagging — despite today's Amazon-driven Tech/cloud pop, YTD leadership framework is unchanged
+- XOM (existing position): live Alpaca price $153.32, down ~1.4% intraday and off its $159.07 trailing-stop high; analyst sentiment mixed (Citi cut PT to $155 from $175, Neutral; Piper Sandler Buy; RBC Hold) — web search XOM quotes were stale/conflicting ($136-140, dated mid-to-late July), Alpaca live data is the trustworthy source per established practice; no thesis-breaking news, pullback looks like normal digestion after the run to $159
+
+### Trade Ideas
+1. No new name today — Amazon/AWS-driven Tech rally is a one-day event in our weakest YTD sector (Tech -3.3%); chasing it contradicts the sector-momentum rule. Watchlist only.
+2. Materials (LIN/FCX/XLB) — #2 YTD sector, no company-specific dated catalyst today; watchlist only, doesn't clear entry checklist.
+3. Consumer Staples — #3 YTD sector, no confirmed reporter today; watchlist only pending a dated trigger.
+
+### Risk Factors
+- A full week (7/27-7/31) has no research-log or trade-log entries at all — a third scheduled-run logging gap on top of the earlier 7/14-7/19 and 7/23 gaps; the XOM GTC stop order shows it was updated 7/29 (hwm reached $159.07), so activity/monitoring did happen live on Alpaca even though it wasn't logged — worth confirming the scheduled workflow is firing reliably every session
+- XOM has pulled back ~3.6% off its high while still comfortably above the trailing stop (6.6% cushion) — not thesis-breaking, but the first real pullback since entry; monitor for further weakness
+- VIX data quality remains poor/contradictory across sources — recurring issue, don't trust a single print
+- Friday's nonfarm payrolls is this week's key macro catalyst — positioning risk builds into it
+- Deployment stuck at 12.2% vs. 75-85% target for a 7th+ consecutive session tracked — recurring gap continues with no action taken
+
+### Decision
+HOLD — no new trades today. XOM thesis intact, stop active with healthy cushion; today's Amazon/Tech rally doesn't fit our Energy/Materials/Staples momentum framework and no name in our lane clears the specific-catalyst checklist. Flagging the missing 7/27-7/31 log week and the persistent under-deployment as items for review.

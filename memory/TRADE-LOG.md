@@ -46,3 +46,12 @@ No new trades. 1 open position (XOM), thesis intact, GTC trailing stop active (s
 | XOM | 800 | $144.77 | $151.80 | +2.32% | +$5,624.00 (+4.86%) | $136.58 GTC trailing 10% (hwm $151.76) |
 
 **Notes:** Quiet no-trade day, as previewed in the market-open check. XOM continued its run, up 2.3% intraday to $151.80, pushing the trailing stop's high-water mark to $151.76 and the stop itself up to $136.58 — the position is now up nearly 5% unrealized. Portfolio gained $2,680 (+0.27%) on the day, all from XOM's move; cash sat untouched at $884,184 (87.9%). Zero trades today, zero trades this week (0/3), and deployment remains stuck at ~12% vs. the 75-85% target for a third straight session — the bot continues to wait for a dated catalyst outside the weak Tech rally rather than force a trade.
+
+### Aug 03 — EOD Snapshot (Day 16, Monday)
+**Portfolio:** $1,008,143.99 | **Cash:** $884,183.99 (87.7%) | **Day P&L:** -$392.00 (-0.04%) | **Phase P&L:** +$8,143.99 (+0.81%)
+
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|
+| XOM | 800 | $144.77 | $154.95 | -0.32% | +$8,144.00 (+7.03%) | $143.16 GTC trailing 10% (hwm $159.07) |
+
+**Notes:** Major logging gap: no market-open or EOD entries exist for Jul 22-23 or Jul 27-31 (6 trading days) — this routine appears not to have run over that stretch, the second such gap after the Jul 14-19 one. Confirmed via Alpaca closed-order history that no new trades filled during the gap or today — the account still holds only the original XOM buy from Jul 15, position and stop order unchanged in structure since Jul 21 aside from the trail ratcheting up with price. Day P&L computed from Alpaca's last_equity ($1,008,535.99) rather than the stale Jul 21 log line, per the established precedent for bridging logging gaps. XOM closed slightly softer today (-0.32%) but remains up 7.03% unrealized, still short of the +15% trail-tighten trigger; stop has trailed up to $143.16 off a $159.07 high. Cash sits at $884,184 (87.7%), deployment still ~12.3% vs. the 75-85% target — now a persistent, multi-week pattern rather than a transient wait for a catalyst; worth an explicit decision next session on whether the entry bar is too high. Trades today: none. Trades this week: 0/3 (week resets today, Monday).

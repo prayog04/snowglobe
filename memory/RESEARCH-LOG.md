@@ -255,3 +255,38 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-08-03 — Pre-market Research (run inline during market-open; no separate pre-market entry existed for 7/25, 7/28-8/1 — logging gap continues, see Risk Factors)
+
+### Account
+- Equity: $1,006,975.99 | Last equity: $1,008,535.99
+- Cash: $884,183.99
+- Buying power: $3,880,553.56 (margin, 4x)
+- Positions: 1 (XOM, 800 sh), market value $122,792 = **12.2%** of equity — still well under the 75-85% target
+- Daytrade count: not reported by API (0 day trades taken)
+- Trades this week (new week, Mon 8/3): 0/3
+- XOM: 800sh @ $144.77 avg, current $153.52, unrealized +$7,000 (+6.04%), GTC trailing-stop 10% live (stop $143.16, hwm $159.07) — well below +15%/+20% tighten thresholds, no stop action needed. Note current price down slightly from XOM's earlier ~$157-159 high — normal pullback, stop untouched.
+
+### Market Context
+- WTI ~$71-74, Brent ~$74-78 (sources vary but converge low-70s/mid-70s) — oil fell back below $80, continuing the reversal from July's Iran-risk spike
+- Headline geopolitical driver today: Trump suspended military action against Iran — easing tensions, which is *bearish* for the oil-supply-risk premium that originally justified the XOM entry (7/15 thesis). XOM's own fundamentals (upstream earnings guided up $3.5-3.9B QoQ per one source) are a separate, still-intact support, but the geopolitical leg of the original thesis is fading.
+- S&P 500 futures +0.5-0.6%, Dow +0.7%, Nasdaq +0.5-1.0% premarket — broad risk-on tone
+- VIX ~18.9 (stale-ish quote, dated 7/29) — moderate, nothing alarming
+- Today's catalysts: ISM Manufacturing PMI (10am ET) + final S&P Global Manufacturing PMI (9:45am ET) are the macro focus; earnings slate includes Palantir, ON Semiconductor, Vertex, Diamondback Energy (Energy peer), Tyson Foods, Marriott, Progressive, Loews — TSN (Consumer Staples, our #2 sector) reports before open but no thesis built yet, would need to wait for print+reaction per no-blind-earnings rule
+- No CPI/PPI/FOMC/jobs today — CPI 8/12, PPI 8/13, FOMC no August meeting shown, Nonfarm Payrolls Friday 8/7 (dominant catalyst for the week, not today)
+- Sector momentum YTD: Energy #1 (+22-27%), Consumer Staples #2 (+10-16%), Materials #3 (+10-17%), Industrials #4 (+10-14%) leading; Financials (-6-7%), Tech (-3-4%), Consumer Discretionary (-3-5%) lagging — same leadership pattern as prior sessions, framework intact
+- XOM-specific web/news search results were stale and unreliable again (quoted $136-140, clearly mid-July data, contradicting live Alpaca price of $153.52) — same recurring data-quality issue flagged 7/22, 7/24; live Alpaca price is the trusted source, not search results
+
+### Trade Ideas
+1. No new name today — TSN (Consumer Staples, before-open earnings) is sector-aligned but has no pre-built catalyst thesis and reports today; per strategy (don't buy blind into earnings), would need to wait for the print and react to actual results, not preempt it.
+2. Diamondback Energy (FANG) also reports today, same sector as XOM — no independent catalyst for a new position pre-print; watch reaction only.
+3. No other name across Energy/Staples/Materials/Industrials clears the specific-dated-catalyst bar today.
+
+### Risk Factors
+- XOM's original entry catalyst (Iran/Hormuz geopolitical oil-risk premium) is actively unwinding as tensions ease and oil falls back under $80 — thesis is shifting from "geopolitical premium" to "fundamentals/earnings," which is a weaker, less dated catalyst; the 10% trailing stop remains the risk control if the position rolls over.
+- No RESEARCH-LOG or TRADE-LOG entries exist for 7/25, 7/28, 7/29, 7/30, 8/1 (Tue-Fri last week + last Tue-Fri) — a third and now much larger scheduled-run logging gap on top of the 7/14-7/19 and 7/23 gaps already flagged. This routine is not firing reliably; flagging for operator attention.
+- Deployment still stuck at ~12% vs. 75-85% target — now roughly 3 weeks under-deployed with no corrective action taken; each session continues to flag it without resolving it.
+- Two Energy-sector earnings today (Diamondback) plus broad earnings breadth (~130 S&P names this week) could move sector sentiment sharply in either direction; no position action pre-print.
+
+### Decision
+HOLD — no new trades. XOM's original catalyst is fading (easing Iran tensions, falling oil) but the position is still profitably in the money (+6.04%) with an intact GTC trailing stop ($143.16) doing the risk management; not selling on thesis-drift alone without a stop trigger or a clear breakdown. No new name clears the catalyst/sector/R:R bar today — TSN and FANG earnings are watch-only until they print. Flagging (again) the multi-week logging gap and persistent under-deployment as items needing operator-level review, not just repeated log notes.

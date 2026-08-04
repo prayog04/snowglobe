@@ -255,3 +255,40 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-08-04 — Pre-market Research
+
+### Account
+- Equity: $1,007,967.99 (last close $1,008,231.99 → Day P&L -$264)
+- Cash: $884,183.99
+- Buying power: $3,883,331.16 (margin, 4x)
+- Positions: 1 (XOM, 800 sh), market value $123,784 = **12.3%** of equity — still well under the 75-85% deployment target
+- Daytrade count: not reported by API (0 day trades taken)
+- Trades this week (since Mon 8/3): 0/3
+- XOM: 800sh @ $144.77 avg, live Alpaca price $154.73, unrealized +$7,968 (+6.88%), GTC trailing-stop 10% live (stop $143.16, hwm $159.07) — below the +15%/+20% tighten thresholds, no stop action needed
+- **Logging gap:** no RESEARCH-LOG or TRADE-LOG market-open entries exist between 2026-07-24 and today (2026-08-04) — roughly 6-7 trading days unlogged. This is now a third instance of this scheduled-run reliability gap (prior ones: 7/14-7/19, 7/23). Flagging for review; account state was reconstructed from live Alpaca data only.
+
+### Market Context
+- **Regime shift since last log (7/24):** Trump reportedly canceled planned Iran strikes / signs of US-Iran de-escalation triggered a sharp oil selloff — WTI ~$71 (from the $85-88 spike seen 7/22), Brent ~$75 (from $91-95). Monday 8/3 saw oil crash further intraday (one source: WTI -7%, Brent -5%) alongside a broad equity rally (Dow record close, Nasdaq +2.1%, Meta +6%, Amazon +4.6% to $3T market cap, Nvidia +3%). The Strait-of-Hormuz risk premium that drove XOM's run-up is actively unwinding.
+- S&P 500 futures: ~7,571 (+0.56%) on one live feed; other snapshots conflict (7,492-7,580) — treat as roughly flat-to-up, not a clean read
+- VIX: contradictory across sources as usual — one dated print shows 20.95 (+12.4%), others in the 16-19 range; given the equity-rally headlines, the higher print looks stale/mistimed. Don't trust a single number today.
+- Today's catalysts: **AMD earnings AMC** (major AI-chip read-through, stock already +7.5% premarket per one source), **SpaceX first-ever public-company earnings AMC** (also starts an insider lock-up clock), JOLTS job openings 10am ET, June trade balance 8:30am ET
+- Earnings before open: Caterpillar, HSBC, Merck, McDonald's, Pfizer (all BMO), **Energy Transfer (ET)** — energy-adjacent but midstream/MLP, not a direct XOM read-through
+- Economic calendar: JOLTS (10am ET) and trade balance (8:30am ET) today; no CPI/PPI/FOMC today — next CPI 8/12, next payrolls report Fri 8/7
+- Sector momentum YTD: Energy still #1 (+15.9% to +24.3% depending on source), Materials #2 (+11-17%), Consumer Staples #3 (+11-16%), Industrials #4 (+11-14%); Tech (-3%), Consumer Discretionary (-4%), Financials (-7%) still lagging — framework unchanged from 7/22-7/24, but the oil reversal is a headwind to the Energy leadership narrative going forward
+- XOM (existing position): web-search price data was stale/wrong again ($137-140, dated late July) — live Alpaca price ($154.73, hwm $159.07) is the trustworthy source per prior sessions' notes. Citi cut PT to $155 from $175 (Neutral) on a stale-dated note; no fresh company-specific news today beyond the oil-driven macro backdrop
+
+### Trade Ideas
+1. No new name today — oil's de-escalation-driven selloff undercuts the geopolitical premium behind the Energy sector's YTD leadership; adding a second Energy position into a reversing commodity does not clear the catalyst bar. XOM's own price is holding up well vs. the oil move (per Alpaca), so the existing thesis isn't broken, but this is not the moment to add exposure.
+2. AMD/SpaceX earnings tonight (AMC) are Tech/aerospace, outside our Energy/Materials/Staples/Industrials momentum lane — no action, just a volatility watch item for tomorrow's open.
+3. Materials/Consumer Staples — still #2/#3 YTD sectors, no company-specific dated catalyst today that clears the entry checklist; watchlist only.
+
+### Risk Factors
+- Oil/Iran de-escalation is a real, not cosmetic, reversal of the catalyst that built the Energy sector's YTD lead — worth reassessing sector-momentum framework if it persists over the next few sessions rather than treating as one-day noise
+- XOM's 10% trailing stop ($143.16 off a $159.07 high) is ~7.5% below the live price — the built-in defense if the oil reversal drags XOM down with a lag; no manual action needed unless price approaches the stop
+- VIX readings were internally contradictory again today (16-21 range across sources) — treat with skepticism, cross-check against realized price action rather than trusting a single print
+- 6-7 trading day logging gap (7/25-8/3) means this session has no visibility into any intervening price action, news, or (absence of) trades beyond what live Alpaca state shows — flagging as a process issue, not a trading one
+- Deployment still ~12.3% vs. 75-85% target — persistent under-deployment pattern continues; no new dated catalyst today changes that
+
+### Decision
+HOLD — no new trades today. XOM position intact, GTC trailing stop active well below current price, unrealized +6.88%. The dominant news is oil's sharp reversal on Iran de-escalation, which is a risk to monitor for the existing Energy thesis (not a stop-loss trigger) rather than a fresh catalyst for a new name — no candidate clears the specific-catalyst + sector-momentum + 2:1 R:R bar today. AMD/SpaceX earnings tonight are outside our sector lane. Flagging the 7/25-8/3 logging gap for review.

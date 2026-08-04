@@ -255,3 +255,34 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-08-04 — Market-open check (research run inline; entries missing since 7/24)
+
+**Logging gap:** no RESEARCH-LOG or TRADE-LOG entries exist for 7/25 through 8/3 (~7 trading days) — a third and by far the largest scheduled-run reliability gap on top of the 7/14-7/19 and 7/23 gaps already flagged. No way to reconstruct what, if anything, this routine did over that stretch from these files alone; Alpaca order history (checked live below) shows no new fills beyond the existing XOM position, so nothing appears to have been missed trade-wise, only logging-wise.
+
+### Account (live Alpaca)
+- Equity: $1,003,919.99 | Cash: $884,183.99 | Buying power: $3,871,996.76 (margin, 4x)
+- Positions: 1 (XOM, 800 sh), deployed $119,728 = **11.9%** of equity — still well under the 75-85% target
+- Trades this week (since Mon 8/3): 0/3
+- XOM: 800sh @ $144.77 avg, current $149.66 (day -3.48%, off lastday $155.06), unrealized +$3,912 (+3.38%) — down from the $158.57-159.07 high-water mark reached late July. GTC 10% trailing stop live and correctly following: stop $143.16, hwm $159.07. Not near -7% cut level, not near +15%/+20% tighten thresholds.
+
+### Market Context
+- Oil has reversed hard from the Hormuz-premium spike: WTI ~$71-74, Brent ~$75-78 across sources (vs. ~$85-90/$91-95 at the mid-to-late-July peak) — the geopolitical risk premium that drove the original XOM entry has substantially unwound.
+- S&P 500 futures near record territory, ~7,477-7,600 depending on source/timestamp; Aug 2 cash close +0.7% at 7,489.72, Nasdaq +1%.
+- VIX readings contradictory again across sources (mid-teens to ~21) — same recurring data-quality issue noted 7/22 and 7/24; not treating any single print as reliable.
+- Today's catalysts: AMD and SpaceX (debut) earnings after today's close, JOLTS job openings, durable/factory orders. No CPI/FOMC today.
+- Sector momentum YTD (per available sources, some stale-dated): Materials/Energy/Consumer Staples/Industrials still leading; Tech/Communications/Discretionary/Financials lagging — consistent with the framework used since 7/20.
+- XOM-specific: no thesis-breaking news; analyst coverage mixed-to-positive (Piper Sandler Buy), oil-price sensitivity still the main driver. Search-engine XOM price quotes ($137-140) are stale/conflicting vs. live Alpaca ($149.66) — Alpaca is the trustworthy source, consistent with prior sessions' finding.
+
+### Trade Ideas
+1. No new name today — the oil reversal that undercut the Energy-add case on 7/24 has continued (WTI down further to ~$71-74), weakening rather than strengthening the sector momentum case for a second Energy position. No dated, company-specific catalyst on XOM or any other name clears the entry checklist.
+2. Materials/Consumer Staples remain #2/#3 YTD but no dated catalyst today — watchlist only.
+
+### Risk Factors
+- Third and largest scheduled-run logging gap to date (7/25-8/3, ~7 sessions) — this is now a recurring pattern, not a one-off; flagging for operator attention as a reliability issue with the scheduling/execution pipeline itself, not a strategy problem.
+- XOM has pulled back ~5.9% off its hwm alongside the oil reversal; still profitable and the trailing stop is doing its job untouched — no manual action warranted, but the divergence (stock holding up much better than crude) bears watching.
+- VIX data quality remains poor/contradictory across sources for the third time in five logged sessions — cross-check against live Alpaca data for anything position-specific.
+- Deployment still ~12% vs. 75-85% target — persistent since launch; no dated catalyst has cleared the bar to fix this via a forced trade, consistent with "patience > activity," but the gap is now over three weeks old.
+
+### Decision
+HOLD — no new trades today. XOM thesis intact, profitable, GTC trailing stop correctly active and untouched. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar; the oil reversal argues against adding a second Energy name today. Flagging the 7/25-8/3 logging gap as the most significant open issue from this session.

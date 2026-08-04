@@ -46,3 +46,12 @@ No new trades. 1 open position (XOM), thesis intact, GTC trailing stop active (s
 | XOM | 800 | $144.77 | $151.80 | +2.32% | +$5,624.00 (+4.86%) | $136.58 GTC trailing 10% (hwm $151.76) |
 
 **Notes:** Quiet no-trade day, as previewed in the market-open check. XOM continued its run, up 2.3% intraday to $151.80, pushing the trailing stop's high-water mark to $151.76 and the stop itself up to $136.58 — the position is now up nearly 5% unrealized. Portfolio gained $2,680 (+0.27%) on the day, all from XOM's move; cash sat untouched at $884,184 (87.9%). Zero trades today, zero trades this week (0/3), and deployment remains stuck at ~12% vs. the 75-85% target for a third straight session — the bot continues to wait for a dated catalyst outside the weak Tech rally rather than force a trade.
+
+### Aug 04 — EOD Snapshot (Day 17, Tuesday)
+**Portfolio:** $1,007,303.99 | **Cash:** $884,183.99 (87.8%) | **Day P&L:** -$928.00 (-0.09%) | **Phase P&L:** +$7,303.99 (+0.73%)
+
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|
+| XOM | 800 | $144.77 | $153.90 | -0.75% | +$7,304.00 (+6.31%) | $143.16 GTC trailing 10% (hwm $159.07) |
+
+**Notes:** Major logging gap — this is the first TRADE-LOG entry since Jul 21 (Day 7); no EOD snapshots or market-open entries exist for Jul 22-31 or Aug 3, meaning this scheduled routine did not run for roughly two full weeks (9 trading sessions). Day P&L computed from Alpaca's own last_equity ($1,008,231.99) rather than the stale Jul 21 log line. Live order history confirms zero new trades since the original Jul 15 XOM buy — still 1 of 5-6 target positions open, still only XOM, no other fills or cancellations in the gap. XOM has drifted down slightly today (-0.75%) but remains up +6.31% unrealized off its $144.77 entry, with the 10% GTC trailing stop now at $143.16 (hwm $159.07) — well clear of the current $153.90 price. Cash unchanged at $884,184 (87.8%), deployment still stuck at ~12.2% of equity vs. the 75-85% target, now for well over two weeks running. Trades today: none. Trades this week (since Mon Aug 3): 0/3. This scheduled-run reliability gap is now the dominant issue on the book — flagging for operator review, independent of trading decisions.

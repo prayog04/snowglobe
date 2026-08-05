@@ -255,3 +255,42 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-08-05 — Pre-market Research
+
+### Account
+- Equity: $1,007,545.59
+- Cash: $884,183.99
+- Buying power: $3,882,148.44 (margin, 4x)
+- Positions: 1 (XOM, 800 sh), market value $123,361.60 = **12.24%** of equity — still well below 75-85% target
+- Daytrade count: not reported by API (0 day trades taken)
+- Trades this week (since Mon 8/3): 0/3
+- XOM: 800sh @ $144.77 avg, current $154.20, unrealized +$7,545.60 (+6.52%), GTC trailing-stop 10% live (stop $143.16, hwm $159.07) — hwm peaked ~$159 then pulled back to $154.20 as oil reversed; well short of +15%/+20% tighten thresholds, no stop action needed (never move stop down)
+
+### ⚠️ Logging/workflow gap
+- No RESEARCH-LOG or TRADE-LOG entries exist between 2026-07-24 and today (2026-08-05) — 8 trading days with zero committed output. This is the largest reliability gap yet (prior gaps: 7/14-7/19, 7/23).
+- Checked Alpaca's full order history (all statuses, not just open) to rule out an unlogged trade during the gap: only two orders exist on the account, ever — the original XOM buy (filled 7/15) and its GTC trailing stop (placed same day, still live). **No new trades occurred during the gap** — this is a missed-logging issue, not a missed-trade or unauthorized-trade issue.
+- Flagging via ClickUp as urgent: if research/trade logging silently stopped for 8 sessions, the market-open/midday/daily-summary routines may have had the same failure — worth confirming the scheduler is actually firing all five daily runs.
+
+### Market Context
+- WTI ~$71-74, Brent ~$75-78 — continuing the sharp reversal first seen 7/24 (was $85-90 WTI in mid-July), driven by growing hopes of a US-Iran deal reopening the Strait of Hormuz. This directly erodes the geopolitical supply-risk premium that has been the core XOM/Energy thesis since entry.
+- S&P 500 / Dow at fresh record highs (S&P above 7,700 per multiple sources referencing Tuesday 8/4 close); futures roughly flat to mixed this morning. Broad risk-on tone on falling oil + strong AI/tech earnings (Palantir +29% post-earnings, Caterpillar beat/raised guidance).
+- VIX: source data contradictory as usual (prints from ~16 to ~21 same-day across sources) — treat as elevated-but-easing rather than trusting one print.
+- Today's catalysts: easing Iran/Hormuz risk, heavy Q2 earnings flow (Costco, Uber, Disney, Eli Lilly, AppLovin, Expedia, Block among today's reporters per one source), ISM Services PMI (July) due today — a real rates/cyclicals mover.
+- Tech is mixed/bifurcated: mega-caps up modestly (MSFT, NVDA, AAPL, AMZN, META, TSLA all green) while several AI-infra/data-center names sold off sharply (SMCI -8.9%, RBRK -7.6%, ALAB -7.3%, MRVL -6.9%, ANET -6.1%, SHOP -5.0%) — a rotation/digestion move within Tech, not a clean sector signal.
+- Sector momentum YTD: tool results skewed toward stale (Feb-dated) snippets again; best available read still shows Energy, Materials, Consumer Staples, Industrials as YTD leaders and Tech/Financials/Consumer Discretionary as laggards — but given oil's reversal, Energy's momentum leadership should not be assumed to hold going forward without a fresh check.
+- XOM (existing position) — reported Q2 earnings 8/3 (confirmed via Zacks headline "Exxon (XOM) Reports Q2 Earnings"). Post-earnings analyst reaction is mixed-to-cautious: **Citi cut PT to $155 from $175, HSBC cut to $158 from $168** — both now sitting right at/near the current $154.20 price, a meaningfully more muted outlook than the $166-168 targets referenced earlier in this position's life. Bernstein maintained Buy. Separately, Trump publicly criticized Exxon/Chevron for profiting from the Iran-driven oil spike (headline noise, not thesis-breaking on its own, but pairs with the PT cuts to suggest the easy upside case has narrowed).
+
+### Trade Ideas
+1. No new name today — oil's continuing reversal (Hormuz de-escalation hopes) undercuts the Energy-momentum thesis that would justify adding a second Energy position; the tighter post-earnings analyst targets on XOM itself reinforce caution rather than conviction.
+2. Materials/Consumer Staples — still nominally #2/#3 YTD sectors per stale data, no company-specific dated catalyst surfaced today that clears the entry checklist; watchlist only.
+3. Tech AI-infra names sold off sharply this morning (SMCI, RBRK, ALAB, MRVL, ANET) — Tech remains the weakest YTD sector in our framework and today's move looks like rotation/profit-taking, not a fresh momentum signal; not actionable.
+
+### Risk Factors
+- XOM thesis is weakening, not broken: oil's multi-week reversal + Citi/HSBC PT cuts to $155/$158 (essentially at current price) suggest the position's easy upside is behind it. Per strategy, no manual action — the 10% GTC trailing stop ($143.16, hwm $159.07) is the built-in defense; unrealized is still +6.5%, nowhere near the -7% manual-cut trigger.
+- 8-trading-day logging gap (7/25-8/4) is a workflow reliability problem, not a trading one — confirmed no missed/unlogged trades via full Alpaca order history, but flagging for review since it implies scheduled runs may have silently failed for over a week.
+- Deployment stuck at 12.24% of equity vs. 75-85% target, 1 of 5-6 target positions, ~3.5 weeks since the only trade — this has been flagged repeatedly since mid-July with no resolution; worth treating as an active decision point once data reliability (see below) and the logging gap are resolved.
+- Data quality remains poor: VIX, S&P futures, and sector-momentum queries all returned internally contradictory or stale-dated results again today — same recurring issue as 7/22 and 7/24; cross-checked account/position figures against live Alpaca data rather than trusting search results.
+
+### Decision
+HOLD — no new trades today. XOM stop active and unchanged (never move down); position still profitable (+6.5%) but thesis has softened on oil's reversal and more cautious post-earnings analyst targets — not a cut-loss trigger, just a reason not to add exposure to Energy today. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar amid contradictory data. Top priority for next session: verify the scheduled workflows are actually firing daily — this is the third and largest logging gap on record.

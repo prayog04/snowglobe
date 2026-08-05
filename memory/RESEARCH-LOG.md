@@ -255,3 +255,34 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-08-05 — Pre-market Research (run inline during market-open; entry was missing)
+
+### Account
+- Equity: $1,006,725.99 | Cash: $884,183.99 | Buying power: $3,879,853.56 (margin, 4x)
+- Positions: 1 (XOM, 800 sh @ $144.77 avg), deployed $122,542 = **12.2%** of equity — still far under the 75-85% target
+- XOM: current $153.18, unrealized +$6,726 (+5.81%), GTC trailing-stop 10% live (stop $143.16, hwm $159.07 as of last update)
+- Trades this week (Mon 8/3 start): 0/3. Trades since Jul 15 entry: 0 — no orders placed in Alpaca history between 7/15 and today.
+- **Reliability gap:** no market-open/pre-market/EOD runs or commits landed between Jul 24 and today (Aug 5) — an ~8-trading-day gap in this bot's scheduled cadence. XOM's trailing stop kept working autonomously (hwm rose from $158.57 to $159.07 on its own), but no research, decisions, or logging happened for over a week. Flagging as an operational issue, not a strategy one.
+
+### Market Context
+- WTI ~$71 (-3%), Brent ~$75 (-3%) — oil extending its slide on reports the US and Iran are close to a deal reopening the Strait of Hormuz; this directly erodes the geopolitical-premium thesis behind the XOM entry
+- S&P 500 and Dow at fresh record highs; S&P futures +0.1-0.3% this morning after Tuesday's record close (Dow > 54,000, S&P > 7,700)
+- VIX: noisy/contradictory prints again (16-21 range across sources), general tone is low-volatility/complacent given records being set
+- Today's catalysts: broad AI/tech rally continuing (Palantir +27% post-earnings, Caterpillar +6.6%, Micron +4%, Marvell +8% Tuesday) on strong earnings + Hormuz deal optimism; earnings today include Disney, Shopify, Costco, McKesson, Uber, Eli Lilly, McDonald's; ISM Services PMI on the calendar
+- Sector read: Tech/AI now the market's clear leadership (a reversal from the Energy/Materials/Staples leadership this book was built around in July) — but the big moves (Palantir, Micron, Marvell) already happened Tuesday; chasing a 27% post-earnings pop today is not a clean entry
+- XOM: oil's continued slide is a headwind to the original thesis, but the position itself is still up +5.8% and the 10% trailing stop ($143.16) is well below current price — no manual action needed, thesis is weakening but not broken
+
+### Trade Ideas
+1. No new name today — yesterday's big AI/tech movers (Palantir, Micron, Marvell, Caterpillar) already ran on their catalyst; entering today means chasing, not catching a dated catalyst at a clean entry. Watch for a pullback/consolidation entry, not a blind chase.
+2. XOM — no new action; trailing stop handles the oil-reversal risk mechanically. Continue monitoring; sector thesis (Energy momentum) is now stale given Tech's clear leadership shift.
+3. No Materials/Staples-specific dated catalyst surfaced today.
+
+### Risk Factors
+- Oil's slide (Hormuz deal hopes) directly undercuts the XOM thesis; stop is the safety net, no override needed while price holds above $143.16
+- Market-wide complacency at record highs (VIX low, indices at ATHs) raises the cost of a reversal if the Iran deal or earnings optimism disappoints
+- 8-trading-day operational gap (7/25-8/4) is the bigger issue this session — flag to operator; if this recurs, positions could drift unmonitored past stop/trail-tighten thresholds without anyone reviewing
+- Deployment stuck at ~12% vs 75-85% target for well over a week now with zero trades; still not forcing size into a market at record highs without a clean, dated, company-specific catalyst
+
+### Decision
+HOLD — no new trades today. XOM position and its trailing stop are intact and functioning correctly through the unmonitored gap. Yesterday's AI/tech rally already happened — not chasing a post-earnings pop with no clean entry. No dated, company-specific catalyst clears the checklist bar today. Primary flag for the operator this session: the ~8-trading-day gap in scheduled runs (7/25-8/4), not a trading decision.

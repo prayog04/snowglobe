@@ -255,3 +255,40 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-08-06 — Pre-market Research
+
+### Account
+- Equity: $1,006,415.99
+- Cash: $884,183.99 (87.9%)
+- Buying power: $3,878,985.56 (margin, 4x)
+- Positions: 1 (XOM, 800 sh), deployed $122,232 = **12.1%** of equity — still far under the 75-85% target
+- Daytrade count: not reported by API (0 day trades taken)
+- Trades this week: unverifiable from log (see gap note below); Alpaca order history shows only the original 7/15 XOM buy + its GTC trailing stop — no new orders since
+- **Logging gap:** no RESEARCH-LOG or TRADE-LOG entry exists between 2026-07-24 and today (2026-08-06) — ~9 trading days of missed/unrecorded scheduled runs, on top of the two earlier gaps already flagged (7/14-7/19, 7/23). Flagging via ClickUp as a recurring reliability issue.
+- XOM: 800 sh @ $144.77 avg, current $152.79 (live Alpaca), unrealized +$6,416 (+5.54%), GTC trailing-stop 10% live (stop $143.16, hwm $159.07 — price has pulled back from that high but stop is well clear, no action needed)
+
+### Market Context
+- WTI ~$71.10 (-2.9%), Brent ~$74.76 (-3.0%) — most recent reliable print (oilprice.com, delayed); other sources noisy/stale as usual, discounted
+- S&P 500 futures: roughly flat, ES=F ~7,465 (-0.01%) per most current Yahoo quote; other sources scattered 7,460-7,580 with older timestamps — treat as flat/no strong directional signal
+- VIX: ~16.1-16.9 (most recent dated prints), calm — no elevated-volatility signal
+- Today's catalysts: earnings season still the main driver (Apple, Arista, Shopify, Match strong recently); rate-cut odds for next month's FOMC rising and supporting risk assets; today's data is initial jobless claims, Q2 unit labor costs, Q2 productivity, June wholesale inventories; after-hours reports from Airbnb, DoorDash, Lyft; tariff/trade headlines remain a wildcard
+- Earnings before open: ConocoPhillips (COP), Datadog (DDOG), Constellation Energy (CEG), Parker-Hannifin (PH), Howmet Aerospace (HWM), Canadian Natural Resources (CNQ), Warner Bros. Discovery (WBD), plus Kenvue/Fox/Hertz/Keurig Dr Pepper/Ralph Lauren per WSJ roundup
+- Economic calendar: no CPI/PPI/FOMC today; initial jobless claims + productivity at 8:30am ET, wholesale inventories at 10am ET; nonfarm payrolls tomorrow (8/7); CPI 8/12, PPI 8/13
+- Sector momentum YTD: Energy still the standout leader; Tech and Industrials also showing strength in today's snapshot (a shift from the Tech-lagging picture noted in late July — treat as a signal to re-verify next session, not yet confirmed trend change); Financials and Health Care weaker/lagging
+- XOM: Perplexity's price feed is stale/wrong today (showing ~$136-137, apparently pre-split or cached data) vs. Alpaca's live $152.79 — same class of data-quality issue flagged repeatedly in prior logs; trusting Alpaca. XOM reported Q2 earnings 8/3 (already passed, no fresh reaction data available); Citi cut PT to $155 from $175 (Neutral), Piper Sandler reiterated Buy, RBC at Hold — mixed but no thesis-breaking signal since $155 PT is still above current price
+
+### Trade Ideas
+1. No new name today — COP and CNQ (Energy peers, today's BMO reporters) are earnings-day names; strategy rule is no blind entries into earnings, so both are watch-only until after the print and reaction.
+2. Tech/Industrials strength (DDOG, PH, HWM, NET all reporting today) doesn't clear the bar — these sectors were lagging as of the last confirmed read (7/24) and today's momentum read needs at least one more session to confirm before treating it as a real regime shift.
+3. No dated, verifiable catalyst outside earnings-day names and a stale/noisy data environment — not forcing a trade.
+
+### Risk Factors
+- Recurring scheduled-workflow logging gap (3rd occurrence, longest yet at ~9 trading days) — this is a process/reliability risk independent of market risk; flagged to the operator via ClickUp.
+- Data quality: XOM price feed from Perplexity is materially wrong (off by >10%) vs. live Alpaca data — reinforces treating Alpaca as the only trustworthy price source, per prior sessions' findings.
+- Deployment stuck at ~12% vs. 75-85% target for what is now well over a month — previously flagged repeatedly as a decision point with no resolution; still no dated catalyst today clears the entry checklist, so continuing to hold rather than force a trade, but this pattern needs a strategy-level review (position sizing, entry bar, or candidate sourcing) rather than another one-line flag.
+- Nonfarm payrolls tomorrow (8/7) — positioning risk into a jobs print that could move rate-cut odds and broad market direction.
+- Possible sector rotation into Tech/Industrials (unconfirmed, single-session read) — worth re-checking next session before dismissing.
+
+### Decision
+HOLD — no new trades today. XOM thesis intact (+5.54% unrealized off $144.77 avg, live price $152.79), GTC trailing stop active and well clear ($143.16 vs $152.79). Today's only earnings-day Energy names (COP, CNQ) can't be entered pre-print per strategy rules; no other name has a dated, verifiable catalyst. Flagging two real issues to the operator: (1) a ~9-trading-day gap in scheduled research/trade logging, and (2) deployment stuck near 12% for over a month with repeated "decision point" flags going unaddressed — both are process issues, not trading calls, and deserve attention outside the daily HOLD/TRADE loop.

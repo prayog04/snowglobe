@@ -255,3 +255,39 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-08-06 — Pre-market Research (run inline during market-open; no scheduled run since 7/24)
+
+### Account
+- Equity: $1,006,107.99
+- Cash: $884,183.99
+- Buying power: $3,878,123.16 (margin, 4x)
+- Positions: 1 (XOM, 800 sh), deployed $121,924 = **12.1%** of equity — still well under 75-85% target
+- Daytrade count: not reported by API (0 day trades taken)
+- Trades this week (since Mon 8/3): 0/3
+- XOM: 800sh @ $144.77 avg, current $152.36, unrealized +$6,072 (+5.24%), GTC trailing-stop 10% live (stop $143.16, hwm $159.07) — pulled back from its high, stop unmoved and well clear, never reached +15% tighten trigger
+
+### Market Context
+- **Scheduled-workflow gap: no market-open or research entry exists between 7/24 and today (8/6) — roughly 9 trading days with zero logged runs.** This is a third and by far the largest reliability gap (after 7/14-7/19 and 7/23), now spanning nearly two weeks. Flagging as a operational issue, not a trading decision.
+- WTI ~$71.10 (-2.9%), Brent ~$74.76 (-3.0%) per most-current source; cross-source spread as usual ($67-90 WTI depending on staleness) — treated the most-recently-timestamped feed as authoritative
+- S&P 500 futures modestly positive across sources (+0.15% to +0.56%), no red flags
+- VIX ~15.8-16.0 — calm, below the 20 "elevated" threshold; no stress signal
+- Today's catalysts: strong Q2 earnings season continuing (Eli Lilly, Apple, others), rising Fed rate-cut expectations, reported progress on a US-Iran deal to reopen the Strait of Hormuz (de-escalating the geopolitical oil-risk premium that originally drove the XOM entry), tariff-deadline crosscurrents, ISM services PMI miss
+- BMO earnings today: Darden (DRI), TD SYNNEX (SNX), Acuity Brands (AYI), Commercial Metals (CMC), Winnebago (WGO), Nano-X (NNOX), ConocoPhillips (COP), Datadog (DDOG), Oklo (OKLO), Albemarle, US Foods, Arrow Electronics, Warner Bros Discovery; AMC: MercadoLibre, DraftKings, Con Edison
+- No CPI or FOMC today; latest official CPI/jobs prints are stale (May/June) — economic-calendar tool did not surface a same-day release
+- Sector momentum YTD: Energy still #1 (+24-25%), but Tech has resurfaced as a co-leader (+17-23%, vs. -3% to -6% as logged 7/24) alongside Industrials (+11-17%) and Materials (+11-17%); Healthcare (-3.7%) and Financials (-6%) now the laggards. This is a material shift from the 7/24 framework (Tech was lagging then) — treating as a genuine rotation given multiple independent sources agree Tech has rallied hard in the gap window (AI-trade deleveraging reportedly ~95% complete per one source), not a data-quality artifact this time
+- XOM: web quotes are stale/contradictory ($136-140, dated late July); live Alpaca price ($152.36) is the trustworthy figure per established practice. Exxon reported Q2 earnings 8/3 — mixed analyst reaction, several price-target cuts (Citi to $155 from $175, HSBC to $158 from $168) even as Bernstein reiterated Buy; no thesis-breaking news, stop is the risk control
+
+### Trade Ideas
+1. No new name this session — COP (Energy peer) reports BMO today; same-sector as existing XOM position, no independent catalyst, and per strategy rule do not buy blind into earnings — wait for print + reaction before considering
+2. Tech's apparent resurgence (+17-23% YTD per today's sources) is a meaningful signal but conflicts with the framework built over the prior gap; want one more session of confirmation before treating Tech as investable momentum given how often this data source has been internally inconsistent
+3. No company-specific dated catalyst cleared the entry checklist today
+
+### Risk Factors
+- **Nine-trading-day gap in scheduled runs (7/24-8/6)** is the dominant risk factor today — the account went unmonitored by this bot for that entire stretch; XOM's stop was live throughout so downside was bounded, but this is a process failure worth investigating outside of trading logic
+- XOM pulled back from its $159.07 high-water mark to $152.36 (unrealized gain fell from +8.6% on 7/24 to +5.2% today) — normal volatility, stop untouched and unmoved down, no action needed
+- Exxon post-earnings analyst price-target cuts (Citi, HSBC) are a mild headwind but not thesis-breaking; Strait of Hormuz de-escalation reduces the original risk-premium catalyst somewhat — watch for further erosion of the original thesis over coming sessions
+- Under-deployment (12.1% vs 75-85% target, 0/3 trades this week) continues; now compounded by the multi-week logging gap, so this pattern has effectively not been reviewed in almost two weeks
+
+### Decision
+HOLD — no new trades today. XOM position intact, GTC trailing stop live and correctly positioned ($143.16, well below current $152.36), no rule violations found on live re-check. No candidate clears the specific-catalyst bar this session (COP reports today but requires waiting for the print; Tech's apparent rotation needs confirmation before acting). Primary action item from this session is non-trading: the 7/24-8/6 scheduled-run gap needs investigation — this is the third and largest such gap logged.

@@ -255,3 +255,36 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-08-07 — Pre-market Research (run inline during market-open; entries were missing since 7/24)
+
+### Account
+- Equity: $1,005,703.99
+- Cash: $884,183.99
+- Buying power: $3,876,991.96 (margin, 4x)
+- Positions: 1 (XOM, 800 sh), deployed $121,520 = **12.1%** of equity — still well below 75-85% target
+- Daytrade count: not reported by API (0 day trades taken)
+- Trades this week (since Mon 8/3): 0/3
+- XOM: 800sh @ $144.77 avg, current $151.90, unrealized +$5,704 (+4.93%), GTC trailing-stop 10% live (stop $143.16, hwm $159.07 — position pulled back from a higher high reached during the unlogged gap, still well above stop, no threshold action needed)
+
+### Market Context
+- WTI ~$76.7-76.8, Brent ~$81.8-81.9 — both down from the late-July spike, oil/geopolitical premium has faded
+- S&P 500 futures / cash: sources conflicted (one showed S&P +0.5% premarket ~7,774; another showed cash S&P 500 at 7,709.96, -0.18%; Dow reportedly down ~464pts/-0.85% in one snapshot) — treat as noisy, direction unclear intraday
+- VIX: ~15.1 — calm
+- Today's catalysts: **July jobs report released this morning — payrolls -23,000 vs +83,000 expected, a sharp miss**, pushing yields lower and boosting rate-cut expectations; broad macro-driven session, not sector/stock-specific
+- Earnings before open: Vistra (VST) in Utilities; Cloudflare/Atlassian (reported after Thu close, gapping up) — none in our Energy/Materials/Staples lane
+- Economic calendar: 8:30am ET — Average Hourly Earnings, Non-Farm Payrolls, Unemployment Rate (all released, miss noted above)
+- Sector momentum YTD: Energy still #1 (~+26%), Consumer Staples and Industrials next; Information Technology weakest (~-3%) — consistent with the framework tracked since mid-July, no rotation signal
+- No dated, company-specific catalyst found for XOM, CVX, or any other Energy/Materials/Staples name today
+
+### Trade Ideas
+1. No new name today — today's dominant catalyst (jobs miss) is a broad macro event, not a specific, dated company catalyst; doesn't clear the entry checklist for any sector-momentum name.
+2. XOM (existing) — thesis intact, no action needed; stop is well below tighten thresholds (+4.93% vs +15%/+20% triggers).
+
+### Risk Factors
+- **Workflow reliability gap (recurring, now worse):** no research/market-open/trade-log entries exist for 7/25 through 8/6 (roughly 10 trading days) — scheduled runs did not execute or log during that window. No trades were placed in the gap per Alpaca order history (only the existing XOM trailing-stop order is live), so no financial harm, but this is the third documented instance of this gap (prior: 7/14-7/19, 7/23) and the largest yet. Flagging for operator review — see notification.
+- Market data (S&P level/direction) was internally inconsistent across sources again today — treat as directionally noisy, not a blocker for the no-trade decision since no candidate was catalyst-driven anyway
+- Under-deployment: 12.1% vs 75-85% target — persistent pattern, but not a reason to force a trade without a catalyst per strategy rules
+
+### Decision
+HOLD — no new trades today. No dated, company-specific catalyst clears the entry checklist; today's jobs-miss is a macro event affecting the whole market, not a sector-momentum trigger. XOM position intact and profitable, stop active and appropriately below tighten thresholds. Primary action item from this session is flagging the recurring scheduled-workflow logging gap (7/25-8/6 unlogged) to the operator.

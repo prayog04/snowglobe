@@ -46,3 +46,12 @@ No new trades. 1 open position (XOM), thesis intact, GTC trailing stop active (s
 | XOM | 800 | $144.77 | $151.80 | +2.32% | +$5,624.00 (+4.86%) | $136.58 GTC trailing 10% (hwm $151.76) |
 
 **Notes:** Quiet no-trade day, as previewed in the market-open check. XOM continued its run, up 2.3% intraday to $151.80, pushing the trailing stop's high-water mark to $151.76 and the stop itself up to $136.58 — the position is now up nearly 5% unrealized. Portfolio gained $2,680 (+0.27%) on the day, all from XOM's move; cash sat untouched at $884,184 (87.9%). Zero trades today, zero trades this week (0/3), and deployment remains stuck at ~12% vs. the 75-85% target for a third straight session — the bot continues to wait for a dated catalyst outside the weak Tech rally rather than force a trade.
+
+### Aug 07 — EOD Snapshot (Day 20, Friday)
+**Portfolio:** $1,006,546.79 | **Cash:** $884,183.99 (87.8%) | **Day P&L:** -$1,509.20 (-0.15%) | **Phase P&L:** +$6,546.79 (+0.65%)
+
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|
+| XOM | 800 | $144.77 | $152.95 | -1.22% | +$6,546.80 (+5.65%) | $143.16 GTC trailing 10% (hwm $159.07) |
+
+**Notes:** Major logging gap — this is the first scheduled-workflow entry (of any kind) since Jul 24; no market-open, midday, pre-market, or EOD entries exist for Jul 25 through Aug 6 (10 trading days), meaning the routine appears not to have run at all over that stretch. Checked Alpaca's full closed-order history directly: only one fill exists on the account, ever — the original XOM buy on Jul 15 — so no trades were missed during the gap, just unlogged research/checks. XOM's trailing stop continued updating live throughout (hwm now $159.07, stop $143.16), so risk management was never unmonitored even though the log was silent. Today itself was a no-trade day: XOM pulled back 1.2% to $152.95 against yesterday's $154.84 close, trimming the position to +5.65% unrealized and equity down $1,509 (-0.15%) on the day; portfolio remains up +0.65% cumulative since launch. Cash still 87.8%, deployment stuck at ~12% vs. the 75-85% target — now well past a dozen sessions of under-deployment with no second position added. Trades today: none. Trades this week: 0/3 (week of Aug 3-7). Flagging the multi-week workflow outage as the top priority for the operator to investigate — the strategy itself is intact (stop-loss discipline held throughout), but blind scheduling is a real operational risk.

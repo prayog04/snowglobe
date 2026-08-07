@@ -255,3 +255,43 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-08-07 — Pre-market Research
+
+### Logging Gap
+No RESEARCH-LOG or TRADE-LOG entries exist between 2026-07-24 and today (2026-08-07) — 10 trading days with no scheduled runs recorded. Cause not diagnosable from this session; flagging as a recurring scheduled-workflow reliability issue (3rd gap on record, after 7/14-7/19 and 7/23).
+
+### Account
+- Equity: $1,007,482.07
+- Cash: $884,183.99
+- Buying power: $3,881,970.58 (margin, 4x)
+- Positions: 1 (XOM, 800 sh), position value $123,298.08 = **12.2%** of equity — under-deployed for a 7th recorded session vs. the 75-85% target
+- Daytrade count: not reported by API (0 day trades taken)
+- Trades this week (since Mon 8/3): 0/3
+- XOM: 800sh @ $144.77 avg, current $154.12, unrealized +$7,482.08 (+6.46%), GTC trailing-stop 10% live (stop $143.16, hwm $159.07) — pulled back from a higher watermark (was $158.57 on 7/24, now $159.07) but well short of the +15%/+20% tighten thresholds; no stop action needed
+
+### Market Context
+- **Today's dominant catalyst: July jobs report (nonfarm payrolls) at 8:30am ET** — the week's primary macro event; consensus ~91K jobs added. High volatility risk around the print; not a day to initiate new positions pre-data.
+- WTI ~$72.27, Brent ~$76.46 (most recent consistently-dated Aug 6 snapshot) — oil has eased back from July's Iran/Hormuz-driven spike (was $85-90 WTI in late July), continuing the reversal flagged 7/24; broader theme is crude prices grinding lower as geopolitical premium unwinds
+- S&P 500 futures: roughly flat to slightly positive (~7,460-7,580 range across sources, most recent Aug 6 print +0.56%); no clear pre-NFP directional signal
+- VIX: data quality issue persists (same class of problem flagged 7/22 and 7/24) — one "current" quote of 20.95 is actually stale (dated Feb 2026), most recent genuinely-dated prints run ~15.99-16.90 (late Jul/early Aug), i.e. low/calm. Treat with caution; don't trust a single print.
+- Other catalysts: Fed rate-path expectations, continued AI/semiconductor sentiment (Palantir +~30% post-earnings this week), easing oil helping risk sentiment, lingering Middle East overhang
+- Earnings before today's open: no confirmed major BMO reports found; Friday's earnings (Vistra, Take-Two, Oklo) are not in our Energy/Materials/Staples lane and timing is unclear (may be AMC)
+- Economic calendar: July NFP + unemployment rate + avg hourly earnings all 8:30am ET today; no CPI/PPI/FOMC today (next CPI mid-Aug, no FOMC meeting this week)
+- Sector momentum YTD: Energy and Information Technology co-leading (~20-25% YTD across sources), Industrials and Materials also outperforming; Financials and Health Care lagging (negative territory) — Energy thesis for XOM remains intact
+- XOM (existing position): no thesis-breaking news. Q2 earnings already reported 7/31; Citi trimmed price target to $155 from $175 (kept Neutral) — target now sits just above current price ($154.12), a mild headwind signal to note but not a stop-level or thesis concern. Redomicile from NJ to Texas completed effective 7/1. Position essentially flat/slightly down intraday, consistent with a pre-NFP wait-and-see tape.
+
+### Trade Ideas
+1. No new name today — NFP is a high-volatility, market-wide catalyst, not a company-specific one; strategy calls for a specific dated catalyst per name, and initiating new risk minutes before a major jobs print is poor risk management regardless. Wait for the print and reaction.
+2. Energy/Tech remain the two co-leading YTD sectors — no company-specific dated catalyst in either lane clears the entry checklist today; watchlist only.
+3. XOM: hold as-is. Citi's trimmed price target ($155, just above spot) is a data point to monitor, not an action trigger; GTC trailing stop ($143.16) remains the defense mechanism.
+
+### Risk Factors
+- NFP print at 8:30am ET carries outsized single-print volatility risk for the whole tape; expect wide swings at the open regardless of position
+- 10-trading-day gap in scheduled runs (see Logging Gap above) means this account went unmonitored by the bot for two full weeks — no way to confirm from this session whether that was a scheduling failure or an intentional pause; recommend the operator verify the automation is firing reliably
+- VIX/oil source data continues to include stale/mismatched-date snippets — cross-check against live Alpaca data for position-specific figures rather than trusting search snapshots at face value
+- Citi's trimmed XOM price target ($155) is now close to spot ($154.12) — a soft signal that upside may be more limited near-term; not thesis-breaking, but worth tracking against future analyst moves
+- Deployment stuck at ~12% vs. 75-85% target for a 7th recorded session — same recurring gap flagged repeatedly; still not forcing a trade without a dated catalyst, but the bar should be revisited if this persists much longer
+
+### Decision
+HOLD — no new trades today. NFP is this morning's dominant catalyst and is market-wide, not stock-specific — not a setup for initiating a new position pre-print. XOM thesis intact (+6.46% unrealized, GTC stop active at $143.16, well below tighten thresholds); Citi's trimmed price target is a watch item, not an exit signal. Flagging the 10-day scheduled-run gap as the most important item for operator review this session.

@@ -255,3 +255,18 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-08-10 — Midday Scan
+
+### Account
+- Equity: ~$1,000,000 base + XOM unrealized (see below); positions: 1 (XOM, 800sh)
+- XOM: 800sh @ $144.77 avg, current $159.66, unrealized +10.29% (+$11,912), GTC trailing stop 10% (stop $144.33, hwm $160.37)
+
+### Market Context
+- XOM up +4.33% intraday. Perplexity check: move is oil-price/Energy-sector-wide (Brent/WTI rally on supply concerns), no Exxon-specific headline found — thesis (Strait-of-Hormuz/geopolitical supply-risk premium + Energy sector momentum) intact and strengthening, not broken.
+
+### Decision
+HOLD — no cuts (not at -7%), no trail tightening (10.29% is below the +15% threshold), no thesis break. No action taken, no ClickUp alert sent per workflow rule (alert only on action).
+
+### Gap flagged
+No RESEARCH-LOG or TRADE-LOG entries exist between 2026-07-24 and today (2026-08-10) — git history confirms no scheduled-workflow commits landed in that ~17-day / ~12-trading-day window. This session cannot determine why (scheduler, auth, or routine failures upstream). Recommend operator verify the cloud routine schedule/triggers are still active.

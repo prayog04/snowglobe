@@ -46,3 +46,12 @@ No new trades. 1 open position (XOM), thesis intact, GTC trailing stop active (s
 | XOM | 800 | $144.77 | $151.80 | +2.32% | +$5,624.00 (+4.86%) | $136.58 GTC trailing 10% (hwm $151.76) |
 
 **Notes:** Quiet no-trade day, as previewed in the market-open check. XOM continued its run, up 2.3% intraday to $151.80, pushing the trailing stop's high-water mark to $151.76 and the stop itself up to $136.58 — the position is now up nearly 5% unrealized. Portfolio gained $2,680 (+0.27%) on the day, all from XOM's move; cash sat untouched at $884,184 (87.9%). Zero trades today, zero trades this week (0/3), and deployment remains stuck at ~12% vs. the 75-85% target for a third straight session — the bot continues to wait for a dated catalyst outside the weak Tech rally rather than force a trade.
+
+### Aug 10 — EOD Snapshot (Day 21, Monday)
+**Portfolio:** $1,011,874.87 | **Cash:** $884,183.99 (87.4%) | **Day P&L:** +$5,258.88 (+0.52%) | **Phase P&L:** +$11,874.87 (+1.19%)
+
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|
+| XOM | 800 | $144.77 | $159.61 | +4.30% | +$11,874.88 (+10.25%) | $144.33 GTC trailing 10% (hwm $160.37) |
+
+**Notes:** Major logging gap: no market-open or EOD entries exist between Jul 24 and today (Aug 10) — roughly 12 trading days where this scheduled routine appears not to have run, the third and largest gap on record (after the earlier 7/14-7/19 and 7/23 gaps). Day P&L computed from Alpaca's own last_equity ($1,006,615.99, prior close per the API) since the most recent log line (Jul 21) is three weeks stale; Phase P&L computed against the $1,000,000 starting baseline. XOM remains the lone open position and keeps climbing, now $159.61 (+4.3% today, +10.25%/+$11,875 unrealized) with its 10% GTC trailing stop keeping pace (hwm $160.37, stop $144.33) — still short of the +15% tighten-to-7% threshold. Zero trades today, zero orders filled during the gap per Alpaca order history (only the standing XOM trailing-stop order is open). Deployment is ~12.6% of equity vs. the 75-85% target, an extended under-deployment streak with no visibility into whether it held steady through the unlogged stretch. Today is a Monday (Day 21), so the weekly 3-trade cap resets fresh at 0/3.

@@ -255,3 +255,42 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-08-10 — Pre-market Research
+
+### Account
+- Equity: $1,006,951.99
+- Cash: $884,183.99
+- Buying power: $3,880,486.36 (margin, 4x)
+- Positions: 1 (XOM, 800 sh), deployed $122,768 = **12.2%** of equity — still far below 75-85% target
+- Daytrade count: not reported by API (0 day trades taken)
+- Trades this week (week of Mon 8/10): 0/3 — new week
+- XOM: 800sh @ $144.77 avg, current $153.46, unrealized +$6,952 (+6.00%), GTC trailing-stop 10% live (stop $143.16, hwm $159.07) — well short of the +15%/+20% tighten thresholds, no stop action needed
+
+### ⚠️ Logging Gap
+- No RESEARCH-LOG or TRADE-LOG entries exist between 2026-07-24 and today (2026-08-10) — a **17-day gap**, the largest yet (prior gaps were 7/14-7/19 and 7/23). Scheduled workflow reliability is a recurring, worsening problem. XOM's stop hwm ($159.07) shows the position ran up further and pulled back to $153.46 sometime during the unmonitored window with no log record of it. Account survived fine (stop mechanism worked as designed), but this is now a 3rd occurrence and should be escalated, not just noted.
+
+### Market Context
+- WTI ~$78.3-78.8 (+0.1-1.6%), Brent ~$83.8-84.4 (+0.25-1.9%) — modestly higher on continued Strait of Hormuz reopening uncertainty
+- S&P 500 futures ~7,779.75, +0.58% premarket — multiple sources flag the market pushing to **new all-time highs**
+- VIX ~14.90 — low/calm, well under 20
+- Today's catalysts: light Monday calendar; market positioning ahead of this week's CPI (Wed 8/12) and PPI (Thu 8/13), the real macro catalysts; SPG earnings after close; morning earnings cluster in names outside our lane (Barrick Mining, Ferguson, Camtek, Axsome, Apogee, Embraer)
+- Earnings before open: Barrick Mining (B, gold/Materials), Ferguson (FERG), Camtek (CAMT), Axsome (AXSM), Apogee (APGE) — none are dated, thesis-aligned catalysts in our Energy/Materials/Staples framework
+- Economic calendar: nothing major today; CPI 8/12, PPI 8/13, Retail Sales 8/15 — no FOMC this week
+- Sector momentum YTD: Energy still #1 (~24-25% YTD) but **Tech has caught up** to ~23.5% YTD in the most recent snapshot — a shift from the earlier "Tech is the weak sector" framework in prior log entries; Industrials/Materials also positive; Health Care/Financials the clear laggards now. Sector leadership picture is less clean than a month ago — treat "follow sector momentum" with fresh eyes next session, not on stale assumptions.
+- XOM (existing position): Q2 earnings (reported during the gap) came in solid — $14.5B GAAP / $14.7B adjusted earnings, $3.52 adj EPS, $23.6B operating cash flow, $9.4B shareholder returns ($4.3B div + $5.1B buybacks); TD Cowen raised PT to $168 (from $155), Buy; new Guyana exploration well started. No thesis-breaking news. Next earnings ~10/29/26.
+
+### Trade Ideas
+1. No new name today — no dated, company-specific catalyst in Energy/Materials/Staples clears the entry checklist; today's earnings cluster (Barrick, Ferguson, Camtek, Axsome) sits outside our momentum lane or lacks a clear setup.
+2. CPI (8/12) and PPI (8/13) this week are the real macro catalysts — worth waiting for before sizing up; a hot/cool surprise could move rate-cut odds and broad market sentiment sharply either direction.
+3. Watch whether Tech's YTD catch-up to Energy is a genuine rotation or noise — if it persists past this week, it may be worth re-screening Tech candidates against the entry checklist, something the framework has ruled out for a month.
+
+### Risk Factors
+- 17-day logging/monitoring gap (7/24-8/10) — scheduled workflow reliability issue, now a 3rd occurrence and the longest yet; flagging for review of why runs are being missed
+- Market near all-time highs with VIX at 14.90 — low-vol complacency risk into CPI/PPI this week
+- CPI (8/12) and PPI (8/13) are 2 and 3 trading days out — positioning risk building
+- Deployment stuck at 12.2% vs. 75-85% target — now spanning at least 7+ logged sessions (likely more, given the gap) with 0/3 trades used this new week; this remains a real, unresolved pattern rather than a one-off note
+- Oil/Strait-of-Hormuz risk premium still a two-way risk for the XOM position (de-escalation would reverse the tailwind fast)
+
+### Decision
+HOLD — no new trades today. XOM thesis intact and strengthening (+6.00% unrealized), GTC trailing stop active well below any tighten threshold, and the stop mechanism proved itself during the unmonitored 17-day gap. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar; CPI/PPI this week are the real triggers to wait for. Escalating the logging gap and persistent under-deployment as items needing attention beyond another "HOLD" note.

@@ -255,3 +255,38 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-08-10 — Pre-market Research (run inline during market-open; scheduled runs did not fire 7/25–8/9)
+
+### Account
+- Equity: $1,009,711.99
+- Cash: $884,183.99
+- Buying power: $3,888,214.36 (margin, 4x)
+- Positions: 1 (XOM, 800 sh), market value $125,528 = **12.4%** of equity — still well below 75-85% target
+- Daytrade count: not reported by API (0 day trades taken)
+- Trades this week (new week, Mon 8/10): 0/3
+- XOM: 800sh @ $144.77 avg, current $156.91, unrealized +$9,712 (+8.39%). GTC trailing-stop 10% live and functioning on Alpaca's side even through the outage — last updated 7/29, hwm $159.07, stop $143.16 — well short of +15%/+20% tighten thresholds
+
+### Market Context
+- WTI ~$78-79 (down sharply from the $85-97 spike range seen in late July), Brent ~$83-84 — Strait of Hormuz risk premium has unwound materially on diplomatic progress, though Iran is reportedly setting "tough conditions" for reopening the strait, so headline risk remains two-sided
+- S&P 500: fresh record high, ~7,757 cash / ~7,777 futures — best 5-day run since April 2026, driven by a weak July jobs report (nonfarm payrolls -23K) read as dovish for the Fed, a strong Q2 earnings season, and reopened buyback windows
+- VIX: ~14.9-15.4 — calm, near YTD lows
+- Today's catalysts: light Monday calendar; market positioning into Tuesday's CPI (and Wednesday's PPI); SPG earnings after close; Barrick Mining, Ferguson, Camtek, Axsome before open — none in our current sector lane
+- Economic calendar: no CPI/PPI/jobs/FOMC today; CB Employment Trends Index 10am ET only. CPI prints Tue 8/12, PPI Wed 8/13 — the week's real catalysts
+- Sector momentum YTD: **Technology has overtaken Energy for #1** (+30-34% Tech vs +28-30% Energy per multiple sources — a rotation since our last logged read on 7/24), Capital Goods/Materials also strong; Financials/Consumer Discretionary lagging. SSGA's July scorecard confirms Tech now leads on momentum while Energy's momentum "remains strong but has slowed" as oil trends lower
+- XOM (existing position): Q2 earnings reported 8/7 — $14.5B net income ($3.48/sh, adjusted $3.52/sh, missed the $3.60 estimate), but strong $23.6B operating cash flow / $17.2B FCF and $9.4B shareholder distributions; $1.03 dividend declared, ex-date 8/17. Analyst reaction mixed: TD Cowen raised PT to $168 (Buy), Goldman PT $168, JPMorgan PT $166, but DZ Bank downgraded to Hold ($156 PT) on 8/5. Net: thesis intact, no red flags
+
+### Trade Ideas
+1. No new name today — sector leadership has rotated to Tech (now #1 YTD, overtaking Energy), but no company-specific dated catalyst in Tech clears the entry checklist today; adding into a light Monday ahead of Tuesday's CPI print adds unnecessary event risk without a confirmed trigger.
+2. XOM (existing) — no action needed; thesis intact post-earnings, dividend declared, GTC trailing stop functioning correctly and unaffected by the logging gap.
+3. Energy (2nd name, e.g. CVX) — momentum has "slowed" per SSGA as oil retreats from its spike; not compelling for a fresh add without a dated trigger.
+
+### Risk Factors
+- **Major reliability gap**: no RESEARCH-LOG or TRADE-LOG entries exist between 2026-07-24 and today (2026-08-10) — 17 calendar days / ~12 trading sessions of scheduled workflows (pre-market, market-open, midday, daily-summary) not firing. This is the third and by far the largest instance of this class of issue (previously 7/14-7/19 and a single missing 7/23 entry, both already flagged). XOM's GTC trailing stop is an Alpaca-side order and continued protecting the position through the gap (confirmed via order history, last update 7/29), so the position itself was never unprotected — but the account also never adjusted to the sector rotation (Tech overtaking Energy) or added positions during a strong market run, meaning the outage had a real opportunity cost, not just a logging cost.
+- **Performance gap during the outage**: equity moved from ~$1,009,304 (7/24) to $1,009,712 today (+0.04%) while the S&P 500 rallied roughly +3% over the same window to fresh record highs — the account underperformed its benchmark during the gap specifically because it was sitting ~88% in cash while unattended, not because of a bad thesis.
+- Tuesday's CPI (8/12) and Wednesday's PPI (8/13) are this week's real catalysts — worth waiting for before sizing up
+- Iran's "tough conditions" on reopening the Strait of Hormuz keep oil headline risk two-sided; a re-escalation would help XOM, a resolution would hurt it
+- Deployment still stuck at 12.4% vs. 75-85% target — now a persistent, multi-week pattern predating even this outage
+
+### Decision
+HOLD — no new trades today. XOM thesis intact post-Q2-earnings with dividend declared and stop functioning normally; no name (including newly-#1 Tech) clears the specific-catalyst bar on a light pre-CPI Monday. Flagging the 17-day scheduled-workflow outage (7/25-8/9) as the priority operational issue: the position itself was protected throughout via Alpaca's own GTC order, but the account missed the current sector rotation and sat in ~88% cash through a strong market rally, producing a real (if modest) performance gap versus the S&P 500 that is attributable to the outage rather than to strategy.

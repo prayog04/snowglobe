@@ -46,3 +46,12 @@ No new trades. 1 open position (XOM), thesis intact, GTC trailing stop active (s
 | XOM | 800 | $144.77 | $151.80 | +2.32% | +$5,624.00 (+4.86%) | $136.58 GTC trailing 10% (hwm $151.76) |
 
 **Notes:** Quiet no-trade day, as previewed in the market-open check. XOM continued its run, up 2.3% intraday to $151.80, pushing the trailing stop's high-water mark to $151.76 and the stop itself up to $136.58 — the position is now up nearly 5% unrealized. Portfolio gained $2,680 (+0.27%) on the day, all from XOM's move; cash sat untouched at $884,184 (87.9%). Zero trades today, zero trades this week (0/3), and deployment remains stuck at ~12% vs. the 75-85% target for a third straight session — the bot continues to wait for a dated catalyst outside the weak Tech rally rather than force a trade.
+
+### Aug 11 — EOD Snapshot (Day 22, Tuesday)
+**Portfolio:** $1,011,943.51 | **Cash:** $884,183.99 (87.4%) | **Day P&L:** -$72.48 (-0.01%) | **Phase P&L:** +$11,943.51 (+1.19%)
+
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|
+| XOM | 800 | $144.77 | $159.70 | -0.06% | +$11,943.52 (+10.31%) | $145.50 GTC trailing 10% (hwm $161.67) |
+
+**Notes:** Major reliability gap — no scheduled workflow (pre-market/market-open/midday/EOD/weekly-review) committed anything to this repo between Jul 24 and today, a ~2.5-week outage spanning roughly 12 trading days. XOM's resting GTC 10% trailing stop kept working broker-side through the gap regardless (hwm climbed from $158.57 on 7/24 to $161.67 today, stop now $145.50), so the position stayed protected, but no research, no rule checks (7% loss cut, 15%/20% trail-tighten triggers), and no new-candidate sourcing happened for over two weeks. XOM is flat today (-0.06%) but up +10.31% unrealized since entry — still short of the +15% trail-tighten trigger, so no stop action needed yet. Cash remains 87.4% idle (only ~12.6% deployed in XOM, 1 of 5-6 target positions) vs. the 75-85% target — an under-deployment pattern now stretching well past the sessions that first flagged it in July. Zero trades today, zero trades this week (0/3). Recommend next session prioritize diagnosing why scheduled runs stopped landing, and revisit whether the "wait for a dated catalyst" bar is too conservative given over three weeks of near-total inactivity.

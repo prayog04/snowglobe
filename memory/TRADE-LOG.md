@@ -38,6 +38,9 @@ No new trades. 1 open position (XOM), thesis intact, GTC trailing stop active (s
 ### Jul 24 — Market-open check
 No new trades. 1 open position (XOM), thesis intact, GTC trailing stop active (stop $142.71, hwm $158.57). Trades this week: 0/3. See RESEARCH-LOG 2026-07-24 for full context — HOLD decision; today's Perplexity research output was internally inconsistent/unreliable (oil and VIX prints spanning implausible ranges, mismatched dates), so no candidate could be verified against a real catalyst — not forcing a trade on bad data. XOM unrealized +8.59%, approaching (not yet at) the +15% trail-tighten threshold. Also note: no market-open or research entry exists for 7/23 — a second logging gap on top of the earlier 7/14-7/19 one.
 
+### Aug 11 — Market-open check
+No new trades. 1 open position (XOM), thesis intact, GTC trailing stop active (stop $144.486, hwm $160.54), unrealized +10.58%. Trades this week: 0/3. See RESEARCH-LOG 2026-08-11 for full context — HOLD decision; no dated catalyst clears the bar for a new name. **Flagging: no market-open/pre-market/EOD entries exist for 7/25 through 8/10 (~12 trading days) — a third and by far the largest instance of the recurring scheduled-workflow reliability gap.** Live Alpaca data confirms the XOM position and its GTC trailing stop functioned correctly and remained protected throughout the gap; no untracked orders were placed. Operator should check why scheduled runs stopped firing.
+
 ### Jul 21 — EOD Snapshot (Day 7, Tuesday)
 **Portfolio:** $1,005,623.99 | **Cash:** $884,183.99 (87.9%) | **Day P&L:** +$2,680.00 (+0.27%) | **Phase P&L:** +$5,623.99 (+0.56%)
 

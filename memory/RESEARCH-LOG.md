@@ -255,3 +255,39 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-08-11 — Pre-market Research (run inline during market-open; entry was missing)
+
+### Account
+- Equity: $1,012,247.99
+- Cash: $884,183.99
+- Buying power: $3,895,315.16 (margin, 4x)
+- Positions: 1 (XOM, 800 sh), deployed $128,064 = **12.65%** of equity — still well below the 75-85% target
+- Daytrade count: not reported by API (0 day trades taken)
+- Trades this week (since Mon 8/10): 0/3
+- XOM: 800sh @ $144.77 avg, current $160.08, unrealized +$12,248 (+10.58%), GTC trailing-stop 10% live (stop $144.486, hwm $160.54) — past the old +8-9% readings, still short of the +15%/+20% tighten thresholds, no stop action needed
+
+### Market Context
+- WTI ~$82.1-82.5 (roughly flat, -0.2% to +0.4% depending on source), Brent ~$87.9-89.5 — oil holding in the low-to-mid $80s, well off the late-July spike highs; source prints noisy as usual, no single reliable number
+- S&P 500 futures: ~7,776-7,789, roughly flat (+0.15%); cash S&P closed Monday near record 7,758
+- VIX: not available from Perplexity results today — could not verify
+- Economic calendar: NFIB Business Optimism Index (10am ET), Existing Home Sales (2pm ET) — no CPI/PPI/FOMC/jobs today
+- Sector momentum YTD: Energy still #1 across sources (+23% to +34% depending on methodology); Technology also showing strong YTD prints in some rankings today — a departure from the "weak Tech" framework used in every prior session, treat cautiously pending confirmation; Materials/Consumer Staples still positive but middling; Consumer Discretionary weakest
+- No company-specific dated catalyst found today for CVX, LIN, FCX, PG, or KO
+
+### Reliability Note — MAJOR GAP
+- No market-open, pre-market, or EOD entries exist in RESEARCH-LOG or TRADE-LOG between 2026-07-24 and today (2026-08-11) — roughly 12 trading days with zero scheduled-workflow activity. This is a third instance of the recurring logging/scheduling gap (previously flagged 7/20 for 7/14-7/19, and 7/24 for 7/23), and by far the largest.
+- Verified via live Alpaca data that nothing broke during the gap: the XOM position and its GTC 10% trailing stop remained live and tracked price correctly throughout (stop rose from $142.71/hwm $158.57 on 7/24 to $144.486/hwm $160.54 today); no other orders were placed per account/order history. The position was never unprotected.
+- This is an operator-facing issue, not a strategy issue — the scheduled market-open/pre-market/EOD routines simply did not fire for ~2.5 weeks. Flagging for the operator to check scheduling/cron config.
+
+### Trade Ideas
+1. No new name today — no dated, company-specific catalyst clears the entry checklist for any candidate in the Energy/Materials/Staples momentum lane. Sector figures are inconsistent across sources today (Energy YTD ranges 23-34%), same data-quality caveat noted in prior sessions.
+
+### Risk Factors
+- ~2.5-week unattended gap in scheduled runs (see Reliability Note) — no trading impact found, but the account went unmonitored by this bot for that stretch
+- VIX unverifiable today — treat volatility read as unknown, not zero
+- Sector-data inconsistency across sources continues; Technology showing up as a YTD leader in some prints is a notable shift to watch, not yet actionable
+- Deployment still ~12.65% vs. 75-85% target — flagged repeatedly across prior sessions with no new dated catalyst to act on
+
+### Decision
+HOLD — no new trades. XOM thesis intact and strengthening (+10.58% unrealized), GTC trailing stop live and correctly following price up through the unattended gap. No candidate clears the specific-catalyst bar today. Top priority for the operator: confirm why scheduled runs stopped firing 7/25-8/10 before treating deployment/cadence as a strategy question again.

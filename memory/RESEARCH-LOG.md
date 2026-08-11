@@ -255,3 +255,39 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-08-11 — Pre-market Research
+
+### ⚠️ Scheduled-run reliability gap
+No RESEARCH-LOG or TRADE-LOG entry exists between 2026-07-24 and today (2026-08-11) — a **~12 trading-day gap** where this workflow did not run or was not logged, far larger than the earlier isolated 7/23 gap. Verified via Alpaca closed-order history that **no trades were missed**: the only filled order on the account is still the original XOM buy from 7/15; the GTC 10% trailing stop has remained live and current (now stop $144.33, hwm $160.37, last updated 2026-08-10). Position integrity is intact, but the automation gap itself is a real operational risk (a stop-loss breach or trade opportunity during that window would have gone unnoticed) and is flagged to the operator via ClickUp this run.
+
+### Account
+- Equity: $1,011,719.99 | Cash: $884,183.99 (87.4%) | Buying power: $3,893,836.76 (margin, 4x)
+- Positions: 1 (XOM, 800 sh @ $144.77 avg), market value $127,536 = **12.6% deployed** — still far under the 75-85% target
+- Daytrade count: not reported (0 day trades taken)
+- Trades this week (Mon 8/10 start): 0/3 — and 0/3 for every week since 7/15, no trade has been added since launch
+- XOM: current $159.42 (Alpaca), unrealized +$11,720 (+10.12%), GTC trailing-stop 10% live, stop $144.33, hwm $160.37 — above the 10% base trail but below the +15%/+20% tighten thresholds, no stop action needed
+
+### Market Context
+- WTI ~$82.1-82.4, Brent ~$87.6-87.8 — elevated but off the Iran/Strait-of-Hormuz spike highs from late July; oil-driven inflation concern still a live theme
+- S&P 500 futures: ~7,785, +0.11% — flat/slightly higher premarket
+- VIX: ~15.5 — calm, low-volatility regime, no fear signal
+- Catalysts: cooling labor market (July payrolls +23k miss) easing rate-hike fears; Iran/Hormuz tensions still supporting oil; reports of Nvidia-led ~$500B AI infrastructure initiative with major financial firms supportive for AI/tech names; Datadog beat lifting growth-stock sentiment
+- Earnings BMO today: Cardinal Health (CAH), On Holding (ONON), Sea Ltd (SE), Aramark (ARMK), Super Micro (SMCI), Lumentum (LITE), CoreWeave (CRWV) — none in our Energy/Materials/Staples lane
+- Economic calendar: no CPI/PPI/FOMC/jobs today; NFIB optimism 6am, Existing Home Sales 10am ET; CPI prints tomorrow (8/12), PPI Thursday (8/13) — positioning risk into both
+- Sector momentum YTD (unchanged from last confirmed read): Energy #1 (+22-27%), Materials #2 (+15-17%), Consumer Staples #3 (+15-16%), Industrials #4 (+12-14%) leading; Financials, Consumer Discretionary, Communication Services lagging; Tech reads inconsistently across sources (data quality caveat, not acted on)
+- XOM (existing position): $159.42, still grinding higher post its Q2 print (~7/31: $14.5B earnings, $23.6B operating cash flow); TD Cowen raised PT to $168 from $155 (Buy) — no thesis-breaking news
+
+### Trade Ideas
+1. No new name today — no dated, company-specific catalyst in Energy/Materials/Staples clears the entry checklist; today's BMO earnings slate is entirely outside our sector lane.
+2. Materials (LIN/FCX/XLB) — still #2 YTD sector, no confirmed reporter or trigger today; watchlist only.
+3. Consumer Staples — #3 YTD sector, no dated catalyst today; watchlist only.
+
+### Risk Factors
+- **Automation gap (see above)** — ~12 trading days with no research/trade logging; position was safe this time but the gap itself needs operator attention, not just a note.
+- Deployment stuck at 12.6% vs. 75-85% target — now roughly 4 weeks (every session since launch) under target with 0 trades added beyond the original XOM buy. This has been flagged as a "decision point" repeatedly without a rule change; continuing to log it rather than force a trade outside the catalyst checklist.
+- CPI (8/12) and PPI (8/13) both land this week — positioning risk into both prints.
+- XOM +10.12% unrealized, approaching (not yet at) the +15% trail-tighten threshold — watch next session.
+
+### Decision
+HOLD — no new trades today. XOM thesis intact (+10.12% unrealized, analyst target raised post-Q2, GTC stop live and current). No name in the Energy/Materials/Staples momentum lane has a dated catalyst today. Flagging two issues for the operator: (1) a ~12 trading-day gap in scheduled-run logging that needs a fix, and (2) deployment has sat at ~12-13% vs. the 75-85% target for essentially the entire life of the account — the "wait for a perfect catalyst" bar may need recalibration, but not changing it unilaterally here.

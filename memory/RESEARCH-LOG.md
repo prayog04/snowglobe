@@ -255,3 +255,34 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-08-12 — Pre-market Research (run inline during market-open; scheduled runs did not fire 2026-07-25 through 2026-08-11)
+
+### Account
+- Equity: $1,010,615.99
+- Cash: $884,183.99
+- Buying power: $3,890,745.56 (margin, 4x)
+- Positions: 1 (XOM, 800 sh), deployed $126,432 = **12.5%** of equity — still well under the 75-85% target
+- Daytrade count: not reported by API (0 day trades taken)
+- Trades this week (since Mon 8/10): 0/3
+- XOM: 800sh @ $144.77 avg, current $158.18, unrealized +$10,616 (+9.17%), GTC trailing-stop 10% live (stop_price $145.503, hwm $161.67) — order confirmed still open on Alpaca (id c8388a7a, updated 2026-08-11), not yet at the +15% tighten threshold
+
+### Market Context
+- S&P 500 closed 7,728.20 on 8/11, -0.32%; Dow -0.34% to 53,791.85; Nasdaq -0.60% to 26,445.45 — third straight softer session, driven by mounting uncertainty over the US-Iran Strait of Hormuz standoff (source: Riotimesonline global briefing, HDFCSky, both dated 8/12)
+- VIX ~15.46, +3.76% on the session — still low in absolute terms despite the oil/geopolitical overhang
+- WTI ~$83.7-84.0/bbl, Brent ~$89.4-89.8/bbl — both up ~0.6-1% on the day, holding near multi-week highs; Strait of Hormuz disruption risk and fading hopes of a US-Iran deal cited as the driver (MarketWatch, HDFCSky, Polymarket, all dated 8/11-8/12) — same thesis category that has driven XOM's YTD run
+- Sector YTD leaderboard: could not be independently verified today — Perplexity had no sourced sector-performance table available; treating Energy-leadership assumption as unconfirmed rather than restating stale 7/22 data as current
+- No confirmed company-specific (earnings/upgrade/guidance) catalyst located for any Energy or Materials name in the last 2 trading days — general oil-price move only, not a stock-specific trigger
+- XOM (existing position): $158.18 live quote, thesis intact — oil strength continues, no thesis-breaking news found
+
+### Trade Ideas
+1. No new name today — oil/Hormuz strength continues to support the existing XOM thesis but no independently-verified company-specific catalyst was found for a second Energy or Materials name; not forcing a trade on an unconfirmed sector-leadership assumption.
+
+### Risk Factors
+- **Operational: scheduled market-open/pre-market/EOD runs did not fire from 2026-07-25 through 2026-08-11 (roughly 13 trading days) — no RESEARCH-LOG or TRADE-LOG entries exist for that entire window.** Live Alpaca data confirms the account was untouched during the gap (still 1 position, XOM, GTC trailing stop uninterrupted, hwm moved from $158.57 to $161.67 as price ran), so no loss of capital occurred, but the bot was effectively unmonitored and undocumented for ~2.5 weeks. This is a severe escalation of the smaller 7/23 and 7/14-7/19 gaps already flagged — needs operator attention to the scheduler/trigger, not just a memory note.
+- Sector-momentum data could not be confirmed today (no sourced YTD table) — flagging so the next session doesn't assume the 7/22 framework is still current without re-verifying.
+- Deployment remains ~12.5% vs. 75-85% target; with a 2.5-week unmonitored gap now in the picture, this number should be treated as unreliable evidence of "patience" and reviewed fresh rather than extended as a continuing streak.
+- XOM unrealized +9.17%, still short of the +15% trail-tighten trigger but closer than last logged (+8.59% on 7/24) — watch next session.
+
+### Decision
+HOLD — no new trades today. XOM position and GTC trailing stop confirmed intact via live Alpaca data despite the 2.5-week logging/scheduling gap; no capital impact found. No independently-verified company-specific catalyst for a new name — oil/Hormuz strength is a continuation of the existing thesis, not a fresh trigger. Top priority for the operator: diagnose why scheduled runs stopped firing 7/25-8/11.

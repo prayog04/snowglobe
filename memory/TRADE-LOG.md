@@ -46,3 +46,12 @@ No new trades. 1 open position (XOM), thesis intact, GTC trailing stop active (s
 | XOM | 800 | $144.77 | $151.80 | +2.32% | +$5,624.00 (+4.86%) | $136.58 GTC trailing 10% (hwm $151.76) |
 
 **Notes:** Quiet no-trade day, as previewed in the market-open check. XOM continued its run, up 2.3% intraday to $151.80, pushing the trailing stop's high-water mark to $151.76 and the stop itself up to $136.58 — the position is now up nearly 5% unrealized. Portfolio gained $2,680 (+0.27%) on the day, all from XOM's move; cash sat untouched at $884,184 (87.9%). Zero trades today, zero trades this week (0/3), and deployment remains stuck at ~12% vs. the 75-85% target for a third straight session — the bot continues to wait for a dated catalyst outside the weak Tech rally rather than force a trade.
+
+### Aug 12 — EOD Snapshot (Day 23, Wednesday)
+**Portfolio:** $1,012,077.67 | **Cash:** $884,183.99 (87.4%) | **Day P&L:** +$53.68 (+0.01%) | **Phase P&L:** +$12,077.67 (+1.21%)
+
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|
+| XOM | 800 | $144.77 | $159.87 | +0.04% | +$12,077.68 (+10.43%) | $145.50 GTC trailing 10% (hwm $161.67) |
+
+**Notes:** Major logging gap: no market-open, research, or EOD entries exist between the Jul 24 market-open check and today — roughly 13 trading days (Jul 27-Aug 11) with no record of this workflow running. Day P&L computed from Alpaca's last_equity ($1,012,023.99, prior close per balance_asof 2026-08-11) since no fresher snapshot exists in this log. No new trades occurred during the gap per Alpaca order history — still a single XOM position (800sh @ $144.77), whose GTC 10% trailing stop kept ratcheting up on its own as price climbed (hwm $158.57→$161.67, stop $142.71→$145.50 since Jul 24). XOM unrealized gain is +10.43%, still short of the +15% trail-tighten threshold — no stop action needed. Deployment remains ~12.6% of equity vs. the 75-85% target, now over three weeks under-deployed with zero research conducted to source new candidates during the gap. Trades today: none. Trades this week: 0/3. Flagging the multi-week scheduled-workflow reliability gap as the primary issue this session — recommend the operator verify the daily-summary/market-open/pre-market schedules are actually firing.

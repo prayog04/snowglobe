@@ -255,3 +255,41 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-08-12 — Pre-market Research
+
+### Account
+- Equity: $1,011,783.99 | Cash: $884,183.99 | Buying power: $3,894,015.96 (margin, 4x)
+- Day P&L: -$240.00 (-0.02%) vs. last_equity $1,012,023.99 | Phase P&L (since $1M launch): +$11,783.99 (+1.18%)
+- Positions: 1 (XOM, 800 sh), market value $127,600 = **12.6%** of equity — still far under the 75-85% deployment target
+- Daytrade count: not reported by API (0 day trades taken)
+- Trades this week (since Mon 8/10): 0/3
+- XOM: 800sh @ $144.77 avg, current $159.50, unrealized +$11,784 (**+10.18%**), GTC trailing-stop 10% live (stop $145.50, hwm $161.67) — climbing toward but not yet at the +15% trail-tighten threshold (would move to 7%); no stop action needed today
+
+### Logging-gap note
+No RESEARCH-LOG or TRADE-LOG entries exist between 2026-07-24 and today (2026-08-12) — roughly 12 trading days with no scheduled-run output on file, on top of the two earlier gaps already flagged (7/14-7/19, 7/23). This is now a recurring reliability pattern across multiple weeks; account state was reconstructed from live Alpaca data only. Flagging for operator review — scheduled pre-market runs appear to be silently failing or not firing on a regular basis.
+
+### Market Context
+- Oil: WTI ~$83.7-84.3, Brent ~$89.8-90.0 — back near recent highs; Strait of Hormuz reportedly still closed, keeping the geopolitical risk premium bid
+- S&P 500 futures: ~7,770-7,790, roughly flat to slightly positive (+0.02% to +0.17%) ahead of CPI
+- VIX: ~15.3-15.6 — notably calm/low vs. the 17-21 range seen in late July, market pricing low near-term risk
+- **Today's dominant catalyst: July CPI report at 8:30am ET** — one source shows an actual print of 3.4% YoY vs. 3.5% forecast (cooler than expected), but this should be treated as unconfirmed/early since sources disagree on whether it has printed yet; this is a market-wide macro event, not a single-stock catalyst
+- Other catalysts: dense earnings slate (~188 companies today) including Nebius (NBIS, BMO), Cisco (CSCO), Cerebras — AI/tech earnings continuing to drive sentiment; CoreWeave and Sea Ltd both beat and rallied hard Tuesday
+- Economic calendar: CPI is the only major scheduled print today; no FOMC (next meeting was 7/28-29, already passed with no thesis-breaking impact noted); no jobs data today
+- Sector momentum YTD: sources disagree — one dataset shows Energy #1 (+36%) with Tech #2 (+29%) climbing fast on the AI rally; our working framework (Energy/Materials/Staples leading, Tech lagging) may need revisiting given Tech's YTD strength has been building for weeks. Materials and Consumer Staples still cited as top-4 performers across sources.
+- XOM (existing position): $159.50-159.80, no thesis-breaking news. Q2 earnings (reported 7/31) were strong — $14.5B net income, $3.48 EPS, $9.4B returned to shareholders via dividends+buybacks. Analyst targets mixed but a recent raise to $168 vs. current $159.50 suggests some remaining room; next earnings not until ~10/29.
+
+### Trade Ideas
+1. No new name today — CPI is a macro, market-wide catalyst, not a company-specific dated trigger; strategy rule requires a specific catalyst, and buying ahead of/into a CPI print adds unrewarded event risk. Wait for the print and market reaction before evaluating anything new.
+2. Materials/Consumer Staples — still cited among top-4 YTD sectors across sources, but no company-specific dated catalyst today clears the entry checklist; watchlist only.
+3. Tech (NBIS/CSCO/CBRS earnings) — sector's YTD standing is ambiguous in today's data (some sources show it as a top-2 performer now, contradicting our long-held "laggard" framework); even so, earnings-day entries are excluded by the "don't buy blind into earnings" rule — not actionable today regardless.
+
+### Risk Factors
+- CPI print at 8:30am ET is today's single biggest swing factor for the whole market — expect elevated volatility around the release regardless of position; XOM's stop is already in place as the automatic risk control
+- XOM unrealized gain (+10.18%) is closing in on the +15% trail-tighten trigger — next session should check whether it has crossed and tighten the stop to 7% per strategy rule if so
+- Sector-momentum data is inconsistent across sources on where Tech now ranks YTD — treat the Energy/Materials/Staples-lead framework as provisional until confirmed by a cleaner source
+- Deployment still stuck at 12.6% vs. 75-85% target, now well over a month since launch with 0/3 trades this week — the recurring under-deployment issue remains unresolved and unaddressed across many sessions
+- Scheduled-run logging gap (7/24-8/12, ~12 trading days) means there's no continuous record of intermediate decisions or account moves — a process risk independent of any trading risk
+
+### Decision
+HOLD — no new trades today. XOM thesis intact and strengthening (+10.18% unrealized), GTC stop active and no action needed yet. CPI at 8:30am ET is a market-wide event, not a company-specific catalyst, so no new position is justified ahead of it — wait for the print and reassess next session. Watch XOM for the +15% trail-tighten threshold. Persistent under-deployment (12.6%, 0/3 trades this week) and the multi-week logging gap are both flagged for operator attention but are not urgent enough on their own to force a trade or send an alert.

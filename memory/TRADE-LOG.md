@@ -46,3 +46,12 @@ No new trades. 1 open position (XOM), thesis intact, GTC trailing stop active (s
 | XOM | 800 | $144.77 | $151.80 | +2.32% | +$5,624.00 (+4.86%) | $136.58 GTC trailing 10% (hwm $151.76) |
 
 **Notes:** Quiet no-trade day, as previewed in the market-open check. XOM continued its run, up 2.3% intraday to $151.80, pushing the trailing stop's high-water mark to $151.76 and the stop itself up to $136.58 — the position is now up nearly 5% unrealized. Portfolio gained $2,680 (+0.27%) on the day, all from XOM's move; cash sat untouched at $884,184 (87.9%). Zero trades today, zero trades this week (0/3), and deployment remains stuck at ~12% vs. the 75-85% target for a third straight session — the bot continues to wait for a dated catalyst outside the weak Tech rally rather than force a trade.
+
+### Aug 13 — EOD Snapshot (Day 24, Thursday)
+**Portfolio:** $1,010,831.99 | **Cash:** $884,183.99 (87.5%) | **Day P&L:** -$1,152.00 (-0.11%) | **Phase P&L:** +$10,831.99 (+1.08%)
+
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|
+| XOM | 800 | $144.77 | $158.31 | -0.90% | +$10,832.00 (+9.35%) | $145.50 GTC trailing 10% (hwm $161.67) |
+
+**Notes:** Major logging gap: no TRADE-LOG or RESEARCH-LOG entries exist between Jul 24 and today (Aug 13) — roughly three weeks (~14 trading days) where the scheduled pre-market/market-open/midday/EOD routines did not run or did not persist. Alpaca's closed-order history confirms nothing was missed on the trading side: the only fill on the account remains the original Jul 15 XOM buy, no new trades occurred during the gap, and the 10% GTC trailing stop stayed live throughout (hwm climbed to $161.67, stop now $145.50, well clear of price). Day P&L computed from Alpaca's own last_equity ($1,011,983.99, as of 8/12 close) rather than the stale Jul 21 log line, since three weeks separate them. Phase P&L +1.08% since the $1,000,000 baseline. Still just 1 of 5-6 target positions and ~12.5% deployed vs. the 75-85% target. Trades today: none. Trades this week (since Mon 8/10): 0/3. Flagging the scheduling gap for review — this is a reliability issue with the automation, not a trading decision.

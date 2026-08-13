@@ -255,3 +255,42 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-08-13 — Pre-market Research
+
+### Account
+- Equity: $1,011,623.99
+- Cash: $884,183.99 (87.4%)
+- Buying power: $3,893,567.96 (margin, 4x)
+- Positions: 1 (XOM, 800 sh), deployed $127,440 = **12.6%** of equity — still well below 75-85% target
+- Daytrade count: not reported by API (0 day trades on record)
+- Trades this week: 0/3 (only order on file is the original XOM GTC trailing stop; no new buys/sells since 7/15)
+- XOM: 800sh @ $144.77 avg, current $159.30, unrealized +$11,624 (**+10.04%**) — first session crossing +10%, still short of the +15% trail-tighten trigger. GTC trailing stop 10% live: stop $145.50, hwm $161.67. No stop action needed; do not move stop down.
+
+### ⚠️ Logging gap
+No RESEARCH-LOG or TRADE-LOG entries exist between 2026-07-24 and today (2026-08-13) — roughly three weeks with no pre-market/market-open runs on file. Live Alpaca history confirms no trades were missed (still just the one XOM position/order), but XOM's Q2 earnings printed 7/31 (net income $14.5B, EPS $3.48, adjusted $3.52; dividend $1.03/share, ex-date 8/17/26) with zero log commentary, and the account has now sat at ~12-13% deployed for well over a month with no research trail explaining the gap. Flagging as a scheduled-workflow reliability issue for the operator to check — this is a bigger and longer gap than the two shorter ones already noted in July.
+
+### Market Context
+- WTI ~$82.1 (-1.4%), Brent ~$87.9 (-1.2%) — both off their late-July Hormuz-risk spike highs, now in a calmer $82-88 range
+- S&P 500 futures: ~7,768-7,778, roughly flat to +0.1-0.3% premarket; cash S&P near record highs after Wednesday's CPI-driven rally
+- VIX: ~14.7-15.4 — low-vol regime, down meaningfully from July's 17-20 readings; S&P at/near records with vol this low is a complacency flag
+- Today's catalysts: **PPI (MoM/Core) + weekly jobless claims at 8:30am ET** are the day's top scheduled events; Fed's Hammack speaks 12:15pm ET (rate-cut-timing risk); AI/semis leadership continuing to drive the tape (CoreWeave/SMCI earnings beats lifted Nasdaq Wednesday, NVDA +3% premarket), small-cap (IWM) strength suggesting broadening risk appetite
+- Earnings before open: light/none confirmed in our sector lane — Nasdaq calendar shows no scheduled BMO reports today; AMAT, BN, NU, TPR, JD have earnings-related catalysts but timing/sector don't fit our framework; no Energy/Materials/Staples name reporting today
+- Economic calendar: PPI MoM/Core PPI 8:30am ET (July data) + Initial/Continuing Jobless Claims 8:30am ET — no CPI today (already printed 8/12, in line with expectations; next CPI 9/11); no FOMC (next Fed minutes 8/19)
+- Sector momentum: YTD framework still shows Energy (~+16%), Materials (~+12%), Consumer Staples (~+11%) as nominal leaders, but the multi-week tape has clearly been an AI/Tech-led rally to record highs (today's real-time sector reads show Tech/Industrials green, Energy/Materials red) — the YTD-leadership framework and current price action are diverging more than at any point since this log started; worth a deliberate re-check next session rather than defaulting to the stale YTD read
+- XOM (existing position): $159.30, roughly flat/-0.3% intraday, hwm $161.67 set this week; Q2 earnings (7/31) beat on cash flow/net income but reportedly missed EPS estimates — no thesis-breaking news, dividend ex-date 8/17/26 is routine
+
+### Trade Ideas
+1. No new name today — the day's only hard, dated catalysts (PPI, jobless claims, Fed's Hammack) are macro releases, not company-specific triggers, and no Energy/Materials/Staples name has an earnings/catalyst event today. Not actionable per the entry checklist.
+2. AI/semis (e.g., NVDA) — real-time leadership is strong and S&P is at records on this trade, but Tech remains a YTD laggard sector in our framework; chasing it here would violate "follow sector momentum" as currently defined. Watchlist only pending a deliberate framework re-check (see Risk Factors).
+3. CVX / Materials (LIN/FCX) — nominal YTD sector leaders, but no dated company-specific catalyst today; watchlist only.
+
+### Risk Factors
+- Three-week logging gap (7/24-8/13) — see flag above; treat as the top operational priority, not just a data note
+- XOM unrealized +10.04% for the first time — not yet at the +15% tighten trigger, but close enough to watch closely next session; never move the stop down, only tighten per the rulebook thresholds
+- VIX ~15 at/near S&P record highs — thin cushion for a PPI or Fed-speaker surprise today
+- Sector-momentum signal is now genuinely ambiguous: stale YTD leaders (Energy/Materials/Staples) vs. weeks of real-time AI/Tech leadership — this has been building since July and deserves a real decision next session instead of continued deferral
+- Deployment stuck at 12.6% vs. 75-85% target, 0/3 trades used this week, with 1 of 5-6 target positions open — this is now a chronic, multi-week condition, not a session-by-session anomaly
+
+### Decision
+HOLD — no new trades today. XOM thesis intact, +10.04% unrealized, GTC trailing stop active well below the tighten threshold, no action needed. No name clears the specific-catalyst + sector-momentum bar; today's only hard catalysts are macro (PPI, jobless claims, Fed speaker), not stock-specific. Flagging the three-week research/trade-log gap as urgent — recommend the operator confirm the scheduled workflow is firing daily, and next session should treat both the stale sector-momentum framework and chronic under-deployment as active decisions rather than deferring again.

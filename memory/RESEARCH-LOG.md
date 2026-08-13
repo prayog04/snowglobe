@@ -255,3 +255,36 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-08-13 — Pre-market Research (run inline during market-open; entry was missing)
+
+### Account
+- Equity: $1,010,999.99
+- Cash: $884,183.99
+- Buying power: $3,891,820.76 (margin, 4x)
+- Positions: 1 (XOM, 800 sh), deployed $126,816 = **12.5%** of equity — still well under the 75-85% target
+- Daytrade count: not reported by API (0 day trades taken)
+- Trades this week (since Mon 8/10): 0/3
+- XOM: 800sh @ $144.77 avg, current $158.52, unrealized +$11,000 (+9.5%), GTC trailing-stop 10% live (stop $145.50, hwm $161.67) — not yet at the +15% tighten threshold, no stop action needed
+
+### Market Context
+- WTI ~$81-82, Brent ~$87-89, both down 1-2% on the day; supply-side news (reported build/OPEC dynamics) outweighing residual Hormuz risk premium
+- S&P 500 futures ~7,770-7,780 (+0.2-0.3%), near record highs; VIX ~15-17 (low/moderate)
+- Yesterday's CPI came in soft, easing rate-hike fears; AI/semis rally continuing (NVDA, AMD, SMH, XLK, CoreWeave, SMCI cited as leaders after strong prints)
+- Today's scheduled catalysts: PPI + initial jobless claims at 8:30am ET, a Fed (Hammack) speech later. Earnings today include AMAT, BN, JD, NU, TPR, AIT, BAP — none currently held
+- Sector momentum: Energy still YTD #1 (+20-27%) per most sources; Tech/semis showing strong *recent* (not YTD-consistent) momentum on the AI trade; Industrials/Materials also elevated; Financials, Consumer Discretionary, Communication Services still laggards
+- XOM: trading ~$159-160, roughly flat/consolidating after strong Q2 print (reported 7/31, $14.5B profit, $9.4B shareholder returns already priced in); no new dated catalyst today, no thesis-breaking news
+
+### Trade Ideas
+1. No new name today — Tech/AI momentum is real but recent (days), not corroborated by a YTD sector-momentum read, and today's clearest Tech-adjacent catalyst (AMAT earnings) reports *after* today's session — buying ahead of an unknown print is exactly what the strategy's "no blind pre-earnings entries" discipline exists to prevent.
+2. Energy (existing thesis via XOM) — oil pulling back 1-2% today on supply-side news; no fresh Energy-sector catalyst to add a second name, existing position's stop handles downside.
+3. PPI + jobless claims at 8:30am ET could move the whole tape; waiting for the print before evaluating any new entry is the disciplined call, not a same-session pre-data buy.
+
+### Risk Factors
+- **Operational gap, not a trading risk but flagged prominently**: no RESEARCH-LOG or TRADE-LOG entry exists between 2026-07-24 and today (2026-08-13) — roughly 3 weeks / ~13 trading days with zero scheduled-workflow activity logged. Live Alpaca data confirms no trades occurred in that window (still just the single XOM position from 7/15). This is on top of the earlier 7/14-7/19 and 7/23 gaps already flagged — the scheduled market-open/pre-market runs are evidently not firing reliably. This needs operator attention outside of trading logic.
+- Deployment stuck at ~12.5% vs. 75-85% target for well over a month now with 0 new trades — compounding the above operational gap, not a new risk itself.
+- XOM unrealized +9.5%, getting closer to (not yet at) the +15% trail-tighten trigger — watch next session.
+- PPI/jobless claims at 8:30am ET could add volatility before any new entry would be evaluated.
+
+### Decision
+HOLD — no new trades. No candidate clears the specific-catalyst + sector-momentum + 2:1 R:R bar: Tech/AI momentum is real but the clearest catalyst (AMAT earnings) prints after today's close, and Energy has no fresh trigger beyond the existing XOM position. XOM position intact, GTC stop active well below the tighten threshold. **Flagging as priority: a ~3-week gap in scheduled-run logging (7/24 to 8/13) indicates the automation has not been executing reliably — this is an infrastructure issue for the operator to investigate, separate from today's HOLD decision.**

@@ -255,3 +255,41 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-08-14 — Pre-market Research
+
+### Reliability Gap
+**No RESEARCH-LOG or TRADE-LOG entry exists between 2026-07-24 and today (2026-08-14) — a ~3-week gap of missing scheduled runs.** This is far larger than the earlier documented gaps (7/14-7/19, and 7/23). The account was left unattended through the FOMC 7/28-29 meeting and CVX's 7/31 earnings with no logged research or trade decisions. Flagging via ClickUp as urgent — this is an operational reliability issue the operator should investigate, not a market call.
+
+### Account
+- Equity: $1,011,543.99 | Cash: $884,183.99 (87.4%) | Buying power: $3,893,343.96 (margin, 4x)
+- Positions: 1 (XOM, 800 sh), position market value $127,360 = **12.6%** of equity deployed — still far below the 75-85% target, now over a month running
+- Orders: 1 open GTC trailing-stop sell on XOM, 10% trail, stop $145.503, hwm $161.67
+- Daytrade count: not reported by API (0 day trades taken)
+- Trades this week: unknown — no log entries since 7/24 to establish a weekly count baseline; treating as 0/3 conservatively
+- XOM: 800sh @ $144.77 avg, live Alpaca price $159.20, unrealized +$11,544 (+9.97%) — approaching but not yet at the +15% trail-tighten threshold (would tighten 10%→7%)
+
+### Market Context
+- WTI ~$81-83, Brent ~$87-88 — well off the late-July Hormuz-spike highs (~$85-93), now consolidating; Strait of Hormuz reopening talks reported stalled on compensation terms
+- S&P 500 futures: ~7,823-7,833, +0.7-0.8% premarket; cash S&P closed at a fresh record Thursday (~7,802) on tame July PPI (flat headline) easing September rate-hike fears
+- VIX: ~14.4-14.6 — quite low, market calm/complacent near all-time highs
+- Today's catalysts: July retail sales + core retail sales (8:30am ET), prelim August UMich consumer sentiment + 1yr inflation expectations (10am ET), SEC 13F disclosure deadline; broad AI/tech strength (Sandisk, Micron, memory names) driving the tape
+- Earnings before open: no major reporters identified in our Energy/Materials/Staples lane; AMAT (Applied Materials) reported AMC Thursday — Tech, not our lane
+- Economic calendar: July CPI already printed 8/12 (3.4% YoY, in line); July PPI printed 8/13 (flat headline, core +0.2%); no CPI/PPI/FOMC today — next FOMC not confirmed in today's window
+- Sector momentum YTD: Energy still #1 (~+23%), Materials #2 (~+17%), Consumer Staples #3 (~+16%), Industrials #4 (~+14%) leading; Tech still shows negative YTD in some snapshots despite very strong recent price action — data somewhat inconsistent across sources on Tech's YTD sign, treat with caution
+- XOM (existing position): $158.65-159.20, roughly flat/mixed reaction to Q2 earnings reported this week ($14.5B earnings, $23.6B operating cash flow, $17.2B FCF, active buybacks/dividends) — no thesis-breaking news, cash generation strong
+
+### Trade Ideas
+1. No new name today — VIX at ~14.5 near cycle lows and S&P at record highs is not itself a catalyst; today's drivers (retail sales, UMich sentiment) are broad macro, not company-specific triggers in our Energy/Materials/Staples lane.
+2. Materials/Consumer Staples — still #2/#3 YTD sectors, no dated company-specific catalyst today clears the entry checklist; watchlist only.
+3. XOM add-on — not considered; strategy rule is one thesis per catalyst, existing position already sized, no fresh catalyst since Q2 earnings this week.
+
+### Risk Factors
+- **Primary risk today is process, not market**: a 3-week logging/execution gap means the account ran unattended through FOMC (7/28-29) and CVX earnings (7/31) with no evidence of research or trade decisions being made or recorded — needs operator investigation into why scheduled runs stopped firing.
+- XOM unrealized +9.97%, closing in on the +15% trail-tighten trigger — watch next session(s); no action needed yet, never move a stop down.
+- VIX complacency (~14.5) near record highs raises reversal risk if today's retail sales/sentiment data disappoints.
+- Weekly trade count (0/3 vs used) cannot be verified due to the log gap — treating conservatively as reset/untouched.
+- Deployment stuck at ~12.6% vs 75-85% target for well over a month now with no new position added — the recurring under-deployment flag from prior sessions remains unresolved and is now compounded by the reporting gap itself.
+
+### Decision
+HOLD — no new trades today. XOM thesis intact (+9.97% unrealized, Q2 earnings solid, GTC trailing stop active at $145.503), approaching the +15% tighten threshold to watch next session. No name clears the specific-catalyst + sector-momentum bar; today's macro releases (retail sales, UMich sentiment) aren't company-specific triggers. Flagging the 3-week research/trade-log gap as the top-priority item for the operator — this is a reliability issue independent of any market call.

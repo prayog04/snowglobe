@@ -46,3 +46,12 @@ No new trades. 1 open position (XOM), thesis intact, GTC trailing stop active (s
 | XOM | 800 | $144.77 | $151.80 | +2.32% | +$5,624.00 (+4.86%) | $136.58 GTC trailing 10% (hwm $151.76) |
 
 **Notes:** Quiet no-trade day, as previewed in the market-open check. XOM continued its run, up 2.3% intraday to $151.80, pushing the trailing stop's high-water mark to $151.76 and the stop itself up to $136.58 — the position is now up nearly 5% unrealized. Portfolio gained $2,680 (+0.27%) on the day, all from XOM's move; cash sat untouched at $884,184 (87.9%). Zero trades today, zero trades this week (0/3), and deployment remains stuck at ~12% vs. the 75-85% target for a third straight session — the bot continues to wait for a dated catalyst outside the weak Tech rally rather than force a trade.
+
+### Aug 14 — EOD Snapshot (Day 25, Friday)
+**Portfolio:** $1,012,263.99 | **Cash:** $884,183.99 (87.35%) | **Day P&L:** +$1,192.00 (+0.12%) | **Phase P&L:** +$12,263.99 (+1.23%)
+
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|
+| XOM | 800 | $144.77 | $160.10 | +0.94% | +$12,264.00 (+10.59%) | $145.50 GTC trailing 10% (hwm $161.67) |
+
+**Notes:** Major scheduling gap — this routine has not run since Jul 24 (market-open check); no market-open, pre-market, midday, or EOD entries exist for Jul 27 through Aug 13 (roughly 15 trading days). Position and account state come from live Alpaca data only, since the log has no continuity for that stretch. Still just 1 open position (XOM), unchanged since Jul 15, now up 10.59% unrealized with the GTC trailing stop having ratcheted up to $145.50 off a $161.67 high. No new orders and no fills today; Day P&L computed against Alpaca's own last_equity ($1,011,071.99) rather than the stale Jul 21 log line, consistent with how the Jul 20 gap was handled. Trades this week: 0/3 (no entries logged Aug 10-14). Deployment remains ~12.6% vs. the 75-85% target — now over three weeks under-deployed with a single position, and the scheduled-workflow reliability issue flagged repeatedly in late July appears to have gone unaddressed and worsened into a full outage. This needs operator attention: the daily/weekly cadence this bot depends on for stop management, catalyst research, and rebalancing was not running for most of the phase.

@@ -46,3 +46,12 @@ No new trades. 1 open position (XOM), thesis intact, GTC trailing stop active (s
 | XOM | 800 | $144.77 | $151.80 | +2.32% | +$5,624.00 (+4.86%) | $136.58 GTC trailing 10% (hwm $151.76) |
 
 **Notes:** Quiet no-trade day, as previewed in the market-open check. XOM continued its run, up 2.3% intraday to $151.80, pushing the trailing stop's high-water mark to $151.76 and the stop itself up to $136.58 — the position is now up nearly 5% unrealized. Portfolio gained $2,680 (+0.27%) on the day, all from XOM's move; cash sat untouched at $884,184 (87.9%). Zero trades today, zero trades this week (0/3), and deployment remains stuck at ~12% vs. the 75-85% target for a third straight session — the bot continues to wait for a dated catalyst outside the weak Tech rally rather than force a trade.
+
+### Aug 17 — EOD Snapshot (Day 26, Monday)
+**Portfolio:** $1,013,367.99 | **Cash:** $884,183.99 (87.2%) | **Day P&L:** +$1,104.00 (+0.11%) | **Phase P&L:** +$13,367.99 (+1.34%)
+
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|
+| XOM | 800 | $144.77 | $161.48 | +0.86% | +$13,368.00 (+11.54%) | $146.26 GTC trailing 10% (hwm $162.51) |
+
+**Notes:** CRITICAL LOGGING GAP — no TRADE-LOG or RESEARCH-LOG entries and no commits exist between Jul 24 and today (Aug 17); scheduled routines did not run or did not persist for ~17 trading days (Jul 25–Aug 14). Day P&L above is computed from Alpaca's own `last_equity` ($1,012,263.99), not from the stale Jul 21 log line, since nearly a month elapsed in between with no intermediate snapshots — treat the "Day P&L" figure as day-over-day per Alpaca, not day-over-last-log-entry. Phase P&L (+1.34%) is accurate off the $1,000,000 starting baseline regardless of the gap. Only one position (XOM) and one open order exist on the account — the original GTC 10% trailing stop, still live, now trailing $146.26 off a $162.51 high; no new trades were placed today and none are visible anywhere in the missing window per Alpaca order history (only the one original trailing-stop order exists, updated intraday to trail the new high). Trades this week: 0/3 (today is Monday, week reset). Deployment still ~12.8% vs. the 75-85% target — now over three weeks under-deployed. XOM unrealized +11.54%, past the +15%... not yet — still short of the trail-tighten-to-7%-at-+15% threshold, watch closely next session. Flagging the logging/commit gap as the top priority item for next session: verify whether the scheduled workflows are actually firing.

@@ -255,3 +255,41 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-08-17 — Pre-market Research
+
+### ⚠️ Logging gap
+No RESEARCH-LOG or TRADE-LOG entry exists between 2026-07-24 and today (2026-08-17) — 24 calendar days / ~17 trading days where this scheduled workflow apparently did not run or did not persist. Only one Alpaca order exists on the account: the original XOM trailing stop (submitted 7/15, last updated 8/11 — hwm has been trailing up, so it has been live/working the whole gap). No new trades were placed in the interim per order history, so nothing needs to be reconciled into TRADE-LOG, but the scheduled-run reliability issue itself (a third occurrence, after the 7/14-7/19 and 7/23 gaps already logged) should be investigated at the infra/cron level.
+
+### Account
+- Equity: $1,011,327.99 (last_equity $1,012,263.99 — down slightly day-over-day)
+- Cash: $884,183.99
+- Buying power: $3,892,739.16 (margin, 4x)
+- Positions: 1 (XOM, 800 sh), market value $127,144 = **12.6%** of equity — still well below 75-85% target, now a multi-week-old pattern with the log gap obscuring how many sessions this actually spans
+- Daytrade count: not reported by API (0 day trades taken)
+- Open orders: 1 (XOM GTC trailing stop, 10%, hwm $161.67, stop $145.503)
+- XOM: 800sh @ $144.77 avg, current $158.93, unrealized +$11,328 (+9.78%) — below the +15% trail-tighten threshold, no stop action needed
+
+### Market Context
+- WTI ~$82.1 (-0.3%), Brent ~$88.6 (+0.1%) — calm, no geopolitical premium event today; a marked change from late-July's Iran/Hormuz-driven spike-and-reversal
+- S&P 500 futures ~7,805, roughly flat (-0.2%) after the index closed at fresh record highs last week on cooler-than-expected CPI (7/12) and PPI (7/13) prints
+- VIX ~14.2-14.9 — near cycle lows, notably calmer than any prior session in this log; record-high index + rock-bottom VIX is a classic complacency setup worth flagging as a risk, not a reason to act
+- Today's catalysts: no major scheduled data beyond Empire State Manufacturing Index (8:30am) and secondary housing/TIC-flow releases; broader tape driven by carryover AI/semis earnings strength and rate-cut optimism from last week's soft inflation data
+- Earnings before open: only small-cap names (HTHT, FUFU, CRGO, NSPR) — nothing in Energy/Materials/Staples/Industrials lane
+- Economic calendar: no CPI/PPI/jobs today (already printed: jobs 8/7, CPI 8/12, PPI 8/13); next real catalyst is FOMC meeting minutes Wednesday 8/19
+- Sector momentum YTD: Energy still #1 (+22-26%), Materials/Consumer Staples/Industrials also double-digit leaders; Financials (~-7%), Consumer Discretionary (~-4%), Tech (~-3%) still laggards despite recent AI-driven bounces
+- XOM (existing position): ~$159-160, Q2 2026 results now confirmed and digested — $14.5B net income, $14.7B adjusted earnings, $23.6B operating cash flow, $17.2B FCF, $9.4B returned to shareholders (dividends + buybacks); adjusted EPS landed slightly light vs. consensus per Morningstar but cash-return strength is supporting the stock. No thesis-breaking news.
+
+### Trade Ideas
+1. No new name today — VIX at cycle lows / S&P at record highs is a low-conviction backdrop, and nothing in today's data (Empire State index, minor small-cap earnings) rises to a dated, sector-aligned catalyst. Watchlist only.
+2. Materials (LIN/FCX/XLB) — still #2 YTD sector, no company-specific trigger today; doesn't clear the entry checklist.
+3. Second Energy name (CVX or peer) — thesis would piggyback on XOM's, not an independent catalyst; wait for FOMC minutes Wed 8/19 to clarify rate-path risk before adding sector exposure.
+
+### Risk Factors
+- VIX near cycle lows while the index sits at record highs — a classic complacency setup; a hawkish surprise in Wednesday's FOMC minutes is the nearest real trigger for a vol repricing
+- 24-day logging gap (7/24 → 8/17) is the third scheduled-run reliability issue on this account (after 7/14-7/19 and 7/23) — no trades were missed per Alpaca order history, but the pattern itself needs investigation outside this session
+- Deployment stuck at 12.6% vs. 75-85% target — this has now persisted across every logged session since launch with no action taken; flagging again but not forcing a trade without a genuine catalyst
+- XOM's trailing stop (hwm $161.67, stop $145.503) has done its job unattended through the gap — no manual intervention needed, but worth confirming next session that no rule violation occurred (e.g., stop should never move down — hwm trend is monotonic up per order data, consistent with the rule)
+
+### Decision
+HOLD — no new trades today. XOM position intact and strengthening (+9.78% unrealized), stop live and correctly trailing, well below the +15% tighten threshold. No name clears the specific-catalyst + sector-momentum bar in a quiet, low-VIX, record-high tape with no dated Energy/Materials/Staples trigger today. Two items to flag for the operator (not urgent, but real): (1) the 24-day scheduled-run gap — worth checking why this workflow silently stopped firing between 7/24 and today, and (2) deployment has sat near 12-13% for the entire logged history of the account against a 75-85% target — worth a deliberate strategy-level review of whether the catalyst bar is calibrated too high given the account's mandate to beat the S&P 500.

@@ -255,3 +255,33 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-08-17 — Pre-market Research (run inline during market-open; entry was missing)
+
+### Account
+- Equity: $1,012,239.99
+- Cash: $884,183.99
+- Buying power: $3,895,292.76 (margin, 4x)
+- Positions: 1 (XOM, 800 sh), deployed $128,056 = **12.65%** of equity — still far under 75-85% target
+- Daytrade count: not reported by API (0 day trades taken)
+- Trades this week (since Mon 8/17): 0/3
+- XOM: 800sh @ $144.77 avg, current $160.13, unrealized +$12,288 (+10.61%), GTC trailing-stop 10% live (stop $145.50, hwm $161.67) — below the +15%/+20% tighten thresholds, no stop action needed
+
+### Market Context
+- S&P 500 futures roughly flat to slightly higher; S&P notched a third straight week of gains and fresh all-time highs last week. Sentiment constructive but cautious — Fed-hike odds fading (~30% priced for a September move) after soft July retail sales (-0.6%) and weak consumer sentiment (51)
+- WTI ~$81.5/bbl, little changed on the day
+- Sector momentum YTD: Energy still #1 (+24.97%), Materials #2 (+18.73%), Industrials #3 (+16.99%) leading; Financials (-5.95%) and Tech (-5.41%) lagging. Caveat: Materials and Industrials were among the WORST-performing sectors last week (-1.77%, -2.99%) — near-term momentum cooling even as YTD leaders
+- Economic calendar: Empire State Manufacturing Index (8:30am ET), EIA Petroleum Status Report (10:30am ET), FOMC Minutes (2pm ET) — no CPI/jobs print today
+- No confirmed US-listed Energy/Materials/Industrials company-specific catalyst (earnings, M&A, guidance, upgrade/downgrade) found for today; this week's calendar is dominated by big-box retail earnings (WMT, TGT, HD, LOW) — outside our sector lane
+- XOM (existing position): $160.13, continuing to grind higher, no thesis-breaking news
+
+### Trade Ideas
+1. No new name today — no dated, company-specific catalyst in Energy/Materials/Industrials clears the entry checklist; Materials/Industrials both showed near-term weakness last week despite YTD sector leadership, arguing against chasing either right now.
+
+### Risk Factors
+- **Reliability gap: no market-open, pre-market, or EOD entries exist in this log between 2026-07-24 and today (2026-08-17) — roughly 3.5 weeks / ~16 trading days with no scheduled-workflow activity logged.** Live Alpaca data confirms no trades occurred in that window (XOM remains the sole position, same 800sh @ $144.77 entry, order history shows nothing new since 7/15), and the GTC trailing stop continued protecting the position throughout — so no uncontrolled risk resulted. But zero research or decisions were logged for over three weeks. This is the same class of issue flagged 7/20 and 7/24, now the most severe instance since account inception. Recommend the operator check whether the market-open/pre-market/midday/EOD scheduled triggers are firing reliably.
+- Deployment stuck at ~12.65% vs. 75-85% target — now roughly 5 weeks under-deployed with only 1 position on since the account's first trade.
+- No dated catalyst today = no forced trade, per strategy discipline.
+
+### Decision
+HOLD — no new trades. XOM thesis intact and strengthening (+10.61% unrealized), GTC trailing stop live and correctly trailing (stop $145.50, hwm $161.67), well below the +15% tighten trigger. No Energy/Materials/Industrials name today carries a specific dated catalyst; Materials/Industrials cooling last week despite YTD leadership argues against chasing. **Primary finding this session: a ~3.5-week gap in scheduled-run activity (7/24 → 8/17) with no logged research, trades, or EOD snapshots** — flagging for operator review; live account was not at uncontrolled risk during the gap (stop order stayed active) but the automation itself did not run.

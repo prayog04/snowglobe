@@ -46,3 +46,19 @@ No new trades. 1 open position (XOM), thesis intact, GTC trailing stop active (s
 | XOM | 800 | $144.77 | $151.80 | +2.32% | +$5,624.00 (+4.86%) | $136.58 GTC trailing 10% (hwm $151.76) |
 
 **Notes:** Quiet no-trade day, as previewed in the market-open check. XOM continued its run, up 2.3% intraday to $151.80, pushing the trailing stop's high-water mark to $151.76 and the stop itself up to $136.58 — the position is now up nearly 5% unrealized. Portfolio gained $2,680 (+0.27%) on the day, all from XOM's move; cash sat untouched at $884,184 (87.9%). Zero trades today, zero trades this week (0/3), and deployment remains stuck at ~12% vs. the 75-85% target for a third straight session — the bot continues to wait for a dated catalyst outside the weak Tech rally rather than force a trade.
+
+### Aug 17 — Midday scan
+**Gap flagged:** No RESEARCH-LOG or TRADE-LOG entries exist between Jul 24 and today (Aug 17) — a ~3.5-week stretch (~17 trading days) where scheduled runs did not execute or did not log/commit. XOM's GTC trailing stop stayed live and self-managing throughout, so the position was not unprotected, but no market-open/pre-market/midday/EOD decisions were made or recorded for that entire window.
+
+Current state (live Alpaca):
+- Equity: $1,013,767.99 | Cash: $884,183.99 | Position value: $129,584 (12.8% deployed) — still only 1 of 5-6 target positions, ~14th consecutive logged session under the 75-85% deployment target
+- XOM: 800 sh @ $144.77 avg, current $162.00, unrealized +$13,784 (**+11.90%**) — up from +8.03% at last log (Jul 24)
+- GTC trailing stop 10% live: stop $146.259, hwm $162.51 (auto-updated by broker throughout the gap)
+
+Rule checks:
+- Cut-loser (-7%): N/A, position is +11.90%
+- Tighten trail (+15%→7%, +20%→5%): not yet triggered — 11.90% is below the +15% threshold, no stop change made
+- Thesis check: no thesis-breaking news found; original Strait-of-Hormuz/Energy-momentum thesis still intact per price action
+- No intraday move sharp enough to warrant ad-hoc Perplexity research
+
+**Decision:** HOLD, no action. No new trades evaluated today (midday scan scope, not a research session). Flagging the multi-week logging/scheduling gap for review — next pre-market/market-open session should investigate why scheduled runs stopped executing after Jul 24.

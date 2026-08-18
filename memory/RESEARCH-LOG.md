@@ -255,3 +255,42 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-08-18 — Pre-market Research
+
+### Logging gap (flag)
+No RESEARCH-LOG or TRADE-LOG entry exists between 2026-07-24 and today (2026-08-18) — a 25-day scheduled-run gap, the third and by far the largest of its kind (prior gaps: 7/14-7/19, 7/23). Live Alpaca history shows no new orders were placed in the gap other than routine trailing-stop hwm/stop updates on the existing XOM position — account still holds exactly 1 position. Deployment and trade-count tracking below restart the count from today since the intervening sessions were never logged.
+
+### Account
+- Equity: $1,014,175.99 | Last equity: $1,013,351.99
+- Cash: $884,183.99
+- Buying power: $3,900,713.56 (margin, 4x)
+- Positions: 1 (XOM, 800 sh), deployed $129,992 = **12.8%** of equity — still far under the 75-85% target after a 25-day unlogged gap
+- Daytrade count: not reported by API (0 day trades taken)
+- Trades this week (since Mon 8/17): 0/3
+- Open orders: 1 GTC trailing-stop sell on XOM, 10% trail, stop $146.26, hwm $162.51 (updated 8/17)
+- XOM: 800 sh @ $144.77 avg, current $162.49, unrealized +$14,176 (+12.24%) — above the +15%/tighten-to-7% checkpoint is now close; not yet triggered, no stop action needed this session, watch next session
+
+### Market Context
+- WTI ~$85.05-85.06/bbl, Brent ~$91.33-91.40/bbl — both up modestly (~+0.6-3%) on the session; sources still reference the ongoing Strait of Hormuz supply-risk premium (talks to reopen it reportedly stalled)
+- S&P 500 futures: modestly lower, roughly 7,750-7,795 (-0.13% to -0.5% depending on source/contract) — mildly negative tone, not a selloff
+- VIX: ~15.0-15.9 (sources range 14.98-15.95), up ~5% on the day from Monday's close (~14.25) but still low/complacent in absolute terms given the active oil-supply risk premium — same VIX/oil disconnect flagged in prior sessions
+- Today's catalysts: 8:30am ET Import/Export Price Indexes is the primary scheduled macro event; Reddit (RDDT) joins the S&P 500 today replacing AvalonBay (AVB) — estimated ~$2.9B forced index buying, a mechanical flow event not a fundamental thesis, and in the weak Communication Services sector — not actionable under our framework; Home Depot (HD) beat premarket (EPS $4.92 vs. $4.73 est.) — Consumer Discretionary, not our lane; other BMO earnings: Baidu, Hesai, Amer Sports, Jack Henry, Keysight, Toll Brothers, others; Danish Defence Industry Day cited as a modest catalyst for LMT/RTX/AVAV/GD
+- Economic calendar: July CPI already printed 8/12 (+0.1% m/m, +3.4% y/y, in line with forecast); PPI final demand unchanged in July; July jobs data already out (unemployment 4.1%, payrolls -23k, avg hourly earnings +$0.02) — no CPI/PPI/jobs surprise due today; today's releases are Building Permits, Capacity Utilization, Housing Starts, Industrial Production, Pending Home Sales; FOMC already met 7/28-29, next meeting not imminent
+- Sector momentum YTD: sources diverge more than usual — one shows Energy #1 (+40%), Technology #2 (+33%), Industrials #3 (+21%), Communication Services worst (-5%); another (dated slightly earlier) shows Energy, Materials, Consumer Staples, Industrials leading with Tech still negative. Treat Energy-#1 as the reliable constant across all sources; Tech's YTD sign is genuinely unclear from today's data and should not be traded on either side without a fresher, single-source check
+- XOM (existing position): $161.46-162.70 across sources, consistent with live Alpaca $162.49; ex-dividend today ($1.03/share, ex-date 8/17); positive company-specific news — $1.1B pre-investment contracts awarded for Mozambique Rovuma LNG Phase 1, new 20-year fee-based midstream agreements with Targa Resources in the Permian — no thesis-breaking news
+
+### Trade Ideas
+1. No new name today — Energy remains the one consistently-confirmed leading sector, but no second Energy ticker has an independent dated catalyst today (XOM's own news is supportive of the existing position, not a new-name trigger). Not chasing the continued oil/geopolitical premium into a second position.
+2. Reddit S&P 500 inclusion (mechanical ~$2.9B forced buying) — explicitly not actionable: it's a flow event, not a fundamental catalyst, and RDDT sits in the weakest-YTD sector (Communication Services) — fails the sector-momentum leg of the checklist.
+3. Home Depot earnings beat — Consumer Discretionary, a lagging/negative-YTD sector in every recent read; no sector-momentum alignment, watchlist only.
+
+### Risk Factors
+- **25-day logging/scheduling gap (7/24 → 8/18)** — the workflow appears not to have run for over three weeks; this is a reliability issue larger than the two prior gaps combined and should be investigated outside this session (cron/schedule check), since "patience > activity" only holds if the research loop is actually running to catch a catalyst when one appears
+- XOM unrealized +12.24%, now meaningfully closer to the +15% trail-tighten checkpoint (would move trail from 10%→7%) — check again next session, don't act early
+- VIX/oil disconnect persists: elevated Hormuz-linked oil risk premium alongside a still-low absolute VIX (~15) — a re-escalation or resolution headline could move markets sharply either way
+- Sector-momentum sources disagree materially on Tech's YTD sign (+33% vs. negative in different reads) — don't trust either without a fresh single-source confirmation before using Tech in any decision
+- Deployment at 12.8% vs. 75-85% target — still far under target; given the unlogged gap, can't confirm whether this was a deliberate 25-day HOLD or simply an unmonitored account, which is itself the bigger issue
+
+### Decision
+HOLD — no new trades today. XOM thesis intact and strengthening (+12.24% unrealized), GTC trailing stop active and appropriately trailing (stop $146.26, hwm $162.51), approaching but not yet at the +15% tighten trigger. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar today — Reddit's index-inclusion flow and Home Depot's earnings beat are both outside our sector-momentum lane. Flagging the 25-day scheduled-run gap as the top priority for review — patience is the correct call today, but only because the reviewed data itself shows nothing actionable, not because the process has been reliably watching for the last month.

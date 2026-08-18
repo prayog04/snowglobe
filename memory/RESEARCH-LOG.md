@@ -255,3 +255,41 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-08-18 — Pre-market Research (run inline during market-open; entry was missing)
+
+### Account
+- Equity: $1,015,783.99
+- Cash: $884,183.99
+- Buying power: $3,905,215.96 (margin, 4x)
+- Positions: 1 (XOM, 800 sh), deployed $131,600 = **12.96%** of equity — still far under the 75-85% target
+- Daytrade count: not reported by API (0 day trades taken)
+- Trades this week (since Mon 8/17): 0/3
+- XOM: 800sh @ $144.77 avg, current $164.50, unrealized +$15,784 (+13.63%), GTC trailing-stop 10% live (stop $148.74, hwm $165.27) — approaching but not yet at the +15% tighten threshold, no stop action needed
+
+### ⚠️ Reliability gap — routine did not run for ~19 trading days
+No RESEARCH-LOG or TRADE-LOG entry exists between 2026-07-24 and today (2026-08-18) — pre-market, market-open, midday, and EOD scheduled runs all appear to have not fired for roughly a month. No trades were missed as a result (XOM's stop trailed correctly the whole time and no other order history exists), but this is the second and by far largest documented scheduled-run gap (first was 7/14-7/19, flagged 7/20). Flagging for operator review — this is outside what a single market-open run can fix.
+
+### Market Context
+- WTI ~$85.04, Brent ~$91.14 — both up sharply again vs. 7/24 levels (WTI was ~$71 then), driven by renewed US-Iran tension / Strait of Hormuz risk premium; oil now ~+42% YTD per sector data
+- S&P 500: cash index closed lower Monday at 7,745.06 (-0.52%); Sep E-mini futures ~7,732-7,738, down ~0.4-0.5% this morning — soft tone tied to the oil/rates shock
+- VIX: ~15.0-15.9 across sources — still low/calm despite the equity softness
+- Today's catalysts: US-Iran driven oil spike + a new 30-year Treasury yield high pressuring growth names; RDDT joining S&P 500 (replacing AVB) around the open; Danish Defence Industry Day (LMT, RTX, AVAV, GD) and a Seaport investor conference
+- Earnings before open: HD, BIDU, IQ, DRI, SNX, AYI, CMC, WGO, NNOX — none in Energy/current-holding lane
+- Economic calendar: Import/Export Price Indexes 8:30am ET, Housing Starts/Building Permits 8:30am ET, Industrial Production 9:15am ET; no CPI/PPI/FOMC/jobs today (CPI was 8/12, PPI was 8/13)
+- Sector momentum YTD: Energy #1 (+38-41%), Technology #2 (+32%), Industrials #3 (+20%), Materials (+15.3%), Consumer Staples (+10.8%), Utilities (+4%); Consumer Discretionary (-2%) and Communication Services (-5.6%) lagging
+- XOM (existing position): strong Q2 ($14.5B / $3.48 EPS), dividend raised to $1.03/sh (paid 9/10), $1.1B Mozambique LNG contract award (8/13), TD Cowen PT raised to $168 from $155 — no thesis-breaking news, thesis strengthening
+
+### Trade Ideas
+1. No new name today — oil's renewed spike (US-Iran tension) is the same continuation-of-existing-thesis pattern that has produced HOLD on every prior session (7/21, 7/22, 7/24 x2); CVX/COP have Buy ratings and sector tailwind but no company-specific dated catalyst today, same bar that wasn't cleared before.
+2. Materials (#4 YTD, +15.3%) and Consumer Staples (#5, +10.8%) — no dated company-specific catalyst today; watchlist only.
+3. RDDT S&P 500 inclusion — mechanical index-flow event, not a fundamental catalyst in our sector lane; pass.
+
+### Risk Factors
+- Deployment stuck at ~13% vs. 75-85% target — now confirmed flat for nearly 5 weeks straight (last measured 12.4% on 7/24, now 12.96%), compounded by the ~19-trading-day logging gap. This is the same "treat as active decision point" flag raised 7/24 that never got actioned because the routine didn't run. Escalating to operator rather than deferring a fourth+ time.
+- 30-year Treasury yield at a new high is a cross-asset risk (equity valuation pressure) independent of our Energy-only book.
+- XOM unrealized +13.63%, close to the +15% trail-tighten trigger — next session should check if tighten to 7% trail is warranted.
+- One live quote pull for XOM showed an anomalously wide bid/ask ($163.94 bid / $172.73 ask, condition "R") — used Alpaca's position current_price ($164.50, consistent with the trailing-stop hwm of $165.27) instead of the raw quote as the trustworthy figure.
+
+### Decision
+HOLD — no new trades today. Oil's renewed spike is a continuation of the existing XOM thesis (now +13.63% unrealized, stop correctly trailing at $148.74), not a fresh dated catalyst for a second Energy name — same bar applied consistently across every prior session. XOM approaching the +15% tighten threshold; watch next session. Primary finding today is procedural, not market-driven: the scheduled routine silently stopped running for ~19 trading days (7/25-8/17) with no trades or logging in that window — flagging as a reliability issue that needs operator attention rather than something a single run can self-correct.

@@ -46,3 +46,12 @@ No new trades. 1 open position (XOM), thesis intact, GTC trailing stop active (s
 | XOM | 800 | $144.77 | $151.80 | +2.32% | +$5,624.00 (+4.86%) | $136.58 GTC trailing 10% (hwm $151.76) |
 
 **Notes:** Quiet no-trade day, as previewed in the market-open check. XOM continued its run, up 2.3% intraday to $151.80, pushing the trailing stop's high-water mark to $151.76 and the stop itself up to $136.58 — the position is now up nearly 5% unrealized. Portfolio gained $2,680 (+0.27%) on the day, all from XOM's move; cash sat untouched at $884,184 (87.9%). Zero trades today, zero trades this week (0/3), and deployment remains stuck at ~12% vs. the 75-85% target for a third straight session — the bot continues to wait for a dated catalyst outside the weak Tech rally rather than force a trade.
+
+### Aug 18 — EOD Snapshot (Day 27, Tuesday)
+**Portfolio:** $1,016,639.99 | **Cash:** $884,183.99 (87.0%) | **Day P&L:** +$3,288.00 (+0.32%) | **Phase P&L:** +$16,639.99 (+1.66%)
+
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|
+| XOM | 800 | $144.77 | $165.57 | +2.55% | +$16,640.00 (+14.37%) | $149.10 GTC trailing 10% (hwm $165.67) |
+
+**Notes:** Major logging gap: this is the first log entry of any kind since the Jul 24 market-open check — no pre-market, market-open, midday, or EOD entries exist for roughly four weeks (Jul 25 - Aug 17), meaning scheduled runs were silent or not committed for most of a month. Day P&L computed from Alpaca's own last_equity ($1,013,351.99, balance_asof 2026-08-17) rather than the stale Jul 21 log line. Phase P&L computed from the $1,000,000 starting balance. No new trades or orders in that gap — only position remains XOM (unchanged, 800sh @ $144.77), now up 14.37% unrealized and $165.57, right at the edge of the strategy's +15% trail-tighten threshold (would tighten stop from 10% to 7%) — flagging for the next market-open/midday session to act on, since this EOD-summary run does not adjust stops. Trades today: none. Trades this week (Mon 8/17-today): 0/3. Deployment still ~13% vs. 75-85% target. This ~4-week dark stretch is a serious reliability issue for the scheduled-workflow setup and should be investigated (cron/routine trigger config) separately from today's numbers.

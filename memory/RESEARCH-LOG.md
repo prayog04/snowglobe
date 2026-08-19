@@ -255,3 +255,34 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-08-19 — Market-open (run inline; ~4-week scheduled-run gap)
+
+### CRITICAL: automation gap
+No RESEARCH-LOG or TRADE-LOG entry, and no git commit, exists between 2026-07-24 and today (2026-08-19) — roughly 18 trading days where the scheduled market-open/pre-market/EOD routines did not fire or did not persist. Env vars, wrapper scripts, and git push all work fine right now, so the cause is unconfirmed (scheduler config, not this account's tooling). Flagging for operator review; not something this session can diagnose further.
+
+### Account (live Alpaca, ground truth used since logs are stale)
+- Equity: $1,017,471.99 | Cash: $884,183.99 | Buying power: $3,909,942.36 (margin, 4x)
+- Positions: 1 (XOM, 800 sh @ $144.77 avg), current $166.61-170, unrealized +$17,472 (+15.09%) — **crossed the +15% trail-tighten threshold** (first crossing since the gap began; unknown how long it sat above +15% unlogged)
+- Deployed: $133,288 = 13.1% of equity — still well below 75-85% target
+- Trades this week: unknown (weekly counter reset by gap); treating as 0/3 conservatively
+
+### Action taken: stop tightened per Rule 6
+Old order (10% trail, GTC, stop $149.98, hwm $166.64) canceled and replaced with a 7% trail GTC stop, per "tighten trail to 7% at +15%." New stop: $155.06 (hwm $166.73) — moved up from $149.98, consistent with "never move a stop down."
+
+### Market Context
+- S&P 500 ~7,691.76 (-0.69% last close, Aug 18), near record highs (record closing high 7,798.99 on 8/13); today's tone: tech-heavy selloff on rising yields, chip names weak
+- VIX ~15.84 — low/complacent
+- No reliable YTD sector-momentum table obtained today; last confirmed framework (7/22, now stale after a month) had Energy/Materials/Staples leading — not re-verified today
+- Today's catalysts: FOMC minutes release; earnings from ADI, TJX, LOW, TGT, EL — none in an Energy/Materials/Staples lane tied to our existing thesis
+
+### Trade Ideas
+1. No new name today — sector-momentum data is stale/unverified after the month-long gap and no company-specific dated catalyst in our lane was found. Not forcing a trade on a rebuilt-from-scratch, unverified framework.
+
+### Risk Factors
+- Scheduled-run gap (see CRITICAL above) is the dominant issue today — operator should confirm the trigger/cron is actually firing and this session's writes are landing before trusting future automated runs
+- XOM sat above the +15% tighten threshold for an unknown period before this session caught it — real but bounded risk exposure (stop was still 10% trailing throughout, so max drawdown from peak was capped at 10%, not unlimited)
+- Sector-momentum framework needs a full rebuild next session — a month of drift means the 7/22 read is unreliable
+
+### Decision
+HOLD on new trades — no verified, dated catalyst in our sector lane after a month-long data gap. Took the one clear, rule-mandated action available: tightened XOM's trailing stop from 10% to 7% now that unrealized P&L crossed +15%. Escalating the automation gap to the operator as the top priority.

@@ -46,3 +46,12 @@ No new trades. 1 open position (XOM), thesis intact, GTC trailing stop active (s
 | XOM | 800 | $144.77 | $151.80 | +2.32% | +$5,624.00 (+4.86%) | $136.58 GTC trailing 10% (hwm $151.76) |
 
 **Notes:** Quiet no-trade day, as previewed in the market-open check. XOM continued its run, up 2.3% intraday to $151.80, pushing the trailing stop's high-water mark to $151.76 and the stop itself up to $136.58 — the position is now up nearly 5% unrealized. Portfolio gained $2,680 (+0.27%) on the day, all from XOM's move; cash sat untouched at $884,184 (87.9%). Zero trades today, zero trades this week (0/3), and deployment remains stuck at ~12% vs. the 75-85% target for a third straight session — the bot continues to wait for a dated catalyst outside the weak Tech rally rather than force a trade.
+
+### Aug 19 — EOD Snapshot (Day 28, Wednesday)
+**Portfolio:** $1,016,023.99 | **Cash:** $884,183.99 (87.0%) | **Day P&L:** -$608.00 (-0.06%) | **Phase P&L:** +$16,023.99 (+1.60%)
+
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|
+| XOM | 800 | $144.77 | $164.80 | -0.46% | +$16,024.00 (+13.84%) | $156.44 GTC trailing 7% (hwm $168.21) |
+
+**Notes:** Major logging gap — this is the first TRADE-LOG entry since Jul 24 EOD (last committed snapshot on any branch/PR); no market-open, EOD, or research entries exist for Jul 25 through Aug 18, roughly four weeks of scheduled runs. The live Alpaca account shows no trades in that gap — cash is unchanged at $884,183.99 since Jul 21/24, and the only position remains the original 800sh XOM buy from Jul 15. One risk-management action did occur today: the 10% GTC trailing stop was canceled and replaced with a 7% trailing stop (hwm $168.21, stop $156.44), consistent with the strategy's +15%-tighten-to-7% rule (XOM peaked at +16.2% from the $144.77 entry). Day P&L computed from Alpaca's own last_equity ($1,016,631.99, Aug 18 close) since the log had no Aug 18 line. XOM unrealized +13.84% ($16,024), pulled back slightly today (-0.46%) after the run to its $168.21 high. Zero new trades today, zero this week (0/3). Deployment remains ~13% vs. the 75-85% target — essentially unchanged since launch, now 28 trading days in with only one position ever opened. Flagging the four-week scheduled-run gap as the priority item to investigate — the account and stop management appear healthy, but daily research/logging clearly was not running.

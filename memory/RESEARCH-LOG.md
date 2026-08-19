@@ -255,3 +255,19 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-08-19 — Midday Scan (afternoon addendum)
+
+**Logging gap flagged:** no memory entries (pre-market/market-open/midday/EOD/weekly) exist between 2026-07-24 and today — scheduled routines appear not to have run or committed for ~4 weeks. Backfilling current state from live Alpaca data below; historical daily detail for that window is unrecoverable.
+
+### Account (live, 2026-08-19 midday)
+- Equity: ~$1,009,952 cash + $132,592.80 XOM market value (cash figure carried from last known snapshot, not re-verified this run)
+- Positions: 1 (XOM, 800 sh) — still the only open position, deployment far under the 75-85% target
+- XOM: 800sh @ $144.77 avg, current $165.74, unrealized +$16,776.80 (+14.49%). GTC trailing stop live: trail_percent 7%, hwm $168.21, stop $156.4353 (already tightened past the +15% threshold at some point during the unlogged gap — hwm implies price briefly cleared ~+16.2% before pulling back; stop correctly left unmoved, never lowered)
+
+### Thesis check (Perplexity)
+- No thesis-breaking news for XOM. Q2 profit $14.5B, record Permian/upstream production, dividend raised 4% to $1.03/share (26th consecutive annual increase), multiple recent price-target raises (Jefferies $200, Morgan Stanley $177, Barclays $177, BMO $170, Argus $175, TD Cowen $168). Only negative-ish note is political noise (Trump criticizing oil majors' profits) — not an operating/thesis issue.
+- No losers to cut (position is a winner, not near -7%). No new stop action needed today: current 14.49% gain is below the +15% re-tighten trigger relative to a fresh crossing, and the stop already reflects the tighter 7% trail from its prior high.
+
+### Decision
+HOLD — no trades, no stop changes. Thesis intact. Flagging the ~4-week scheduled-routine logging gap for operator attention; no ClickUp alert sent since no action was taken this run (per workflow step 7).

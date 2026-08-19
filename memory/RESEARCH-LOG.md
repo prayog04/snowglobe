@@ -255,3 +255,38 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-08-19 — Pre-market Research
+
+### Account
+- Equity: $1,017,391.99
+- Cash: $884,183.99
+- Buying power: $3,909,718.36 (margin, 4x)
+- Positions: 1 (XOM, 800 sh), deployed $133,208 = **13.1%** of equity — still far below 75-85% target
+- Daytrade count: not reported by API (0 day trades taken)
+- Trades this week (since Mon 8/17): 0/3
+- XOM: 800sh @ $144.77 avg, current $166.51, unrealized +$17,392 (**+15.02%**), GTC trailing-stop still at 10% (stop $149.10, hwm $165.67 as of last snapshot) — **has crossed the +15% tighten trigger**
+
+### Market Context
+- WTI ~$85.0-85.9, Brent ~$91.3-91.9 — oil holding elevated, little change from late July levels
+- S&P 500 futures: ~7,710-7,726, down ~0.5-0.6% premarket
+- VIX: ~15.8, calm, up modestly from Monday's 15.19 close but well below the July 20-22 18-19 range
+- Today's catalysts: **FOMC Minutes (July 28-29 meeting) at 2:00pm ET** — primary scheduled event; ongoing AI/semis "crowded trade" unwind pressuring chip stocks (Philly Semi Index pulled back after briefly re-entering a bull market); S&P 500 hit fresh record highs 8/13-8/15 on cooler-than-expected CPI/PPI
+- Earnings before open: ADI, TGT, TJX, LOW, EL — none in our Energy/Materials/Staples momentum lane
+- Economic calendar: CPI (8/12) and PPI (8/13) already released, both cooler than forecast; nothing major today besides FOMC Minutes
+- Sector momentum YTD: Energy (+21-26%), Materials (+10-17%), Consumer Staples (+11-16%), Industrials (+10-21%) still leading; Financials (-6 to -7%), Tech (mixed, ~-3%), Consumer Discretionary (-4 to -5%), Communication Services (flat/negative) still lagging — same framework as the last logged session (7/24), unchanged
+- XOM (existing position): $166.51, up further on a **$1.1B Mozambique Rovuma LNG Phase 1 pre-investment contract award**, a **4% dividend hike to $1.03/share**, and a strong Q2 print ($14.5B profit) — thesis fully intact, no new risk
+
+### Trade Ideas
+1. XOM (existing) — no new entry; thesis intact and strengthening. **Action required, not a new trade: unrealized gain crossed +15% (currently +15.02%), which triggers Strategy Hard Rule #6 — tighten the GTC trailing stop from 10% to 7%.** At current hwm (~$166.51), a 7% trail implies a stop near **$154.85** (must not be set below the existing $149.10 floor per the "never move a stop down" rule — new stop should land above that). This needs the next execution session (market-open) to actually place the order; this pre-market routine is research-only and does not modify orders.
+2. No new name screened today — with a 26-day gap since the last logged research entry (7/24 to 8/19), there hasn't been a fresh multi-candidate screen against Energy/Materials/Staples momentum names; not forcing a pick today off stale groundwork. Materials (LIN/FCX/XLB) and Consumer Staples remain the standing watchlist sectors pending a dated, company-specific catalyst.
+
+### Risk Factors
+- **Reliability gap**: no RESEARCH-LOG or TRADE-LOG entries exist between 2026-07-24 and 2026-08-19 (~4 weeks, ~18 trading days) — scheduled workflows appear not to have run over that stretch, echoing the earlier 7/14-7/19 and 7/23 gaps already flagged. This is now a recurring, unresolved reliability issue, not a one-off.
+- **XOM stop is stale relative to the strategy rules**: position is +15.02% unrealized and still on the original 10% trail instead of the 7% trail the rules require past +15% — real risk exposure is currently larger than the strategy intends until the next session tightens it.
+- Deployment stuck at 13.1% vs. 75-85% target, still only 1 of 5-6 target positions, more than 5 weeks after inception — the under-deployment pattern flagged repeatedly through July has persisted through the entire logging gap.
+- AI/semis "crowded trade" unwind is pressuring Tech broadly — not our sector exposure, but a sentiment risk for the wider tape into FOMC Minutes this afternoon.
+- FOMC Minutes at 2pm ET could move rate-cut-path expectations and broad risk sentiment; no direct XOM linkage but worth monitoring for spillover.
+
+### Decision
+HOLD on new trades — no fresh, dated catalyst screened for a second name after a 26-day research gap; not forcing a pick off stale groundwork. **Flagging as urgent**: XOM's GTC trailing stop needs tightening from 10% to 7% now that unrealized gain has crossed +15% (Strategy Hard Rule #6) — this is a mechanical risk-management action, not a new trade, and should be executed at the next session (market-open) without waiting for a further catalyst. Also flagging the ~4-week logging gap (7/24-8/19) as a recurring scheduled-workflow reliability issue that needs review outside this routine's scope.

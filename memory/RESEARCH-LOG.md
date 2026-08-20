@@ -255,3 +255,43 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-08-20 — Pre-market Research (run inline during market-open; ~4-week logging gap, see note)
+
+### Account
+- Equity: $1,018,019.99
+- Cash: $884,183.99
+- Buying power: $3,911,476.76 (margin, 4x)
+- Positions: 1 (XOM, 800 sh), deployed $133,836 = **13.1%** of equity — still far under the 75-85% target
+- Daytrade count: not reported by API (0 day trades taken)
+- Trades this week (since Mon 8/17): 0/3
+
+### Logging Gap Note
+- No RESEARCH-LOG or TRADE-LOG entry exists between 2026-07-24 and today (2026-08-20) — nearly 4 weeks of scheduled runs produced no committed memory entries, and git history confirms no commits to either file in that window.
+- Live Alpaca order history shows the account was NOT fully idle during the gap: on 2026-08-19 the XOM trailing stop was replaced — old order (10% trail, stop $150.07, hwm $166.74) canceled and a new one placed (7% trail, stop $156.44, hwm $168.21), correctly matching the strategy's "tighten to 7% at +15% unrealized" rule (XOM is now +15.56% unrealized). This action was correct per the rulebook but was never logged here, meaning some process executed it without going through this repo's committed workflow.
+- No other orders exist in Alpaca history beyond the original 7/15 XOM buy and this one stop replacement — no missed/unlogged new-position trades, just the missing paper trail.
+- Flagging as an operational reliability issue for the operator: scheduled runs appear to have stopped logging (and possibly stopped running market-open/midday checks entirely) for ~4 weeks despite the account remaining live.
+
+### Market Context
+- WTI ~$84.5/bbl, Brent ~$91.8/bbl — both elevated and roughly flat day-over-day; Mideast (Iran/Strait of Hormuz-adjacent) risk premium persists per multiple sources
+- S&P 500 futures: mixed/contradictory across sources (range ~7,478-7,750); no single reliable premarket read this morning
+- VIX: ~15.1 — low/calm, no stress signal
+- Today's catalysts: initial jobless claims, Philly Fed Manufacturing Survey, Conference Board Leading Index, 30-yr TIPS auction; FOMC Minutes released yesterday (8/19); Moderna/Merck cancer-vaccine Phase 3 data lifting biotech; Walmart weaker-than-expected sales/guidance pressuring consumer names; crypto strength (Clarity Act) lifting Strategy/Coinbase
+- Earnings before open: WMT, BABA, DE, NTES, FUTU, AAP — none in our Energy/Materials/Staples momentum lane
+- Economic calendar: no CPI/PPI today (both already printed in August); FOMC minutes were yesterday, not today
+- Sector momentum YTD: Energy #1 by a wide margin (+38-43%), Tech #2 (+28-32%), Industrials #3 (+18-20%), Materials #4 (+16-17%), then Real Estate/Staples/Healthcare/Financials/Utilities, with Consumer Discretionary and Communication Services weakest — framework unchanged from late July, Energy still clearly the leading sector
+- XOM (existing position): current $167.29 (Alpaca), Q2 earnings already reported (adjusted EPS $3.52 vs $3.60 consensus, slight miss but strong absolute profit $14.5B); dividend raised to $1.03/share Q3; TD Cowen raised PT to $168 from $155 (Buy) — price is now essentially at that target
+
+### Trade Ideas
+1. No new name today — Energy remains the #1 momentum sector but no company-specific dated catalyst clears the entry bar (XOM's own catalyst is stale/priced-in; no other Energy name has a fresh trigger today).
+2. Today's BMO earnings slate (WMT, BABA, DE, NTES, FUTU, AAP) has no overlap with the Energy/Materials/Staples momentum framework; WMT's guidance miss is a headwind signal, not a buy setup.
+3. Materials — still top-4 YTD sector, no dated company-specific catalyst today; watchlist only.
+
+### Risk Factors
+- XOM is now +15.56% unrealized and sitting essentially at its analyst PT ($168) — upside may be more limited from here; trailing stop already correctly tightened to 7% (stop $156.44) per rulebook, no further action needed unless it reaches +20% (would tighten to 5%)
+- Deployment stuck at ~13% vs. 75-85% target — now over a month of under-deployment with only 1 position; this is a persistent, unresolved gap that predates and continued through the logging outage
+- Operational: confirm with operator whether scheduled market-open/midday/EOD runs were actually executing (and just failing to log/push) or were not firing at all for ~4 weeks — this needs investigation outside this session's scope
+- S&P futures data was contradictory across sources this morning — no high-confidence premarket index read today
+
+### Decision
+HOLD — no new trades today. XOM thesis intact, stop already correctly tightened to 7% at the +15% threshold (done 8/19, outside this session). No name clears the specific-catalyst + sector-momentum bar for a new position. Flagging the ~4-week research/trade-log gap and the persistent under-deployment (13% vs 75-85% target, now over a month) as issues needing operator attention.

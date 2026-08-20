@@ -255,3 +255,37 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-08-20 — Pre-market Research
+
+### Account
+- Equity: $1,017,415.99
+- Cash: $884,183.99
+- Buying power: $3,909,785.56 (margin, 4x)
+- Positions: 1 (XOM, 800 sh), deployed $133,232 = **13.1%** of equity — still well below 75-85% target
+- Daytrade count: not reported by API (0 day trades taken)
+- Trades this week: unknown — no TRADE-LOG/RESEARCH-LOG entries exist between 2026-07-24 and today (~4-week logging gap), on top of the earlier 7/14-7/19 and 7/23 gaps already documented. Scheduled-workflow reliability remains a real, recurring problem — flagging again.
+- XOM: 800sh @ $144.77 avg, current $166.54, unrealized +$17,416 (**+15.04%**) — has now crossed the +15% tighten threshold. GTC trailing stop is already active at **7% trail** (stop $156.44, hwm $168.21, order placed 2026-08-19) — the tighten-to-7%-at-+15% strategy rule has already been correctly applied, no action needed today. Next threshold: tighten to 5% at +20% (~$173.72), not yet reached.
+
+### Market Context
+- WTI ~$84.49/bbl, Brent ~$91.86/bbl — both elevated, holding near multi-week highs on continued Middle East supply-risk premium; Energy sector tailwind intact
+- S&P 500 futures ~7,740-7,745, modestly up premarket (+0.2-0.4%); cash S&P has printed fresh record highs this month (record intraday high 7,814.88) on cooling inflation + strong Q2 earnings (~47% YoY EPS growth, best since Q2 2021)
+- VIX ~15.1-15.3 — low/calm, well off recent highs
+- Today's catalysts: Walmart (WMT), Alibaba (BABA), Deere (DE), Advance Auto Parts (AAP), NetEase (NTES) report before the open — WMT is the highest-profile print and sits in the Consumer Staples sector (our #2 YTD momentum sector); FOMC Minutes release this afternoon (6:00pm UTC / 2:00pm ET) — a real macro catalyst but not actionable pre-market
+- Economic calendar: No CPI/PPI today (both already printed in Aug). Initial jobless claims (8:30am ET, consensus 210K vs prior 209K), Philadelphia Fed Manufacturing Survey (8:30am), Conference Board Leading Economic Index (10:00am)
+- Sector momentum YTD: Energy #1 (+22-26%), Consumer Staples #2 (+11-16%), Materials #3 (+10-17%), Industrials #4 (+10-12%) leading; Information Technology (-3.8%), Consumer Discretionary (-4.6%), Financials (-5.7%) lagging — framework unchanged from prior sessions
+- XOM (existing position): $166.54, no thesis-breaking news. Recent news flow is net positive — Q2 results already reported (net income $14.5B, adjusted $14.7B, FCF $17.2B, production at multi-decade highs, record Permian output), $1.1B Rovuma LNG (Mozambique) contract win, potential $80B Kazakhstan venture, new Guyana exploration well. Next earnings ~10/29 (est.) — no near-term earnings-driven risk to the position
+
+### Trade Ideas
+1. No new name pre-market today — WMT (Consumer Staples, our #2 YTD sector) reports before the open, which is a genuine dated catalyst, but per strategy do not buy blind into earnings; WAIT for the print + market reaction before evaluating an entry. If reaction confirms strength: entry ~market post-open, stop -7 to -8%, target +14-16%, R:R ~2:1.
+2. Materials/Industrials (LIN/FCX/XLB or CAT/XLI) — still top-4 YTD sectors, no company-specific dated catalyst today; watchlist only.
+3. No second Energy name today — oil is holding steady near recent highs (not a fresh incremental catalyst beyond the existing XOM thesis).
+
+### Risk Factors
+- FOMC Minutes this afternoon could move rates expectations and broad market sentiment sharply in either direction; low VIX (~15) suggests the market isn't pricing much surprise risk into it — asymmetric downside if minutes read hawkish
+- XOM unrealized gain just crossed +15% — stop already correctly tightened to 7% trailing; watch for approach to +20% (~$173.72) which would trigger the next tighten to 5%
+- Deployment stuck at ~13% vs. 75-85% target with only 1 of 5-6 target positions, apparently for over a month with no logged trade activity — this is now a severe, ongoing pattern (not a one-off) and should be treated as a priority decision point at the next market-open/trade-eligible session, not deferred again
+- ~4-week gap in RESEARCH-LOG/TRADE-LOG entries (7/24 → 8/20) — cannot confirm this week's trade count from the log; scheduled pre-market/market-open workflows may not be running reliably. Flagging for review outside this session's scope.
+
+### Decision
+HOLD (pre-market recommendation) — no new trades to execute in this research-only session. XOM thesis intact and strengthening (+15.04% unrealized), stop correctly tightened to 7% GTC trailing per strategy rule, no action needed. WMT's earnings print today is a legitimate dated catalyst in our #2 YTD sector (Consumer Staples) worth evaluating post-reaction at market-open — flagging as the most actionable idea for today rather than a blind pre-market entry. Deployment gap (13.1% vs 75-85%) and the ~4-week logging gap are both flagged as urgent, recurring issues for the next trade-eligible session to address rather than defer again.

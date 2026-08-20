@@ -255,3 +255,28 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-08-20 — Midday Addendum (routine gap — see TRADE-LOG note)
+
+### Account
+- Positions: 1 (XOM, 800 sh @ $144.77 avg), current $166.785, unrealized +$17,612 (+15.21%)
+- Live GTC trailing stop: trail_percent 7%, stop $156.8352, hwm $168.64 (order updated 2026-08-19, not previously logged)
+
+### Thesis Check (XOM)
+Perplexity check for August 2026 XOM/Energy news: no thesis-breaking
+catalyst found. Q2 print slightly missed EPS but shareholder-return
+guidance unchanged (execution issue, not thesis break). Strait of Hormuz
+supply-risk premium and oil/refining-margin momentum still reported intact;
+Energy sector momentum still tactically intact per recent analyst target
+revisions, though consensus leans Hold rather than strongly bullish.
+
+### Decision
+HOLD. No losers to cut, no stop change needed (already at the correct 7%
+band for +15%, hasn't reached +20%), thesis intact. No trade action this
+session.
+
+**Gap flag:** No market-open/midday/EOD entries exist between 2026-07-24
+and today (2026-08-20) — roughly a month of missing scheduled runs. Live
+Alpaca account shows activity (stop update 2026-08-19) that was never
+logged. Flagging for operator review outside this session; not something
+this midday run can fix.

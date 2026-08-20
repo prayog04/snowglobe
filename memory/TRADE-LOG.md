@@ -46,3 +46,12 @@ No new trades. 1 open position (XOM), thesis intact, GTC trailing stop active (s
 | XOM | 800 | $144.77 | $151.80 | +2.32% | +$5,624.00 (+4.86%) | $136.58 GTC trailing 10% (hwm $151.76) |
 
 **Notes:** Quiet no-trade day, as previewed in the market-open check. XOM continued its run, up 2.3% intraday to $151.80, pushing the trailing stop's high-water mark to $151.76 and the stop itself up to $136.58 — the position is now up nearly 5% unrealized. Portfolio gained $2,680 (+0.27%) on the day, all from XOM's move; cash sat untouched at $884,184 (87.9%). Zero trades today, zero trades this week (0/3), and deployment remains stuck at ~12% vs. the 75-85% target for a third straight session — the bot continues to wait for a dated catalyst outside the weak Tech rally rather than force a trade.
+
+### Aug 20 — EOD Snapshot (Day 29, Thursday)
+**Portfolio:** $1,017,167.99 | **Cash:** $884,183.99 (86.9%) | **Day P&L:** +$1,168.00 (+0.11%) | **Phase P&L:** +$17,167.99 (+1.72%)
+
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|
+| XOM | 800 | $144.77 | $166.23 | +0.89% | +$17,168.00 (+14.82%) | $156.84 GTC trailing 7% (hwm $168.64) |
+
+**Notes:** MAJOR LOGGING GAP — no TRADE-LOG or RESEARCH-LOG entry exists between Jul 24 and today (Aug 20); scheduled runs (market-open, midday, daily-summary) appear not to have executed or committed for roughly a month (~19 trading days). Live Alpaca history shows only stop-management activity in that window: the original 10% GTC trailing stop (hwm $166.74) was canceled and replaced with a tighter 7% GTC trailing stop on Aug 19 (hwm $168.64, stop $156.84) — consistent with the strategy's "tighten to 7% at +15%" rule, since XOM's unrealized gain is now +14.82% — but this action was never logged. No new trades were placed in the gap (only the original Jul 15 XOM buy and the two stop orders exist in order history); trades this week remain 0/3. Day P&L computed from Alpaca's own last_equity ($1,015,999.99) rather than the stale Jul 21 log line, per the same convention used on Jul 20. Portfolio now $1,017,168 (+1.72% phase-to-date), still only ~13% deployed vs. the 75-85% target — deployment gap now compounding on top of the logging gap. Flagging both issues for operator attention: (1) scheduled-workflow reliability needs investigation, (2) a month with zero new research/trade decisions logged despite one live stop adjustment.

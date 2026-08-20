@@ -46,3 +46,24 @@ No new trades. 1 open position (XOM), thesis intact, GTC trailing stop active (s
 | XOM | 800 | $144.77 | $151.80 | +2.32% | +$5,624.00 (+4.86%) | $136.58 GTC trailing 10% (hwm $151.76) |
 
 **Notes:** Quiet no-trade day, as previewed in the market-open check. XOM continued its run, up 2.3% intraday to $151.80, pushing the trailing stop's high-water mark to $151.76 and the stop itself up to $136.58 — the position is now up nearly 5% unrealized. Portfolio gained $2,680 (+0.27%) on the day, all from XOM's move; cash sat untouched at $884,184 (87.9%). Zero trades today, zero trades this week (0/3), and deployment remains stuck at ~12% vs. the 75-85% target for a third straight session — the bot continues to wait for a dated catalyst outside the weak Tech rally rather than force a trade.
+
+### Aug 20 — Midday scan (gap flagged — see note)
+No losers to cut (XOM only position, unrealized +15.2%). Trailing stop already
+correctly tightened to 7% (trail_percent 7, stop $156.84, hwm $168.64,
+current $166.79) — matches the +15% tighten rule; position has not yet
+crossed the +20% threshold for a 5% trail. No stop action taken this session.
+Thesis check via Perplexity: no XOM/Energy thesis-breaking news found; Q2
+slightly missed EPS but shareholder-return guidance unchanged; Strait of
+Hormuz supply-risk premium and Energy-sector momentum reported intact as of
+mid-August. HOLD, no action.
+
+**Note — reliability gap:** last logged memory entry before this one was
+Jul 24, 2026 (~4 weeks ago) despite today being Aug 20, 2026 — no
+market-open/midday/EOD entries exist for the intervening ~4 weeks and no
+memory commits landed on `main` in that window (`git log` confirms last
+memory-touching merge was Jul 24). However, the live Alpaca trailing-stop
+order shows an update dated 2026-08-19 (trail tightened to 7%, hwm $168.64)
+that was never logged here — meaning at least one stop adjustment happened
+live without a corresponding memory commit. Scheduled routines appear to
+have stopped running or stopped committing successfully for roughly a
+month; this needs investigation outside this session.

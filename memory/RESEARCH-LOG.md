@@ -255,3 +255,41 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-08-21 — Pre-market Research
+
+### Account
+- Equity: $1,016,975.99
+- Cash: $884,183.99
+- Buying power: $3,908,553.56 (margin, 4x)
+- Positions: 1 (XOM, 800 sh), deployed $132,792 = **13.06%** of equity
+- Daytrade count: not reported by API (0 day trades taken)
+- Trades this week (since Mon 8/17): 0/3
+- XOM: 800sh @ $144.77 avg, current $165.99, unrealized +$16,976 (+14.66%), GTC trailing-stop **7%** live (stop $156.8352, hwm $168.64) — this is the tightened 7% stop (strategy rule: tighten to 7% at +15% unrealized); price hit +16.5% at the $168.64 high before pulling back to +14.66% now, so the tighten already correctly fired live. No stop action needed today; stop never moves down.
+
+### ⚠️ Repo/automation finding (not a market call)
+Main branch's memory files are stale — last merged RESEARCH-LOG/TRADE-LOG entry is **Jul 24**, a full four weeks behind. Checked GitHub directly: **~20 open, unmerged PRs** (#72–#91, Aug 13–Aug 20) contain every scheduled run since then — pre-market, market-open, midday, EOD, and the Aug 14 weekly review — each one already flagging this same gap with no resolution. Root cause is not that runs are failing; they're executing, logging, committing, and opening PRs correctly. **Nobody/nothing is merging the PRs into main.** Net effect: every new session (this one included) bases off stale `main` and can't see yesterday's own research without querying GitHub directly, and live trading actions (XOM's stop tighten to 7% on Aug 19) happened with no trace on `main`. This entry was written using live Alpaca data + a direct GitHub read of the latest unmerged PR (#91) for accurate context, not the stale local checkout. Recommend the operator merge the PR backlog (oldest first, they should be low-conflict since each only appends log entries) or fix whatever is supposed to auto-merge them.
+
+### Market Context
+- WTI ~$86.50/bbl (-0.4%), Brent ~$93.60/bbl (-0.2%) — little changed, still elevated
+- S&P 500 futures: modestly lower, ~7,690-7,710 range (-0.3% to -0.5%) across sources
+- VIX: ~15.7 — calm
+- Today's catalysts: thin U.S. macro calendar; no confirmed earnings or major data besides BLS State Employment/Unemployment (10:00am ET) and prelim S&P Global PMI Manufacturing/Services (9:45am ET); Energy and semis cited as the clearest relative-strength themes; no Fed appearances scheduled
+- Earnings before open: BJ's Wholesale (BJ), Ubiquiti (UI), Buckle (BKE), KE Holdings (BEKE) — none in our Energy/Materials/Staples lane
+- Economic calendar: no CPI/PPI/FOMC/jobs today — CPI printed 8/12, PPI 8/13, FOMC minutes released 8/19; next NFP not until 9/4
+- Sector momentum YTD: Energy #1 (+22-45% depending on source), Technology #2 (+27.5%), Materials #3 (+16.5%) leading; Consumer Discretionary (-1.9%) and Communication Services (-5.4%) lagging
+- XOM (existing position): trading ~$166-168 across sources (Alpaca $165.99), +1.8-1.9% on the day — Q2 print was $14.5B net income / $17.2B FCF / $9.4B shareholder returns; Kazakhstan Tengiz field news; Morgan Stanley raised PT to $177 (Overweight); tight supply + firmer oil still supportive, no thesis-breaking news
+
+### Trade Ideas
+1. No new name today — macro calendar is thin (no CPI/PPI/FOMC/jobs, no earnings in our Energy/Materials/Staples lane) and nothing clears the specific-dated-catalyst bar in the entry checklist.
+2. Materials (LIN/FCX/XLB) — #3 YTD sector, still no company-specific dated trigger; watchlist only.
+3. A second Energy name (CVX/SLB) — sector remains #1 YTD and XOM continues to work, but adding into a position already up +14.66% with no fresh catalyst isn't a new setup, it's chasing; pass today.
+
+### Risk Factors
+- **Automation/reporting gap** (see finding above) — this is the dominant risk today, bigger than any market factor: a month of live decisions (one stop tighten) sitting outside the auditable log on `main` because PRs aren't being merged.
+- Deployment still just 13.06% vs. the 75-85% target with only 1 of 5-6 target positions and 0/3 trades used this week — this has been flagged in every unmerged session since mid-July; not repeating the case for/against forcing a trade here, just noting it remains unresolved.
+- XOM's stop is now the tight 7% trail ($156.84) — a pullback of ~5.5% from today's price would trigger it; that's the position's real downside protection, no manual action needed.
+- Thin data calendar today raises the odds of a low-catalyst, rangebound session — low conviction either way.
+
+### Decision
+HOLD — no new trades. XOM thesis intact, stop correctly tightened to 7% and no closer action needed. No name clears the catalyst bar on a thin data day. Flagging the PR-merge backlog to the operator as the priority item today (see ClickUp).

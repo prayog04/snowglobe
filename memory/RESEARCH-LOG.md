@@ -255,3 +255,36 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-08-21 — Pre-market Research (run inline during market-open; entry was missing)
+
+### Logging gap flagged
+No RESEARCH-LOG or TRADE-LOG entry exists between 2026-07-24 and today (2026-08-21) — roughly 4 weeks / ~20 trading sessions of scheduled runs never logged, git history confirms the last commit before today was the 7/24 market-open check. The live account did NOT sit idle in that gap: Alpaca order history shows the XOM trailing-stop was updated to trail_percent=7 on 2026-08-19/20 (hwm $168.64, stop $156.84), consistent with the strategy's "tighten to 7% at +15%" rule, but no corresponding log entry or commit exists for that action. Flagging this as a recurring scheduled-workflow reliability failure (now the third documented gap, after 7/14-7/19 and 7/23) — routine did not fire for an extended stretch and no memory trail exists for whatever else may have happened live during it.
+
+### Account
+- Equity: $1,018,111.99 | Cash: $884,183.99 (86.8%)
+- Buying power: $3,911,734.36 (margin, 4x)
+- Positions: 1 (XOM, 800 sh), position value $133,928 = **13.2%** of equity — still well under the 75-85% deployment target
+- Daytrade count: not reported by API (0 day trades taken)
+- Trades this week (since Mon 8/17): 0/3
+- XOM: 800 sh @ $144.77 avg, current ~$167.41-167.98, unrealized +15.6%, GTC trailing-stop already correctly tightened to 7% (hwm $168.64, stop $156.84) per the +15% rule — no stop action needed today
+
+### Market Context
+- WTI ~$86.50-87 (mixed reports, roughly flat/-0.4%), Brent ~$93.2-93.6 (-0.2% to -0.6%) — oil holding well above the late-July reversal lows, no fresh Hormuz-type spike today
+- VIX ~15.7 — calm, well off any stress level
+- S&P 500 futures modestly positive premarket (+0.1% to +0.4% across sources); index near recent record highs (S&P 500 hit an intraday ATH of 7,814.88 earlier in August on cooling inflation + AI/semis earnings strength)
+- Today's catalysts: light US macro calendar — S&P Global PMI Manufacturing/Services prelim (9:45am ET), BLS State Employment/Unemployment (10:00am ET); no CPI/PPI/FOMC today. No dated single-stock catalyst identified for a new US name.
+- Sector momentum YTD: Energy still #1 (+44.6%), Technology #2 (+27.5%), Materials #3 (+16.5%) — Energy/semis (XLE/XOM/CVX, SMH/NVDA) flagged as strongest relative-strength areas in one source, but this is a continuation of the existing thesis, not a new dated trigger
+- XOM (existing position): no thesis-breaking news; Q2 earnings ($14.5B GAAP net income, $3.48 EPS) already priced in; board approved reincorporating from NJ to TX (administrative, not a trading catalyst)
+
+### Trade Ideas
+1. No new name today — sector momentum (Energy/Tech/Materials) is broad and already reflected in the existing XOM position; no company-specific dated catalyst clears the entry checklist bar for a second position.
+
+### Risk Factors
+- ~4-week logging/commit gap (see above) — treat this as an operational reliability issue, not a trading signal; live account state was cross-checked directly against Alpaca rather than trusting the stale memory files
+- XOM at +15.6% unrealized, already past the first tighten threshold (stop correctly at 7%/$156.84); next watch point is +20% (tighten to 5%)
+- Still meaningfully under-deployed (13.2% vs 75-85% target) after ~1 open position for the entire challenge window to date — long-running pattern, not new today
+- No fresh single-stock catalyst found for a new US equity name; broad market near all-time highs increases chase risk for late entries
+
+### Decision
+HOLD — no new trades today. XOM thesis intact, stop correctly tightened to 7% per the +15% rule, no action needed. No name clears the specific-catalyst bar. Primary action item from this session is operational: the multi-week logging gap needs investigation (why the scheduled routine didn't run/commit for ~4 weeks) rather than a trading decision.

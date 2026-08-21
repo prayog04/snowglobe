@@ -46,3 +46,12 @@ No new trades. 1 open position (XOM), thesis intact, GTC trailing stop active (s
 | XOM | 800 | $144.77 | $151.80 | +2.32% | +$5,624.00 (+4.86%) | $136.58 GTC trailing 10% (hwm $151.76) |
 
 **Notes:** Quiet no-trade day, as previewed in the market-open check. XOM continued its run, up 2.3% intraday to $151.80, pushing the trailing stop's high-water mark to $151.76 and the stop itself up to $136.58 — the position is now up nearly 5% unrealized. Portfolio gained $2,680 (+0.27%) on the day, all from XOM's move; cash sat untouched at $884,184 (87.9%). Zero trades today, zero trades this week (0/3), and deployment remains stuck at ~12% vs. the 75-85% target for a third straight session — the bot continues to wait for a dated catalyst outside the weak Tech rally rather than force a trade.
+
+### Aug 21 — EOD Snapshot (Day ~30, Friday)
+**Portfolio:** $1,016,183.99 | **Cash:** $884,183.99 (87.0%) | **Day P&L:** -$920.00 (-0.09%) | **Phase P&L:** +$16,183.99 (+1.62%)
+
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|
+| XOM | 800 | $144.77 | $165.00 | -0.69% | +$16,184.00 (+13.97%) | $156.84 GTC trailing 7% (hwm $168.64) |
+
+**Notes:** Major logging gap — no TRADE-LOG or RESEARCH-LOG entry exists between Jul 24 and today (Aug 21); this routine (and its siblings) appears not to have run or committed for roughly a month, so "Trades this week" and "Day N" above are reconstructed from live Alpaca data only and should be treated as approximate. The good news: the account kept trading correctly on autopilot via the standing GTC stop — Alpaca's own order history shows the only activity in the gap was a stop-tighten on Aug 19 (10%→7% trailing, replacing the old order, consistent with the strategy's "tighten to 7% at +15%" rule; XOM's high-water mark hit $168.64, an unrealized peak of ~16.5%). No new buy/sell trades were placed in the gap or today — still a single XOM position, still under-deployed (13.0% vs. 75-85% target). Today itself was quiet: XOM pulled back slightly (-0.69%) off its highs, portfolio down $920 (-0.09%) on the day but still up +1.62% cumulative since launch. Recommend the next pre-market/market-open session investigate why scheduled runs stopped for a month before resuming normal cadence.

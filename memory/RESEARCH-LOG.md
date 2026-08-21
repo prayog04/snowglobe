@@ -255,3 +255,23 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-08-21 — Midday Scan
+
+### Reliability gap found
+- No commits to `main` and no RESEARCH-LOG/TRADE-LOG entries exist between 2026-07-24 and today (2026-08-21) — a full month with zero scheduled-run output, despite the five-runs/trading-day cadence in CLAUDE.md. Root cause not diagnosed from inside this session (scheduling/config, not memory content).
+- Alpaca order history shows XOM's GTC trailing stop was replaced during that gap: new order created 2026-08-19, trail tightened from the 10% default to 7% (stop $156.84 off hwm $168.64 as of this scan, implying XOM peaked ~+16.5% unrealized at some point) — consistent with the strategy's +15% -> 7% tighten rule, but this action was never logged to TRADE-LOG and never committed.
+- Portfolio has sat at ~13% deployed (1 position, XOM only) essentially unchanged since mid-July; the 75-85% deployment target has now gone unmet for a full month with no new trades logged.
+
+### Account (as of this scan)
+- Equity: $1,016,463.99 | Cash: $884,183.99 (87.0%) | Deployed: $132,280 (13.0%)
+- Positions: 1 — XOM 800sh @ $144.77, current $165.38, unrealized +$16,488 (+14.24%), GTC trailing stop 7% (stop $156.84, hwm $168.64)
+
+### Scan actions
+- Step 3 (cut losers <= -7%): none — only position is +14.24%. No action.
+- Step 4 (tighten stops): XOM at +14.24%, below the +15% tighten trigger; existing 7% trail (set during the unlogged 8/19 gap) already satisfies the +15% rule from its prior high and is tighter than the current level would require. Per "never move a stop down," left as-is. No action.
+- Step 5 (thesis check): no thesis-breaking news surfaced; today's intraday move is -0.46%, not sharp. No action.
+- Step 6 (intraday research): skipped — nothing moving sharply enough to warrant an ad hoc Perplexity query.
+
+### Decision
+HOLD — no trades, no stop changes. Flagging the one-month logging/commit gap and the undocumented 8/19 stop-tightening action for operator review; this scan otherwise found the account in an unremarkable, rule-compliant state.

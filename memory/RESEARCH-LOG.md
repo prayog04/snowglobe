@@ -255,3 +255,37 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-08-24 — Pre-market Research (run inline during market-open; scheduled runs did not fire 2026-07-25 through 2026-08-23)
+
+### Account
+- Equity: $1,015,943.99
+- Cash: $884,183.99
+- Buying power: $3,905,663.96 (margin, 4x)
+- Positions: 1 (XOM, 800 sh), deployed $131,760 = **12.97%** of equity — still far under the 75-85% target
+- Daytrade count: not reported by API (0 day trades taken)
+- Trades this week (since Mon 8/24): 0/3
+- XOM: 800sh @ $144.77 avg, current $164.70, unrealized +$15,944 (+13.77%), hwm $168.64 (+16.49% from entry) already crossed the +15% tighten trigger — GTC trailing stop correctly tightened to **7%** (stop $156.84), live since 2026-08-19. No stop action needed today; price is below hwm and not near +20%.
+
+### Market Context
+- WTI ~$85.5, Brent ~$93 — holding mid-$80s/low-$90s, elevated geopolitical premium tied to US-Iran/Strait of Hormuz tension persists, roughly flat to slightly down vs. recent sessions
+- S&P 500 futures ~7,683, down ~0.1-0.3%, tech-led weakness ahead of Nvidia earnings (Wed) and Jackson Hole symposium (Wed-Fri, Chair Warsh keynote Friday)
+- VIX ~16.0 — calm, mid-teens, up modestly off Friday's 15.13 close but well within a quiet range
+- Today's catalysts: no major US CPI/PPI/FOMC/jobs data today (confirmed "No Releases" for the day); Chicago Fed National Activity Index is a minor release; broader focus is entirely on Nvidia earnings Wed and Jackson Hole Wed-Fri; 10-year yield still elevated (4.73% Fri) after last week's bond selloff
+- Sector momentum YTD: Energy #1 by a wide margin (+44.3%), Technology #2 (+27.6%), Materials #3 (+19.0%), Industrials #4 (+16.8%); Communication Services weakest (-4.8%), Consumer Discretionary also negative (-0.8%)
+- XOM (existing position): Q2 beat on revenue ($114.53B) though adjusted EPS slightly light ($3.48/sh, $14.5B net income); dividend raised to $1.03/sh, 26th consecutive annual increase; analyst consensus Hold, price targets ~$163-168 — current price $164.70 sits mid-range of targets, limiting near-term analyst-implied upside
+
+### Trade Ideas
+1. No new name today — Energy remains the dominant YTD sector but XOM itself is now trading inside its analyst price-target range ($163-168) with a Hold consensus, and no fresh company- or sector-specific dated catalyst exists today (Q2 earnings already priced in mid-August). Adding a second Energy name without a specific trigger doesn't clear the entry checklist.
+2. Materials — #3 YTD sector, no company-specific dated catalyst today; watchlist only.
+3. Market is in a pre-event holding pattern (Nvidia earnings Wed, Jackson Hole Wed-Fri) — reasonable to wait for those catalysts to clarify direction rather than initiate new risk into a quiet, event-heavy week.
+
+### Risk Factors
+- **Operational: scheduled workflows did not run/persist for a full month.** Git history shows no research/trade-log commits between 2026-07-24 and today (2026-08-24) — pre-market, market-open, midday, and EOD/weekly-review routines all appear to have gone silent. Live Alpaca order history shows the XOM trailing stop WAS correctly tightened 10%→7% on 2026-08-19 (hwm $166.74 at the time, above the +15% trigger), meaning at least one execution session ran and acted correctly, but its log entries were never committed/pushed (fresh-clone-plus-must-commit design means the action succeeded live but the paper trail was lost). This is a real reliability gap in the scheduling/persistence pipeline, not a strategy issue — flagging for operator attention.
+- Deployment stuck at ~13% vs. 75-85% target for a **7th-plus consecutive logged session** (gap makes the true count unknown, but the pattern is unbroken across the missing month per live position data — still only 1 position, still only XOM); this is now a long-running, unresolved pattern independent of the logging gap.
+- Nvidia earnings (Wed) and Jackson Hole (Wed-Fri) are two back-to-back macro-moving events this week — elevated event risk into names/sectors we don't hold, but could move broad sentiment and volatility (VIX) sharply either direction.
+- 10-year yield remains elevated after last week's bond selloff — a continued rise could pressure equity valuations broadly.
+- XOM trading mid-range of analyst price targets ($163-168 vs. $164.70) — upside from here is more dependent on oil staying elevated than on further re-rating; the 7% trailing stop is the defense if oil/XOM reverses.
+
+### Decision
+HOLD — no new trades today. XOM thesis intact, unrealized +13.77%, GTC trailing stop already correctly tightened to 7% (stop $156.84) on the +15% hwm trigger — no stop action needed. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar; market is in a pre-event holding pattern into Nvidia earnings and Jackson Hole this week. Flagging the month-long scheduled-workflow gap (2026-07-25 to 2026-08-23) as the priority operational issue — the account was not put at risk (stop-tightening logic executed correctly at least once), but visibility and auditability were lost for ~a month and need investigation outside this session's scope.

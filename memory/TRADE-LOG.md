@@ -46,3 +46,14 @@ No new trades. 1 open position (XOM), thesis intact, GTC trailing stop active (s
 | XOM | 800 | $144.77 | $151.80 | +2.32% | +$5,624.00 (+4.86%) | $136.58 GTC trailing 10% (hwm $151.76) |
 
 **Notes:** Quiet no-trade day, as previewed in the market-open check. XOM continued its run, up 2.3% intraday to $151.80, pushing the trailing stop's high-water mark to $151.76 and the stop itself up to $136.58 — the position is now up nearly 5% unrealized. Portfolio gained $2,680 (+0.27%) on the day, all from XOM's move; cash sat untouched at $884,184 (87.9%). Zero trades today, zero trades this week (0/3), and deployment remains stuck at ~12% vs. the 75-85% target for a third straight session — the bot continues to wait for a dated catalyst outside the weak Tech rally rather than force a trade.
+
+### Aug 24 — Midday scan (first log entry in 30 days — see gap note below)
+**Portfolio:** $1,015,096.63 | **Cash:** $884,183.99 (87.1%) | Deployed: $130,912.64 (12.9%)
+
+| Ticker | Shares | Entry | Current | Intraday Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|
+| XOM | 800 | $144.77 | $163.625 | -0.90% | +$15,084.00 (+13.02%) | $156.8352 GTC trailing 7% (hwm $168.64) |
+
+**Actions taken:** None. No losers (only position is +13.02%, nowhere near -7% cut rule). No stop change needed — trail is already tightened to 7% (order created 2026-08-19, hwm $168.64 implies price crossed +16.5% at some point, correctly triggering the +15% tighten rule live on Alpaca); current gain of 13.02% is below both the 15%/20% thresholds and the rule against loosening a stop means no action is due regardless. No thesis-break signal found; intraday move is only -0.90%, well under the bar for ad hoc Perplexity research.
+
+**⚠️ Reliability flag — 30-day logging gap:** No TRADE-LOG or RESEARCH-LOG entries, and zero commits to `memory/`, exist between 2026-07-24 and today (2026-08-24) — roughly 22 trading days with no scheduled-workflow output. The live Alpaca trailing-stop order shows `created_at 2026-08-19` / `updated_at 2026-08-20` at a 7% trail with hwm $168.64, meaning the +15%-tighten stop logic executed live on the account at some point in that window, but it was never logged here and no market-open/midday/pre-market/EOD entries were committed. Account has sat at exactly 1 position (XOM) the entire month — still 12.9% deployed vs. the 75-85% target, 0 new trades used against the "max 3/week" allowance for four straight weeks. This is the same class of gap flagged 2026-07-20 (then 5 trading days missing); it has recurred and is now six times longer. Recommend operator verify all five scheduled routines are actually firing before trusting deployment/allocation numbers going forward.

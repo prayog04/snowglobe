@@ -46,3 +46,13 @@ No new trades. 1 open position (XOM), thesis intact, GTC trailing stop active (s
 | XOM | 800 | $144.77 | $151.80 | +2.32% | +$5,624.00 (+4.86%) | $136.58 GTC trailing 10% (hwm $151.76) |
 
 **Notes:** Quiet no-trade day, as previewed in the market-open check. XOM continued its run, up 2.3% intraday to $151.80, pushing the trailing stop's high-water mark to $151.76 and the stop itself up to $136.58 — the position is now up nearly 5% unrealized. Portfolio gained $2,680 (+0.27%) on the day, all from XOM's move; cash sat untouched at $884,184 (87.9%). Zero trades today, zero trades this week (0/3), and deployment remains stuck at ~12% vs. the 75-85% target for a third straight session — the bot continues to wait for a dated catalyst outside the weak Tech rally rather than force a trade.
+
+### Aug 19 — Stop adjustment (backfilled 2026-08-25, see note)
+| Ticker | Action | Old Stop | New Stop | Reason |
+|---|---|---|---|---|
+| XOM | Tighten GTC trailing stop | 10% trail (stop $150.07, hwm $166.74) | 7% trail (stop $156.84, hwm $168.64) | Position crossed +15% unrealized — strategy rule: tighten trail to 7% at +15% |
+
+**Note:** This stop adjustment executed live on Alpaca (canceled 10% trail, placed new 7% trail, both timestamped 2026-08-19T13:39 UTC) but was never logged here or committed — no scheduled workflow appears to have run between 7/24 and 8/25. Backfilled during the 8/25 market-open run. See RESEARCH-LOG 2026-08-25 for the full operational-gap flag.
+
+### Aug 25 — Market-open check
+No new trades. 1 open position (XOM, 800sh @ $144.77, current $161.43, +11.5% unrealized), GTC trailing stop active at 7% (stop $156.84, hwm $168.64 — already correctly tightened per the +15% rule, see backfilled entry above). Trades this week: 0/3. See RESEARCH-LOG 2026-08-25 for full context — HOLD decision, no fresh dated catalyst beyond the existing Energy-momentum/XOM thesis. **Flagging for operator: (1) scheduled workflows did not run for ~1 month (7/24→8/25) — this is the second and larger audit-trail gap on this account; (2) deployment has been stuck at 12-13% vs. the 75-85% target for ~6 weeks running, independent of the outage.**

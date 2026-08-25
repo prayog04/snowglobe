@@ -255,3 +255,33 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-08-25 — Pre-market Research (run inline during market-open; entry was missing)
+
+### Account
+- Equity: $1,013,365.99
+- Cash: $884,183.99
+- Buying power: $3,898,445.56 (margin, 4x)
+- Positions: 1 (XOM, 800 sh), deployed $129,182 = **12.7%** of equity — well below 75-85% target
+- Daytrade count: not reported by API (0 day trades taken)
+- Trades this week (since Mon 8/24): 0/3
+- XOM: 800sh @ $144.77 avg, current $161.43, unrealized +$13,328 (+11.5%), GTC trailing stop **7%** (stop $156.84, hwm $168.64) — already tightened past the +15% threshold
+
+### Market Context
+- Perplexity/web data was again noisy and internally inconsistent across sources (sector YTD figures for Energy ranged 30-44%, Tech 15-34%, depending on source/date) — no verified WTI/Brent or S&P futures level obtained today
+- VIX: 15.79 (Cboe, as of today) — calm
+- Sector momentum: Energy remains #1 YTD across every source (range ~30-44%), Technology #2 (~24-34%); directionally consistent with the framework that's been in place since July — no reversal signal
+- Earnings before open: DICK'S Sporting Goods (DKS) — Consumer Discretionary, outside our Energy/Materials/Staples lane, not actionable
+- Economic calendar: Case-Shiller, Consumer Confidence, New Home Sales, Richmond Fed (10am ET) — routine data, no FOMC/CPI today
+
+### Trade Ideas
+1. No new name today — no fresh, dated, ticker-specific catalyst found; today's read is the same broad Energy-sector-momentum thesis already expressed via XOM, not a new trigger for a second position.
+
+### Risk Factors
+- **Major operational gap: no scheduled workflow ran (or logged/committed) between 2026-07-24 and today, 2026-08-25 — roughly a month of missed daily runs.** Confirmed via git log (no commits to memory/ in that window) and Alpaca order history.
+- **Undocumented live action found**: the XOM trailing stop was tightened from 10%→7% on 2026-08-19 (old 10% trail canceled, new 7% trail placed, hwm $168.64) — correctly matches the strategy's "tighten to 7% at +15%" rule, but this action was never logged to TRADE-LOG.md nor committed to git. Backfilling now.
+- Deployment has been stuck at ~12-13% vs. the 75-85% target for roughly six weeks running (last measured 7/24 at 12.4%, now 12.7%) — this predates and is compounded by the month-long gap above.
+- Research data quality remains unreliable (third occurrence of contradictory/stale figures from Perplexity) — cross-checked account/position data against live Alpaca instead.
+
+### Decision
+HOLD — no new trades today. XOM thesis intact, stop correctly tightened to 7% (already reflects the +15% rule, done outside a logged session). No name clears the specific-catalyst bar. **Escalating two issues beyond today's trade decision**: (1) the scheduled workflow did not run for ~1 month (7/24→8/25), and (2) the account has been under-deployed (12-13%) for essentially that entire stretch — these are operational/process failures, not strategy calls, and are being flagged to the operator directly.

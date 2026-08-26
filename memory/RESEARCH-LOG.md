@@ -255,3 +255,41 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-08-26 — Pre-market Research (run inline during market-open; entry was missing)
+
+### ⚠ Scheduled-run gap
+No RESEARCH-LOG or TRADE-LOG entry exists for any date between 2026-07-24 and today (2026-08-26) — a ~1-month gap where this bot's scheduled workflows did not log activity. Alpaca order history confirms only one trade ever occurred (XOM buy, 2026-07-15); the account was otherwise idle. One order-level action DID happen in the gap and was correct but undocumented: the XOM 10% trailing stop was canceled and replaced with a **7% trailing stop** on 2026-08-19 (hwm $168.64 at the time, source "access_key"), matching the strategy's "tighten to 7% at +15%" rule — but no log entry recorded the trigger, the reasoning, or who/what executed it. Flagging this as a reliability issue for review; not a trading decision.
+
+### Account
+- Equity: $1,011,707.99
+- Cash: $884,183.99
+- Buying power: $3,893,803.16 (margin, 4x)
+- Positions: 1 (XOM, 800 sh), deployed $127,524 = **12.6%** of equity — still well under the 75-85% target
+- Daytrade count: not reported by API (0 day trades taken)
+- Trades this week (since Mon 8/24): 0/3
+- XOM: 800sh @ $144.77 avg, current ~$159.40-159.89, unrealized +$11,708 (+10.1%), off its $168.64 high; GTC trailing-stop **already tightened to 7%** (stop $156.8352, hwm $168.64) — stop is only ~1.6% below current price, closer than usual but functioning as designed after the run-up and pullback
+
+### Market Context
+- WTI ~$80.4-80.7 (-2.3%), Brent ~$86.3-86.6 (-2.3%) — pulling back from recent highs but still elevated vs. long-run levels
+- S&P 500 futures: roughly flat, ~7,680-7,690 range, mixed-to-slightly-positive bias; S&P 500 has been making record highs through August on cooling inflation + strong AI earnings
+- VIX: ~15.5-15.8 — calm, low-vol regime
+- Today's dominant catalyst: **NVIDIA earnings after the close** — described across sources as the single biggest catalyst of the month for the AI trade; also PCE inflation + Q2 GDP second estimate at 8:30am ET, plus Salesforce/CrowdStrike/Okta/Synopsys/Veeva/HP earnings
+- Pre-market earnings: Williams-Sonoma (WSM); other names (Kohl's, Abercrombie, J.M. Smucker, Bath & Body Works, Li Auto, etc.) reporting around today but not all confirmed pre-open
+- Economic calendar: no CPI/PPI/FOMC/jobs today. PCE/Personal Income & Outlays + Q2 GDP second read at 8:30am ET are the scheduled releases
+- Sector momentum YTD: **Energy #1 (+43.1%)**, Technology #2 (+25.4%), Materials #3 (+19.1%); Communication Services weakest (-4.0%), Consumer Discretionary next weakest (-0.5%). Notable shift vs. late-July framework: Tech has moved from laggard to #2 YTD, driven by the AI rally — but today's Tech catalyst (NVDA) is an earnings print, not a pre-announcement entry signal
+- XOM (existing position): pulling back today (~-1.5%) alongside oil; headline is a reported ~$8B bid for Shell's U.S. chemical assets plus continued strength from Q2 earnings ($14.5B net income, $17.2B FCF) and Guyana growth — no thesis-breaking news, M&A speculation is a mild positive but not a fresh trigger since we're already long
+
+### Trade Ideas
+1. No new name today — NVDA earnings is the day's dominant catalyst but sits in Tech, and buying ahead of an earnings print violates the strategy's "don't buy blind into earnings" rule; wait for the print + reaction if a Tech name were otherwise in scope.
+2. Energy remains #1 YTD and XOM's M&A speculation is a mild positive, but it's not a new, dated, company-specific catalyst for a *second* Energy position — and adding to an existing name isn't a distinct trade under this checklist.
+3. No Materials/Staples name has a dated catalyst today; watchlist only.
+
+### Risk Factors
+- **Logging gap (see above)** — a full month of scheduled runs left no audit trail; even though the one order-level action taken (stop tightening) was strategy-compliant, this is a process failure that should be investigated/fixed going forward.
+- XOM's trailing stop ($156.8352) is now only ~1.6% below the current price after the pullback from $168.64 — closer than typical; no action needed (stop is doing its job) but a sharp down day could trigger it. Per strategy: never move a stop down.
+- Deployment still ~12.6% vs. 75-85% target — now a 7th+ session under target with the multi-week gap included; the account has taken exactly one trade since inception (7/15).
+- NVDA earnings after the close could move the broader tape (and vol) into tomorrow's session regardless of our lack of direct exposure.
+
+### Decision
+HOLD — no new trades today. XOM position intact, GTC stop already correctly tightened to 7% from an earlier (undocumented) run; current pullback is normal, no rule violated. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — NVDA is today's big catalyst but is an earnings print to wait for, not a pre-announcement entry. Flagging the month-long scheduled-run logging gap as the top priority to fix going forward.

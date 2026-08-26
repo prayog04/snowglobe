@@ -255,3 +255,42 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-08-26 — Pre-market Research
+
+### ⚠️ Reliability gap since last session
+No memory commit exists between 2026-07-24 and today — a ~5-week silent gap (git log confirms last `memory/` commit was `a805c94`, 2026-07-24; next commit is this one). Live Alpaca order history shows a workflow DID run and correctly act during the gap: on 2026-08-19 the original 10% GTC trailing stop on XOM (placed 7/15) was canceled and replaced with a 7% trailing stop (hwm $168.64 at replacement), consistent with the strategy's "tighten to 7% at +15% gain" rule (XOM was +16.5% off entry at that hwm). So the trading logic executed correctly, but STEP 6 (commit/push) silently failed or was skipped for every scheduled run in this window — no research/trade-log entries, no EOD snapshots, no visibility for ~5 weeks. Trade-count-this-week tracking is unreliable across this gap; treating this session as a fresh week for the 3-trades/week counter. Flagging as urgent — this is a persistence-pipeline failure, not a trading-logic failure.
+
+### Account
+- Equity: $1,011,775.99
+- Cash: $884,183.99
+- Buying power: $3,893,993.56 (margin, 4x)
+- Positions: 1 (XOM, 800 sh), deployed $127,592 = **12.6%** of equity — still well below 75-85% target, now over a month under-deployed
+- Daytrade count: not reported by API (0 day trades taken)
+- Trades this week: unreliable due to logging gap, treating as 0/3
+- XOM: 800sh @ $144.77 avg, current $159.49, unrealized +$11,776 (+10.17%), GTC trailing-stop **7%** live (stop $156.8352, hwm $168.64, tightened 8/19 per strategy rule) — stop is ~1.7% below current price, no action needed; price has pulled back from the $168.64 high but trail correctly has not moved down
+
+### Market Context
+- WTI ~$80-82 (-2 to -3%), Brent ~$86-89 (-2 to -3%) — reversing lower as sweeping new US sanctions on Iran paradoxically deflated the Strait-of-Hormuz risk premium, plus a bearish US inventory build
+- S&P 500 futures: ~7,680, roughly flat/+0.1-0.3% premarket; index near record highs per multiple sources
+- VIX: ~15.5-15.8 — low/calm
+- Today's catalysts: **NVDA earnings after today's close** — framed as the single biggest catalyst of the month for AI/chip-demand sentiment across the market; PCE inflation + personal spending/income at 4:20pm ET; weekly jobless claims; cluster of large-cap software earnings (Salesforce, CrowdStrike, HP, Okta, Synopsys, Veeva)
+- Earnings before open: calendar data was inconsistent across sources (BMO, Texas Instruments, Zoom, small-caps mentioned; Nasdaq's own calendar showed nothing) — no confirmed reporter in our Energy/Materials/Staples lane
+- Economic calendar: no CPI/PPI/FOMC/jobs today; next FOMC 9/15, next CPI 9/11, next PPI 9/10, next NFP 9/4
+- Sector momentum YTD (notable shift from July): **Energy #1 at +43.1%**, **Technology #2 at +25.4%** (no longer the laggard sector it was in July), Materials +19.1%, Industrials +16.0%, Real Estate +14.1%, Consumer Staples +14.0%, Health Care +13.8%, Financials +7.2%, Utilities +2.6%, Consumer Discretionary -0.5%, Communication Services -4.0% (weakest)
+- XOM (existing position): live Alpaca price $159.49, down slightly from recent highs; news flow includes a temporary operations halt at Exxon's Guyana site after a fire, and separately a report of possible $8B interest in Shell's US chemical assets — neither is thesis-breaking
+
+### Trade Ideas
+1. No new name today — NVDA earnings land **after** today's close; buying Tech exposure blind ahead of the market's single biggest catalyst violates the "wait for print + reaction" rule. If the reaction is strong tomorrow, Tech's YTD momentum has genuinely improved (#2 sector now, up from laggard) enough to reconsider for the watchlist — not actionable pre-print.
+2. Materials — still #3 YTD sector, no company-specific dated catalyst today; watchlist only.
+3. XOM/Energy — thesis remains intact (#1 sector, +43.1% YTD) and the position is already sized near the 20% single-position cap's neighborhood relative to a fuller book; not adding to XOM today, no new dated catalyst for a second Energy name.
+
+### Risk Factors
+- **Persistence-pipeline failure is the top risk this session** — see reliability-gap note above; recommend the operator verify why STEP 6 (git commit/push) has been failing/skipped for ~5 weeks before trusting future automated runs to self-report.
+- NVDA earnings after close today is a market-wide volatility event; expect gap risk across Tech/semis tomorrow regardless of our own (Energy-only) book.
+- Oil reversing lower (-2-3%) on Iran-sanctions-driven risk-premium unwind is a mild headwind for the Energy thesis; XOM's 7% trailing stop ($156.84) is the built-in defense, no manual action needed unless price approaches it.
+- Deployment stuck at 12.6% vs. 75-85% target — now over a month under-deployed with no new trades logged; combined with the logging gap, this needs an active decision next session rather than continued deferral.
+- Trade-count-this-week tracking broken across the gap — treat weekly allowance as reset/unreliable until a clean week of logging is re-established.
+
+### Decision
+HOLD — no new trades today. XOM thesis intact (+10.17% unrealized), 7% GTC trailing stop correctly tightened and active, no manual stop action needed. NVDA earnings after close is today's dominant catalyst but is Tech-sector and post-close — not actionable pre-market, and buying into it blind would violate the earnings-wait rule regardless. Top priority for the operator: investigate the ~5-week silent commit/push failure (STEP 6) — trading logic and stop management ran correctly during the gap, but zero visibility was recorded.

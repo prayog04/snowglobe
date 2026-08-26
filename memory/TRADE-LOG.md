@@ -46,3 +46,8 @@ No new trades. 1 open position (XOM), thesis intact, GTC trailing stop active (s
 | XOM | 800 | $144.77 | $151.80 | +2.32% | +$5,624.00 (+4.86%) | $136.58 GTC trailing 10% (hwm $151.76) |
 
 **Notes:** Quiet no-trade day, as previewed in the market-open check. XOM continued its run, up 2.3% intraday to $151.80, pushing the trailing stop's high-water mark to $151.76 and the stop itself up to $136.58 — the position is now up nearly 5% unrealized. Portfolio gained $2,680 (+0.27%) on the day, all from XOM's move; cash sat untouched at $884,184 (87.9%). Zero trades today, zero trades this week (0/3), and deployment remains stuck at ~12% vs. the 75-85% target for a third straight session — the bot continues to wait for a dated catalyst outside the weak Tech rally rather than force a trade.
+
+### Aug 26 — Market-open check
+No new trades. 1 open position (XOM), thesis intact. Equity $1,011,707.99, deployed 12.6%. Trades this week: 0/3. See RESEARCH-LOG 2026-08-26 for full context — HOLD decision, no dated catalyst clears the bar (NVDA earnings is today's big event but is Tech, after-the-close, and we don't buy ahead of prints).
+
+**⚠ Logging gap flagged:** no RESEARCH-LOG or TRADE-LOG entry exists between 2026-07-24 and today — ~1 month of scheduled runs produced no log entries. Alpaca order history shows the account was otherwise idle (still just the one 7/15 XOM buy) except that the trailing stop was correctly canceled/replaced with a **7% trail** on 2026-08-19 (hwm $168.64 at the time) per the "tighten to 7% at +15%" rule — a compliant action, but untracked here until now. XOM current price ~$159.40-159.89, stop now $156.8352 (hwm $168.64), unrealized +10.1%. Recommend investigating why the scheduled workflows stopped logging for a month.

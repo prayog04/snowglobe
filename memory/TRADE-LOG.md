@@ -46,3 +46,13 @@ No new trades. 1 open position (XOM), thesis intact, GTC trailing stop active (s
 | XOM | 800 | $144.77 | $151.80 | +2.32% | +$5,624.00 (+4.86%) | $136.58 GTC trailing 10% (hwm $151.76) |
 
 **Notes:** Quiet no-trade day, as previewed in the market-open check. XOM continued its run, up 2.3% intraday to $151.80, pushing the trailing stop's high-water mark to $151.76 and the stop itself up to $136.58 — the position is now up nearly 5% unrealized. Portfolio gained $2,680 (+0.27%) on the day, all from XOM's move; cash sat untouched at $884,184 (87.9%). Zero trades today, zero trades this week (0/3), and deployment remains stuck at ~12% vs. the 75-85% target for a third straight session — the bot continues to wait for a dated catalyst outside the weak Tech rally rather than force a trade.
+
+### Aug 19 — Stop tightened (backfilled 2026-08-26, see note)
+| Ticker | Action | Old Stop | New Stop | Trigger |
+|---|---|---|---|---|
+| XOM | Trailing-stop replace | 10% trailing (canceled, hwm $166.74) | 7% trailing GTC (stop $156.8352, hwm $168.64) | XOM crossed +15% unrealized gain — strategy rule "tighten to 7% at +15%" |
+
+**Note:** This stop-tightening executed live on Alpaca (order canceled and replaced 2026-08-19T13:39 UTC) correctly per the strategy rulebook, but was never committed to this log — **no market-open, EOD, or research entries exist for any session between 2026-07-24 and 2026-08-26**, a ~5-week logging gap. Backfilled from live Alpaca order history during the 2026-08-26 pre-market run. This is the third documented logging-reliability gap for this account (after 7/14-7/19 and 7/23) and by far the largest — flagging as urgent; see RESEARCH-LOG 2026-08-26 for full detail. Trading/risk logic itself appears to have functioned correctly through the gap (the stop tightened exactly as the rulebook specifies); the failure is isolated to STEP 6 persistence (commit/push) not running or not succeeding.
+
+### Aug 26 — Pre-market check
+No new trades. 1 open position (XOM), thesis intact, 7% GTC trailing stop active (stop $156.8352, hwm $168.64, current price $159.49). Trades this week: treating as 0/3 (weekly count unreliable across the logging gap). See RESEARCH-LOG 2026-08-26 for full context — HOLD decision; NVDA earnings after today's close is the dominant catalyst but is post-close/Tech-sector, not actionable pre-market. Top flag: ~5-week silent commit/push gap discovered and backfilled this session (see Aug 19 entry above).

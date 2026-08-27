@@ -255,3 +255,42 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-08-27 — Pre-market Research
+
+### Account
+- Equity: $1,010,007.99
+- Cash: $884,183.99
+- Buying power: $3,889,043.16 (margin, 4x)
+- Positions: 1 (XOM, 800 sh), market value $125,824 = **12.5%** of equity — essentially unchanged from the last logged session (Jul 24, 12.4%)
+- Daytrade count: not reported by API (0 day trades taken)
+- Trades this week: unknown — see logging-gap note below
+- XOM: 800sh @ $144.77 avg, current (Alpaca live) $157.28, unrealized +$10,008 (+8.64%). GTC trailing stop already tightened to **7%** (hwm $168.64, stop $156.8352) — confirms the +15%-gain tighten rule fired at some point while unlogged. Current price is only **$0.45 (0.3%) above the stop** — the position is one more down-tick from being stopped out.
+
+### ⚠ Logging gap (Jul 24 → Aug 27)
+No RESEARCH-LOG or TRADE-LOG entries exist for roughly a month (last entries: Jul 24). Live Alpaca data shows real activity occurred in that window regardless — the GTC stop was replaced/tightened to a 7% trail on 2026-08-19 (updated 2026-08-20), meaning XOM ran up to a $168.64 high (+16.5% from entry) before pulling back to today's $157.28. None of that price action, the tighten event, or any trade decisions from the past ~5 weeks were captured in memory. Equity is flat over the whole gap (~$1,009,304 on 7/24 → $1,010,008 today, i.e. ~+0.07%) while deployment is still stuck at ~12.5% vs. the 75-85% target — the "6th straight under-deployed session" flag from Jul 24 has now compounded into roughly a month of the same unresolved pattern with no record of why. Flagging this as a scheduled-workflow reliability issue for review, on top of the earlier 7/14–7/19 and 7/23 gaps already on file.
+
+### Market Context
+- WTI ~$81.8-82.0/bbl, Brent ~$87.4/bbl — both down modestly on the day, continuing a multi-week slide from July's Hormuz-premium spike (~$85-95 range); no acute geopolitical driver today
+- S&P 500 futures: flat to +0.5% (~7,690-7,730 range across feeds); cash S&P hit a fresh record high earlier in August (~7,814.88) before this week's pullback around NVDA's earnings reaction
+- VIX: ~15.2-15.7 — low, calm regime
+- Today's catalysts: Jackson Hole Economic Policy Symposium (Aug 27-29) — Fed commentary is the main macro risk; market still digesting Tuesday's NVIDIA earnings (cautious reaction on guidance)
+- Earnings before/around today: Marvell (MRVL), Workday (WDAY), Autodesk (ADSK), Dollar General (DG), Dollar Tree (DLTR), Best Buy (BBY), Ulta Beauty (ULTA), Affirm (AFRM) — none in Energy/Materials/Staples lane
+- Economic calendar: PCE Price Index / Core PCE, Chicago PMI, JOLTS Job Openings, Initial Jobless Claims today. No CPI/PPI/jobs report today (next CPI 9/11, PPI 9/10, jobs 9/4); next FOMC 9/15
+- Sector momentum YTD: Energy still #1 (+43.1%), but Technology has moved up to #2 (+25.4%, a major shift from its laggard status in July), Materials #3 (+19.1%), Industrials/Real Estate/Staples/Health Care mid-pack, Financials/Utilities weak, Consumer Discretionary (-0.5%) and Communication Services (-4.0%) worst
+- XOM (existing position): closed $158.19 (-1.53%) Wed 8/26; premarket ~$156.9-157.2. News: Guyana FPSO briefly halted after a fire, resumed operations; ExxonMobil reportedly eyeing an ~$8B bid for Shell's US chemical plants; speaking at Barclays Energy-Power conference; 43rd consecutive annual dividend raise. No thesis-breaking news, but the stock is drifting down with softening oil, and is now sitting right on its trailing stop.
+
+### Trade Ideas
+1. No new name today — the near-term picture is dominated by Jackson Hole positioning risk and post-NVDA tech digestion, neither of which clears the "specific, dated catalyst" bar for a fresh Energy/Materials/Staples entry. Not adding into a market waiting on Fed commentary.
+2. Tech's YTD momentum shift (now #2 sector, +25.4%) is a real change worth tracking going forward, but MRVL/WDAY/ADSK earnings today are print-and-react events per strategy (no buying blind into earnings) — watch reactions, no pre-print position.
+3. XOM (existing position): no new entry — position is being managed by its own GTC 7% trailing stop, which is doing its job. Action item is monitoring, not trading.
+
+### Risk Factors
+- **XOM trailing stop is ~0.3% from triggering** ($156.84 stop vs. $157.28 current) — if oil/Energy sees any further softness today this stop can fill; per strategy the stop must not be moved down, so this is watch-only, not an action item, but flagging so it isn't a surprise on the next check-in
+- Jackson Hole (Aug 27-29) is a real macro catalyst in progress — Fed commentary could move rates expectations and broad risk sentiment intraday
+- A month-long logging gap (Jul 24-Aug 27) means this session has no record of intervening decisions, research quality, or whether other trades were considered and passed on — recommend a review of scheduled-run reliability
+- Portfolio has been flat (+0.07%) for a month while the S&P set new highs in August — the "wait for a perfect dated catalyst" HOLD bias, now compounding for roughly 5-6 weeks, is a real opportunity-cost risk against the S&P-beating mission, not just a process nitpick
+- Deployment stuck at ~12.5% vs. 75-85% target — unchanged from a month ago
+
+### Decision
+HOLD — no new trades today. XOM thesis is intact but the position is one tick from its own trailing stop; no action needed there per strategy (stops don't move down), just monitoring. No new name clears the catalyst bar with Jackson Hole in progress and today's earnings slate (MRVL/WDAY/ADSK/DG/DLTR/BBY/ULTA) outside our Energy/Materials/Staples lane. Escalating two items for review: (1) the ~month-long logging gap masking real account activity, and (2) a month of flat performance at 12.5% deployment against the "beat the S&P 500" mission — the patience bar may need recalibrating rather than deferring again.

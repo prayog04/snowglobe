@@ -255,3 +255,19 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-08-27 — Midday Scan Addendum
+
+### Reliability gap discovered
+No RESEARCH-LOG or TRADE-LOG entries, and no git commits, exist between 2026-07-24 and today (2026-08-27) — roughly a month, ~25 trading sessions, of scheduled runs that either did not execute or did not persist. Live Alpaca order history shows the trailing stop WAS tightened from 10% to 7% on 2026-08-19 (consistent with the +15% rule), confirming at least one run did act on the account without logging it. Backfilled to TRADE-LOG today; flagging as the most severe instance yet of the reliability gap first noted 7/20 and 7/24.
+
+### XOM stop-out (auto-executed, not a decision made this session)
+- Position closed automatically via GTC 7% trailing stop at 13:40 UTC today: 800sh sold @ $156.81 (hwm $168.64), entry $144.77 → **realized +$9,632.00 (+8.32%)**.
+- Perplexity research on the pullback from the ~$168 high: fading Iran/Strait-of-Hormuz oil risk premium (Brent -3.9%/WTI -3.1% on 8/26 as markets priced out supply fears), an Aug 5 DZ Bank downgrade to Hold ($156 target) despite strong Q2 results, and a temporary Guyana (Liza Unity) operations suspension after an onboard fire on 8/25-26.
+- No thesis violation — exit was the stop mechanism working as designed on a real macro reversal (oil premium unwinding), not a company-specific breakdown.
+- **Account is now 100% cash, 0 open positions, 0 open orders.** Equity $1,009,631.99 (+0.96% vs $1,000,000 launch baseline).
+
+### Action taken this session
+- No new positions opened — this is a midday scan (STEP 3-5 stop/thesis maintenance), not a sourcing workflow; account is fully flat so no losers to cut and no winners to tighten.
+- Backfilled the unlogged 8/19 stop-tighten and the 8/27 exit to TRADE-LOG.
+- Next pre-market/market-open session should treat the account as a fresh, fully-flat 0/5-6-position book and begin sourcing a new candidate per the strategy rulebook — deployment is now 0% vs. the 75-85% target.

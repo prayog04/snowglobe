@@ -46,3 +46,13 @@ No new trades. 1 open position (XOM), thesis intact, GTC trailing stop active (s
 | XOM | 800 | $144.77 | $151.80 | +2.32% | +$5,624.00 (+4.86%) | $136.58 GTC trailing 10% (hwm $151.76) |
 
 **Notes:** Quiet no-trade day, as previewed in the market-open check. XOM continued its run, up 2.3% intraday to $151.80, pushing the trailing stop's high-water mark to $151.76 and the stop itself up to $136.58 — the position is now up nearly 5% unrealized. Portfolio gained $2,680 (+0.27%) on the day, all from XOM's move; cash sat untouched at $884,184 (87.9%). Zero trades today, zero trades this week (0/3), and deployment remains stuck at ~12% vs. the 75-85% target for a third straight session — the bot continues to wait for a dated catalyst outside the weak Tech rally rather than force a trade.
+
+### Aug 19 — Stop tightened (backfilled 2026-08-27, see note)
+XOM GTC trailing stop tightened from 10% to 7% (hwm $166.74 at the time), consistent with the +15% tighten rule. Order history shows the 10% trail canceled and a 7% trail placed same second (2026-08-19 13:39:15 UTC), implying a scheduled run executed this action — but no TRADE-LOG or RESEARCH-LOG entry, and no git commit, exists for 7/25 through 8/26. **Scheduled-workflow reliability gap: ~1 month (25 sessions) of runs did not persist to memory**, extending the pattern flagged on 7/20 and 7/24.
+
+### Aug 27 — SELL, stopped out (XOM)
+| Ticker | Side | Shares | Exit | Entry | Realized P&L | Reason |
+|---|---|---|---|---|---|---|
+| XOM | Sell | 800 | $156.81 | $144.77 | +$9,632.00 (+8.32%) | 7% GTC trailing stop filled (hwm $168.64) |
+
+**Note:** Position auto-closed via the standing 7% trailing stop at 13:40 UTC today — not a manual midday-scan decision, discovered when this session pulled live Alpaca state. XOM ran from $144.77 (7/15 entry) to a $168.64 high before pulling back on a fading oil/geopolitical risk premium (Brent -3.9%/WTI -3.1% on 8/26), an Aug 5 DZ Bank downgrade, and a temporary Liza Unity (Guyana) operations suspension after an onboard fire — see RESEARCH-LOG 2026-08-27 addendum. Trade closed as a net winner (+8.32%, +$9,632), exit executed exactly per the trailing-stop mechanism with no rule violation. **Account is now 100% cash, 0 open positions** — first flat day since the 7/15 entry. Given the ~1-month logging/commit gap (see Aug 19 entry above), this session cannot confirm whether any other trades occurred and were never captured; live Alpaca order history (only 3 orders total: buy, stop-cancel, stop-fill) was used as source of truth and matches a clean single-position lifecycle, so no other untracked trades appear to exist.

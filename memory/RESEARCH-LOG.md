@@ -255,3 +255,30 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-08-27 — Pre-market Research (run inline during market-open; entry was missing)
+
+### Account
+- Equity: $1,010,087.99
+- Cash: $884,183.99
+- Buying power: $3,889,267.16 (margin, 4x)
+- Positions: 1 (XOM, 800 sh), position value $125,904 = **12.5%** of equity — still far below the 75-85% target
+- Daytrade count: not reported by API (0 day trades taken)
+- Trades this week (since Mon 8/24): 0/3
+
+### Market Context
+- Alpaca's own quote endpoint returned a frozen/stale XOM quote (bp $149.53 / ap $160, identical timestamp across 3 calls seconds apart despite market being open) — treated as unreliable, not used for any trade decision. Live position data (trade-based current_price $157.47, from the `positions` endpoint) is trusted instead.
+- No Perplexity/news research run today — see Risk Factors below on why a new position wasn't pursued regardless.
+- Sector momentum: last confirmed framework (7/24) — Energy #1, Materials #2, Consumer Staples #3 YTD; Tech/Financials/Discretionary lagging. Not re-verified today.
+
+### Trade Ideas
+None generated — no catalyst research was performed today (see Risk Factors), so no candidate can clear the "specific catalyst" checklist item.
+
+### Risk Factors
+- **Major automation gap discovered**: no RESEARCH-LOG or TRADE-LOG entry exists between 2026-07-24 and today (2026-08-27) — roughly a month, ~24 trading days, of scheduled workflows apparently not running or not logging. Order history confirms only ONE order event fired in that entire window: an automatic trailing-stop tighten to 7% on 2026-08-19 (hwm $168.64, new stop $156.8352) — consistent with the strategy's "+15% tighten to 7%" rule, but never logged.
+- **XOM stop is very close to triggering right now**: current price ~$157.47 vs. GTC trailing stop $156.8352 — roughly 0.4% of headroom. This is the position's only protection; per strategy rules the stop is never moved down and this is not a discretionary trigger, so no manual action taken. Flagging for close monitoring at next session/midday check.
+- Deployment stuck at ~12.5% vs. 75-85% target for well over a month with 0/3 trades used repeatedly — this pattern was already flagged 6 sessions running as of 7/24 and has now persisted through a full undocumented month.
+- Given the stale/frozen live quote data and the total absence of a dated catalyst check today, opening a new position on unverified inputs was judged unsafe — not forcing a trade.
+
+### Decision
+HOLD — no new trades. Existing XOM position intact but sitting within ~0.4% of its GTC trailing stop ($156.8352); stop is live and correctly tightened per the +15% rule (fired 8/19, previously unlogged). No new-name research was performed today given stale quote data from Alpaca's own feed, so no candidate clears the catalyst checklist. Top priority for next session: confirm quote-feed reliability, re-verify XOM stop status immediately at open, and treat the month-long deployment stagnation (12.5% vs 75-85% target) as an urgent decision point rather than deferring again.

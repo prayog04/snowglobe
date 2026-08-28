@@ -255,3 +255,43 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-08-28 — Pre-market Research
+
+### ⚠ Logging Gap Discovered
+- No RESEARCH-LOG or TRADE-LOG entry exists between 2026-07-24 and today — a ~5-week scheduled-workflow gap (largest on record; prior gaps were 7/14-7/19 and 7/23).
+- Live Alpaca order history confirms real activity happened during the gap despite no logging: the XOM GTC trailing stop was tightened 10%→7% on 8/19 (position had crossed +15% unrealized, per strategy rule), then stopped out on 8/27 at $156.81 (hwm $168.64) for a realized gain of **+$9,632.00 (+8.32%)** on the original $144.77 entry. Both actions were strategy-compliant but undocumented until backfilled into TRADE-LOG.md just now.
+- Net effect: account has been **100% cash, 0 positions** since the 8/27 close, with no research/decision trail for that entire stretch. Flagging for operator review — the scheduled pre-market/market-open runs appear to have not fired (or not logged) for over a month.
+
+### Account
+- Equity: $1,009,629.23 | Cash: $1,009,629.23 (100%)
+- Buying power: $4,038,516.92 (margin, 4x)
+- Positions: **0** — fully flat since XOM stopped out 8/27
+- Open orders: 0
+- Daytrade count: not reported by API (0 day trades taken)
+- Deployment: 0% vs. 75-85% target — maximally under-deployed; this is now a genuine decision point, not a one-session gap
+
+### Market Context
+- WTI ~$82.5-83.9, Brent ~$88.3-90.1 — oil drifting lower this week (Iran/Oman advancing a temporary Strait of Hormuz maritime corridor plan, easing the geopolitical risk premium that drove the XOM thesis all summer)
+- S&P 500 futures: ~7,739-7,741, +0.5-0.65% premarket, near record highs
+- VIX: ~14.5-14.7 intraday, low/complacent — down from ~15.2 Wednesday close
+- Today's catalysts: Nvidia's blowout Q2 (beat + raised guidance) driving a broad AI/tech rally (NVDA +6-9%, Salesforce, CrowdStrike also up sharply on earnings) — Nasdaq led markets higher; Jackson Hole symposium concludes today with Fed Chair Warsh's first keynote (2pm ET) — high rates/FX volatility risk; Chicago PMI (9:45am) and final Michigan Consumer Sentiment (10am/2pm) also on tap
+- Earnings before open: light and mostly small/speculative names (Frontline/FRO — oil tanker shipping, MINISO, Chagee, Jiayin, Immuron) — nothing in a size/quality bracket that clears our entry bar
+- Economic calendar: no CPI or FOMC today; PPI-adjacent releases + initial/continuing jobless claims; next CPI and next jobs report (9/4) still ahead
+- Sector momentum YTD: Energy #1 (+43%), Technology #2 (+25%, boosted further by today's Nvidia-led rally), Materials #3 (+19%), Industrials #4 (+16%); Consumer Discretionary (-0.5%) and Communication Services (-4%) lagging
+- XOM (former holding, flat now): ~$156.42, -1.1% today on a minor Scotland regulatory fine (£267k, gas leak) — noise, not thesis-relevant since we're out; no reason to re-enter on this print
+
+### Trade Ideas
+1. No new name today — today's dominant catalyst (Nvidia earnings) is a Tech-sector, already-priced move; chasing a one-day post-earnings pop doesn't meet the "specific, forward-looking catalyst" bar, and Fed Chair Warsh's 2pm Jackson Hole keynote is a real volatility risk to open a position ahead of on a Friday.
+2. Energy (still #1 YTD, oil pulling back on de-escalation) — no company-specific dated catalyst today; XOM's move was noise, CVX/other majors have no report due; watchlist only.
+3. Materials (#3 YTD) — no dated trigger today; watchlist only.
+
+### Risk Factors
+- Account has been 100% cash for the entire ~5-week logging gap and remains so today — 0% deployed vs. 75-85% target is now a structural problem, not a "wait for the right catalyst" nuance. Next session (market-open) should treat sourcing 1-2 new positions as a priority rather than deferring again.
+- Fed Chair Warsh's Jackson Hole keynote at 2pm ET carries real rate-path/volatility risk; low VIX (~14.5) suggests the market isn't pricing much of a surprise — asymmetric risk if he's hawkish.
+- Nvidia-led rally is concentrated in Tech, our #2 but historically weakest-conviction sector for this account's Energy/Materials-led framework — don't chase into a single-stock-driven pop.
+- Thin, event-risk Friday (Jackson Hole capstone + PMI/sentiment prints) into a weekend — lower conviction for new entries generally.
+- Operational: confirm with operator why the scheduled workflow didn't log for 5 weeks — GTC stop management clearly still executed correctly on Alpaca's side, but the research/decision trail (and any human review of it) was completely dark.
+
+### Decision
+HOLD — no new trades today. Nothing clears the specific-catalyst + sector-momentum + 2:1 R:R bar, and Fed Chair Warsh speaks at 2pm ET (real event risk) — not the day to open a fresh position blind. However, flagging 0% deployment (following the newly-discovered 5-week logging/research gap and the XOM stop-out) as an active decision point for the very next session, not a routine "patience" HOLD — the account needs a real sourcing push once today's Fed-speak risk clears.

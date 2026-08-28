@@ -46,3 +46,15 @@ No new trades. 1 open position (XOM), thesis intact, GTC trailing stop active (s
 | XOM | 800 | $144.77 | $151.80 | +2.32% | +$5,624.00 (+4.86%) | $136.58 GTC trailing 10% (hwm $151.76) |
 
 **Notes:** Quiet no-trade day, as previewed in the market-open check. XOM continued its run, up 2.3% intraday to $151.80, pushing the trailing stop's high-water mark to $151.76 and the stop itself up to $136.58 — the position is now up nearly 5% unrealized. Portfolio gained $2,680 (+0.27%) on the day, all from XOM's move; cash sat untouched at $884,184 (87.9%). Zero trades today, zero trades this week (0/3), and deployment remains stuck at ~12% vs. the 75-85% target for a third straight session — the bot continues to wait for a dated catalyst outside the weak Tech rally rather than force a trade.
+
+### Aug 19 — Trailing stop tightened (backfilled 2026-08-28, see note)
+| Ticker | Action | Old Trail | New Trail | HWM at Time | Reason |
+|---|---|---|---|---|---|
+| XOM | Tighten | 10% (stop $150.07) | 7% (stop ~$155.07) | $166.74 (+15.2% from $144.77 entry) | Crossed +15% tighten threshold per rule |
+
+### Aug 27 — SELL (backfilled 2026-08-28, see note)
+| Ticker | Side | Shares | Entry | Exit | Realized P&L | Reason |
+|---|---|---|---|---|---|---|
+| XOM | Sell | 800 | $144.77 | $156.81 | +$9,632.00 (+8.32%) | 7% GTC trailing stop triggered (hwm $168.64) |
+
+**Note:** No scheduled-workflow entries (market-open, midday, EOD, research) exist in this log between Jul 24 and today, Aug 28 — a 5-week logging blackout. Reconstructed from live Alpaca order history during this midday scan: the original 10% trailing stop was canceled and replaced with a 7% trail on 2026-08-19 (correct per the "+15% → tighten to 7%" rule, hwm was $166.74 at that point, +15.2% from entry), then that 7% trail filled on 2026-08-27 at $156.81 after XOM pulled back from a $168.64 high. Net result: XOM closed for +$9,632 (+8.32%), a winning trade, but entirely undocumented until now. **Current state (Aug 28, midday scan): 0 open positions, 0 open orders, equity $1,009,629.23, 100% cash — 0% deployed vs. the 75-85% target.** Flagging this as a severe reliability gap on top of the smaller gaps already noted 7/20 and 7/24 — scheduled runs appear to have stopped executing (or logging) for over a month. Weekly reviews have also not run since the 7/13 inception entry.

@@ -46,3 +46,19 @@ No new trades. 1 open position (XOM), thesis intact, GTC trailing stop active (s
 | XOM | 800 | $144.77 | $151.80 | +2.32% | +$5,624.00 (+4.86%) | $136.58 GTC trailing 10% (hwm $151.76) |
 
 **Notes:** Quiet no-trade day, as previewed in the market-open check. XOM continued its run, up 2.3% intraday to $151.80, pushing the trailing stop's high-water mark to $151.76 and the stop itself up to $136.58 — the position is now up nearly 5% unrealized. Portfolio gained $2,680 (+0.27%) on the day, all from XOM's move; cash sat untouched at $884,184 (87.9%). Zero trades today, zero trades this week (0/3), and deployment remains stuck at ~12% vs. the 75-85% target for a third straight session — the bot continues to wait for a dated catalyst outside the weak Tech rally rather than force a trade.
+
+### Aug 27 — SELL, stopped out (backfilled 2026-08-28, see note)
+| Ticker | Side | Shares | Exit | Realized P&L | Reason |
+|---|---|---|---|---|---|
+| XOM | Sell | 800 | $156.81 | +$9,632.00 (+8.32%) | GTC trailing stop filled. Trail had been tightened from the original 10% to 7% (order placed 2026-08-19, consistent with strategy rule "tighten to 7% at +15%" — hwm reached $168.64, ~+16.5% from entry); price pulled back and triggered the stop at $156.81. |
+
+**Note — 34-day logging/scheduling gap:** No market-open, pre-market, midday, or daily-summary entries exist anywhere between 2026-07-25 and 2026-08-27. `git log` confirms zero commits to `memory/` in that span — no scheduled workflow ran at all for 34 consecutive days. The XOM position was closed entirely by its own standing GTC order with no bot or human oversight during that window; nothing else traded (verified via full Alpaca order history, inception to date — only 2 fills exist on this account: the 7/15 XOM buy and this 8/27 stop-out). Backfilled from live Alpaca order history during the 2026-08-28 weekly-review run. See WEEKLY-REVIEW.md's 2026-08-28 entry for full assessment — this is a scheduled-workflow reliability failure, not a strategy failure.
+
+### Aug 28 — EOD Snapshot (Day 33, Friday)
+**Portfolio:** $1,009,629.23 | **Cash:** $1,009,629.23 (100%) | **Positions:** 0
+
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|
+| — | — | — | — | — | — | — |
+
+**Notes:** First confirmed data point since the 5-week gap. Fully in cash, zero open positions, 0/3 trades used this week, 0% deployed vs. 75-85% target. See the Aug 27 backfill note above and the 2026-08-28 weekly review for full context.

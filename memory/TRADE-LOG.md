@@ -46,3 +46,35 @@ No new trades. 1 open position (XOM), thesis intact, GTC trailing stop active (s
 | XOM | 800 | $144.77 | $151.80 | +2.32% | +$5,624.00 (+4.86%) | $136.58 GTC trailing 10% (hwm $151.76) |
 
 **Notes:** Quiet no-trade day, as previewed in the market-open check. XOM continued its run, up 2.3% intraday to $151.80, pushing the trailing stop's high-water mark to $151.76 and the stop itself up to $136.58 — the position is now up nearly 5% unrealized. Portfolio gained $2,680 (+0.27%) on the day, all from XOM's move; cash sat untouched at $884,184 (87.9%). Zero trades today, zero trades this week (0/3), and deployment remains stuck at ~12% vs. the 75-85% target for a third straight session — the bot continues to wait for a dated catalyst outside the weak Tech rally rather than force a trade.
+
+## ⚠️ SCHEDULED-RUN GAP: 2026-07-24 to 2026-08-28 (no runs fired for ~5 weeks)
+
+No market-open/pre-market/midday/EOD/weekly entries exist for this window — every scheduled run
+was silent. Two real account events happened live on Alpaca during the gap with no corresponding
+log entry or git commit (backfilled below from Alpaca order history during the 2026-08-28
+market-open run). See RESEARCH-LOG 2026-08-28 for full writeup and flag to operator.
+
+### Aug 19 — Stop tightened (backfilled 2026-08-28)
+| Ticker | Action | Old Stop | New Stop | Trigger |
+|---|---|---|---|---|
+| XOM | Tighten GTC trailing stop | 10% trailing (stop ~$150.07, hwm $166.74) | 7% trailing (stop $156.84, hwm $168.64) | Per strategy rule 6 (tighten to 7% at +15% unrealized) — XOM was ~+15-16% unrealized at this hwm. Correctly executed per rules, but never logged; no session ran or committed this window. |
+
+### Aug 27 — SELL, stopped out (backfilled 2026-08-28)
+| Ticker | Side | Shares | Entry | Exit | Stop Type | P&L | Thesis (orig.) | R:R realized |
+|---|---|---|---|---|---|---|---|---|
+| XOM | Sell (stop-out) | 800 | $144.77 | $156.81 | 7% GTC trailing (hwm $168.64) | +$9,632.00 (+8.32%) | Strait of Hormuz supply-risk premium + Energy #1 YTD momentum | ~1:1 realized (short of the ~2:1 target of ~$168; stop trailed down from hwm $168.64 and caught the pullback) |
+
+**Note:** The GTC trailing stop functioned exactly as designed — it protected and then locked in the
+gain fully unattended, with no bot session needed to execute it. What failed was the *logging/review*
+layer: the scheduled market-open/EOD/pre-market/midday routines did not fire (or fired but never
+committed) for ~5 weeks (2026-07-24 → 2026-08-28), so the stop-tighten and the exit were invisible
+until this run reconstructed them from live Alpaca order history. Account sat 100% in cash,
+0 of 5-6 target positions, for an unknown number of trading days between the 8/27 exit and today.
+
+### Aug 28 — Market-open check
+No new trades. 0 open positions (XOM stopped out 8/27, see backfill above). Trades this week: 0/3.
+Equity $1,009,629.23, cash $1,009,629.23 (100% — 0% deployed vs. 75-85% target). See RESEARCH-LOG
+2026-08-28 for full context — HOLD decision; today's research surfaced only broad market context
+(Energy still #1 YTD +43%, Tech now #2 +25%, VIX calm at 14.4, oil steady WTI ~$83/Brent ~$90),
+no company-specific dated catalyst clearing the entry checklist for a new name. Primary flag this
+session is the ~5-week scheduled-run gap above, not today's trade decision.

@@ -255,3 +255,67 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-08-28 — Market-open Research (run inline; no scheduled entry since 2026-07-24)
+
+### ⚠️ Scheduled-run gap
+No pre-market/market-open/midday/EOD/weekly entries exist for 2026-07-25 through 2026-08-27 —
+~5 weeks, ~24 trading days of silence. Confirmed via git log: last memory commit before today was
+`a805c94 market-open 2026-07-24`. Live Alpaca order history (reconstructed this session) shows the
+account was NOT idle during the gap:
+- **2026-08-19:** XOM's 10% GTC trailing stop was replaced with a 7% trailing stop (hwm $168.64,
+  new stop $156.84) — correct per strategy rule 6 (tighten to 7% at +15%), but no session logged it.
+- **2026-08-27:** That 7% stop filled, selling all 800 XOM shares @ $156.81 — realized +$9,632
+  (+8.32%) on the original $144.77 entry. Full backfill in TRADE-LOG 2026-08-28.
+- Net effect: the GTC stop mechanism worked unattended exactly as designed. What broke was
+  reporting/review — for an unknown number of sessions the account has been 100% cash with zero
+  visibility, and 0/3 weekly trade budget has gone unused for weeks. Root cause of the scheduling
+  gap itself is outside this session's tools (this run cannot see why the automation didn't fire);
+  flagging for the operator rather than guessing.
+
+### Account
+- Equity: $1,009,629.23
+- Cash: $1,009,629.23 (100%)
+- Buying power: $4,038,516.92 (margin, 4x)
+- Positions: 0 (XOM stopped out 8/27 — see above) — 0% deployed vs. 75-85% target
+- Daytrade count: not reported by API
+- Trades this week (since Mon 8/24... actually current week Mon 8/24): 0/3
+
+### Market Context
+- WTI ~$83.18-83.53/bbl, Brent ~$89.70-89.85/bbl — steady, no acute geopolitical spike like the
+  July Hormuz episode
+- VIX: 14.44 (Cboe spot, ~12:50pm 8/28) — calm, low-vol regime
+- S&P 500 futures: no reliable same-day premarket print returned (most recent verified quote was
+  stale, 8/21); treat index level as unconfirmed today
+- Today's catalysts: Nvidia-driven AI optimism continuing to lift Nasdaq/tech; Alibaba earnings
+  today (not in our universe); Tokyo CPI/unemployment ahead of September BOJ; Fed Chair Kevin
+  Warsh's first Jackson Hole keynote (rates/currency volatility risk); August U. Michigan consumer
+  sentiment release today
+- Sector momentum YTD (updated ranking, notably reshuffled since 7/24): **Energy #1 (+43.1%)**,
+  Technology #2 (+25.4%) — a sharp move up from laggard status in July, Materials #3 (+19.1%),
+  Industrials #4 (+16.0%), Real Estate #5 (+14.1%), Consumer Staples #6 (+14.0%), Health Care #7
+  (+13.8%), Financials #8 (+7.2%), Utilities #9 (+2.6%), Consumer Discretionary #10 (-0.5%),
+  Communication Services #11 (-4.0%, laggard)
+- No current holdings (flat) — no position-specific news to check
+
+### Trade Ideas
+1. No new name today — Energy remains #1 YTD but no company-specific dated catalyst identified
+   (no Energy earnings/news screened this session); reflexively re-buying XOM or another Energy
+   name off broad sector strength alone doesn't clear the entry checklist.
+2. Tech's move to #2 YTD (Nvidia-driven AI rally) is a real momentum shift worth tracking into next
+   session, but needs a dated, company-specific catalyst before entry — watchlist only.
+3. No trade forced today; this session prioritized reconstructing the gap above over screening a
+   full new-candidate list given the account's current unattended state.
+
+### Risk Factors
+- Primary risk this session is operational, not market: confirm the scheduled cron/automation is
+  actually re-registered and firing before relying on this account being monitored again.
+- 0% deployed for an unknown stretch of weeks — once the scheduling issue is confirmed fixed,
+  next session should treat sourcing 1-2 new candidates as a priority rather than deferring again.
+- Fed Chair Jackson Hole keynote today is a volatility risk across risk assets generally.
+
+### Decision
+HOLD — no new trades today. This session's priority was reconstructing and logging the ~5-week
+scheduled-run gap and the two real account events (stop-tighten 8/19, stop-out 8/27) that occurred
+during it, both backfilled to TRADE-LOG. No company-specific dated catalyst was screened for a new
+name today. Flagging the reliability gap as the top-priority item for the operator.

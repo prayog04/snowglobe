@@ -46,3 +46,18 @@ No new trades. 1 open position (XOM), thesis intact, GTC trailing stop active (s
 | XOM | 800 | $144.77 | $151.80 | +2.32% | +$5,624.00 (+4.86%) | $136.58 GTC trailing 10% (hwm $151.76) |
 
 **Notes:** Quiet no-trade day, as previewed in the market-open check. XOM continued its run, up 2.3% intraday to $151.80, pushing the trailing stop's high-water mark to $151.76 and the stop itself up to $136.58 — the position is now up nearly 5% unrealized. Portfolio gained $2,680 (+0.27%) on the day, all from XOM's move; cash sat untouched at $884,184 (87.9%). Zero trades today, zero trades this week (0/3), and deployment remains stuck at ~12% vs. the 75-85% target for a third straight session — the bot continues to wait for a dated catalyst outside the weak Tech rally rather than force a trade.
+
+### Aug 19 — Stop tightened to 7% GTC trailing (backfilled 2026-08-31, see note)
+Original 10% GTC trailing stop (stop $150.07, hwm $166.74) canceled and replaced with a 7% GTC trailing stop, hwm $166.74 at time of replacement. XOM was ~+15.2% above the $144.77 entry, correctly crossing the strategy's "tighten to 7% at +15%" threshold.
+
+**Note:** Never logged live — no market-open/research entries exist for 7/25 through 8/30. Backfilled from live Alpaca order history during the 2026-08-31 market-open run.
+
+### Aug 27 — SELL, stop-out (backfilled 2026-08-31, see note)
+| Ticker | Side | Shares | Entry | Exit | Stop | Realized P&L |
+|---|---|---|---|---|---|---|
+| XOM | Sell (trailing-stop fill) | 800 | $144.77 | $156.81 | 7% GTC trailing, hwm $168.64 | +$9,632.00 (+8.32%) |
+
+**Note:** Position closed automatically by the GTC trailing stop with no scheduled workflow running to log it. Backfilled from live Alpaca order history during the 2026-08-31 market-open run. Account has been 100% flat cash since this fill.
+
+### Aug 31 — Market-open check
+No new trades. Account flat (0 positions) since the Aug 27 stop-out. Trades this week: 0/3. See RESEARCH-LOG 2026-08-31 — HOLD; no verified, dated catalyst today, and research data (Perplexity) was again incomplete/unreliable. Flagging a critical automation gap: no scheduled workflow executed between 2026-07-24 and 2026-08-31 (~5 weeks), despite the stop-tighten and stop-out above actually happening live on Alpaca during that window, unrecorded until today.

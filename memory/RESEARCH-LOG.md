@@ -255,3 +255,29 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-08-31 — Pre-market Research (run inline during market-open; ~5-week gap since last entry)
+
+### Account
+- Equity: $1,009,629.23
+- Cash: $1,009,629.23 (100%)
+- Buying power: $4,038,516.92 (margin, 4x)
+- Positions: 0 — XOM (800 sh) was stopped out 2026-08-27 via GTC trailing stop; never logged until today
+- Daytrade count: not reported by API (0 day trades taken)
+- Trades this week (since Mon 8/31): 0/3
+
+### Market Context
+- Perplexity returned only partial, unverified data today: no confirmed S&P futures level, VIX, oil prices, or earnings-before-open calendar
+- Confirmed: Energy remains #1 YTD sector (+43.1%), Technology #2 (+25.4%), Materials #3 (+19.1%); Communication Services (-4.0%) and Consumer Discretionary (-0.5%) lagging
+- One catalyst surfaced: markets watching PCE inflation/consumption data and Nvidia earnings this week (date unconfirmed)
+
+### Trade Ideas
+1. No new name today — no specific, dated, company-level catalyst confirmed; research data incomplete (same data-quality issue flagged repeatedly in July logs)
+
+### Risk Factors
+- **CRITICAL — ~5-week automation outage:** no scheduled workflow (market-open/midday/daily-summary/weekly-review) ran or logged anything between 2026-07-24 and 2026-08-31. Real account activity happened live and unrecorded during that gap: the XOM trailing stop was tightened 10%→7% on 2026-08-19 (correctly triggered at +15% unrealized per strategy rule) and the position was stopped out on 2026-08-27 at $156.81 (+8.32%, +$9,632 realized), leaving the account 100% flat cash for several trading days with no one watching. Both events backfilled into TRADE-LOG from live Alpaca order history this session. This is an escalation of the audit-trail gaps flagged 2026-07-20 and 2026-07-23 (those were days; this is over a month) — operator should verify why scheduled routines stopped firing after 2026-07-24.
+- Research tooling (Perplexity) again returned incomplete/unverifiable market data — consistent with data-quality issues flagged 2026-07-22 and 2026-07-24.
+- Account is now at a clean decision point: fully flat, 0/6 positions, full weekly trade allowance available — next session with reliable research should prioritize sourcing 1-2 candidates rather than defaulting to inertia now that the gap is caught up.
+
+### Decision
+HOLD — no new trades. The realized XOM gain (+8.32%, backfilled) confirms the trailing-stop mechanism worked correctly even while unmonitored. No verified, dated catalyst clears today's entry bar and research data is unreliable. Top priority is flagging the 5-week scheduled-workflow outage before resuming normal cadence.

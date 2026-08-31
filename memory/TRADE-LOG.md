@@ -46,3 +46,20 @@ No new trades. 1 open position (XOM), thesis intact, GTC trailing stop active (s
 | XOM | 800 | $144.77 | $151.80 | +2.32% | +$5,624.00 (+4.86%) | $136.58 GTC trailing 10% (hwm $151.76) |
 
 **Notes:** Quiet no-trade day, as previewed in the market-open check. XOM continued its run, up 2.3% intraday to $151.80, pushing the trailing stop's high-water mark to $151.76 and the stop itself up to $136.58 — the position is now up nearly 5% unrealized. Portfolio gained $2,680 (+0.27%) on the day, all from XOM's move; cash sat untouched at $884,184 (87.9%). Zero trades today, zero trades this week (0/3), and deployment remains stuck at ~12% vs. the 75-85% target for a third straight session — the bot continues to wait for a dated catalyst outside the weak Tech rally rather than force a trade.
+
+### Aug 19 — Stop tightened (backfilled 2026-08-31, see note)
+| Ticker | Action | New Stop | HWM at time | Rule |
+|---|---|---|---|---|
+| XOM | Trailing stop tightened 10% → 7% | $155.07 (7% off hwm) | $166.74 (+15.2% from $144.77 entry) | Strategy rule 6: tighten to 7% at +15% |
+
+**Note:** Old 10% GTC trailing stop canceled and replaced with a 7% GTC trailing stop same day, per rule. No log entry existed for this at the time — backfilled from Alpaca order history during the 2026-08-31 pre-market run, which also discovered the 7/24–8/31 logging gap (see RESEARCH-LOG 2026-08-31).
+
+### Aug 27 — SELL, stop-out (backfilled 2026-08-31, see note)
+| Ticker | Side | Shares | Entry | Exit | P&L | Trigger |
+|---|---|---|---|---|---|---|
+| XOM | Sell (stop-out) | 800 | $144.77 | $156.81 | +$9,632.00 (+8.32%) | 7% GTC trailing stop filled, hwm $168.64 |
+
+**Note:** Position fully closed automatically via the GTC trailing stop — no manual action taken, and none was needed. This exit was never logged; discovered via `alpaca.sh orders closed` during the 2026-08-31 pre-market run. Account has been 100% cash with zero positions since this exit. See RESEARCH-LOG 2026-08-31 for full context on the logging gap and today's decision.
+
+### Aug 31 — Market-open check (pre-market run)
+No positions, no open orders, 100% cash ($1,009,629.23 equity). Trades this week: 0/3 (new week). See RESEARCH-LOG 2026-08-31 for full context — HOLD decision; today's oil/Hormuz spike revives the Energy thesis but wants confirmation before re-entry, not a day-one chase.

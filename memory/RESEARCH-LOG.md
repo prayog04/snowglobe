@@ -255,3 +255,41 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-08-31 — Pre-market Research
+
+### Logging Gap (flagged first)
+- No RESEARCH-LOG or TRADE-LOG entry exists between 2026-07-24 and today (5 weeks, ~26 trading days) — scheduled runs did not execute or were not logged over that stretch.
+- XOM's 7% GTC trailing stop (tightened from 10% on 2026-08-19 at hwm $166.74, consistent with the +15% tighten rule) filled automatically on **2026-08-27** at **$156.81** (hwm $168.64, an 800sh position bought 2026-07-15 @ $144.77) — realized gain **+$9,632 (+8.32%)**. The stop mechanics worked correctly with no manual intervention; only the research/logging cadence failed. Confirmed via `alpaca.sh orders closed`, not from any log entry.
+- Account has sat 100% cash since the 8/27 exit with zero new positions opened — a second, larger under-deployment gap on top of the one already flagged repeatedly through 7/24.
+
+### Account
+- Equity: $1,009,629.23 | Cash: $1,009,629.23 (100%) | Buying power: $4,038,516.92 (margin, 4x)
+- Positions: 0 | Open orders: 0 | Deployed: **0%** vs. 75-85% target
+- Daytrade count: not reported by API (0 day trades taken)
+- Trades this week (week of Mon 8/31, new week): 0/3
+- Phase P&L since inception (7/13): +$9,629.23 (+0.96%)
+
+### Market Context
+- WTI ~$85.4-85.5 (+2.3-2.5%), Brent ~$90.4-90.7 (+2.6-2.9%) — sharp oil pop on collapse of US-Iran diplomatic efforts to restore normal Strait of Hormuz shipping; same geopolitical-premium dynamic that originally drove the XOM thesis
+- S&P 500 futures: ~7,722, roughly flat (-0.26% to -0.4% across sources); index made fresh ATHs earlier in August on cooling inflation + AI-earnings strength
+- VIX: ~15.2-15.3, low/calm — market not pricing the oil/Hormuz headline as a near-term risk-off event
+- Today's catalysts: G20 Finance Ministers/Central Bank Governors meeting kicks off (thru 9/1); Dallas Fed Manufacturing Index 2:30pm ET; continued Nvidia-led AI/Tech rally (Nasdaq strength) after last week's blowout NVDA earnings/guidance
+- Earnings before open: sparse/contradictory across sources — only SAIC (Science Applications Intl, EPS est. $2.31) is confirmed pre-market; none in Energy/Materials/Staples lane
+- Economic calendar: no CPI/PPI/FOMC/jobs today — July CPI already printed (3.4% YoY); next CPI 9/11; next FOMC in September (exact date not confirmed by sources)
+- Sector momentum YTD: Energy still #1 by a wide margin (+37-43% across sources, 3rd-best year since 1990), Technology now clearly #2 (+25.4%, AI-earnings-driven) — a shift from the July framework where Tech was a laggard; Materials #3 (+19%), Industrials #4 (+16%); Communication Services and Consumer Discretionary weakest
+- No held ticker to check news on — flat book
+
+### Trade Ideas
+1. Energy re-entry (XOM/CVX) — catalyst: today's oil spike on the US-Iran Hormuz-diplomacy collapse directly reprises the thesis that made the prior XOM trade work; Energy remains the #1 YTD sector by a wide margin. Not entering blind on a single-day oil pop — want to see the move hold past today's G20-meeting headline noise before sizing an entry. If it holds: entry ~market, stop -8%, target +16-20%, R:R ~2:1.
+2. Tech/AI (post-NVDA momentum) — catalyst: Tech has moved from laggard to #2 YTD sector on strong hyperscaler/semis earnings; no company-specific dated catalyst for a new name today though, and chasing a multi-week AI rally without one doesn't clear the entry checklist — watchlist only.
+3. Materials — #3 YTD sector, no dated company-specific trigger today — watchlist only.
+
+### Risk Factors
+- **Process risk, not market risk, is today's biggest issue**: a 5-week blind spot in research/trade logging means this account ran unsupervised through the XOM exit and beyond — verify the scheduled workflow is actually firing daily going forward, not just when this session happens to run.
+- Oil's Hormuz-driven pop could reverse fast on any de-escalation headline (same whipsaw pattern seen in July) — don't chase day one of a spike into a full position.
+- G20 meeting (thru 9/1) is a source of unscheduled headline risk on rates/FX/capital flows.
+- 0% deployed, 0/6 target positions — most under-deployed the account has been since inception; needs a real decision next session or two, not indefinite deferral.
+
+### Decision
+HOLD — no new trades today. Flat book following the automatic, profitable XOM stop-out (+8.32%) on 8/27. Today's oil spike revives the Energy thesis but is one day old and coincides with G20 headline risk; want confirmation it holds before sizing a re-entry rather than chasing the first pop. Priority for next session: (1) confirm the scheduled workflow is running daily again, (2) treat 0% deployment as an active decision point.

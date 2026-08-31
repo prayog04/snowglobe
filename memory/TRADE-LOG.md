@@ -46,3 +46,18 @@ No new trades. 1 open position (XOM), thesis intact, GTC trailing stop active (s
 | XOM | 800 | $144.77 | $151.80 | +2.32% | +$5,624.00 (+4.86%) | $136.58 GTC trailing 10% (hwm $151.76) |
 
 **Notes:** Quiet no-trade day, as previewed in the market-open check. XOM continued its run, up 2.3% intraday to $151.80, pushing the trailing stop's high-water mark to $151.76 and the stop itself up to $136.58 — the position is now up nearly 5% unrealized. Portfolio gained $2,680 (+0.27%) on the day, all from XOM's move; cash sat untouched at $884,184 (87.9%). Zero trades today, zero trades this week (0/3), and deployment remains stuck at ~12% vs. the 75-85% target for a third straight session — the bot continues to wait for a dated catalyst outside the weak Tech rally rather than force a trade.
+
+### Aug 19 — Stop tightened to 7% (backfilled 2026-08-31, see note)
+XOM trailing stop replaced: old 10% GTC stop (stop ~$150.07, hwm $166.74) canceled, new 7% GTC stop placed (stop $156.84, hwm $168.64) — consistent with the "+15% -> tighten to 7%" rule (hwm $168.64 vs $144.77 entry = +16.5%).
+
+**Note:** This order action exists in Alpaca's live history (canceled 2026-08-19T13:39:15Z, new stop same timestamp) but has no corresponding market-open/midday session or git commit — no scheduled run appears to have logged anything between Jul 24 and today. Backfilled from live order history during the 2026-08-31 midday scan.
+
+### Aug 27 — EXIT, XOM stopped out (backfilled 2026-08-31, see note)
+| Ticker | Side | Shares | Entry | Exit | Realized P&L | Reason |
+|---|---|---|---|---|---|---|
+| XOM | Sell | 800 | $144.77 | $156.81 | +$9,632.00 (+8.32%) | 7% GTC trailing stop filled (hwm $168.64) |
+
+**Note:** Position closed via its own trailing-stop order (filled 2026-08-27T13:40:14Z) — not a manual/thesis-based exit. No session logged this at the time; backfilled from live Alpaca order history during the 2026-08-31 midday scan. This closes out the account's only position: from Aug 27 through today (Aug 31) the account has sat 100% cash ($1,009,629.23 equity, 0 positions, 0 open orders) with zero new trades — 0% deployed vs. the 75-85% target. Combined with the Jul 24 -> Aug 31 gap in RESEARCH-LOG/TRADE-LOG entries and git commits (last commit before today was Jul 24), this points to a multi-week scheduled-workflow outage, not a deliberate HOLD. Flagging for review — pre-market/market-open sessions need to resume sourcing candidates.
+
+### Aug 31 — Midday scan
+No open positions, no open orders (account flat, 100% cash, $1,009,629.23 equity) — nothing to cut, tighten, or thesis-check. See backfilled Aug 19/Aug 27 entries above for what happened while logging was dark. No new trades initiated (midday scan does not source new entries; that's pre-market/market-open's job).

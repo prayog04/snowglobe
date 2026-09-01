@@ -255,3 +255,32 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-09-01 — Pre-market Research (run inline during market-open; entry was missing)
+
+### Account (pre-trade, live Alpaca)
+- Equity/Cash: $1,009,629.23 (100% cash, 0 positions, 0 open orders) — flat since the Aug 27 XOM stop-out
+- Buying power: $4,038,516.92 (margin, 4x)
+- Trades this week (new week starting Mon 8/31): 0/3
+- Daytrade count: not reported by API; no PDT restriction on this account size
+
+### Logging-gap finding
+No RESEARCH-LOG or TRADE-LOG entries exist for 2026-07-25 through 2026-08-31 (5+ weeks) — the largest scheduled-workflow gap documented to date. Live Alpaca order history reconstructed what happened in the gap: the original XOM 10% trailing stop was replaced with a 7% trailing stop on 8/19 (consistent with the strategy's +15%-tighten rule), and that stop filled on 8/27 at $156.81 (hwm $168.64) for a realized gain of +$9,632 (+8.32%). Since 8/27 the account has sat 100% in cash with zero trades. Both events are now backfilled into TRADE-LOG.md (2026-09-01 entries). This means real Alpaca-side actions (stop replacement) happened during the gap without any corresponding committed record — a persistence failure, not just a missed narrative log.
+
+### Market Context
+- WTI ~$86.5-86.6/bbl, Brent ~$91.0-91.2/bbl, both up 2.5%+ on the session — fresh (dated today, Sept 1) renewed US-Iran military escalation reigniting Strait-of-Hormuz supply-disruption fears; one source frames it as the first direct exchange in a month on top of an already-elevated conflict backdrop, so the price reaction is new even if the underlying risk isn't brand-new
+- S&P 500: ~7,686 prior close, -0.3%; VIX 14.92 (+3.4%) — not panicky, index-level backdrop otherwise calm; ISM Manufacturing PMI and JOLTS due today, ADP Wed, jobless claims + trade data Thu, employment report Fri
+- XOM: live ask $172.17 pre-trade (later filled at $162.91 avg on the actual buy — wide/stale quote spread observed, treated Alpaca fill price as ground truth over the quote snapshot); CVX ~$198-220 range (wide spread too, not used to size)
+- No reliable company-specific (non-macro) news found today for XOM/CVX/SLB — the oil/conflict headline is the catalyst, not an idiosyncratic company event
+
+### Trade Ideas
+1. XOM — re-enter. Same playbook as the Jul 15 trade that returned +8.32%: Energy-sector name, direct beneficiary of a dated, today's-news supply-disruption catalyst (US-Iran escalation, Strait of Hormuz), oil up 2.5%+ same session. Clears specific-catalyst + sector-momentum + 2:1 R:R checklist items. TAKEN — see TRADE-LOG 2026-09-01.
+2. CVX/SLB — same macro tailwind but no company-specific dated trigger found today; not added as a second name this session. Quote spreads were also unusually wide, adding sizing uncertainty. Watchlist only.
+
+### Risk Factors
+- Quote-data spread on both XOM ($159.84 bid / $172.17 ask) and CVX ($198.36/$219.85) was unusually wide pre-trade — used the actual market-order fill price ($162.91) for sizing/logging rather than the quote snapshot; worth monitoring if this recurs
+- Oil-driven Energy rallies have reversed sharply before in this account's own history (see 2026-07-24 entry) — the 10% GTC trailing stop ($146.53, hwm $162.81) is the defense if the catalyst fades
+- 5-week scheduled-workflow persistence gap (7/25-8/31) is a process risk independent of any single trade — flagging for operator review, not something this session can fix from within a market-open run
+
+### Decision
+BUY XOM, 1000sh @ $162.91 avg, 10% GTC trailing stop at $146.53 (hwm $162.81). Position sized at ~16.1% of equity, under the 20% cap. First trade in 5 weeks, first checked-and-passed all hard rules (positions 1/6, trades 1/3 this week, catalyst dated today, no PDT issue). Also backfilled the Aug 19 stop-tighten and Aug 27 stop-out into TRADE-LOG so the record matches live Alpaca state.

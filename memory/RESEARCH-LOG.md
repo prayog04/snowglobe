@@ -255,3 +255,23 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-09-01 — Midday scan addendum (5-week gap reconciliation)
+
+### Gap found
+No RESEARCH-LOG or TRADE-LOG entries exist between 2026-07-24 and 2026-09-01 (~5 weeks). Reconciled against Alpaca's live order/position history during this midday run — see TRADE-LOG.md for the three backfilled entries:
+- 8/19: 10% trailing stop (from the 7/15 XOM buy) canceled and replaced with a 7% trail — correctly matches the "tighten to 7% at +15%" rule (position was +15.2% off entry, hwm $166.74)
+- 8/27: 7% trail triggered — XOM fully exited at $156.81 (800 sh), realized P&L ≈ +$9,632 (+6.65%). Stop worked exactly as designed.
+- 9/1 (today): a market order bought XOM 1000 sh @ $162.90998, followed immediately by a fresh 10% GTC trailing stop (stop $148.194, hwm $164.66). Today's automated run traded correctly but — like the rest of the gap — did not write anything to RESEARCH-LOG/TRADE-LOG.
+
+### Sep 1 catalyst check (via Perplexity, run during midday scan since the entry thesis wasn't logged)
+- No single new company-specific catalyst today; move is a mix of strong Q2 2026 results (reported 7/31: $14.5B net income, $3.48 EPS, $17.2B FCF), Venezuela re-entry headlines (Trump said Exxon is among firms planning to do business there), and continued oil-price/Energy-sector strength.
+- XOM ~$164.5, up ~2.2% on the session; no thesis-breaking news found. Analyst consensus: Buy, avg PT ~$168.83.
+
+### Risk Factors
+- **The logging gap is now the dominant operational risk, not the trading itself.** Alpaca's audit trail shows strategy rules (10%→7% trail tighten at +15%, stop-triggered exits, no options, sizing) were followed correctly through the entire gap. The failure is specifically that scheduled runs stopped committing to memory/TRADE-LOG.md and memory/RESEARCH-LOG.md, breaking the "read memory first" workflow this bot depends on — this session had to reconstruct 5 weeks of history from Alpaca directly. Needs investigation: check whether scheduled routine runs are hitting a git commit/push failure, a workflow-config issue, or being skipped/misconfigured since late July.
+- Deployment still low: 16.3% vs 75-85% target, single-name (XOM/Energy) concentration — same standing pattern as before the gap.
+- New XOM position's entry thesis, stop, and target were not recorded live; this addendum is a best-effort backfill, not a substitute for the market-open run actually logging it going forward.
+
+### Decision
+HOLD / no action this midday run. No losers, no stop-tighten trigger, thesis intact per today's catalyst check. Backfilled the 7/24–9/1 gap into TRADE-LOG.md. Recommend the operator (or next scheduled run) investigate why memory-file commits stopped for over a month.

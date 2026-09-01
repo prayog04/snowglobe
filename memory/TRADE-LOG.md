@@ -46,3 +46,23 @@ No new trades. 1 open position (XOM), thesis intact, GTC trailing stop active (s
 | XOM | 800 | $144.77 | $151.80 | +2.32% | +$5,624.00 (+4.86%) | $136.58 GTC trailing 10% (hwm $151.76) |
 
 **Notes:** Quiet no-trade day, as previewed in the market-open check. XOM continued its run, up 2.3% intraday to $151.80, pushing the trailing stop's high-water mark to $151.76 and the stop itself up to $136.58 — the position is now up nearly 5% unrealized. Portfolio gained $2,680 (+0.27%) on the day, all from XOM's move; cash sat untouched at $884,184 (87.9%). Zero trades today, zero trades this week (0/3), and deployment remains stuck at ~12% vs. the 75-85% target for a third straight session — the bot continues to wait for a dated catalyst outside the weak Tech rally rather than force a trade.
+
+### Aug 19 — Trail tightened to 7% (reconciled from Alpaca, 9/1 midday run; not logged live)
+Original 10% GTC trailing stop from the 7/15 XOM buy (stop $150.07, hwm $166.74) was canceled and replaced with a 7% trail. Position was +15.2% off the $144.77 entry at the time (hwm $166.74) — correctly matches the "tighten to 7% at +15%" rule. No RESEARCH-LOG or TRADE-LOG entry exists for this date.
+
+### Aug 27 — SELL (stopped out; reconciled from Alpaca, 9/1 midday run; not logged live)
+| Ticker | Side | Shares | Exit | Realized P&L | Reason |
+|---|---|---|---|---|---|
+| XOM | Sell | 800 | $156.81 | +$9,632.00 (+6.65%) | 7% GTC trailing stop triggered off $168.64 hwm |
+
+**Note:** Full exit of the original 7/15 XOM position via the trailing-stop mechanism — worked exactly as designed, no manual intervention needed or taken. This closes out a winning round-trip: bought $144.77, sold $156.81, held ~6 weeks.
+
+### Sep 1 — BUY (re-entry; order placed by today's automated run, backfilled at midday since not logged live)
+| Ticker | Side | Shares | Entry | Stop | Thesis | Target | R:R |
+|---|---|---|---|---|---|---|---|
+| XOM | Buy | 1000 | $162.90998 | 10% trailing GTC (stop $148.19, hwm $164.66 as of midday) | Not recorded at entry — reconstructed via Perplexity during the midday run (see RESEARCH-LOG 9/1 addendum): strong Q2 2026 earnings ($14.5B net income, $3.48 EPS, $17.2B FCF), Trump confirmed Exxon among firms planning Venezuela re-entry, continued oil/Energy-sector strength | not recorded | not recorded |
+
+**Note:** No pre-market/market-open RESEARCH-LOG or TRADE-LOG entry exists for 9/1 — entry thesis, stop level, and target were not written at trade time. Backfilled during the 9/1 midday scan from live Alpaca order history + a same-day Perplexity catalyst check.
+
+### Sep 1 — Midday scan
+No new trades. No losers to cut (only position, XOM, is +0.99% unrealized). No stop tightening needed — position opened same-day, nowhere near the +15%/+20% tighten thresholds; existing 10% GTC trail (stop $148.19, hwm $164.66) is correct and untouched. Thesis check: no thesis-breaking news found for XOM (Q2 earnings strength, Venezuela re-entry, oil/Energy strength all still intact). **Primary finding this run:** reconciled a ~5-week memory-log gap (7/24 → 9/1) against Alpaca's live order history — see the three backfilled entries above and the RESEARCH-LOG addendum. Portfolio equity $1,011,189.25. Deployed 16.3% ($164,470 / $1,011,189) — still well under the 75-85% target.

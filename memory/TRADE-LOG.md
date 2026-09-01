@@ -46,3 +46,13 @@ No new trades. 1 open position (XOM), thesis intact, GTC trailing stop active (s
 | XOM | 800 | $144.77 | $151.80 | +2.32% | +$5,624.00 (+4.86%) | $136.58 GTC trailing 10% (hwm $151.76) |
 
 **Notes:** Quiet no-trade day, as previewed in the market-open check. XOM continued its run, up 2.3% intraday to $151.80, pushing the trailing stop's high-water mark to $151.76 and the stop itself up to $136.58 — the position is now up nearly 5% unrealized. Portfolio gained $2,680 (+0.27%) on the day, all from XOM's move; cash sat untouched at $884,184 (87.9%). Zero trades today, zero trades this week (0/3), and deployment remains stuck at ~12% vs. the 75-85% target for a third straight session — the bot continues to wait for a dated catalyst outside the weak Tech rally rather than force a trade.
+
+### Aug 19 — Stop tightened (backfilled 2026-09-01, see note)
+XOM's 10% GTC trailing stop (order placed 7/15, hwm $166.74 at cancellation = +15.2% from $144.77 entry) was canceled and replaced with a 7% GTC trail — correct application of Strategy Rule 6 ("tighten to 7% at +15%"). No research/trade-log entry was made at the time.
+
+### Aug 27 — SELL XOM, stop-out (backfilled 2026-09-01, see note)
+| Ticker | Side | Shares | Entry | Exit | Realized P&L | Reason |
+|---|---|---|---|---|---|---|
+| XOM | Sell | 800 | $144.77 | $156.81 | +$9,632.00 (+8.32%) | 7% GTC trailing stop filled after price pulled back from hwm $168.64 (+16.5% peak unrealized) |
+
+**Note:** This 7% trailing stop (placed 8/19, see above) filled live on Alpaca 2026-08-27, closing the account's only position. Neither the tighten event nor this exit was logged at the time — reconstructed from live order history during the 2026-09-01 pre-market run after discovering a 32-day gap (7/25-8/31) with zero scheduled-workflow entries. The stop mechanism itself functioned correctly throughout the gap; only the logging/research cadence failed. Account has been 100% cash, 0 positions since this exit (5 sessions as of 9/1). See RESEARCH-LOG 2026-09-01 for full writeup and flagged reliability issue.

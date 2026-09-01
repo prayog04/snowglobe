@@ -255,3 +255,42 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-09-01 — Pre-market Research
+
+### ⚠️ Logging gap: 2026-07-25 to 2026-08-31 (32 days, no scheduled runs)
+No RESEARCH-LOG or TRADE-LOG entries exist for over a month. Reconstructed from live Alpaca order history:
+- **2026-08-19**: original 10% GTC trailing stop on XOM (hwm $166.74, +15.2% from $144.77 entry) canceled and replaced with a 7% trail — correct per Strategy Rule 6 (tighten to 7% at +15%), but never logged.
+- **2026-08-27**: new 7% trail filled — XOM sold 800sh @ $156.81 (hwm $168.64, +16.5% peak). Realized gain: **+$9,632 (+8.32%)** on the 800-share position.
+- Account has sat 100% cash, zero positions, zero open orders since 8/27 (5 sessions).
+- Net effect: the trailing-stop mechanism worked exactly as designed even while the research/logging workflow was dark — but 32 days of missing research entries and rationale is a reliability failure worth root-causing (scheduler not firing, or session errors before STEP 6 commit).
+
+### Account
+- Equity: $1,009,629.23
+- Cash: $1,009,629.23 (100%)
+- Buying power: $4,038,516.92 (margin, 4x)
+- Positions: 0 — **0% deployed** vs 75-85% target
+- Daytrade count: not reported by API (0 day trades taken)
+- Trades this week: 0/3
+
+### Market Context
+- WTI ~$85-87 (+1.5-3%), Brent ~$90-92 — continued firm energy-price backdrop, sources cite renewed US-Iran friction/Strait of Hormuz risk resurfacing late Aug
+- S&P 500 futures: ~7,688-7,700, roughly flat to -0.4% premarket
+- VIX: ~14.9-15.9, up modestly (+3-6%) off multi-month lows but still calm
+- Today's catalysts: JOLTS (July data) 10am ET; broad AI/chip strength continuing to support tape; Apple CEO transition to John Ternus effective today, iPhone event set for 9/9 (no position, not actionable)
+- Earnings before open: MDT, NIO, YEXT, RGS and others — none in Energy/Materials/Staples lane
+- Economic calendar: JOLTS today 10am ET; Aug jobs report Fri 9/4 8:30am ET (major catalyst this week); PPI 9/10, CPI 9/11; next FOMC 9/16
+- Sector momentum YTD (as of 8/31): **Energy +42.3%** (extended its lead sharply since our July exit), Materials +15.9%, Industrials +12.6%, Health Care +10.1%, Consumer Staples +9.6%; Financials -6.9%, Consumer Discretionary -4.6%, Tech -3.8% lagging
+
+### Trade Ideas
+1. Energy re-entry (XOM/CVX watchlist) — sector has kept compounding (+42% YTD, up from ~+20-30% when we exited in Aug) on the same oil/geopolitical tailwind; no dated, name-specific catalyst today though — need a trigger (earnings, inventory data, headline) before entry, not just "sector still hot." Watchlist only.
+2. No other name clears the specific-catalyst + 2:1 R:R bar today — Friday's jobs report is this week's real volatility trigger; avoid pre-positioning into it without an edge.
+
+### Risk Factors
+- **32-day scheduled-workflow gap (7/25-8/31)** — needs root-cause review; account was unmonitored by this bot for a month even though the GTC stop mechanism itself held up
+- Fully un-deployed (0% vs 75-85% target, 0/3 trades this week) — most under-deployed the account has been since launch; risk of the "wait for a catalyst" discipline drifting into pure inertia is now acute
+- Aug jobs report Friday 9/4 is a major macro catalyst — could move rate-cut expectations and broad tape sharply either direction
+- Energy's continued run without us means re-chasing now requires real discipline on entry/stop, not FOMO off the sector tape
+
+### Decision
+HOLD — no new trades today. No name clears the specific, dated-catalyst bar; Friday's jobs report is the week's real trigger and not worth pre-positioning into blind. Flagging two items for the operator: (1) the 32-day logging gap needs investigating — likely a scheduler or workflow reliability issue, not a strategy issue, since the trailing-stop safety net functioned correctly throughout; (2) the account is now at its most under-deployed point since launch (0% vs 75-85% target) — worth treating the next verified catalyst as a real trigger rather than deferring again.

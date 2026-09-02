@@ -255,3 +255,23 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-09-02 — Midday scan
+
+### Logging gap
+No RESEARCH-LOG or TRADE-LOG entry exists between 2026-07-24 and today (~5.5 weeks, scheduled runs not landing in memory). Live Alpaca state no longer matches the last logged position: TRADE-LOG shows XOM 800sh @ $144.77 avg (as of 7/24); live account now shows XOM **1000sh @ $162.90998 avg**. Shares and cost basis both changed with no trade record, current thesis, or stop history on file for the gap period. Flagging for reconciliation — next session with capacity should pull full Alpaca order history for the gap window and backfill TRADE-LOG (same pattern as the 7/15 and 7/23 backfills already noted).
+
+### Account (live, Alpaca)
+- Equity: $1,010,904.74 | Cash: $846,719.24 (83.8%)
+- Positions: 1 (XOM, 1000 sh), deployed $164,185.50 = **16.2%** of equity
+- XOM: 1000sh @ $162.90998 avg, current $164.17, unrealized +$1,260.02 (+0.77%), change today -0.23%
+- Open order: GTC trailing-stop sell, trail_percent 10%, hwm $164.7699, stop $148.29291 — one live stop order, consistent with 1 open position
+
+### Mechanical checks (per TRADING-STRATEGY.md)
+- Cut-loser threshold (-7%): XOM at +0.77% — not triggered, no action
+- Trail-tighten thresholds (+15%→7%, +20%→5%): XOM at +0.77% — not triggered, no action
+- Thesis check: no documented current thesis on file for the gap period, so cannot verify "thesis intact" beyond price action; no news or intraday move (-0.23%) that itself signals a break
+- Sharp/unexplained move check: -0.23% intraday is unremarkable — no Perplexity research pulled today
+
+### Decision
+HOLD — no trade action. XOM is neither a loser nor a winner against any rule threshold today, so nothing to cut or tighten. Main output of this session is flagging the 5.5-week memory gap and the unlogged share/cost-basis change — this needs reconciliation before thesis-based decisions on XOM can be made with confidence.

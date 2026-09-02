@@ -46,3 +46,26 @@ No new trades. 1 open position (XOM), thesis intact, GTC trailing stop active (s
 | XOM | 800 | $144.77 | $151.80 | +2.32% | +$5,624.00 (+4.86%) | $136.58 GTC trailing 10% (hwm $151.76) |
 
 **Notes:** Quiet no-trade day, as previewed in the market-open check. XOM continued its run, up 2.3% intraday to $151.80, pushing the trailing stop's high-water mark to $151.76 and the stop itself up to $136.58 — the position is now up nearly 5% unrealized. Portfolio gained $2,680 (+0.27%) on the day, all from XOM's move; cash sat untouched at $884,184 (87.9%). Zero trades today, zero trades this week (0/3), and deployment remains stuck at ~12% vs. the 75-85% target for a third straight session — the bot continues to wait for a dated catalyst outside the weak Tech rally rather than force a trade.
+
+### Aug 27 — STOP FILLED (backfilled 2026-09-02, see note)
+| Ticker | Side | Shares | Fill Price | Trail | Realized P&L |
+|---|---|---|---|---|---|
+| XOM | Sell (trailing stop) | 800 | $156.81 | 7% GTC (hwm $168.64) | +$9,632.00 (+6.65% on the position) |
+
+**Note:** GTC trailing stop filled live on Alpaca 2026-08-27 13:40 UTC, closing the original XOM position opened 7/15. Trail had tightened to 7% per the +15% profit rule as XOM ran past $168. This exit was never logged — no scheduled workflow ran between 7/24 and 9/1 (see EOD note below).
+
+### Sep 01 — BUY (backfilled 2026-09-02, see note)
+| Ticker | Side | Shares | Entry | Stop | Thesis | Target | R:R |
+|---|---|---|---|---|---|---|---|
+| XOM | Buy | 1000 | $162.90998 | 10% trailing GTC (stop $148.52, hwm $165.02 as of 9/1) | Not on file — no RESEARCH-LOG entry exists for this trade | — | — |
+
+**Note:** Market buy filled live on Alpaca 2026-09-01 13:43 UTC, re-entering XOM after the 8/27 stop-out, with a 10% GTC trailing stop attached same session. No pre-market/market-open RESEARCH-LOG entry or TRADE-LOG entry exists for this decision — violates the "every trade documented before execution" rule in PROJECT-CONTEXT.md. Backfilled from live order history during the 2026-09-02 daily-summary run.
+
+### Sep 02 — EOD Snapshot (Day 38, Wednesday)
+**Portfolio:** $1,010,969.24 | **Cash:** $846,719.24 (83.8%) | **Day P&L:** -$300.00 (-0.03%) | **Phase P&L:** +$10,969.24 (+1.10%)
+
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|
+| XOM | 1000 | $162.91 | $164.25 | -0.18% | +$1,340.02 (+0.82%) | $148.52 GTC trailing 10% (hwm $165.02) |
+
+**Notes:** MAJOR LOGGING GAP: no scheduled workflow (pre-market/market-open/midday/daily-summary) committed anything to this repo between 2026-07-24 and 2026-09-01 — a full 5-week, ~25-trading-day blackout, the worst instance of the reliability issue flagged repeatedly in late July. Reconstructed from live Alpaca order history: the original 800sh XOM position (entry $144.77, opened 7/15) hit its 7% trailing stop on 8/27 at $156.81, realizing +$9,632 (+6.65%) — the trail-tightening rule worked as designed even with no bot supervision. The account then sat in cash until 9/1, when a fresh 1000sh XOM buy filled at $162.91 with a new 10% GTC trailing stop attached same session; no research rationale for this specific re-entry exists anywhere in RESEARCH-LOG.md, breaking the document-before-execution rule. Today (9/2) itself was quiet: no new trades, XOM basically flat (-0.18%), stop resting safely below at $148.52. Trades this week (since Mon 8/31): 1/3 (the 9/1 buy). Deployment is 16.2% vs. the 75-85% target. Flagging the multi-week outage as the top priority — the scheduled workflows must be confirmed running (and committing) before trusting this log again; consider a monitoring/alert on missed runs.

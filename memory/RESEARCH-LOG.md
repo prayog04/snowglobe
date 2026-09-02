@@ -255,3 +255,35 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-09-02 — Pre-market Research (run inline during market-open; entry was missing)
+
+### Account
+- Equity: $1,011,189.24
+- Cash: $846,719.24
+- Buying power: $3,847,392.96 (margin, 4x)
+- Positions: 1 (XOM, 1000 sh), deployed $164,470 = **16.3%** of equity
+- Daytrade count: not reported by API (0 day trades taken)
+- Trades this week (since Mon 8/31): 1/3 (XOM buy, Tue 9/1)
+- XOM: 1000sh @ $162.91 avg, current ~$164.50-164.55, unrealized +$1,560 (+0.96%), GTC trailing-stop 10% live (stop $148.29, hwm $164.77)
+
+### Market Context
+- WTI ~$90.77, Brent ~$95.57 — oil elevated on renewed Mideast (Iran-strike) tension, continuing to support the Energy trade
+- S&P 500 futures: near flat, ~7,642-7,650 range across sources
+- VIX: ~16.3-16.4 — calm
+- Today's catalysts: Broadcom (AVGO) and Snowflake (SNOW) earnings after the close; ongoing Mideast oil-shock risk; renewed AI/tech bid; Fed policy expectations in focus
+- Economic calendar: not independently queried today — research budget prioritized to oil/SPX/VIX/catalysts/sector/XOM given the priority of closing the logging gap below
+- Sector momentum YTD: Energy #1 (+42.3%), Materials #2 (+15.9%), Industrials #3 (+12.6%), Health Care #4 (+10.1%), Consumer Staples #5 (+9.6%) — Energy leadership intact and widening vs. July readings
+- XOM (existing position): $164.55, +2.24% today, driven by Venezuela-related headlines (reports Exxon nearing deals there; Trump said Exxon "going in"); Q2 2026 already reported ($14.5B net income, $17.2B FCF) — no thesis-breaking news; fresh company-specific catalyst supports the existing position
+
+### Trade Ideas
+1. No new name today — XOM's Venezuela headline is a fresh, positive company-specific catalyst but supports the EXISTING position, not a case for a new independent name; adding a second Energy ticker same-day risks unwanted sector concentration without full pre-market vetting.
+2. Materials/Industrials — #2/#3 YTD sectors, no company-specific dated catalyst surfaced in today's abbreviated research; watchlist only pending a proper dated trigger next session.
+
+### Risk Factors
+- **~5-week scheduled-workflow outage discovered.** `git log` and Alpaca order history show zero market-open/pre-market/daily-summary/weekly-review commits between 2026-07-24 and 2026-09-01 inclusive. During the gap the strategy's mechanics still executed correctly and profitably — trail tightened to 7% at +15% per rule (8/19), stop triggered 8/27 closing XOM 800sh @ $156.81 for +8.32%, account sat in cash, then a fresh XOM entry 9/1 at $162.91 with a new 10% GTC stop — but none of it was logged or committed until this run backfilled it (see TRADE-LOG 2026-09-02). Flagging as a critical operational issue — investigate why the cloud-scheduled routines stopped firing for over a month — not just a data-hygiene note.
+- Today's research was abbreviated (oil/SPX/VIX/catalysts/sector/XOM only, no earnings-calendar or econ-calendar query) given the priority of closing the logging gap this session; treat as lighter-than-usual pre-market coverage.
+- Mideast/oil geopolitical risk remains the dominant driver of the Energy trade — a de-escalation headline is the main risk to the existing XOM thesis; the 10% GTC trailing stop is the built-in defense, no manual action needed unless price approaches it.
+
+### Decision
+HOLD — no new trades today. Existing XOM position (1000sh @ $162.91) carries a correctly-sized, active 10% GTC trailing stop (stop $148.29, hwm $164.77) and a fresh supportive catalyst (Venezuela headlines) rather than a thesis break. No independently-catalyzed second name cleared the bar in today's abbreviated research. Priority this session was reconstructing and closing the ~5-week TRADE-LOG/RESEARCH-LOG gap (7/25-8/31, plus the undocumented 9/1 session) discovered via git/order-history cross-check — flagged to the operator as the top item for this run.

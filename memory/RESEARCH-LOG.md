@@ -255,3 +255,42 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-09-02 — Pre-market Research
+
+### ⚠ Logging gap since last entry
+No RESEARCH-LOG or TRADE-LOG entry exists between 2026-07-24 and today — a **5.5-week blackout** where the scheduled workflow apparently did not run. Real trading happened anyway: on 8/19 XOM's stop was correctly tightened to 7% at +15% unrealized; on 8/27 that stop triggered, closing the full 800sh position at $156.81 for a realized +8.32% gain; on 9/1 a fresh 1000sh XOM position was opened at $162.91 with a new 10% GTC trailing stop. All three actions have been reconstructed from live Alpaca order history and backfilled into TRADE-LOG.md today. The 8/19 and 8/27 events look rule-compliant; the 9/1 re-entry has no documented catalyst or entry-checklist review on file. This is the third and largest such gap (prior: 7/14–7/19, 7/23) — flagged to the operator via ClickUp as urgent, with a recommendation to check why the scheduled runs stopped firing.
+
+### Account
+- Equity: $1,011,910.74
+- Cash: $846,719.24
+- Buying power: $3,849,413.16 (margin, 4x)
+- Positions: 1 (XOM, 1000 sh @ $162.91 avg, re-entered 9/1), current $165.19, unrealized +$2,281.52 (+1.4%); deployed $165,191.50 = **16.3%** of equity — well under the 75-85% target, only 1 of 5-6 target positions open
+- Daytrade count: not reported by API (0 day trades taken)
+- Trades this week (since Mon 8/31): 1/3 (the 9/1 XOM re-entry)
+- XOM stop: GTC trailing 10% live, stop $148.23, hwm $164.70 — fresh stop from the 9/1 entry, nowhere near the +15%/+20% tighten thresholds
+
+### Market Context
+- WTI ~$90-91, Brent ~$95-96 — oil sharply higher, driven by fresh reporting of U.S. military action tied to Iran/Venezuela tensions; broader market reacted negatively (Dow -400+ points 9/1) on inflation worries as high oil pushed bond yields up
+- S&P 500 futures: modestly lower premarket, roughly 7,630-7,700 across sources (-0.1% to -0.4%)
+- VIX: ~15.4-16.4 — moderate, no acute fear signal despite yesterday's selloff and oil spike
+- Today's catalysts: Broadcom (AVGO) and Snowflake (SNOW) report after the close — the market's main focus today is Tech/AI, not our Energy lane; falling bond yields cited elsewhere as a separate support for stocks; oil/geopolitical developments remain the other swing factor
+- Earnings before open: Palo Alto Networks (PANW), Dell (DELL) reporting today per multiple calendars; MongoDB (MDB) is AMC not BMO; Brown-Forman confirmed BMO — none in our Energy/Materials/Staples lane; earnings-calendar data was again inconsistent across sources, treat as directional only
+- Economic calendar: no CPI/PPI/FOMC/jobs data confirmed today; next CPI (August data) due 9/11; no FOMC meeting this week
+- Sector momentum YTD: Energy remains the dominant #1 leader by a wide margin (roughly +41-46% YTD across sources, vs. #2 Materials/Tech in the high-teens to high-20s%) — thesis for holding XOM as the core position is unchanged and reinforced
+- XOM (existing position): trading $165.19 near recent highs; Monday's Venezuela business-deal headline (Trump: Exxon "going in" to Venezuela) drove a ~2% pop; other recent news includes a 20-year Permian gas-processing agreement with Targa Resources and a Mozambique LNG letter of intent to McDermott; Q2 earnings ($14.5B / $3.48 EPS) already reported, next earnings est. ~10/29 — no thesis-breaking news
+
+### Trade Ideas
+1. No new name today — XOM (re-established 9/1) remains the vehicle for the still-dominant Energy thesis; today's oil spike on fresh Iran-related headlines reinforces rather than changes that thesis. Fresh 10% GTC stop already in place, no action needed.
+2. Broadcom (AVGO) earnings tonight (AMC) — Tech, not our sector lane; WAIT for print + reaction, no pre-earnings position per strategy rule.
+3. Materials — still a top-tier YTD sector by most sources, but no company-specific dated catalyst identified today; watchlist only.
+
+### Risk Factors
+- **Process risk is the dominant risk today**, not market risk: a 5.5-week gap in scheduled logging means trading decisions (including the 9/1 re-entry) went undocumented and unreviewed against the strategy checklist in real time — flagged as urgent via ClickUp.
+- Yesterday's session was risk-off (Dow -400+, yields up) on inflation worries compounded by high oil — sentiment cautious into today even though our book (Energy) isn't directly exposed to the tech-driven part of that move
+- Oil/geopolitical risk: renewed U.S. military action reported; same asymmetric risk as July's Hormuz episode — a de-escalation headline could reverse the Energy tailwind quickly. The 10% trailing stop is the built-in defense if XOM reverses with oil.
+- Broadcom's AMC print tonight is a high-volatility event for Tech/AI sentiment broadly and could spill into overall risk appetite tomorrow
+- Deployment still only 16.3% vs. 75-85% target even after re-establishing XOM — badly under-deployed with 4 to 5 more positions still needed per the 5-6 position target
+
+### Decision
+HOLD — no new trades today. This session's priority was reconstructing and backfilling over a month of undocumented live trading activity (stop-tighten, stop-out, re-entry) into TRADE-LOG.md; see the gap note above. XOM's thesis is intact and reinforced by fresh oil/Iran headlines and Venezuela-deal news, with an appropriate fresh 10% GTC stop in place. No new-name catalyst clears the bar today — Broadcom's earnings are Tech/AMC, outside our lane. The logging gap itself is the most urgent finding this session and has been flagged to the operator.

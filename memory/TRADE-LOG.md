@@ -46,3 +46,12 @@ No new trades. 1 open position (XOM), thesis intact, GTC trailing stop active (s
 | XOM | 800 | $144.77 | $151.80 | +2.32% | +$5,624.00 (+4.86%) | $136.58 GTC trailing 10% (hwm $151.76) |
 
 **Notes:** Quiet no-trade day, as previewed in the market-open check. XOM continued its run, up 2.3% intraday to $151.80, pushing the trailing stop's high-water mark to $151.76 and the stop itself up to $136.58 — the position is now up nearly 5% unrealized. Portfolio gained $2,680 (+0.27%) on the day, all from XOM's move; cash sat untouched at $884,184 (87.9%). Zero trades today, zero trades this week (0/3), and deployment remains stuck at ~12% vs. the 75-85% target for a third straight session — the bot continues to wait for a dated catalyst outside the weak Tech rally rather than force a trade.
+
+### Sep 3 — EOD Snapshot (Day 39, Thursday)
+**Portfolio:** $1,008,937.44 | **Cash:** $846,719.24 (83.9%) | **Day P&L:** -$1,931.80 (-0.19%) | **Phase P&L:** +$8,937.44 (+0.89%)
+
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|
+| XOM | 1000 | $162.91 | $162.22 | -1.18% | -$691.78 (-0.42%) | $149.09 GTC trailing 10% (hwm $165.65) |
+
+**Notes:** MAJOR LOGGING GAP — no TRADE-LOG or RESEARCH-LOG entry exists between Jul 24 and today; the scheduled workflows appear not to have run for roughly five weeks. Live Alpaca history (reconstructed from order data, not from this log) shows the original XOM position (800sh @ $144.77) was stopped out on Aug 27 at $156.81 (a 7% trailing stop, +8.3% gain) with no exit ever recorded here, then a fresh 1000sh XOM position was opened Sep 1 @ $162.91 (market order) with a new 10% GTC trailing stop — also never logged or researched at entry. Today itself was a no-trade day: the only order activity was the existing trailing stop's routine HWM update (no new trades today; 1/3 used this week, the Sep 1 buy). Position is 16.1% of equity (within the 20% cap), currently down slightly (-0.42% unrealized, -1.18% today) off its $165.65 high. Cumulative phase P&L is still positive (+0.89%) despite the gap. This is a reliability issue, not a strategy issue — recommend investigating why pre-market/market-open/midday/EOD runs did not fire or commit for ~5 weeks before trusting the schedule going forward.

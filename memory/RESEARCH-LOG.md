@@ -255,3 +255,22 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-09-03 — Market-Open (reliability gap since 2026-07-24)
+
+### Reliability Gap
+- No RESEARCH-LOG, TRADE-LOG, or EOD entry exists between 2026-07-24 and today (2026-09-03) — roughly 5.5 weeks / ~27 trading days of scheduled market-open/pre-market/EOD/weekly-review runs produced no committed output on either this branch or `main`.
+- Live Alpaca order history confirms trading activity DID occur during the gap and was rule-consistent in mechanism, just never logged: the original 800sh XOM 10% trailing stop (from 7/15) was canceled and replaced with a tightened 7% trailing stop on 8/19 — matching strategy rule 6 ("tighten trail to 7% at +15%"), since XOM had run well past that threshold (hwm $168.64). That stop triggered 8/27 at $156.81, closing the position for +$9,632 (+8.31%) vs. the $144.77 entry — a real, disciplined win, just undocumented.
+- A new 1000-share XOM position was then opened 9/1 at $162.90998 with a fresh 10% GTC trailing stop, currently live (stop $148.518, hwm $165.02). No RESEARCH-LOG entry exists for 9/1, so this buy has no recorded catalyst — it violates the strategy's "catalyst documented in today's RESEARCH-LOG" hard rule.
+- Root cause (scheduler not firing vs. runs firing but failing to commit/push vs. some other process) is not diagnosable from inside this session. Flagging for operator review; both gap events backfilled into TRADE-LOG.md today from live order data.
+
+### Account (live, 2026-09-03)
+- Equity: $1,010,989.24
+- Cash: $846,719.24
+- Buying power: $3,846,832.96 (margin, 4x)
+- Positions: 1 (XOM, 1000 sh @ $162.90998 avg), current $164.27, unrealized +$1,360.02 (+0.84%), market value $164,270 = **16.25%** of equity — under the 75-85% deployment target
+- GTC trailing stop 10% live and correctly configured: stop $148.518, hwm $165.02 (order 240c38d4, status new) — well below the +15%/+20% tighten thresholds, no stop action needed
+- Trades this week (Mon 9/1–Fri 9/5): 1/3 used (the 9/1 buy, backfilled today)
+
+### Decision
+HOLD — no new trades today. This session's priority was closing the 5.5-week documentation gap and confirming live state matches what the rules require (stop present, correctly sized, position not yet due for tightening). No fresh research was run to source a second name today — doing so was secondary to fixing the reliability gap. Flagging the gap and the undocumented 9/1 entry for operator review: confirm what process is placing live orders and why scheduled runs stopped committing after 7/24.

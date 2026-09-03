@@ -255,3 +255,19 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-09-03 — Midday check (afternoon addendum)
+
+### Account / Position
+- XOM: 1000 sh @ $162.90998 avg, current $163.025, unrealized +$115.02 (+0.07%)
+- GTC trailing stop live: 10% trail, stop $149.085, hwm $165.65 (order placed 2026-09-01, status new)
+- No losers to cut (-7% threshold), no winner threshold hit (+15%/+20%) — no action taken
+
+### Note — logging gap
+- Last TRADE-LOG/RESEARCH-LOG entries before today are dated 2026-07-24, a ~6-week gap. Live Alpaca data shows both position size and stop have changed since then (800→1000 sh, avg entry $144.77→$162.91, stop order replaced 9/1) with no documented rationale on file. Flagging for the next pre-market/market-open session to backfill from Alpaca order history, same class of gap already flagged 7/20 and 7/24.
+
+### Thesis Check
+- Perplexity query found no thesis-breaking news for XOM today: shares near recent highs (~$163-164), Piper Sandler raised PT to $185 from $158, 18-analyst consensus is Buy, strong Q2 print ($14.5B earnings, $23.6B operating cash flow, $17.2B FCF) still the dominant narrative. Only generic risk flagged is oil-price downside, not company-specific.
+
+### Decision
+HOLD — no action. Position flat (+0.07% unrealized), stop active and untouched, thesis intact.

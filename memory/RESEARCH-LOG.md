@@ -255,3 +255,44 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-09-03 — Pre-market Research
+
+### Account
+- Equity: $1,011,928.04
+- Cash: $846,719.24 (83.7%)
+- Buying power: $3,849,461.60 (margin, 4x)
+- Positions: 1 (XOM, 1000 sh), deployed $165,208.80 = **16.3%** of equity — improved from ~12% (7/24) but still well below 75-85% target
+- Daytrade count: not reported by API (0 day trades taken)
+- Trades this week (since Mon 8/31): 1/3 (XOM re-entry 9/1)
+- XOM: 1000sh @ $162.90998 avg (re-entered 9/1), current $165.21, unrealized +$2,299 (+1.41%), GTC trailing-stop 10% live (stop $148.52, hwm $165.02)
+
+### Logging Gap — 7/25 through 9/2 (flagged urgent)
+No RESEARCH-LOG or TRADE-LOG entries exist for over 5 weeks. Reconstructed from live Alpaca order history:
+- Original XOM position (800sh @ $144.77, from 7/15) had its trailing stop tighten to 7% per strategy rule after crossing +15% unrealized (hwm $168.64) and was **stopped out 8/27 @ $156.81** — locked in **+8.32% profit**, rule executed correctly.
+- Account sat in 100% cash from 8/27 until **9/1**, when a **new XOM position was opened**: 1000sh @ $162.91 market buy, with a fresh 10% GTC trailing stop attached same session (now stop $148.52, hwm $165.02).
+- Both the stop-out and the re-entry are unlogged in TRADE-LOG/RESEARCH-LOG — no rationale on file for the 9/1 re-entry (thesis, catalyst, sizing decision all missing). This is the third and largest scheduled-run reliability gap on record (after 7/14-7/19 and 7/23). Backfilling a minimal TRADE-LOG entry for both fills in this session; recommend a review of why scheduled workflows aren't firing reliably.
+
+### Market Context
+- WTI ~$90.1-90.8, Brent ~$94.5-95.3 — both modestly lower on the day (-0.5% to -1%) but still elevated vs. earlier summer levels
+- S&P 500 futures: ~7,680-7,685, +0.1-0.5% premarket, broadly firmer
+- VIX: ~15.2-15.5 — calm, well below the 17-19 range seen in July
+- Today's catalysts: Tesla Cybercab launch event (Austin); Broadcom (AVGO) slipped despite strong quarter on margin-outlook miss; Snowflake jumped on raised outlook; renewed AI optimism offsetting higher oil/yields; Fed Beige Book; ADP report showed only 38k jobs added in August (soft, second weak print in a row) — none of today's headline catalysts sit in our Energy/Materials/Staples lane
+- Earnings before open: Campbell's (CPB, Consumer Staples — our #3 sector), Ciena (CIEN), Toro (TTC), Wiley (WLY), lululemon (LULU, later) — no confirmed Energy or Materials reporter today
+- Economic calendar: ADP jobs (miss, 38k), Initial Jobless Claims 203k, ISM Services PMI 10am ET, Q2 Productivity/Costs revision — no CPI/PPI/FOMC today; next CPI 9/11, next FOMC 9/15-16, official jobs report 9/4 (tomorrow)
+- Sector momentum YTD: Energy still #1 by a wide margin (+42-47%), Technology #2 (+28-32%), Materials #3 (+16-18%); Communication Services weakest (-1% to -4%)
+- XOM (existing position): $165.21, near highs; Q3 dividend $1.03/share payable 9/10; CFO fireside chat at Barclays energy conference 9/9 (minor IR event, not a trading catalyst); no thesis-breaking news
+
+### Trade Ideas
+1. No new name today — no Energy/Materials/Staples ticker has a dated, company-specific catalyst that clears the entry checklist. CPB earnings (Staples) is a possible watch but a single small-cap staple print isn't a strong enough standalone catalyst without further vetting.
+2. Tomorrow's official jobs report (9/4) plus today's soft ADP print raise the odds of Fed rate-cut chatter — worth watching for a broad-market reaction, but not a stock-specific setup.
+3. XOM CFO fireside chat 9/9 — informational only, not a trading trigger.
+
+### Risk Factors
+- 5-week logging gap (see above) means the last 5+ weeks of decisions were unreviewed and undocumented in real time — process risk, not a market risk, but flagged as the top priority
+- Oil (WTI ~$90, Brent ~$95) is well above the $71-88 range seen in late July — Energy-sector tailwind intact but elevated levels raise reversal risk if geopolitical premium unwinds again (as it did briefly 7/24)
+- Deployment still only 16.3% vs. 75-85% target with 1 of 5-6 positions open — improved slightly from the 6-session-stuck 12% level in July but the pattern of under-deployment persists
+- Soft ADP jobs print + tomorrow's official jobs report could add volatility into the weekend
+
+### Decision
+HOLD — no new trades today. XOM position (re-entered 9/1) intact with GTC 10% trailing stop active well below current price; no name in our momentum sectors clears the specific-catalyst bar. Top priority for next session: confirm scheduled runs are firing daily going forward given the 5-week gap just discovered.

@@ -255,3 +255,42 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-09-04 — Pre-market Research
+
+### ⚠️ Logging gap flagged
+No RESEARCH-LOG or TRADE-LOG entry exists between 2026-07-24 and today (~6 weeks, ~30 trading days) — the scheduled workflows appear not to have run over that stretch. Live account data also shows the XOM position changed from 800sh @ $144.77 avg (last logged 7/24) to **1000sh @ $162.90998 avg** today, meaning ~200 shares were added at a materially higher price with no trade ever recorded in TRADE-LOG or a rationale in RESEARCH-LOG. Cannot verify this add against strategy rules (specific catalyst, 20%-per-position cap, 3-trades/week limit) after the fact. Flagging as the top-priority item for review — see ClickUp alert sent this session.
+
+### Account
+- Equity: $1,007,949.24
+- Cash: $846,719.24
+- Buying power: $3,838,320.96 (margin, 4x)
+- Positions: 1 (XOM, 1000 sh @ $162.90998 avg), market value $161,230 = **16.0%** of equity — still below 75-85% target but up from the ~12% level last logged (consistent with the unlogged share add above)
+- Unrealized P&L: -$1,679.98 (-1.03%) — current price $161.23 vs avg entry $162.91
+- GTC trailing stop: live, 10% trail, stop $149.085, hwm $165.65 (order id 240c38d4, submitted 2026-09-01, still open/unfilled)
+- Daytrade count: not reported by API (0 day trades taken)
+- Trades this week (since Mon 8/31): cannot determine — orders endpoint only returns open orders, not fill history, and the log gap above means no record either
+
+### Market Context
+- WTI ~$91.4-91.9/bbl, Brent ~$95.5-95.9/bbl — both little-changed on the day, holding near recent range highs
+- S&P 500 futures: mixed across sources, roughly +0.1% to +0.4% premarket (~7,680-7,760 range depending on contract/source)
+- VIX: ~14.2-15.0, low/calm — well off the 17-19 range seen in July, market pricing low near-term risk
+- Today's dominant catalyst: **August Nonfarm Payrolls at 8:30am ET** — the key macro print of the week, sets the tone for Fed rate-cut expectations into the Sept 15-16 FOMC meeting
+- Earnings before open: DRI (Darden Restaurants), SNX (TD SYNNEX), AYI (Acuity Brands), CMC (Commercial Metals), WGO (Winnebago) — none in our Energy/Materials/Staples lane; small-caps (KNOP, HURC, etc.) also reporting, not relevant
+- Economic calendar: NFP/unemployment/wages today 8:30am ET; next PPI 9/10, next CPI 9/11; next FOMC 9/15-16 (11 days out)
+- Sector momentum YTD: **Energy #1 and now dominant, +42% to +47% YTD** (accelerated sharply from the +16-27% range seen in July) — thesis has strengthened materially; Industrials, Health Care, Consumer Staples, Materials, Technology form the next tier (+10-30% depending on source); Communication Services weakest (-3%)
+- XOM (existing position): ~$161-164, roughly flat/slightly down today; Piper Sandler raised PT to $185 (from $158, Neutral) — bullish signal; Q2 earnings already reported ($14.5B net income, $17.2B FCF); Tengiz/Kazakhstan field-peaking headlines and Kashagan deal talk are noise, not thesis-breaking
+
+### Trade Ideas
+1. No new name today — NFP at 8:30am ET is a broad market-moving event; per strategy discipline, wait for the print and market reaction before sizing any new position rather than front-running a volatile data release.
+2. Energy sector momentum has strengthened dramatically since July (+42-47% YTD vs +16-27% in July) — if NFP doesn't trigger a risk-off reaction, a second Energy name (e.g., CVX, SLB) on a dated catalyst would fit the sector-momentum thesis, but no company-specific trigger exists today. Watchlist only.
+3. No Materials/Staples catalyst today that clears the entry checklist. Watchlist only.
+
+### Risk Factors
+- **Unresolved logging/audit gap (see flag above)** — the largest risk factor today isn't market data, it's that this account has an unlogged position change and ~6 weeks of dark scheduled-run history; can't confirm the strategy's max-20%-per-position, 3-trades/week, and catalyst-checklist rules were followed for whatever trade(s) happened in that window
+- NFP release at 8:30am ET carries typical event risk — wage/payroll surprises in either direction can move rates, dollar, and equities sharply; XOM's 10% GTC trailing stop ($149.085) is the existing risk control if the print triggers a broad selloff
+- VIX at ~14-15 is historically low — some complacency risk into a data-heavy September (NFP today, PPI 9/10, CPI 9/11, FOMC 9/15-16)
+- XOM sitting at -1.03% unrealized (not stop-relevant, but worth noting the position is underwater intraday for the first time in recent logs, likely reflecting the higher average cost from the unlogged add)
+
+### Decision
+HOLD — no new trades today. Waiting for NFP print (8:30am ET) before evaluating any new name; Energy sector momentum remains the strongest thesis in the market (accelerating YTD), XOM's GTC trailing stop is active and appropriately placed. Top priority for next session: reconcile the ~6-week logging gap and the unlogged XOM share add before treating the trade history as reliable.

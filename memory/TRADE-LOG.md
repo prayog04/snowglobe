@@ -46,3 +46,20 @@ No new trades. 1 open position (XOM), thesis intact, GTC trailing stop active (s
 | XOM | 800 | $144.77 | $151.80 | +2.32% | +$5,624.00 (+4.86%) | $136.58 GTC trailing 10% (hwm $151.76) |
 
 **Notes:** Quiet no-trade day, as previewed in the market-open check. XOM continued its run, up 2.3% intraday to $151.80, pushing the trailing stop's high-water mark to $151.76 and the stop itself up to $136.58 — the position is now up nearly 5% unrealized. Portfolio gained $2,680 (+0.27%) on the day, all from XOM's move; cash sat untouched at $884,184 (87.9%). Zero trades today, zero trades this week (0/3), and deployment remains stuck at ~12% vs. the 75-85% target for a third straight session — the bot continues to wait for a dated catalyst outside the weak Tech rally rather than force a trade.
+
+### Aug 27 — SELL (stop-out, backfilled 2026-09-04, see note)
+| Ticker | Side | Shares | Fill | Stop Order | Thesis | Result |
+|---|---|---|---|---|---|---|
+| XOM | Sell (trailing-stop fill) | 800 | $156.81 | 7% GTC trailing (tightened from 10%, triggered at hwm $168.64) | Closes original Jul 15 Hormuz/Energy-momentum position; trail was tightened per strategy rule 6 (7% at +15%, 5% at +20%) as XOM ran | +8.32% vs. $144.77 entry (~+$9,632) |
+
+**Note:** This fill was never logged live — no research or trade-log entries exist for 7/25 through 8/26. Backfilled from Alpaca order history during the 2026-09-04 market-open run.
+
+### Sep 1 — BUY (backfilled 2026-09-04, see note — undocumented at time of trade)
+| Ticker | Side | Shares | Entry | Stop | Thesis | Target | R:R |
+|---|---|---|---|---|---|---|---|
+| XOM | Buy | 1000 | $162.91 | 10% GTC trailing (stop $149.09, hwm $165.65 as of 9/4) | **Not documented at time of trade** — no research-log entry exists for 9/1 | Not documented | Not documented |
+
+**Note:** No RESEARCH-LOG entry, catalyst, or pre-trade documentation exists for this trade — violates PROJECT-CONTEXT.md's "every trade must be documented BEFORE execution" rule. Backfilled from Alpaca order history during the 2026-09-04 market-open run. This sits inside a ~6-week total logging blackout (7/25-9/3, no research or trade-log entries at all) — a severe escalation of the audit-trail gaps flagged 7/20 and 7/24. See RESEARCH-LOG 2026-09-04.
+
+### Sep 4 — Market-open check
+No new trades. 1 open position (XOM, 1000 sh @ $162.91 avg), thesis (Energy/oil momentum) intact and reinforced by this week's sharp oil rally (WTI +9.8% WoW, Brent +7.1% WoW). GTC trailing stop active (stop $149.09, hwm $165.65). Trades this week: 1/3 (Sep 1 buy). Unrealized -1.95% ($159.74 vs. $162.91 avg) — well inside the -7% manual-cut level, no tighten-threshold action needed. See RESEARCH-LOG 2026-09-04 for full context — HOLD decision, no fresh dated catalyst for a second name. **Flagging for operator review: 6-week logging blackout (7/25-9/3) and an undocumented Sep 1 entry were discovered and backfilled this session — scheduled-run reliability needs to be checked.**

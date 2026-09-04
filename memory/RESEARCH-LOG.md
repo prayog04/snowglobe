@@ -255,3 +255,34 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-09-04 — Pre-market Research (run inline during market-open; entry was missing)
+
+### Account
+- Equity: $1,006,459.24
+- Cash: $846,719.24
+- Buying power: $3,834,148.96 (margin, 4x)
+- Positions: 1 (XOM, 1000 sh @ $162.91 avg), deployed $159,740 = **15.87%** of equity — well below 75-85% target
+- Daytrade count: not reported by API (0 day trades taken)
+- Trades this week (since Tue 9/1 — Mon 9/1 handling: Labor Day Mon 8/31 closed, so Tue 9/1 opened the week): 1/3 (Sep 1 XOM buy)
+
+### Market Context
+- WTI ~$91.4-91.6 (+9.8% week-to-date), Brent ~$95.5-95.7 (+7.1% week-to-date) — sharp oil rally, strongest weekly gain since mid-July; one source flags rising Fed-hike risk on oil-driven inflation
+- VIX: ~14.25 cash, VIX futures ~15.95 — low/calm, no near-term stress signal
+- S&P 500 futures: not verified — research tool returned no reliable print today
+- Today's catalysts / earnings / economic calendar: none confirmed by research tool for today
+- XOM: no company-specific news returned; live price $159.74 (Alpaca positions endpoint), day chg -1.52%, unrealized -1.95% vs. $162.91 avg entry. Note: Alpaca's quotes endpoint returned an implausibly wide bid/ask spread ($155.94/$169.16) today — treated as unreliable and disregarded in favor of the positions endpoint, per the data-quality practice established 7/24.
+- Sector momentum: falling back to last-confirmed framework (7/22) — Energy, Materials, Consumer Staples, Industrials leading YTD; Tech, Financials, Consumer Discretionary lagging. This week's strong oil rally is consistent with continued Energy-sector strength.
+
+### Trade Ideas
+1. No new name today — oil/Energy momentum continues but is already expressed via the existing XOM position; no fresh, dated, company-specific catalyst found for a second name today. 1/3 weekly trade allowance already used (Sep 1 XOM add).
+
+### Risk Factors
+- **Critical — multi-week logging blackout:** no RESEARCH-LOG or TRADE-LOG entries exist between 2026-07-24 and today, ~6 weeks with zero scheduled-workflow output on file, despite the account trading live in that window. See TRADE-LOG 2026-09-04 backfill (Aug 27 stop-out, Sep 1 buy). Severe escalation of the audit-trail gaps flagged 7/20 and 7/24 — this needs an operator check on which scheduled runs are actually firing.
+- **Compliance gap:** the current XOM position (1000 sh @ $162.91, bought 2026-09-01) was opened with no prior research-log entry or documented catalyst — violates PROJECT-CONTEXT.md's "every trade must be documented BEFORE execution" rule. Backfilling after the fact; not endorsing the pattern.
+- XOM unrealized -1.95%; 10% GTC trailing stop active (stop $149.09, hwm $165.65) — well inside the -7% manual-cut level and far from the +15%/+20% tighten thresholds; no action needed.
+- Oil's rally carries a Fed-hike-risk headline (inflation angle) that could hit broad equities even while supporting the Energy/XOM thesis directly.
+- Data quality: Alpaca quote-endpoint spread was implausible today; cross-checked against the positions endpoint instead.
+
+### Decision
+HOLD — no new trades today. Existing XOM position's thesis (Energy/oil momentum) is intact and reinforced by this week's oil rally; GTC stop active and appropriately placed, no rule action needed. No new name clears the specific-catalyst bar, and this week's trade allowance is already partly used. Priority item: the 6-week logging blackout and the undocumented Sep 1 entry, both backfilled this session, need operator review of scheduled-run reliability.

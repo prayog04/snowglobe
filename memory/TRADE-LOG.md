@@ -46,3 +46,23 @@ No new trades. 1 open position (XOM), thesis intact, GTC trailing stop active (s
 | XOM | 800 | $144.77 | $151.80 | +2.32% | +$5,624.00 (+4.86%) | $136.58 GTC trailing 10% (hwm $151.76) |
 
 **Notes:** Quiet no-trade day, as previewed in the market-open check. XOM continued its run, up 2.3% intraday to $151.80, pushing the trailing stop's high-water mark to $151.76 and the stop itself up to $136.58 — the position is now up nearly 5% unrealized. Portfolio gained $2,680 (+0.27%) on the day, all from XOM's move; cash sat untouched at $884,184 (87.9%). Zero trades today, zero trades this week (0/3), and deployment remains stuck at ~12% vs. the 75-85% target for a third straight session — the bot continues to wait for a dated catalyst outside the weak Tech rally rather than force a trade.
+
+### Aug 19 — Stop tightened to 7% (discovered via backfill 2026-09-07, see note below)
+Trailing stop on the Jul 15 XOM position (800sh, entry $144.77) replaced 10%→7% per Rule 6 (tighten to 7% at +15% gain). HWM had reached ~$166.74 (+15.2% vs. entry), clearing the threshold. No RESEARCH-LOG or TRADE-LOG entry exists for this action — reconstructed from Alpaca order history.
+
+### Aug 27 — SELL, stop-out (discovered via backfill 2026-09-07, see note below)
+| Ticker | Side | Shares | Fill | Trigger | Realized P&L | R:R vs. plan |
+|---|---|---|---|---|---|---|
+| XOM | Sell (7% trailing stop) | 800 | $156.81 | HWM $168.64 (+16.5% vs. $144.77 entry), stop $156.8352 | +$9,632.00 (+8.32%) | mechanical exit, thesis (original: 7/15) played out positively |
+
+**Note:** Mechanical trailing-stop exit closed the entire Jul 15 XOM position. No log entry exists for this fill.
+
+### Sep 1 — BUY, new position (discovered via backfill 2026-09-07, see note below)
+| Ticker | Side | Shares | Entry | Stop | Thesis | Target | R:R |
+|---|---|---|---|---|---|---|---|
+| XOM | Buy | 1000 | $162.90998 | 10% trailing GTC (stop $149.085, hwm $165.65 as of 9/7) | **UNDOCUMENTED** — no RESEARCH-LOG entry exists; catalyst/rationale unrecoverable | — | — |
+
+**Note (backfilled 2026-09-07):** No RESEARCH-LOG or TRADE-LOG entries exist for 2026-07-25 through 2026-08-31 — over 5 weeks with zero scheduled-workflow activity logged or committed to this repo (confirmed via `git log`: last memory commit before today was 7/24). During this blackout, live Alpaca order history shows the Jul 15 XOM position was fully stopped out 8/27 (+8.32% realized, rule-compliant tighten-and-exit) and a fresh 1000-share XOM position was opened 9/1 with a new 10% GTC trailing stop — none of it logged until now. Position sizing (~16.2% of equity at entry) and stop mechanics are rule-compliant; the entry catalyst is simply lost. This is a scheduled-workflow reliability failure, not a strategy violation — flagging for operator review of why market-open/pre-market runs stopped firing for over a month.
+
+### Sep 7 — Market-open check
+Market **CLOSED — Labor Day** (NYSE holiday). No orders attempted; no live-data re-validation is actionable on a closed market. Backfilled the Aug 19 / Aug 27 / Sep 1 gap above from Alpaca's own order history — see note. Current state: 1 position (XOM, 1000sh @ $162.90998 avg, current $159.47, unrealized -$3,439.98 / -2.11%), GTC 10% trailing stop live (stop $149.085, hwm $165.65). Equity $1,006,189.24, deployed 15.85% of equity — still well under the 75-85% target. Trades this week: 0/3 (holiday Monday; week's first tradeable session is Tuesday).

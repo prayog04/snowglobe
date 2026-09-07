@@ -255,3 +255,35 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-09-07 — Market-open check (market closed, backfill)
+
+### Account (live Alpaca, as of 2026-09-07)
+- Equity: $1,006,189.24
+- Cash: $846,719.24
+- Buying power: $3,833,392.96 (margin, 4x)
+- Positions: 1 (XOM, 1000 sh @ $162.90998 avg), market value $159,470 = **15.85%** of equity — still well under the 75-85% deployment target
+- XOM: current $159.47, unrealized -$3,439.98 (-2.11%); GTC 10% trailing stop live (stop $149.085, hwm $165.65)
+- Trades this week: 0/3 (today is a holiday; week's first tradeable session is Tuesday 9/8)
+
+### Market Context
+- Today (Monday 2026-09-07) is **Labor Day — NYSE closed**. No live market data to re-validate, no orders attempted. This alone would have blocked any market-order execution today regardless of research findings.
+
+### Critical finding — 5+ week logging/execution gap
+No RESEARCH-LOG or TRADE-LOG entry exists between 2026-07-24 and today, and `git log` confirms no memory-related commit landed on `main` in that window either — this scheduled workflow produced zero committed output for over five weeks. It did **not** sit idle on the trading side, though: live Alpaca order history shows real activity during the blackout:
+- **2026-08-19** — trailing stop on the original Jul-15 XOM position (800sh @ $144.77) tightened 10%→7%, correctly per Rule 6 (hwm had reached +15.2% vs. entry).
+- **2026-08-27** — that 7% trailing stop filled, selling all 800sh @ $156.81 (+8.32% / +$9,632 realized). Mechanically rule-compliant exit.
+- **2026-09-01** — a new 1000-share XOM position was opened @ $162.90998 (market order) with a fresh 10% GTC trailing stop placed the same session (stop $149.085).
+
+All three actions are backfilled into TRADE-LOG.md today from Alpaca's own order records. The stop-tighten and stop-out are mechanically sound and rule-compliant. The 9/1 re-entry is **not** — it carries no documented catalyst, no sector-momentum check, and no entry-checklist record; the rationale is unrecoverable after the fact. Position size (16.2% of equity at entry, single position) does not itself violate any hard rule, so no corrective trade is warranted today, but this is a workflow-reliability failure (scheduled runs not firing or not committing for 5+ weeks) that goes well beyond the smaller 1-2 day gaps flagged on 7/20 and 7/24, and it produced an undocumented trade — this needs operator attention, not just a memory note.
+
+### Trade Ideas
+None evaluated — market closed today; no new-name research performed.
+
+### Risk Factors
+- Root cause of the 5-week scheduled-run gap is unknown from this session (no access to scheduler/CI logs) — needs operator investigation.
+- Current XOM position (entry 9/1 @ $162.91) has no documented thesis to validate against; treat future decisions about this position (tighten/exit) as thesis-agnostic and mechanical (rely on the trailing stop and the -7% manual cut-loss rule) until/unless a real catalyst is established.
+- Position is currently -2.11% unrealized, well short of the -7% manual cut-loss trigger; GTC trailing stop at $149.085 remains the primary defense.
+
+### Decision
+HOLD — market closed for Labor Day, no orders possible or attempted. Backfilled a critical 5+ week gap in scheduled-workflow logging/execution during which the account fully cycled out of and back into XOM (rule-compliant stop-tighten and stop-out; undocumented re-entry). Flagging the gap itself as the priority item for operator review.

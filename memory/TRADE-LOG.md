@@ -46,3 +46,23 @@ No new trades. 1 open position (XOM), thesis intact, GTC trailing stop active (s
 | XOM | 800 | $144.77 | $151.80 | +2.32% | +$5,624.00 (+4.86%) | $136.58 GTC trailing 10% (hwm $151.76) |
 
 **Notes:** Quiet no-trade day, as previewed in the market-open check. XOM continued its run, up 2.3% intraday to $151.80, pushing the trailing stop's high-water mark to $151.76 and the stop itself up to $136.58 — the position is now up nearly 5% unrealized. Portfolio gained $2,680 (+0.27%) on the day, all from XOM's move; cash sat untouched at $884,184 (87.9%). Zero trades today, zero trades this week (0/3), and deployment remains stuck at ~12% vs. the 75-85% target for a third straight session — the bot continues to wait for a dated catalyst outside the weak Tech rally rather than force a trade.
+
+### Aug 19 — Stop tightened (backfilled 2026-09-07, see gap note below)
+XOM crossed the +15% trail-tighten threshold; old 10% GTC trailing stop (stop $150.07, hwm $166.74) canceled and replaced with a 7% GTC trailing stop per rule 6.
+
+### Aug 27 — SELL, stop triggered (backfilled 2026-09-07)
+| Ticker | Side | Shares | Exit | Realized P&L | Reason |
+|---|---|---|---|---|---|
+| XOM | Sell | 800 | $156.81 | +$9,632.00 (+8.0% on cost) | 7% trailing stop triggered off $168.64 high-water mark |
+
+Original 7/15 XOM thesis played out — position exited automatically via the tightened trailing stop, no manual action. Full round trip: bought 7/15 @ $144.77, exited 8/27 @ $156.81.
+
+### Sep 1 — BUY (backfilled 2026-09-07)
+| Ticker | Side | Shares | Entry | Stop | Thesis | Target | R:R |
+|---|---|---|---|---|---|---|---|
+| XOM | Buy | 1000 | $162.90998 | 10% trailing GTC (stop $149.085, hwm $165.65 as of 9/7) | Not on file — no pre-market/research entry exists for 9/1 | — | — |
+
+**Gap note (logged 2026-09-07):** No TRADE-LOG or RESEARCH-LOG entries exist between 2026-07-24 and 2026-09-07 — a ~6-week silent gap where scheduled workflows evidently did not run or did not commit, yet live trading continued on the account (stop tightened 8/19, position closed 8/27 for +$9,632 realized, re-entered 9/1 with no logged rationale). Backfilled from live Alpaca order history during the 2026-09-07 midday scan. This compounds the earlier 7/14-7/19 and 7/23 logging gaps already flagged — a recurring scheduled-workflow reliability issue, escalated to the operator.
+
+### Sep 7 — Midday check
+No new trades, no stop changes. 1 open position (XOM, 1000 sh @ $162.90998 avg, current ~$159.47, unrealized -2.11%) — not at the -7% cut threshold, not at the +15%/+20% tighten thresholds. Existing 10% GTC trailing stop intact (stop $149.085, hwm $165.65). Deployment ~15.9% ($159,470 of $1,006,189 equity) vs. 75-85% target — still well under-deployed. No thesis-break signal today (change_today flat, no sharp move) so no action taken beyond this check-in.

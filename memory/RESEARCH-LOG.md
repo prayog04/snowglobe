@@ -255,3 +255,42 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-09-07 — Pre-market Research
+
+### ⚠️ Scheduled-run gap + undocumented trades (read first)
+- **No scheduled run logged anything between 2026-07-24 and today** — a 6-week gap, far worse than the earlier 7/14-7/19 and 7/23 gaps. No commits touch these memory files in that window (`git log` confirms).
+- Live Alpaca history shows the account kept trading during the blackout:
+  - **2026-08-19:** original 10% trailing stop on XOM (800sh, $144.77 cost) canceled and replaced with a **7% trail** — correct per strategy rule 6 (tighten to 7% at +15% gain), but never logged.
+  - **2026-08-27:** that 7% stop **filled at $156.81** (hwm $168.64), closing the 800sh position for a realized **+$9,632.00 (+8.32%)** gain. Rule-compliant exit, but undocumented.
+  - **2026-09-01:** a fresh **market buy of 1000sh XOM @ $162.90998** (16.2% of equity) plus a new 10% GTC trailing stop (stop $149.085, hwm $165.65) — **no thesis, catalyst, or target on file for this entry.** Cannot verify it passed the Entry Checklist.
+- Both trades have been backfilled into TRADE-LOG.md from live order history. This is a process-compliance issue, not just a logging one — flagging for operator review of the scheduling/execution pipeline.
+
+### Account (live, 2026-09-07)
+- Equity: $1,006,189.24 | Cash: $846,719.24 (84.15%)
+- Buying power: $3,833,392.96 (margin, 4x)
+- Positions: 1 (XOM, 1000 sh @ $162.90998 avg), market value $159,470 = **15.85%** of equity — still well under the 75-85% deployment target
+- Open orders: 1 (XOM 10% GTC trailing stop, stop $149.085, hwm $165.65)
+- XOM current price: $159.47 → unrealized **-$3,439.98 (-2.11%)** on the 9/1 entry; well above the -7% manual-cut line and the stop
+- Daytrade count: not reported; trades this week: N/A (market closed today, see below)
+
+### Market status
+- **Today, 2026-09-07, is Labor Day — a US market holiday. Markets are closed; no trading possible.** This run is informational only, to prep for Tuesday 9/8 open and to surface the backfill above.
+
+### Market Context (for Tuesday's open)
+- WTI ~$91.4-91.5, Brent ~$96.3-97.1 — oil still elevated on Middle East supply risk, consistent with the Energy-sector tailwind behind XOM
+- VIX: 14.53 as of Fri 9/4 close (+1.47%) — low/calm, no stress signal
+- Sector momentum YTD: **Energy still #1 by a wide margin (+41-42%)**, Materials #2 (+16%), Industrials #3 (+13%), Health Care/Staples/Real Estate mid-single-to-low-teens, Financials +5% — same leadership pattern as July, Energy thesis for XOM remains structurally intact
+- Catalysts for Tuesday: Apple iPhone event, Oracle earnings, Adobe earnings (Tech/software-focused, outside our Energy lane); broader market watching oil-driven Treasury-yield moves
+- XOM-specific: Piper Sandler raised price target to $185 (from $158, Neutral); Q2 FCF $17.2B, $9.4B shareholder distributions; East Texas refineries maintained production through Tropical Storm Edouard; no thesis-breaking news
+
+### Trade Ideas
+- **None today — market closed (holiday).** No new-position evaluation possible or needed.
+
+### Risk Factors
+- **Process risk is now the top risk**, not market risk: a 6-week gap in scheduled runs let a full position cycle (stop-tighten → stop-out → re-entry) happen with zero documented rationale. If the scheduling/pipeline issue isn't fixed, the next undocumented trade may not be rule-compliant.
+- XOM position sits at -2.11% unrealized on the fresh 9/1 entry — not a concern per se (stop is 10% below hwm), but worth watching into Tuesday's open given no on-file thesis to reference for a stop/target decision.
+- Deployment at 15.85% vs. 75-85% target — still well under, consistent with the multi-session pattern already flagged repeatedly (though the account did briefly deploy more, then get stopped out, during the undocumented gap).
+
+### Decision
+**HOLD — market closed today (Labor Day).** No trades possible or attempted. Priority for next session (Tue 9/8 pre-market/market-open): (1) verify the scheduling pipeline is actually firing reliably going forward, (2) reassess the 9/1 XOM entry now that it's on record — confirm stop/target discipline going forward since no original thesis exists to check it against, (3) resume normal catalyst-driven evaluation for a 2nd position given Energy's continued sector leadership. Flagging this session's findings to the operator via ClickUp given the severity of the gap.

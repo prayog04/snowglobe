@@ -255,3 +255,15 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-09-07 — Midday Addendum
+
+**Reliability gap:** No RESEARCH-LOG or TRADE-LOG entries exist between 2026-07-24 and today — scheduled workflows did not run or did not commit for ~6 weeks. Live trading nonetheless continued on the account with zero recorded rationale: the original XOM position's trailing stop tightened to 7% on 8/19, triggered on 8/27 (+$9,632 realized), and a new 1000-share XOM position was opened 9/1 @ $162.90998 with no logged thesis. Backfilled into TRADE-LOG from live Alpaca order history this session. Escalated to operator — this is now the third documented scheduled-run gap (7/14-7/19, 7/23, and this 7/24-9/1 gap).
+
+### Account (live, 2026-09-07)
+- Equity: $1,006,189.24 | Cash: $846,719.24 | Buying power: $3,833,392.96 (margin, 4x)
+- Positions: 1 (XOM, 1000 sh @ $162.90998 avg), deployed $159,470 = **15.9%** of equity — still well under the 75-85% target
+- XOM: current $159.47, unrealized -$3,439.98 (-2.11%); GTC 10% trailing stop live (stop $149.085, hwm $165.65); no cut (not at -7%), no tighten (not at +15%/+20%)
+
+### Decision
+HOLD — no new trades, no stop changes. Position is a small unrealized loss, well above the -7% cut line and below the tighten thresholds; no thesis-break signal today (flat intraday move). No thesis on file for the 9/1 re-entry to check against — flagging for the next full pre-market research session to re-establish and document a thesis for the current XOM position, and to treat the persistent under-deployment (15.9% vs 75-85%, unknown trades-this-week count given the logging gap) as an active decision point.

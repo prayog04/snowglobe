@@ -255,3 +255,36 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-09-08 — Pre-market Research (run inline during market-open; entry was missing)
+
+### Account
+- Equity: $1,009,639.24
+- Cash: $846,719.24 (83.9%)
+- Buying power: $3,843,052.96 (margin, 4x)
+- Positions: 1 (XOM, 1000 sh), deployed $162,920 = **16.1%** of equity — well under the 75-85% target
+- Daytrade count: not reported by API (0 day trades taken)
+- Trades this week (since Mon 9/7, Labor Day holiday — today is the first trading day): 0/3
+- XOM: 1000sh @ $162.91 avg, current ~$161.43 (bid $160.35 / ask $162.51), GTC trailing-stop 10% live (stop $149.085, hwm $165.65)
+
+### Market Context
+- WTI ~$92-94 (+2-3%), Brent ~$97-99 — still elevated on ongoing US-Iran / Strait-of-Hormuz tension; roughly flat to modestly higher vs. recent sessions
+- S&P 500 futures: slightly negative premarket (~7,700-7,720, -0.1% to -0.4%)
+- VIX: ~15.3-15.8 — moderate, up modestly (+5-8%) but well below stressed levels
+- Today's catalysts: light pre-market earnings slate (ABM Industries, United Natural Foods, Darden, TD SYNNEX, Acuity Brands, Commercial Metals, Winnebago); Casey's/GameStop/ServiceTitan after close; only Consumer Credit + NFIB Small Business Optimism on the econ calendar — no CPI/PPI/jobs today (PPI Thu 9/10, CPI Fri 9/11, FOMC decision Wed 9/16)
+- Sector momentum YTD: Energy still #1 by a wide margin (+42-45%), Tech #2 (+30%), Materials #3 (+16%); Financials, Communication Services, Consumer Discretionary lagging
+- XOM (existing position): Papua LNG operatorship transfer from TotalEnergies (project cost cut to $14B) is a positive operational headline this week; Piper Sandler raised PT to $185 (from $158) on 9/3; Wall Street Zen upgraded to Hold on 9/5; Q2 earnings were strong (~$14.5B net income); $1.03/sh dividend payable 9/10. Stock consolidating $159-165 after pulling back from a ~$168 high in late August.
+
+### Trade Ideas
+1. No new name today — no dated, company-specific catalyst outside the existing XOM position clears the entry bar; continued oil/Energy strength is the same macro backdrop already reflected in our one position, not a fresh signal to add a second Energy name.
+2. Pre-market earnings names (ABM, UNFI, Darden, etc.) sit outside our momentum sectors (Energy/Materials/Staples) or lack a verified 2:1 R:R setup pre-print — watch, don't chase into earnings, per strategy rule.
+3. Materials — still #3 YTD sector, no company-specific dated catalyst today; watchlist only.
+
+### Risk Factors
+- **Major logging/execution gap discovered this session**: no RESEARCH-LOG or TRADE-LOG entries exist between 2026-07-24 and today (2026-09-08) — roughly 7 weeks where this scheduled workflow evidently did not run, or ran without logging. Live Alpaca order history shows the original 800sh XOM position (from 7/15) was stopped out on 8/27 (7% trailing stop, tightened from 10% per the +15%-unrealized rule, filled $156.81 vs. hwm $168.64, realized +8.32% from the $144.77 entry) and a new 1000sh XOM position was opened 9/1 at $162.91 with a fresh 10% GTC trailing stop. Both trades are being backfilled into TRADE-LOG.md this session from live order history — neither has a documented pre-trade research entry on file.
+- Deployment has now been stuck well under the 75-85% target for essentially the entire challenge window to date (16.1% today; was 12-12.4% in late July) — this is no longer a short-term pattern but a structural one. Flagging again, more forcefully: the next session should treat "wait for a dated catalyst" as needing recalibration, or explicitly accept sustained under-deployment as the outcome of the strategy as written, rather than repeating the same flag with no change.
+- Oil/Energy strength — XOM's main tailwind — is running on the same geopolitical premium that's persisted for roughly two months; a de-escalation is the main risk to the existing position. The 10% GTC trailing stop (currently $149.085) is the defense, no manual action needed unless price approaches it.
+- This bot's own scheduled-execution reliability is now a confirmed, repeated issue (7/14-19 gap, 7/23 gap, and now a ~7-week gap) — worth operator attention independent of any single day's trade decision.
+
+### Decision
+HOLD — no new trades today. Existing XOM position (1000sh @ $162.91) intact, thesis strengthening (Papua LNG operatorship news, PT raised to $185, Hold upgrade), GTC trailing stop active and appropriately placed. No name today clears the specific-catalyst + sector-momentum + 2:1 R:R bar. Primary action this session was backfilling ~7 weeks of missing trade/research records from live Alpaca data and flagging the persistent under-deployment and logging-reliability issues for operator attention.

@@ -255,3 +255,42 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-09-08 — Pre-market Research
+
+### ⚠️ Reliability note (read first)
+No RESEARCH-LOG or TRADE-LOG entry exists between 2026-07-24 and today — a ~6-week gap where this scheduled workflow did not run or did not log. Live Alpaca order history shows real activity happened in that gap that was never recorded: the original 800sh XOM position was stopped out for a gain on 8/27 (7% trail, tightened from 10% per the +15%-profit rule), then the account re-entered XOM fresh on 9/1 (1000sh). Reconstructed both fills from live order history and backfilled them into TRADE-LOG.md this session. Recommend the operator check why the scheduled runs stopped for six weeks.
+
+### Account (live Alpaca, reconciled — prior log figures were stale/wrong)
+- Equity: $1,008,439.24
+- Cash: $846,719.24 (84.0%)
+- Buying power: $3,839,692.96 (margin, 4x)
+- Daytrade count: not reported by API (0 day trades taken)
+- Positions: 1 (XOM, 1000 sh @ $162.90998 avg, bought 9/1), deployed $161,720 = **16.0%** of equity — improved slightly vs. the 12.4% last logged (7/24) but still far below the 75-85% target
+- XOM: current $161.72, unrealized -$1,189.98 (-0.73%) — position is now slightly underwater despite oil's rally since the 9/1 re-entry; GTC trailing-stop 10% live (stop $149.085, hwm $165.65), well below current price, no action needed
+- Trades this week (since Mon 9/7 — Labor Day holiday, market closed, so today is the week's first session): 0/3
+
+### Market Context
+- WTI ~$92-94 (+2-3%), Brent ~$97-99 (+1-3%) — multi-week highs, driven by continued US-Iran/Strait of Hormuz tension and reported US strikes on Iranian tankers; same geopolitical-premium thesis that has been running since July
+- S&P 500 futures: ~7,703-7,711, slightly lower premarket (-0.15% to -0.24%)
+- VIX: ~15.3-15.8, up ~5% on the day but still in the calm/moderate range (52wk range 13.4-35.3)
+- Today's catalysts: strong August jobs report has lifted Fed rate-hike-odds debate (CME FedWatch shows 40.6% probability of holding rates at the Sept meeting; other commentary flags hike-probability estimates above 60% ahead of this week's inflation prints) — read with caution, sourcing was inconsistent; oil/Middle East tensions and new Canadian tariffs also cited as downside pressure on futures; Tech/semis continue as the market's clearest relative-strength theme
+- Earnings before open: none in our Energy/Materials/Staples lane (Casey's General Stores, ServiceTitan, GameStop reporting, all unrelated)
+- Economic calendar: PPI (Aug) Thu 9/10 8:30am ET; CPI (Aug) Fri 9/11 8:30am ET; next FOMC decision Wed 9/16 2:00pm ET — correcting a stale assumption in the 7/24 log that had FOMC as "4 trading days out" (7/28-29); actual next FOMC is 9/16
+- Sector momentum YTD: Energy still #1 by a wide margin (+41-45%); Materials #3 (+16.6%); Industrials/Healthcare/Consumer Staples/Real Estate mid-pack (+9-13%); Financials lower-mid (+5.4%); Consumer Discretionary and Communication Services negative. **Notable shift: Technology now reads as YTD #2 (+30.4%)** per today's sources — a reversal from the persistent "weakest sector" framing used in every July log; worth treating as a real change, not a one-day blip, and revisiting once a company-specific catalyst appears
+- XOM (existing position): Q2 earnings already reported ($14.5B net income, $17.2B FCF, $9.4B shareholder returns); Papua LNG stake/operatorship increase (positive); Texas redomiciliation announced; speaking at Barclays Energy-Power Conference 9/9 (no material catalyst expected, investor-relations event); Venezuela-related political headlines are noise, not thesis-breaking
+
+### Trade Ideas
+1. No new name today — nothing in our lane has a dated, company-specific catalyst before today's open. PPI (Thu 9/10) and CPI (Fri 9/11) are this week's real triggers on the inflation/rate-path question that's driving broad-market jitters; wait for those prints before evaluating a second position.
+2. Technology — now YTD #2 momentum sector (+30.4%), a genuine change from its prior laggard status; still no company-specific dated catalyst today, so it doesn't clear the entry checklist, but flag as the top watchlist candidate for a second position once one appears (semis particularly strong).
+3. Materials — steady #3 YTD (+16.6%), no dated catalyst today; watchlist only.
+
+### Risk Factors
+- Oil's continued rally is double-edged as always: a Hormuz de-escalation headline would remove XOM's tailwind fast; both-ways risk, unchanged from prior logs
+- XOM currently -0.73% unrealized since the 9/1 re-entry even as oil pushes to multi-week highs — a real divergence worth watching next session; the 10% GTC trailing stop ($149.085) is the built-in defense, no manual action needed unless price approaches it
+- Strong jobs data has re-opened rate-path uncertainty ahead of PPI (9/10) and CPI (9/11) this week — a hawkish surprise on either print is a real risk to broad equities this week
+- Six-week documentation blackout (see reliability note above) means today's "12.4% deployed, 6 straight sessions" framing from 7/24 is stale — real deployment today is ~16.0%, still far under the 75-85% target, and the account has now been materially under-deployed for the entire life of the challenge (since Day 1)
+- Process risk: if the scheduled workflow silently stopped logging once before, it can again — this session cannot independently verify why the gap happened, only that it did
+
+### Decision
+HOLD — no new trades today. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar; PPI (9/10) and CPI (9/11) are this week's real triggers, and Technology's emergence as the #2 YTD momentum sector is the top candidate to revisit for a second position once a company-specific trigger appears post-data. XOM thesis intact, GTC 10% trailing stop active well below current price. Top priority for next session: confirm the scheduled workflow is running reliably again — this is the second multi-week documentation gap on record (the first was 7/14-7/19) and this one hid a full stop-out-and-re-entry cycle.

@@ -46,3 +46,12 @@ No new trades. 1 open position (XOM), thesis intact, GTC trailing stop active (s
 | XOM | 800 | $144.77 | $151.80 | +2.32% | +$5,624.00 (+4.86%) | $136.58 GTC trailing 10% (hwm $151.76) |
 
 **Notes:** Quiet no-trade day, as previewed in the market-open check. XOM continued its run, up 2.3% intraday to $151.80, pushing the trailing stop's high-water mark to $151.76 and the stop itself up to $136.58 — the position is now up nearly 5% unrealized. Portfolio gained $2,680 (+0.27%) on the day, all from XOM's move; cash sat untouched at $884,184 (87.9%). Zero trades today, zero trades this week (0/3), and deployment remains stuck at ~12% vs. the 75-85% target for a third straight session — the bot continues to wait for a dated catalyst outside the weak Tech rally rather than force a trade.
+
+### Sep 08 — EOD Snapshot (Day 41, Tuesday)
+**Portfolio:** $1,007,555.34 | **Cash:** $846,719.24 (84.0%) | **Day P&L:** +$1,366.10 (+0.14%) | **Phase P&L:** +$7,555.34 (+0.76%)
+
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|
+| XOM | 1000 | $162.91 | $160.84 | +0.86% | -$2,073.88 (-1.27%) | $149.09 GTC trailing 10% (hwm $165.65) |
+
+**Notes:** This log has no entry since Jul 21/24 — a 6+ week gap — so Day P&L is computed off Alpaca's own `last_equity` (Fri 9/4 close; markets were closed Mon 9/7 for Labor Day) rather than the stale prior line. Pulling live Alpaca order history confirms real, undocumented activity happened during the gap: the original 800sh XOM position (entered 7/15 @ $144.77) had its trailing stop tightened 10%→7% on 8/19 per the +15%-gain rule, which triggered on 8/27 and closed the position at $156.81 for a realized gain of +$9,632 (+8.32%); a fresh 1000sh XOM position was then opened 9/1 @ $162.90998 with a new 10% GTC trailing stop (current stop $149.09, hwm $165.65) — no research thesis for that re-entry was ever logged. No trades today, none this week (0/3). Still only 1 of 5-6 target positions and ~16% deployed vs. the 75-85% target, a pattern going back to the last confirmed session. Root cause of the gap is not a broken bot: GitHub shows 30+ open PRs since 8/28 (this one included) that each independently rediscovered and backfilled this exact gap — none have ever been merged to `main`, so every fresh session reads the same stale Jul-24 history and repeats the work. Flagging for operator action: merge the backlog (PR #143, opened today's midday-scan run, has the most complete backfill) to actually close the loop.

@@ -255,3 +255,31 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-09-08 — Midday Addendum
+
+### Account
+- Equity: $1,007,289.24
+- Cash: $846,719.24
+- Buying power: $3,836,472.96 (margin, 4x)
+- Positions: 1 (XOM, 1000 sh), market value $160,530 = ~15.9% of equity
+- Open orders: 1 (10% GTC trailing stop on XOM, stop $149.085, hwm $165.65, expires 2026-11-30)
+
+### What changed since the last log entry (2026-07-24)
+Repo logging was silent for 5+ weeks — reconstructed from live Alpaca order history:
+- **2026-08-19:** the 7/15 XOM position's 10% trailing stop was canceled and replaced with a 7% trailing stop — consistent with the "+15% tighten to 7%" rule, but undocumented at the time.
+- **2026-08-27:** that 7% stop triggered, closing the 800sh XOM position (entered 7/15 @ $144.77) at $156.81 — realized +$9,632 (+8.32%). Stop discipline worked; thesis played out as a winner.
+- **2026-09-01:** a new 1000sh XOM position was opened @ $162.90998 with a fresh 10% GTC trailing stop. No pre-market/market-open research or thesis was logged for this entry — undocumented.
+- All three events backfilled into TRADE-LOG today from live Alpaca data; see notes there.
+
+### Today's Position
+- XOM: 1000 sh @ $162.90998 avg, current $160.53, unrealized -$2,379.98 (-1.46%), up +0.67% intraday — no sharp move, nothing to cut or tighten.
+- 10% GTC trailing stop live and appropriately far from price (stop $149.085 vs. $160.53 current) — no action needed.
+
+### Risk Factors
+- **5+ week logging gap (7/24 → 9/1) is a serious reliability failure**, not just bookkeeping: real trading decisions (a stop tighten, a stop-out exit, and a fresh ~$163K re-entry) happened with zero documented rationale. The current position's entry thesis is unrecoverable from repo history.
+- This is the third distinct scheduled-workflow gap documented in this repo (first two: 7/14-7/19 and 7/23), and by far the largest — worth operator review of why scheduled runs stopped executing/logging between late July and September.
+- Deployment remains low: ~16% of equity in 1 position vs. the 75-85% / 5-6 position target — a pattern flagged repeatedly since mid-July with no resolution.
+
+### Decision
+HOLD — no cut (unrealized -1.46%, threshold -7%), no stop tighten (not at +15%/+20%), no thesis-break evidence found today. Backfilled 5+ weeks of missing trade history from live Alpaca data. Flagging the logging gap and the undocumented 9/1 re-entry thesis as issues for operator attention — this session found more than a routine no-trade day.

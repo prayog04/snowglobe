@@ -46,3 +46,27 @@ No new trades. 1 open position (XOM), thesis intact, GTC trailing stop active (s
 | XOM | 800 | $144.77 | $151.80 | +2.32% | +$5,624.00 (+4.86%) | $136.58 GTC trailing 10% (hwm $151.76) |
 
 **Notes:** Quiet no-trade day, as previewed in the market-open check. XOM continued its run, up 2.3% intraday to $151.80, pushing the trailing stop's high-water mark to $151.76 and the stop itself up to $136.58 — the position is now up nearly 5% unrealized. Portfolio gained $2,680 (+0.27%) on the day, all from XOM's move; cash sat untouched at $884,184 (87.9%). Zero trades today, zero trades this week (0/3), and deployment remains stuck at ~12% vs. the 75-85% target for a third straight session — the bot continues to wait for a dated catalyst outside the weak Tech rally rather than force a trade.
+
+### Aug 19 — Stop tightened to 7% (backfilled 2026-09-08, see note)
+| Ticker | Action | Old Stop | New Stop | Trigger |
+|---|---|---|---|---|
+| XOM | Tighten trailing stop | 10% trailing (from 7/15 entry) | 7% trailing | Position crossed +15% unrealized gain per strategy rule 6 |
+
+**Note:** Backfilled from live Alpaca order history during the 2026-09-08 midday scan — no RESEARCH-LOG or TRADE-LOG entry exists for 8/19. This is a third distinct scheduled-workflow logging gap, on top of the two already documented on 7/20 and 7/24.
+
+### Aug 27 — SELL, stopped out (backfilled 2026-09-08, see note)
+| Ticker | Shares | Entry | Exit | Realized P&L | Return | Reason |
+|---|---|---|---|---|---|---|
+| XOM | 800 | $144.77 | $156.81 | +$9,632.00 | +8.32% | 7% GTC trailing stop hit (hwm $168.64, stop $156.8352) |
+
+**Note:** Full close of the 7/15 XOM position via the 7% trailing stop placed 8/19. Original thesis (Strait of Hormuz supply-risk premium + Energy sector #1 YTD momentum) played out as a winner — stop discipline worked as designed. No exit rationale was logged at the time; backfilled from Alpaca fill history during the 2026-09-08 midday scan.
+
+### Sep 1 — BUY (backfilled 2026-09-08, see note)
+| Ticker | Side | Shares | Entry | Stop | Thesis | Target | R:R |
+|---|---|---|---|---|---|---|---|
+| XOM | Buy | 1000 | $162.90998 | 10% trailing GTC (stop $149.085, hwm $165.65 as of 9/8) | **UNDOCUMENTED** — no pre-market/market-open entry exists for this trade | — | — |
+
+**Note:** Nothing was logged in this repo for 5+ weeks (last entry 7/24) until this backfill. The entry thesis for this re-entry into XOM is not recoverable from repo history — flagging as a reliability gap requiring operator attention, not just a data gap: position sizing/thesis decisions for over a month are undocumented.
+
+### Sep 8 — Midday scan
+No cut, no stop change. 1 open position (XOM, 1000 sh @ $162.91 avg), unrealized -1.46% (well above the -7% cut threshold), current price $160.53, up +0.67% intraday — no sharp move. 10% GTC trailing stop active and appropriately placed (stop $149.085, hwm $165.65); not yet at the +15%/+20% tighten thresholds. Thesis cannot be verified against a documented record (see 9/1 backfill note above); no evidence found today of a broken thesis. Deployment ~16% of equity vs. 75-85% target, 1 of 5-6 target positions — under-deployment pattern continues. See RESEARCH-LOG 2026-09-08 for full context.

@@ -38,6 +38,20 @@ No new trades. 1 open position (XOM), thesis intact, GTC trailing stop active (s
 ### Jul 24 — Market-open check
 No new trades. 1 open position (XOM), thesis intact, GTC trailing stop active (stop $142.71, hwm $158.57). Trades this week: 0/3. See RESEARCH-LOG 2026-07-24 for full context — HOLD decision; today's Perplexity research output was internally inconsistent/unreliable (oil and VIX prints spanning implausible ranges, mismatched dates), so no candidate could be verified against a real catalyst — not forcing a trade on bad data. XOM unrealized +8.59%, approaching (not yet at) the +15% trail-tighten threshold. Also note: no market-open or research entry exists for 7/23 — a second logging gap on top of the earlier 7/14-7/19 one.
 
+### Aug 27 — SELL, stopped out (backfilled 2026-09-08, see note)
+| Ticker | Side | Shares | Exit | Trigger | Realized P&L | R:R |
+|---|---|---|---|---|---|---|
+| XOM | Sell | 800 | $156.81 | 7% GTC trailing stop (tightened from 10% per +15%-profit rule, hwm $168.64) | +$9,632.00 (+8.32%) | ~1:1 realized (vs. original 2:1 target) |
+
+**Note:** Filled live on Alpaca (2026-08-27 13:40 UTC), closing the 7/15 XOM entry (800sh @ $144.77). Never logged — no RESEARCH-LOG/TRADE-LOG entries exist for 7/25 through 9/7. Backfilled from live order history during the 2026-09-08 pre-market run.
+
+### Sep 1 — BUY (backfilled 2026-09-08, see note)
+| Ticker | Side | Shares | Entry | Stop | Thesis | Target | R:R |
+|---|---|---|---|---|---|---|---|
+| XOM | Buy | 1000 | $162.90998 | 10% trailing GTC (stop $149.085, hwm $165.65 as of 9/8) | Re-entry into existing Energy-momentum thesis (still #1 YTD sector) after the 8/27 stop-out; oil/Hormuz risk premium persisting | not recorded — no research entry exists for this trade | not recorded |
+
+**Note:** Filled live on Alpaca (2026-09-01 13:44 UTC) with a new 10% GTC trailing stop placed same session, but neither the entry nor its rationale was ever committed to this log. Backfilled from live order history during the 2026-09-08 pre-market run — see RESEARCH-LOG 2026-09-08 for the full reliability writeup on this gap.
+
 ### Jul 21 — EOD Snapshot (Day 7, Tuesday)
 **Portfolio:** $1,005,623.99 | **Cash:** $884,183.99 (87.9%) | **Day P&L:** +$2,680.00 (+0.27%) | **Phase P&L:** +$5,623.99 (+0.56%)
 

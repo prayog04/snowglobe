@@ -255,3 +255,48 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-09-09 — Pre-market Research
+
+### ⚠️ SCHEDULED-WORKFLOW OUTAGE — READ FIRST
+No research/trade-log entry exists between 2026-07-24 and today (2026-09-09) — **~6.5 weeks, ~33 trading days** with zero scheduled runs recorded. This is a far larger gap than the two prior 1-3 day gaps already flagged on 7/20 and 7/24. Live Alpaca order history shows real (paper) trading activity occurred during the blackout with **no research rationale, no trade-log entry, and no risk review on file for any of it**:
+- **2026-08-19**: original 800sh XOM 10% GTC trailing stop (stop ~$150.07, hwm $166.74) canceled; replaced with a 7% trail (consistent with the strategy's "+15% → tighten to 7%" rule, implying XOM crossed +15% unrealized around this date) — undocumented.
+- **2026-08-27**: that 7% trailing stop filled — **XOM position closed**, 800sh sold @ $156.81 (hwm $168.64). Round-trip on the original 7/15 entry: bought $144.77 → sold $156.81 = **+8.3% realized gain** — undocumented, no exit rationale logged.
+- **2026-09-01**: **XOM re-entered fresh** — 1000sh bought @ $162.90998 (market order), a *larger* position size than the original 800sh — undocumented, no entry rationale/catalyst logged, no confirmation this fits "max 3 new trades/week" (week's trade count is unknown due to the gap).
+- **2026-09-01**: new 10% GTC trailing stop placed on the 1000sh position (stop $149.085, hwm $165.65, expires 2026-11-30) — still open today.
+Backfilling these four events to TRADE-LOG.md now. **Recommend the operator verify the cloud routine schedule/cron is actually firing** — this is the second and far more severe instance of this failure mode (see 7/20, 7/24 notes on the earlier smaller gaps).
+
+### Account
+- Equity: $1,008,279.24
+- Cash: $846,719.24
+- Buying power: $3,839,244.96 (margin, 4x)
+- Positions: 1 (XOM, 1000 sh @ $162.90998 avg, current $161.56, unrealized -$1,349.98 / -0.83%)
+- Deployed: $161,560 = **16.0%** of equity — still well below 75-85% target
+- Open orders: 1 (XOM GTC trailing-stop sell, 10%, stop $149.085, hwm $165.65)
+- Daytrade count: not reported by API today (0 day trades taken)
+- Trades this week: unknown/unverifiable due to the logging gap above — treat conservatively as if some allowance may already be used
+
+### Market Context
+- WTI ~$93-95 (+2-3%), Brent ~$97-99 — sharp rally, pushing toward $100, driven by attacks on energy facilities in southern Saudi Arabia and renewed escalation in Iran-linked Middle East tension
+- S&P 500 futures: ~7,660-7,700, down roughly -0.3% to -0.6% premarket
+- VIX: ~15.3-15.9 — calm/low despite the oil spike, a bit of a disconnect worth noting (echoes the same VIX/oil divergence flagged 7/22)
+- Today's catalysts: Apple iPhone launch event (1pm ET) and a 10-yr Treasury auction (1pm ET) are the marquee non-Energy events; broader tape reacting to an oil-driven inflation scare on top of Iran/Saudi geopolitics; PPI Thu 9/10, CPI Fri 9/11, FOMC decision Wed 9/16 all loom this week/next
+- Earnings before open: CHWY, SAIL, CAL, SIG, ASO, SUNB, CNM, KFY, DXLG, ODD — none in Energy/Materials/Staples lane, no relevance to current book
+- Economic calendar: PPI Thu 9/10 8:30am ET, CPI Fri 9/11 8:30am ET, FOMC decision Wed 9/16 2pm ET; jobs report already printed 9/4; next JOLTS 9/29
+- Sector momentum YTD: Energy still #1 by a wide margin (XLE +42.3%), Materials #2 (+15.9%), Industrials #3 (+12.6%), Health Care #4 (+10.1%), Staples #5 (+9.6%), Real Estate #6 (+9.3%), Financials laggard (+5.4%) — same broad ranking as the last confirmed read (7/22), Energy's lead has widened further
+- XOM (existing position): $161.56 (vs $162.91 avg entry, -0.83% unrealized), Piper Sandler raised PT to $185 (from $158, still Neutral), UBS reiterated Buy on Papua LNG progress; Q2 net income $14.5B ($3.48 EPS) already reported; routine Pioneer note tender offer and CFO speaking at Barclays Energy conference today — no thesis-breaking news, sector tailwind (oil spike) still intact
+
+### Trade Ideas
+1. No new name today — Energy's YTD lead keeps widening on the oil spike, but with the routine having just come back online after a 6.5-week blackout and this week's trade-count unverifiable, prioritize re-establishing a clean audit trail over adding new risk.
+2. XOM (existing, re-entered 9/1) — thesis intact (oil spike + Energy momentum + analyst upgrades), currently -0.83% unrealized on the new entry, well inside the 10% GTC trailing stop ($149.085). No action needed; monitor.
+3. Materials/Industrials — #2/#3 YTD sectors, no company-specific dated catalyst today; watchlist only, does not clear the entry checklist.
+
+### Risk Factors
+- **Primary risk today is process, not market**: a ~6.5-week scheduled-run blackout let a full exit+re-entry cycle happen on this account with zero research rationale or logged review — the audit trail integrity, not any single position, is the top concern this session.
+- Oil spike (Saudi facility attacks, Iran tension) is real geopolitical escalation risk — cuts both ways for XOM if it de-escalates suddenly
+- VIX/oil divergence (VIX calm at ~15.5 despite a 2-3% oil spike) — possible complacency
+- FOMC 9/16 approaching (1 week out), plus PPI (9/10) and CPI (9/11) both land before it — binary macro risk building
+- Unknown this-week trade count means a fresh trade today risks breaching the 3-trades/week rule blind — another reason to hold
+
+### Decision
+HOLD — no new trades today. Immediate priority is documentation, not offense: backfilling the undocumented 8/19 stop-tighten, 8/27 stop-out, and 9/1 re-entry+stop to TRADE-LOG.md, and flagging the scheduled-workflow reliability failure for the operator. XOM (re-entered) thesis is intact and sector-aligned, stop is active and appropriately placed; no fresh catalyst today clears the bar for a new name, and this week's trade allowance can't be verified due to the gap. Patience > activity, doubly so while re-establishing trust in the log after a long blackout.

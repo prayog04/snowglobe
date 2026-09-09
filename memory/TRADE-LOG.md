@@ -46,3 +46,23 @@ No new trades. 1 open position (XOM), thesis intact, GTC trailing stop active (s
 | XOM | 800 | $144.77 | $151.80 | +2.32% | +$5,624.00 (+4.86%) | $136.58 GTC trailing 10% (hwm $151.76) |
 
 **Notes:** Quiet no-trade day, as previewed in the market-open check. XOM continued its run, up 2.3% intraday to $151.80, pushing the trailing stop's high-water mark to $151.76 and the stop itself up to $136.58 — the position is now up nearly 5% unrealized. Portfolio gained $2,680 (+0.27%) on the day, all from XOM's move; cash sat untouched at $884,184 (87.9%). Zero trades today, zero trades this week (0/3), and deployment remains stuck at ~12% vs. the 75-85% target for a third straight session — the bot continues to wait for a dated catalyst outside the weak Tech rally rather than force a trade.
+
+### Aug 19 — Stop tightened (backfilled 2026-09-09)
+Canceled the 10% GTC trailing stop on the original XOM 800sh @ $144.77 position (hwm $166.74, stop $150.07 at cancellation — position was ~+15.1% unrealized) and replaced it with a 7% trail per the "+15% -> tighten to 7%" rule. Never committed to this log when executed; discovered today (9/9) while reconciling live Alpaca order history against this log during the midday scan.
+
+### Aug 27 — SELL (stop-out, backfilled 2026-09-09)
+| Ticker | Side | Shares | Exit | Realized P&L | Reason |
+|---|---|---|---|---|---|
+| XOM | Sell | 800 | $156.81 | +$9,632.00 (+8.32%) | 7% GTC trailing stop triggered off a $168.64 high-water mark — full exit of the 7/15 position |
+
+**Note:** Filled 2026-08-27 13:40 UTC, never logged. Closed out the original XOM position (opened 7/15/26 @ $144.77) for a realized gain of +8.32% ($9,632) — a clean, rules-following exit (trail tightened 8/19 per the +15% rule, then triggered on a pullback). No corresponding log entry existed until this backfill.
+
+### Sep 1 — BUY (backfilled 2026-09-09)
+| Ticker | Side | Shares | Entry | Stop | Thesis | Target | R:R |
+|---|---|---|---|---|---|---|---|
+| XOM | Buy | 1000 | $162.90998 | 10% trailing GTC (stop $149.09, hwm $165.65 as of 9/9) | **UNKNOWN — no RESEARCH-LOG or TRADE-LOG entry exists for this entry.** No pre-market/market-open research on file supporting this re-entry. | — | — |
+
+**Note:** Filled 2026-09-01 13:43 UTC with a 10% GTC trailing stop placed the same session; neither the trade nor any supporting research was ever logged. This is on top of two prior scheduled-workflow logging gaps already flagged in this log (7/14-7/19, and 7/23) — the gap this time spans **Jul 24 through Sep 9 (~7 weeks)** with zero RESEARCH-LOG or TRADE-LOG entries despite live trading activity (a stop-tighten, a full exit, and a new entry all occurred in that window). Operator should verify whether scheduled runs have been firing since 7/24, and what catalyst justified this 9/1 re-entry — no documented thesis exists to evaluate the current position against.
+
+### Sep 9 — Midday check
+No new trades this session. 1 open position (XOM, 1000sh @ $162.91 avg), current $164.90, unrealized +1.22% (intraday +2.64%) — well above the -7% cut threshold and well below the +15%/+20% tighten thresholds; 10% GTC trailing stop active and untouched (stop $149.09, hwm $165.65). No thesis-breaking news evaluated — no documented thesis exists to check against (see 9/1 backfill note above). Deployed capital ~16.3% ($164,870 of $1,011,589.24 equity) — still below the 75-85% target. No trading action taken today; no ClickUp alert sent per the Step 7 action-only rule. Flagging the 7-week logging gap and the undocumented 9/1 re-entry directly to the operator instead of via ClickUp.

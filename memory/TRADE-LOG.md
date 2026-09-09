@@ -46,3 +46,24 @@ No new trades. 1 open position (XOM), thesis intact, GTC trailing stop active (s
 | XOM | 800 | $144.77 | $151.80 | +2.32% | +$5,624.00 (+4.86%) | $136.58 GTC trailing 10% (hwm $151.76) |
 
 **Notes:** Quiet no-trade day, as previewed in the market-open check. XOM continued its run, up 2.3% intraday to $151.80, pushing the trailing stop's high-water mark to $151.76 and the stop itself up to $136.58 — the position is now up nearly 5% unrealized. Portfolio gained $2,680 (+0.27%) on the day, all from XOM's move; cash sat untouched at $884,184 (87.9%). Zero trades today, zero trades this week (0/3), and deployment remains stuck at ~12% vs. the 75-85% target for a third straight session — the bot continues to wait for a dated catalyst outside the weak Tech rally rather than force a trade.
+
+### Aug 27 — SELL (backfilled 2026-09-09, see note)
+XOM 800 sh sold via 7% GTC trailing stop @ $156.81 (hwm $168.64), closing the Jul 15 entry (avg cost $144.77). Realized P&L: +$9,632.00 (+8.31%).
+
+**Note:** This exit filled live on Alpaca (2026-08-27 13:40:14 UTC) via a trailing stop that was tightened from 10% to 7% on 2026-08-19, carrying forward the high-water mark from the original Jul 15 position. It was never committed to this log — no scheduled workflow (pre-market, market-open, midday, or EOD) appears to have run at all between 2026-07-24 and 2026-09-09, a 47-day gap. Backfilled from live Alpaca order history during the 2026-09-09 daily-summary run. No research-log rationale exists for the exit timing.
+
+### Sep 01 — BUY (backfilled 2026-09-09, see note)
+| Ticker | Side | Shares | Entry | Stop | Thesis | Target | R:R |
+|---|---|---|---|---|---|---|---|
+| XOM | Buy | 1000 | $162.90998 | 10% trailing GTC (stop $149.085, hwm $165.65 as of 9/9) | Unknown — no research-log entry exists for this trade | Unknown | Unknown |
+
+**Note:** This entry filled live on Alpaca (2026-09-01 13:43:59 UTC) as a market buy, with a fresh 10% GTC trailing stop attached the same session. Same 47-day scheduled-workflow gap (2026-07-24 to 2026-09-09) as the Aug 27 exit above — no market-open, pre-market, midday, or EOD entries exist for that entire stretch despite live trading activity continuing on the account. No thesis, catalyst, or sizing rationale is on file for this trade. Backfilled from live Alpaca order history during the 2026-09-09 daily-summary run. **Flagging as a critical operational failure**: the account traded blind (no logged research, no dated catalyst check, no documented stop-tightening rule application) for over six weeks — the scheduled-run reliability gaps first noted 2026-07-20 and 2026-07-24 were never fixed and instead worsened into a full outage.
+
+### Sep 09 — EOD Snapshot (Day 43, Wednesday)
+**Portfolio:** $1,011,169.24 | **Cash:** $846,719.24 (83.7%) | **Day P&L:** +$3,790.00 (+0.38%) | **Phase P&L:** +$11,169.24 (+1.12%)
+
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|
+| XOM | 1000 | $162.91 | $164.45 | +2.36% | +$1,540.02 (+0.95%) | $149.09 GTC trailing 10% (hwm $165.65) |
+
+**Notes:** First scheduled run to execute since Jul 24 — a 47-day gap during which the bot kept trading live (via the standing GTC trailing stop and manual/unlogged decisions) but nothing was recorded. Backfilled two trades above: the Jul 15 XOM position was stopped out for a gain on Aug 27 (+8.31%, +$9,632 realized) when its trail tightened to 7% off a $168.64 high, then a new 1,000-share XOM position was opened Sep 1 at $162.91 with a fresh 10% GTC trailing stop — no research rationale is on file for that re-entry. No trades executed today; XOM closed $164.45 (+2.36% on the day), unrealized +$1,540 (+0.95%) against the Sep 1 cost basis, stop sitting at $149.09 off a $165.65 high. Portfolio equity $1,011,169.24, up $3,790 (+0.38%) vs. yesterday's $1,007,379.24 close and up $11,169.24 (+1.12%) cumulative since the $1,000,000 launch baseline. Deployment is 16.3% of equity — well under the 75-85% target — with only 1 of 5-6 target positions open. Trades this week (since Mon Sep 7): 0/3. Top priority before any new trade: diagnose why the scheduled workflows stopped firing for 47 days so this outage doesn't recur.

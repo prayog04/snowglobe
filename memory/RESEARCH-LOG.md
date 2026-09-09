@@ -255,3 +255,40 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-09-09 — Pre-market Research (run inline during market-open; entry was missing)
+
+### Account
+- Equity: $1,011,449.24
+- Cash: $846,719.24
+- Buying power: $3,848,120.96 (margin, 4x)
+- Positions: 1 (XOM, 1000 sh @ $162.91 avg), deployed $164,820 = **16.3%** of equity — still well below 75-85% target
+- Daytrade count: not reported by API (0 day trades taken)
+- Trades this week (since Mon 9/7): 0/3
+
+### Audit-trail gap (critical — read before anything else)
+No RESEARCH-LOG or TRADE-LOG entries exist between 2026-07-24 and 2026-09-09 — a **~6-week gap** where the scheduled workflows evidently did not run. Alpaca's own order history shows real trading activity happened during that blackout, entirely undocumented until backfilled just now:
+- **Aug 19:** original 10% GTC trailing stop (hwm $166.74) canceled and replaced with a 7% trail — consistent with the strategy's "+15% → tighten to 7%" rule (entry $144.77, hwm implies +15.2%), but no log entry recorded the decision.
+- **Aug 27:** that 7% trailing stop hit — 800 sh XOM sold at $156.81, realized +$9,632 (+8.32%). Position went flat.
+- **Sep 1:** re-entered 1000 sh XOM @ $162.91 (market order), 10% GTC trailing stop placed same session (stop now $149.09, hwm $165.65). No catalyst or thesis was ever documented for this re-entry.
+All four entries have been backfilled into TRADE-LOG.md from Alpaca's order history. This is the same class of issue flagged 2026-07-20 and 2026-07-24 ("scheduled-workflow reliability gap"), now materially worse: a full round-trip (stop-out + re-entry) executed with zero research rationale and a 6-week logging blackout. This is an infrastructure/scheduling problem, not a strategy problem, and needs operator attention — the bot cannot self-diagnose why its scheduled triggers stopped firing.
+
+### Market Context
+- S&P 500 futures: conflicting premarket reads (~7,687 E-mini per one source, "flat at 6,510" per another, likely a stale/mismatched index) — treat with caution
+- VIX: ~15.7-16.6, moderate/calm
+- WTI/Brent: Brent ~$98-99 (elevated, up ~1%); no clean WTI print obtained
+- Today's catalysts: no major scheduled event; market focus is the Sep 16 FOMC decision, with one source pricing ~56% odds of a 25bp hike — a week+ out, not an actionable catalyst today
+- Sector momentum YTD: Energy remains the clear #1 sector (estimates ranging ~24-36% YTD across sources, methodology unclear) — same leadership picture as the last confirmed read (7/24)
+- XOM-specific: no dated, company-specific news found in the past week; closest item was a stale mid-August energy-sector note
+
+### Trade Ideas
+1. No new name today — no fresh, dated, company-specific catalyst cleared the entry checklist. Existing XOM position's original momentum thesis (Energy-sector leadership) is still intact and unchanged from prior reads.
+
+### Risk Factors
+- 6-week scheduled-workflow blackout (see above) — highest-priority open issue, flagged to operator
+- FOMC Sep 16 is the next real macro catalyst; positioning risk builds into it but it's a week out
+- Premarket S&P level data was internally inconsistent across sources — don't trust a single print
+- Deployment still well below the 75-85% target (16.3%, 1 of 5-6 positions) — persistent pattern, but not a reason to force a trade without a catalyst
+
+### Decision
+HOLD — no new trades. Existing XOM position (1000 sh, 16.3% of equity) has an intact thesis and a correctly-sized 10% GTC trailing stop ($149.09, hwm $165.65). No dated catalyst clears the bar for a new name. Priority action item: the 6-week logging/scheduling gap needs operator investigation — this is the second and more severe occurrence of an issue flagged twice already (7/20, 7/24) with no apparent fix.

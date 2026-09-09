@@ -255,3 +255,9 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-09-09 — Midday scan (gap discovery, no pre-market entry today)
+
+No pre-market research entry exists for today, and this is not an isolated miss: **no RESEARCH-LOG entry of any kind exists between 2026-07-24 and today** — a ~7-week silent gap. Live Alpaca order history (reconciled during this midday scan) shows real trading activity occurred in that window with zero research or trade documentation: the original XOM position's stop was tightened 10%->7% on 8/19 (+15% rule), stopped out for +8.32% on 8/27, and a fresh 1000sh XOM position was opened 9/1 @ $162.90998 with no catalyst, thesis, or sector-momentum check on file. See TRADE-LOG.md 2026-09-09 entry for full backfill and figures.
+
+No new research performed this session (current position move, +2.64% intraday, isn't sharp/unexplained enough to warrant ad hoc Perplexity research per the midday-scan rule) and no thesis-break identified — but there is no documented thesis to check the position against in the first place. Flagging to the operator: (1) confirm whether scheduled pre-market/market-open/EOD runs have been executing since 7/24, and (2) backfill or reconstruct the catalyst for the 9/1 XOM re-entry so this position has a documented thesis going forward.

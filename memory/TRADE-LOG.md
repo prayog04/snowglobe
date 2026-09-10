@@ -46,3 +46,12 @@ No new trades. 1 open position (XOM), thesis intact, GTC trailing stop active (s
 | XOM | 800 | $144.77 | $151.80 | +2.32% | +$5,624.00 (+4.86%) | $136.58 GTC trailing 10% (hwm $151.76) |
 
 **Notes:** Quiet no-trade day, as previewed in the market-open check. XOM continued its run, up 2.3% intraday to $151.80, pushing the trailing stop's high-water mark to $151.76 and the stop itself up to $136.58 — the position is now up nearly 5% unrealized. Portfolio gained $2,680 (+0.27%) on the day, all from XOM's move; cash sat untouched at $884,184 (87.9%). Zero trades today, zero trades this week (0/3), and deployment remains stuck at ~12% vs. the 75-85% target for a third straight session — the bot continues to wait for a dated catalyst outside the weak Tech rally rather than force a trade.
+
+### Sep 10 — EOD Snapshot (Day 43, Thursday)
+**Portfolio:** $1,011,719.24 | **Cash:** $846,719.24 (83.7%) | **Day P&L:** +$770.00 (+0.08%) | **Phase P&L:** +$11,719.24 (+1.17%)
+
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|
+| XOM | 1000 | $162.91 | $165.00 | +0.47% | +$2,090.02 (+1.28%) | $150.63 GTC trailing 10% (hwm $167.37) |
+
+**Notes:** Severe logging gap — no market-open, research, or EOD entries exist between Jul 24 and today (48 calendar days, ~33 trading sessions), even though live trading continued unlogged on Alpaca. Reconstructed from order history: the original XOM lot (800sh @ $144.77) had its trailing stop tightened from 10% to 7% on Aug 19 (hwm $168.64 at the time, consistent with the strategy's +15%/+20% tighten rule, though no log entry documents the decision), then got stopped out Aug 27 at $156.81 — a realized gain of +$9,632 (+8.3%) on that lot, never logged. The account then sat in cash for ~3 trading days before a new XOM position (1000sh @ $162.91) was opened Sep 1 via market order, with a fresh 10% GTC trailing stop placed same-day (now $150.63, hwm $167.37) — also never logged, no research rationale on file for either the exit or the re-entry. Today itself was a genuine no-trade day: no orders today, no fills since Sep 1, deployment at 16.3% (well under the 75-85% target). Day N above (43) assumes only Labor Day (Sep 7) as a holiday between Jul 13 and today and should be treated as approximate given the gap. Flagging this as a critical scheduled-workflow reliability failure — the daily-summary/market-open/pre-market routines did not run (or did not commit) for ~7 weeks despite live orders executing — needs operator attention independent of today's numbers.

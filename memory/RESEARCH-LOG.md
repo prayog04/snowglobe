@@ -255,3 +255,24 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-09-10 — Midday Addendum
+
+### Account
+- Equity: $1,012,319.24 | Cash: $846,719.24 (83.6%) | Buying power: $3,850,556.96 (margin, 4x)
+- Positions: 1 (XOM, 1000 sh @ $162.90998), deployed $165,600 = **16.4%** of equity — well under the 75-85% target
+- XOM: current $165.5952, unrealized +$2,685.22 (+1.65%), GTC trailing-stop 10% live (stop $150.633, hwm $167.37) — far below both the -7% cut and +15%/+20% tighten thresholds
+
+### Gap discovery (main finding this run)
+No RESEARCH-LOG or TRADE-LOG entry exists between 2026-07-24 and today. Reconstructed from live Alpaca order history and backfilled into TRADE-LOG:
+- 8/19: existing XOM trailing stop tightened 10%→7% at +15.2% unrealized (rule followed correctly)
+- 8/27: that 7% stop filled — original 800sh @ $144.77 position stopped out at $156.81, realized +$9,624 (+8.32%)
+- 9/1: fresh 1000sh XOM position opened @ $162.90998 (market buy), new 10% GTC trailing stop attached same session — **no documented thesis on file for this re-entry**
+
+Account-side risk mechanics (stops, tightening) executed correctly and on-rule throughout the gap. What broke was the recording/reasoning layer: ~6 weeks with zero research or trade-log commits despite three live order events. This is the same reliability pattern already flagged twice before (7/14-7/19, 7/23) but far larger in scope — worth investigating why the scheduled pre-market/market-open runs stopped committing to memory/.
+
+### Market Context
+Not refreshed this session — XOM's intraday move (+0.83%) was unremarkable and didn't warrant ad-hoc Perplexity research per the midday-scan rule (only required for sharp, unexplained moves).
+
+### Decision
+HOLD — no cut, no tighten, no new trade. Existing 10% GTC stop on the 9/1 XOM position is correctly placed and left alone. Re-entry thesis for the current 1000sh position is unverified (undocumented) and should be revisited at the next pre-market/market-open session now that the gap has been surfaced.

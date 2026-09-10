@@ -46,3 +46,23 @@ No new trades. 1 open position (XOM), thesis intact, GTC trailing stop active (s
 | XOM | 800 | $144.77 | $151.80 | +2.32% | +$5,624.00 (+4.86%) | $136.58 GTC trailing 10% (hwm $151.76) |
 
 **Notes:** Quiet no-trade day, as previewed in the market-open check. XOM continued its run, up 2.3% intraday to $151.80, pushing the trailing stop's high-water mark to $151.76 and the stop itself up to $136.58 — the position is now up nearly 5% unrealized. Portfolio gained $2,680 (+0.27%) on the day, all from XOM's move; cash sat untouched at $884,184 (87.9%). Zero trades today, zero trades this week (0/3), and deployment remains stuck at ~12% vs. the 75-85% target for a third straight session — the bot continues to wait for a dated catalyst outside the weak Tech rally rather than force a trade.
+
+### Aug 19 — Stop tightened (backfilled 2026-09-10, see note)
+| Ticker | Action | Shares | Old Stop | New Stop | Reason |
+|---|---|---|---|---|---|
+| XOM | Trail tightened | 800 | 10% trailing (hwm $166.74) | 7% trailing GTC (stop $156.8352, hwm $166.74) | Position hit ~+15.2% unrealized (hwm $166.74 vs $144.77 entry) — strategy rule: tighten trail to 7% at +15% |
+
+### Aug 27 — SELL, stop-out (backfilled 2026-09-10, see note)
+| Ticker | Side | Shares | Fill Price | Realized P&L | Reason |
+|---|---|---|---|---|---|
+| XOM | Sell (trailing stop fill) | 800 | $156.81 | +$9,632.00 (+8.02%) | 7% GTC trailing stop triggered off hwm $168.64 |
+
+### Sep 1 — BUY, re-entry (backfilled 2026-09-10, see note)
+| Ticker | Side | Shares | Entry | Stop | Thesis | R:R |
+|---|---|---|---|---|---|---|
+| XOM | Buy | 1000 | $162.90998 | 10% trailing GTC (stop $149.085, hwm $165.65 as of 9/10) | Re-entry into ongoing Energy-sector #1 YTD momentum trade (now +41-42% YTD) as oil (WTI ~$96-97, Brent ~$100-101) surged on escalating US-Iran conflict | not specified in unlogged entry |
+
+**Note:** All three actions above (trail tighten 8/19, stop-out fill 8/27, re-entry 9/1) executed live on Alpaca with zero corresponding RESEARCH-LOG or TRADE-LOG entries — a 7-week scheduled-workflow gap (last entry before this: 2026-07-24). Backfilled from live Alpaca order history during the 2026-09-10 pre-market run. See RESEARCH-LOG 2026-09-10 for full detail and the operational-reliability flag.
+
+### Sep 10 — Pre-market check
+No new trades. 1 open position (XOM, 1000 sh @ $162.90998), thesis intact, 10% GTC trailing stop active (stop $149.085, hwm $165.65). Trades this week: 0/3. See RESEARCH-LOG 2026-09-10 for full context — HOLD decision; Energy sector stretched (+41-42% YTD), no dated catalyst for a new name today (retail-only earnings slate). Deployment 16.35% vs 75-85% target. Top flag: 7-week logging/scheduling gap discovered and backfilled above — recommend the operator verify why scheduled runs stopped committing between 7/24 and 9/1.

@@ -255,3 +255,46 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-09-10 — Pre-market Research
+
+### ⚠️ Logging/scheduling gap (7/24 → 9/10, ~7 weeks)
+No RESEARCH-LOG or TRADE-LOG entries exist between 2026-07-24 and today — the scheduled workflows did not run or did not commit for ~48 days. Real trades happened live on Alpaca during that blackout with zero record on file, reconstructed here from Alpaca order history and backfilled to TRADE-LOG.md:
+- **8/19**: Original 10% GTC trailing stop (hwm $166.74, ~+15.2% from $144.77 entry) canceled and replaced with a 7% trail per the "tighten to 7% at +15%" rule — correctly executed, just never logged.
+- **8/27**: The 7% trail filled — XOM 800sh stopped out at $156.81 (hwm $168.64). Realized gain: +$9,632 (+8.02%).
+- **9/1**: Re-entered XOM, 1000sh market buy @ $162.90998, fresh 10% GTC trailing stop attached same session.
+This is a serious reliability gap, not a one-off — flagging for review of whatever runs these scheduled routines (cron/trigger config), since a stop could just as easily have failed silently during a blackout like this.
+
+### Account
+- Equity: $1,012,209.24
+- Cash: $846,719.24
+- Buying power: $3,850,248.96 (margin, 4x)
+- Positions: 1 (XOM, 1000 sh @ $162.90998 avg, current $165.49), unrealized +$2,580.02 (+1.58%); deployed $165,490 = **16.35%** of equity — still well below the 75-85% target
+- GTC 10% trailing stop live: stop $149.085, hwm $165.65 (created 9/1, updated 9/3) — far from the +15%/+20% tighten thresholds (would trigger ~$187/$195)
+- Daytrade count: not reported by API (0 day trades taken)
+- Trades this week (since Mon 9/7): 0/3
+
+### Market Context
+- WTI ~$96-97 (+1-4% across sources), Brent ~$100-101 — oil has surged sharply since the last logged entry (WTI was ~$71 on 7/24); driver is escalating US-Iran attacks now reportedly targeting tankers, military bases, and regional energy infrastructure — a materially bigger escalation than the Hormuz-premium story from July
+- S&P 500 futures: ~7,645-7,651, down modestly (~-0.4%) premarket; index near recent highs into next week's Fed decision
+- VIX: ~16.3-16.5, calm — notable disconnect vs. the oil/geopolitical escalation, similar to the complacency flagged back on 7/22
+- Today's catalysts: PPI (Aug) + weekly jobless claims at 8:30am ET; CPI (Aug) prints tomorrow 9/11; next FOMC meeting 9/15-16 — Fed rate-cut expectations are the dominant macro theme into month-end
+- Earnings before open: Macy's, 1-800-Flowers, Shoe Carnival, Designer Brands, Vince Holding, Lovesac — all retail/consumer, none in our Energy/Materials momentum lane
+- Sector momentum YTD: Energy still #1 and now extreme (+41-42%, up from +16-30% in July), Materials #2 (+15.9%), Industrials #3 (+12.6%), Health Care (+10.1%), Consumer Staples (+9.6%), Real Estate (+9.3%), Financials lagging (+5.4%)
+- XOM (existing position): ~$164-165, +2.2% on the day; news flow is a cash tender offer on 2030/2031 senior notes (balance-sheet management, not thesis-relevant), UBS reiterated Buy with $174 PT citing Papua LNG progress, Q2 EPS $3.48 with $17.2B FCF — no thesis-breaking news
+
+### Trade Ideas
+1. No new name today — retail earnings before open don't fit the Energy/Materials momentum lane, and no company-specific dated catalyst in Energy/Materials clears the entry checklist today. Energy at +41-42% YTD is also increasingly stretched; chasing further here without a fresh trigger is lower R:R than it looks.
+2. Watchlist only: a second Energy name (CVX, COP) or Materials name (LIN, FCX) to address the persistent under-deployment — needs a dated catalyst (earnings, guidance) before it clears the checklist, not just continued oil strength.
+3. Today's PPI print (8:30am) is a macro catalyst worth watching into next week's FOMC, but WAIT for the release + reaction rather than positioning ahead of it.
+
+### Risk Factors
+- **Operational**: 7-week logging/scheduling blackout (see above) is the top risk today — not a market risk, a process risk. Real position changes occurred unmonitored; recommend the operator verify the scheduled-run infrastructure before trusting future silent runs.
+- Oil spike to multi-month highs ($96-97 WTI, $100-101 Brent) on escalating US-Iran conflict is double-edged: further escalation extends the XOM/Energy tailwind, but any de-escalation headline could reverse it sharply and fast, as has happened before with this same conflict.
+- VIX (~16.4) shows little concern despite the oil/geopolitical escalation — possible complacency.
+- 100% of deployed capital concentrated in a single Energy name (XOM); no diversification within or outside the sector.
+- Deployment stuck at 16.35% vs. 75-85% target essentially since inception (was ~12% in July, still far off target now) — a real, recurring strategy-execution gap, not just a logging one.
+- CPI tomorrow (9/11) and FOMC 9/15-16 are near-term event risk.
+
+### Decision
+HOLD — no new trades today. XOM thesis intact (+1.58% unrealized on the new 9/1 entry), GTC 10% trailing stop active and far from any action threshold. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar; today's retail earnings slate is off-thesis and Energy is stretched enough that adding without a fresh trigger isn't justified. Flagging the 7-week logging/scheduling gap as the most urgent item — that is a process failure, and it should be root-caused before relying on future unattended runs.

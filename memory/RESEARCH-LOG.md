@@ -255,3 +255,39 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-09-10 — Market-open (research run inline; 48-day logging gap discovered)
+
+### CRITICAL — Pipeline reliability gap (7/25 – 9/9)
+- **Zero git commits landed in this repo between 2026-07-24 and 2026-09-10.** Last logged research/trade entry before today was the 2026-07-24 market-open HOLD.
+- Live Alpaca order history (paper account) shows real activity in that window that was never logged or committed:
+  - **2026-08-19** — 10% trailing stop (hwm $166.74) canceled, replaced with a 7% trailing stop — correct per strategy's "tighten to 7% at +15% gain" rule.
+  - **2026-08-27** — that 7% stop filled: XOM (800sh @ $144.77 entry) sold @ $156.81, closing the position for +$9,632 (+8.32%) realized.
+  - **2026-09-01** — fresh market buy, 1000sh XOM @ $162.90998, immediately followed by a new 10% GTC trailing stop — the exact STEP 4/5 market-open pattern. No thesis/catalyst for this re-entry is on file anywhere.
+- Root-cause hypothesis: these look like automated market-open/midday runs that executed correctly against Alpaca (unaffected by repo permissions) but failed at the final git commit/push step (STEP 6/8) every single time for 48 days, silently, with no fallback alert defined for a push failure (only missing-env-var triggers a ClickUp alert). Each run's container was then reclaimed, losing the record. This session itself was routed through a branch+PR flow rather than a direct push to `main`, consistent with a permissions change being the trigger — see `routines/README.md`: routines need "Allow unrestricted branch pushes" enabled to push straight to `main`.
+- **Backfilled** the three reconstructed events into TRADE-LOG.md today from live Alpaca order history (orders `31366dd1`/`e3db5144` for the tighten+stop-out, `2b7b0c8a`/`240c38d4` for the re-entry) so downstream rule checks (trades-this-week, position count) are accurate again. The 9/1 re-entry has no documented catalyst — flagged, not fabricated.
+- **Action needed from operator:** verify the cloud routines (pre-market/market-open/midday/daily-summary) still have working push permissions to `main`, or confirm whether they're now expected to go through branch+PR like this session. Until confirmed, treat future gaps between scheduled runs as a live risk, not just a documentation nit.
+
+### Account (live Alpaca, 2026-09-10)
+- Equity: $1,012,119.24 | Cash: $846,719.24 | Buying power: $3,849,996.96 (margin, 4x)
+- Positions: 1 (XOM, 1000 sh @ $162.90998 avg), current $165.40, unrealized +$2,490.02 (+1.53%)
+- Deployed: $165,400 = **16.3%** of equity — still well under the 75-85% target
+- Open order: 10% GTC trailing stop on XOM, stop $150.633, hwm $167.37 — active, no action needed (nowhere near +15%/+20% tighten thresholds)
+- Trades this week (Mon 9/8 start, Labor Day 9/7 observed): 0/3 used
+
+### Market Context (Perplexity)
+- Energy remains #1 S&P sector YTD (+46-48%), Tech #2 (+30-31%), Materials #3 (+13-14%); Consumer Discretionary/Communication Services weakest (~-5%)
+- XOM-specific: oil strength (Middle East/Strait of Hormuz risk premium), strong Q2 2026 earnings ($14.5B, $17B+ FCF, net debt down $7B+), 44th consecutive dividend increase expected, Angola discovery (Vicango Este-01), CFO spoke at Barclays Energy-Power Conference 9/9 — thesis intact, no new dated catalyst today beyond continuation of the existing story
+- Broad market: Fed rate-cut expectations (0.25pt widely expected) the dominant near-term macro catalyst; AI-trade enthusiasm (Oracle, Broadcom) supporting Tech; PPI/yield/dollar strength a mild headwind today
+
+### Trade Ideas
+1. XOM (existing) — thesis intact, no fresh dated catalyst for adding size today; stop is doing its job.
+2. No new name today — Energy still leads but no company-specific dated catalyst surfaced for a second name; Fed-cut expectation is a macro backdrop, not a specific-stock trigger.
+
+### Risk Factors
+- The 48-day logging gap itself is the top risk today — it means the last ~7 weeks of trade decisions (if any beyond the 3 reconstructed) have zero audit trail, and the account's real trading-frequency/rule-compliance during that window can't be fully verified from this repo alone.
+- 9/1 re-entry thesis unknown — can't confirm it met the catalyst/2:1-R:R entry checklist at the time; can only confirm the stop discipline (10% trailing) was followed.
+- Deployment at 16.3% vs 75-85% target remains persistently low.
+
+### Decision
+HOLD — no new trades today. Prioritized backfilling the broken trade/research record over adding a new position in the same session; XOM thesis intact and stop active, no urgent action needed there. Flagged the 48-day pipeline gap for operator review — this is a reliability issue, not a strategy one.

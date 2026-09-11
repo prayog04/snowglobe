@@ -46,3 +46,29 @@ No new trades. 1 open position (XOM), thesis intact, GTC trailing stop active (s
 | XOM | 800 | $144.77 | $151.80 | +2.32% | +$5,624.00 (+4.86%) | $136.58 GTC trailing 10% (hwm $151.76) |
 
 **Notes:** Quiet no-trade day, as previewed in the market-open check. XOM continued its run, up 2.3% intraday to $151.80, pushing the trailing stop's high-water mark to $151.76 and the stop itself up to $136.58 — the position is now up nearly 5% unrealized. Portfolio gained $2,680 (+0.27%) on the day, all from XOM's move; cash sat untouched at $884,184 (87.9%). Zero trades today, zero trades this week (0/3), and deployment remains stuck at ~12% vs. the 75-85% target for a third straight session — the bot continues to wait for a dated catalyst outside the weak Tech rally rather than force a trade.
+
+### Aug 27 — SELL (backfilled 2026-09-11, see note)
+| Ticker | Side | Shares | Fill | Stop Trigger | Realized P&L | R:R |
+|---|---|---|---|---|---|---|
+| XOM | Sell (trailing-stop exit) | 800 | $156.81 | 7% trail off hwm $168.64 | +$9,632.00 (+8.32%) | ~1.7:1 |
+
+**Note:** Alpaca order history shows the original Jul 15 XOM position was exited via its trailing stop, filled 2026-08-27 13:40 UTC at $156.81 (stop had been tightened to 7% per strategy rule after the position crossed +15%, trailing a $168.64 high). This closes the Jul 15 trade for a realized gain of ~$9,632 (+8.32%). Backfilled from live order history — no scheduled run committed this to the log at the time.
+
+### Sep 1 — BUY (backfilled 2026-09-11, see note)
+| Ticker | Side | Shares | Entry | Stop | Thesis | Target | R:R |
+|---|---|---|---|---|---|---|---|
+| XOM | Buy | 1000 | $162.91 | 10% trailing GTC (stop $150.63, hwm $167.37 as of 9/11) | Not on file — no pre-market/market-open/research-log entry exists for 9/1 | n/a | n/a |
+
+**Note:** Fresh XOM re-entry, filled 2026-09-01 13:43 UTC at $162.90998 (market order, 1000 sh), with a new 10% GTC trailing stop attached the same session. Backfilled from live order history during this 2026-09-11 EOD run.
+
+### Sep 11 — SCHEDULED-RUN RELIABILITY GAP (flagged during EOD reconciliation)
+**No memory-file activity (TRADE-LOG, RESEARCH-LOG, or any scheduled-run commit) exists between the last logged entry on 2026-07-24 and today, 2026-09-11 — a 7-week gap.** During that window Alpaca live order history shows a full round-trip that was never logged: the Jul 15 XOM position was stopped out on 2026-08-27 (+8.32% realized) and a new 1000-share XOM position was opened on 2026-09-01 at $162.91 with a fresh 10% trailing stop, still open today. Neither the exit, the re-entry thesis, nor ~44 trading days of pre-market/market-open/midday checks were committed to this repo. This is the same class of failure flagged on 2026-07-20 and 2026-07-24 (scheduled workflows not running or not persisting), now recurring at much larger scale — operator should verify the scheduling/commit pipeline for the pre-market, market-open, and midday routines.
+
+### Sep 11 — EOD Snapshot (Day 44, Friday)
+**Portfolio:** $1,012,859.24 | **Cash:** $846,719.24 (83.6%) | **Day P&L:** +$910.00 (+0.09%) | **Phase P&L:** +$12,859.24 (+1.29%)
+
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|
+| XOM | 1000 | $162.91 | $166.14 | +0.55% | +$3,230.02 (+1.98%) | $150.63 GTC trailing 10% (hwm $167.37) |
+
+**Notes:** Day P&L computed from Alpaca's own last_equity ($1,011,949.24, balance as of 9/10) since the log's last real snapshot predates today by 7 weeks — see the reliability-gap entry above. No trades today; the sole open order is the existing GTC trailing stop on the 1000-share XOM position (unchanged status, hwm $167.37, stop $150.63). Trades this week (Mon 9/7-today): 0/3. Portfolio sits at 16.4% deployed vs. the 75-85% target, well under target — consistent with the pattern already flagged before the gap, now compounded by seven weeks with no fresh research or candidate sourcing on file. Priority for the next session: confirm scheduled runs are executing and committing again, and resume active research given the prolonged under-deployment.

@@ -46,3 +46,15 @@ No new trades. 1 open position (XOM), thesis intact, GTC trailing stop active (s
 | XOM | 800 | $144.77 | $151.80 | +2.32% | +$5,624.00 (+4.86%) | $136.58 GTC trailing 10% (hwm $151.76) |
 
 **Notes:** Quiet no-trade day, as previewed in the market-open check. XOM continued its run, up 2.3% intraday to $151.80, pushing the trailing stop's high-water mark to $151.76 and the stop itself up to $136.58 — the position is now up nearly 5% unrealized. Portfolio gained $2,680 (+0.27%) on the day, all from XOM's move; cash sat untouched at $884,184 (87.9%). Zero trades today, zero trades this week (0/3), and deployment remains stuck at ~12% vs. the 75-85% target for a third straight session — the bot continues to wait for a dated catalyst outside the weak Tech rally rather than force a trade.
+
+### RELIABILITY GAP: no scheduled runs 2026-07-25 through 2026-09-10 (backfilled 2026-09-11)
+**No RESEARCH-LOG or TRADE-LOG entries exist for this ~7-week span — every scheduled workflow (market-open, midday, EOD, weekly-review) appears to have silently stopped firing.** Real trades still executed on Alpaca during the gap (GTC stop orders live server-side, independent of this repo), reconstructed from Alpaca order history since no research/decision rationale was ever logged:
+
+| Date | Action | Detail |
+|---|---|---|
+| Aug 19 | Stop replaced | Original 800sh 10% trailing stop (hwm $166.74, ~+15.2% from $144.77 entry) canceled and replaced with a tighter 7% trailing stop — consistent with strategy rule "tighten to 7% at +15%," but no log entry recorded the trigger or the action |
+| Aug 27 | SELL (stop-out) | 800 XOM filled via 7% GTC trailing stop @ $156.81 (hwm $168.64). Closed the Jul 15 position for **+$9,632, +8.32%** realized gain. Fully closed the account to cash-only. |
+| Sep 1 | BUY | 1000 XOM @ $162.91 (market order) — new position, no research/thesis on file |
+| Sep 1 | Stop placed | 1000sh 10% GTC trailing stop attached same session (trail_percent 10, then-hwm ~$162.91) |
+
+**Root cause: unknown — not investigated further here.** Flagging as a critical operational failure: the account was unmonitored and undocumented for 7 weeks while holding a live position; the stop-loss/tighten mechanism happened to work correctly and the round-trip was profitable, but that is luck of market action, not evidence the monitoring is fixed. Operator should check whether the scheduled routines (cron/session triggers) are actually still configured and firing before trusting future scheduled runs.

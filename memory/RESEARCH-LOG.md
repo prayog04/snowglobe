@@ -255,3 +255,45 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-09-11 — Pre-market Research
+
+### RELIABILITY GAP FLAGGED
+No RESEARCH-LOG or TRADE-LOG entries exist between 2026-07-24 and today (~7 weeks). Every scheduled workflow appears to have silently stopped firing over that span. Real trades still occurred on Alpaca in the gap (GTC stop mechanics work server-side, independent of this repo) — reconstructed from Alpaca order history and backfilled into TRADE-LOG.md today:
+- Aug 19: original 800sh 10% trailing stop (hwm $166.74, ~+15.2%) canceled/replaced with a 7% trailing stop per the tighten-at-+15% rule
+- Aug 27: stopped out — 800 XOM sold @ $156.81 (hwm $168.64), closing the Jul 15 entry for **+8.32% realized**
+- Sep 1: fresh entry — 1000 XOM bought @ $162.91, new 10% GTC trailing stop attached same session
+No research rationale exists on file for the Sep 1 re-entry decision. Operator should verify the scheduled trigger/cron for market-open, midday, EOD and pre-market routines is actually still configured — this session cannot diagnose the cause from inside the sandbox.
+
+### Account
+- Equity: $1,010,669.24
+- Cash: $846,719.24
+- Buying power: $3,845,936.96 (margin, 4x)
+- Positions: 1 (XOM, 1000 sh @ $162.91 avg), current $163.95, unrealized +$1,040 (+0.64%) — market value $163,950 = **16.2%** of equity, still well below the 75-85% deployment target
+- GTC trailing stop live: 10% trail, hwm $167.37, stop $150.633 (status "new", unfilled)
+- Daytrade count: not reported by API (0 day trades taken)
+- Trades this week: 0 (last trade was Sep 1, over a week ago)
+
+### Market Context
+- WTI ~$100-104, Brent ~$105-108 — oil has broken above $100/bbl this week, sharpest rally since mid-July; sources cite Iran/Israel strikes resuming (Strait of Hormuz risk) plus hot PPI print
+- S&P 500 futures: ~7,600, roughly -0.5% premarket ahead of CPI
+- VIX: ~16.5-17.7, moderate — not signaling elevated fear despite the oil spike
+- Today's catalysts: **August CPI at 8:30am ET is the day's central event** — last major inflation read before the Sep 15-16 FOMC meeting; yesterday's PPI ran hot (core PPI +5.4% YoY vs +4.8% prior), which already pushed rate-hike-odds repricing and knocked stocks lower alongside the oil spike
+- Earnings before open: Kroger (KR) is the only notable name; nothing in Energy/Materials/Staples lane
+- Economic calendar: CPI (Aug) + Real Earnings, 8:30am ET; next FOMC Sep 15-16; next jobs report Oct 2
+- Sector momentum YTD: Energy still #1 by a wide margin (+22% to +47% across sources, consistently far ahead of #2); Materials, Consumer Staples, Industrials next; Tech recovering (mixed, some sources now show it #2); Consumer Discretionary/Financials weakest
+- XOM (existing position): ~$164-165, incrementally positive — UBS reiterated Buy ($174 PT) on Papua LNG progress, Barclays Buy, Piper Sandler raised PT to $185; Tropical Storm Edouard approaching Gulf Coast but XOM/Motiva/TotalEnergies maintaining planned refinery production, no disruption reported
+
+### Trade Ideas
+1. No new name today — CPI at 8:30am ET is a binary macro event for the whole tape; strategy rule is to wait for print + reaction before entering anything, not trade blind into it. Revisit post-CPI if a dated catalyst clears the bar.
+2. XOM (existing) — thesis intact and strengthening on the sustained Energy-sector leadership (still #1 YTD by a wide margin) and constructive analyst commentary; no action needed, GTC 10% trailing stop live at $150.633 off $167.37 hwm, well clear of the +15%/+20% tighten thresholds from this entry.
+3. Materials — still a top-3 YTD sector, no company-specific dated catalyst today; watchlist only.
+
+### Risk Factors
+- CPI print in a few hours can move the whole market sharply either direction; do not react to overnight/premarket noise before the number lands
+- Oil's break above $100 is double-edged: further Iran/Hormuz escalation extends the Energy tailwind, but any de-escalation headline reverses it fast — same risk pattern that hit this account in July
+- 7-week logging blackout (see above) is a real operational risk independent of today's market call — until confirmed fixed, treat any "current state" read from this repo with extra caution and always verify against live Alpaca data first (as done today)
+- Deployment still only 16.2% of equity vs. 75-85% target with a single position — a chronic pattern predating and surviving the blackout
+
+### Decision
+HOLD — no new trades today. CPI at 8:30am ET is the whole session's catalyst; strategy discipline says wait for the print and reaction rather than position ahead of it. XOM position intact, stop active and appropriately placed relative to entry. Top priority for the next session, separate from any trade call: confirm with the operator whether the scheduled workflows are actually running again, since this account went 7 weeks unmonitored by this bot despite two real, unlogged trades occurring in that window.

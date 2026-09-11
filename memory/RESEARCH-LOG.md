@@ -255,3 +255,36 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-09-11 — Pre-market Research (run inline during market-open; entry was missing)
+
+### Account (live Alpaca, ground truth — see TRADE-LOG backfill note for reconciliation)
+- Equity: $1,011,639.24 | Cash: $846,719.24 | Buying power: $3,848,652.96 (margin, 4x)
+- Positions: 1 (XOM, 1000 sh @ $162.90998 avg), market value $164,920 = **16.3%** of equity
+- XOM current price: $164.92, unrealized +$2,010.02 (+1.23%), GTC trailing-stop 10% live (stop $150.633, hwm $167.37) — well short of +15%/+20% tighten thresholds
+- Trades this week (since Mon 9/7): 0/3
+- Daytrade count: not reported by API
+
+### Reliability note
+No RESEARCH-LOG or TRADE-LOG entry exists between 2026-07-24 and today. Live order history shows the original XOM position was stopped out 8/27 (+8.32% realized) and a new 1000sh XOM position was re-entered 9/1 — neither logged. Backfilled into TRADE-LOG this session from Alpaca order history; see that file's 8/27/9/1 entries for detail. Treating live Alpaca account/position data as ground truth over the stale log.
+
+### Market Context (Perplexity — several items unverified/stale, flagged)
+- S&P 500 closed -0.58% Thursday 9/10 (Dow -0.60%, Nasdaq -1.08%) — broad soft session into today
+- VIX level not reliably extracted from search results today — treat as unknown
+- No verified YTD sector-momentum leaderboard obtained — could not confirm whether Energy/Materials/Staples framework still holds; treat prior (7/24) framework as stale after a 7-week gap
+- Today's scheduled data: US core CPI MoM (Aug) — still pending at time of this check, WASDE report, Baker Hughes rig count, Michigan Consumer Expectations (prelim, Sep); no FOMC today
+- XOM-specific: Q2 2026 earnings already reported (~7/31, net income $14.5B, beat prior year but missed on refinery maintenance per one source); Q3 dividend $1.03/sh paid 9/10; new Angola offshore discovery announced 9/9 (Block 15, with ANPG) — incremental positive but not a fresh trading catalyst for adding size; no other thesis-breaking news
+
+### Trade Ideas
+1. No new name today — sector-momentum framework is unverified/stale after the 7-week research gap, and no company-specific dated catalyst was confirmed for any candidate. Not forcing a trade on unverified inputs, consistent with prior sessions' approach to unreliable data (7/24).
+2. Today's pending core CPI print carries near-term macro risk (broad market already soft into today per Thursday's close) — not a day to add a new position ahead of the number.
+3. XOM (existing, re-entered 9/1): thesis and stop intact; Angola discovery is a mild positive, does not change position sizing today.
+
+### Risk Factors
+- 7-week logging/reliability gap (7/24–9/11) is now a serious, recurring operational issue, not a one-off — an actual trade (9/1 re-entry) went unlogged and this session cannot verify what rationale (if any) was used for it. Flagging for operator review of why scheduled runs stopped executing/logging.
+- Deployment at 16.3% vs. 75-85% target — still well under target, but this is a second, larger position size than the prior 12% baseline; do not force additional deployment just to close the gap without a real catalyst.
+- Unverified VIX/sector data today — same class of research-tooling limitation flagged repeatedly in prior sessions (7/22, 7/24); don't trust single-source figures blind.
+- Pending CPI print today adds intraday volatility risk to the existing XOM position; stop is the defense mechanism, no manual action needed unless price approaches $150.633.
+
+### Decision
+HOLD — no new trades today. Existing XOM position (1000 sh, re-entered 9/1) intact with active 10% GTC trailing stop well clear of any tighten threshold. No candidate clears the specific-catalyst + sector-momentum bar given unverified market data post-gap, and today's pending core CPI print argues against adding into the print. Top priority for next session: confirm why the bot went ~7 weeks without logging (and largely without running) between 7/24 and 9/1, since a real trade occurred without documented rationale.

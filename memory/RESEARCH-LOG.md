@@ -255,3 +255,22 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-09-11 — Midday Addendum (post 7-week logging gap)
+
+### Reconciliation finding
+- No memory-log entries (pre-market/market-open/midday/EOD/weekly) exist for 7/25 through 9/10, 2026 — roughly seven weeks with zero recorded scheduled runs. This appears to be the same "scheduled-workflow reliability gap" flagged on 7/20, now far more severe.
+- Live Alpaca state does not match the last logged state (7/24: XOM 800sh @ $144.77). Reconstructed from Alpaca closed-order history:
+  - **8/27**: original 800sh XOM position closed via its trailing stop (tightened to 7% at some unlogged point after crossing +15%), filled $156.81, hwm $168.64 → realized +$9,632.00 (+8.32%). Never logged.
+  - **9/1**: new 1000sh XOM position opened via plain market buy @ $162.90998. No RESEARCH-LOG or TRADE-LOG entry documents a thesis, catalyst, or sector rationale for this entry — violates the PROJECT-CONTEXT.md "document before execution" rule. Thesis cannot be reconstructed after the fact.
+  - Both events backfilled into TRADE-LOG.md today from live order history.
+- Cannot determine trades-used-this-week reliably given the gap; needs re-baselining next pre-market session.
+
+### Today's position check
+- XOM: 1000sh @ $162.90998, quote ask $165.99 / bid $165.56 (unrealized ~+1.6-1.9%), 10% GTC trailing stop intact (stop $150.633, hwm $167.37). Well inside both -7% cut and +15%/+20% tighten thresholds — no stop action taken.
+- No thesis to check for a break (see above) — treating as HOLD by default since there is no documented reason to exit either, not because the thesis was verified.
+- Account: equity $1,012,209.24, cash $846,719.24, deployed ~16.3% vs. 75-85% target — still meaningfully under-deployed.
+- No Perplexity research run today: nothing moving sharply/unexplained: intraday move is small and within normal range for the existing position.
+
+### Decision
+HOLD — no new trades, no stop changes. Primary output of this session is the backfill/reconciliation above, escalated to the operator via ClickUp. Next pre-market session should: (1) re-baseline trades-this-week count, (2) retroactively document a thesis (or decide to exit) for the undocumented 9/1 XOM re-entry, (3) investigate why no scheduled runs were recorded for ~7 weeks while live trading continued.

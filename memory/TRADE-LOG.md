@@ -46,3 +46,20 @@ No new trades. 1 open position (XOM), thesis intact, GTC trailing stop active (s
 | XOM | 800 | $144.77 | $151.80 | +2.32% | +$5,624.00 (+4.86%) | $136.58 GTC trailing 10% (hwm $151.76) |
 
 **Notes:** Quiet no-trade day, as previewed in the market-open check. XOM continued its run, up 2.3% intraday to $151.80, pushing the trailing stop's high-water mark to $151.76 and the stop itself up to $136.58 — the position is now up nearly 5% unrealized. Portfolio gained $2,680 (+0.27%) on the day, all from XOM's move; cash sat untouched at $884,184 (87.9%). Zero trades today, zero trades this week (0/3), and deployment remains stuck at ~12% vs. the 75-85% target for a third straight session — the bot continues to wait for a dated catalyst outside the weak Tech rally rather than force a trade.
+
+### Aug 27 — SELL (backfilled 2026-09-11, see note)
+| Ticker | Side | Shares | Exit | Realized P&L | Reason |
+|---|---|---|---|---|---|
+| XOM | Sell | 800 | $156.81 | +$9,632.00 (+8.32%) | 7% GTC trailing stop triggered (hwm $168.64) |
+
+**Note:** Original XOM position (800sh @ $144.77, opened 7/15) ran past the +15% tighten threshold and its trail was tightened to 7% at some point between 7/24 and 8/27 — neither the tighten action nor this exit fill was ever logged. Backfilled from live Alpaca closed-order history during the 2026-09-11 midday run. This is the same class of scheduled-workflow reliability gap flagged on 7/20, now much larger: **no memory-log entries exist at all for 7/25 through 9/10** (~7 weeks, 0 pre-market/market-open/midday/EOD/weekly entries), despite live trading activity continuing in that window.
+
+### Sep 1 — BUY (backfilled 2026-09-11, see note)
+| Ticker | Side | Shares | Entry | Stop | Thesis | Target | R:R |
+|---|---|---|---|---|---|---|---|
+| XOM | Buy | 1000 | $162.90998 | 10% trailing GTC (stop $150.633, hwm $167.37 as of 9/11) | **UNDOCUMENTED** — no RESEARCH-LOG entry exists for this date or any date in the 7/25-9/10 gap | — | — |
+
+**Note:** Plain market buy, no logged catalyst, sector rationale, or target — violates the PROJECT-CONTEXT.md rule "every trade must be documented BEFORE execution." Backfilled from live Alpaca closed-order history during the 2026-09-11 midday run; the original thesis cannot be reconstructed after the fact. Flagged to operator via ClickUp.
+
+### Sep 11 — Midday scan
+No new trades, no stop changes. 1 open position (XOM, 1000sh @ $162.90998, current ~$165.7-166.0, unrealized ~+1.6-1.9%) — well inside both the -7% cut threshold and the +15%/+20% tighten thresholds, so no action required under the rulebook. Existing 10% GTC trailing stop intact (stop $150.633, hwm $167.37). Cannot perform a real thesis-break check (Step 5) since the Sep 1 entry has no recorded thesis to check against — treating as HOLD by default rather than forcing an exit with no documented reason either way. Equity $1,012,209.24, cash $846,719.24, deployed ~16.3% of equity vs. 75-85% target. Primary finding this session: reconstructed and backfilled the entire 7/25-9/10 logging gap (1 exit + 1 entry, both previously unlogged) from live Alpaca order history — see RESEARCH-LOG 2026-09-11 addendum. Trades-this-week count cannot be reliably determined from memory alone due to the gap; flagging for next pre-market session to re-baseline.

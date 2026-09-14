@@ -255,3 +255,17 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-09-14 — Midday addendum: 7.5-week logging gap discovered, trade history backfilled
+
+No pre-market/market-open entry exists for today (or any day since 2026-07-24) — this midday scan is the first scheduled run to commit to this repo since then. Pulled Alpaca order history to reconstruct what actually happened in the gap; full detail logged in TRADE-LOG.md under "LOGGING GAP: 2026-07-24 → 2026-09-14". Summary:
+
+- **2026-08-19:** Trail correctly tightened 10%→7% at the +15% unrealized threshold (Rule 6) — mechanism worked, just undocumented.
+- **2026-08-27:** Original XOM position (800 sh @ $144.77) stopped out via the 7% trail at $156.81 — realized +$9,632.00 (+8.31%). Clean win, mechanical exit, never logged.
+- **2026-09-01:** Re-entered XOM, 1000 sh @ $162.90998, fresh 10% GTC trailing stop placed same session. **No documented thesis or catalyst exists for this trade** — RESEARCH-LOG has no entry for 8/28 through 9/1.
+- **2026-09-14 (today):** Position unchanged since 9/1 entry: current $164.30, unrealized +0.85%, stop live at $152.505 (hwm $169.45). No cut/tighten trigger. No sharp/unexplained intraday move — skipping Perplexity research this scan.
+
+**This is now the third documented instance** of scheduled workflows failing to commit logs (after the 7/14–7/19 and 7/23 gaps), and by far the largest — 7.5 weeks with zero RESEARCH-LOG or TRADE-LOG entries despite the account executing a full profitable round-trip in that window. The trade logic itself ran correctly (entries, stop-tightening, stop-loss exit all followed the rulebook), which suggests the scheduled trading runs executed but their git commit/push step did not — a persistence failure, not a strategy failure. **Recommend operator investigate why scheduled runs stopped persisting to git for this stretch**, and treat the 9/1 XOM re-entry as needing a retroactive thesis review at the next pre-market session since none is on file.
+
+### Decision
+HOLD — no new trades this scan. Backfilled missing trade history only; flagging the persistence gap as the priority item for operator review.

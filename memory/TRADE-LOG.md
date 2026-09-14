@@ -46,3 +46,39 @@ No new trades. 1 open position (XOM), thesis intact, GTC trailing stop active (s
 | XOM | 800 | $144.77 | $151.80 | +2.32% | +$5,624.00 (+4.86%) | $136.58 GTC trailing 10% (hwm $151.76) |
 
 **Notes:** Quiet no-trade day, as previewed in the market-open check. XOM continued its run, up 2.3% intraday to $151.80, pushing the trailing stop's high-water mark to $151.76 and the stop itself up to $136.58 — the position is now up nearly 5% unrealized. Portfolio gained $2,680 (+0.27%) on the day, all from XOM's move; cash sat untouched at $884,184 (87.9%). Zero trades today, zero trades this week (0/3), and deployment remains stuck at ~12% vs. the 75-85% target for a third straight session — the bot continues to wait for a dated catalyst outside the weak Tech rally rather than force a trade.
+
+---
+
+## ⚠️ LOGGING GAP: 2026-07-24 → 2026-09-14 (~7.5 weeks, no scheduled runs committed)
+
+No market-open/midday/EOD/research entries exist for this entire stretch, yet Alpaca order history shows the account kept trading correctly per the strategy rules. Backfilled below from live Alpaca order history during the 2026-09-14 midday scan. **This is a third and far more severe instance of the reliability gap first flagged 2026-07-20 and 2026-07-24** — scheduled workflows stopped committing to this repo for weeks while real (paper) trades executed with zero documented thesis or review.
+
+### Aug 19 — Trail tightened 10% → 7% (backfilled 2026-09-14)
+| Ticker | Action | Trigger | Old Stop | New Stop |
+|---|---|---|---|---|
+| XOM | Tighten trail | Position hit +15.2% unrealized (hwm $166.74 vs $144.77 entry) | 10% trailing (hwm $166.74, stop ~$150.07) | 7% trailing (order e3db5144, hwm growing from $166.74) |
+
+**Note:** Correctly executed per Rule 6 (tighten to 7% at +15%). No corresponding RESEARCH-LOG or TRADE-LOG entry exists — discovered only via Alpaca order history (original 10% order `c8388a7a` canceled 2026-08-19T13:39:15Z, replacement 7% order `e3db5144` submitted same second).
+
+### Aug 27 — SELL (stopped out) (backfilled 2026-09-14)
+| Ticker | Side | Shares | Entry | Exit | Realized P&L | Reason |
+|---|---|---|---|---|---|---|
+| XOM | Sell (trailing stop fill) | 800 | $144.77 | $156.81 | +$9,632.00 (+8.31%) | 7% GTC trailing stop triggered (hwm $168.64 → stop $156.8352, filled $156.81) |
+
+**Note:** Full close of the original Jul 15 position via the tightened trailing stop — a clean, profitable exit per the mechanical stop rule, working exactly as designed. Never logged. Position sat flat (0 holdings) from 2026-08-27 to 2026-09-01.
+
+### Sep 1 — BUY (backfilled 2026-09-14)
+| Ticker | Side | Shares | Entry | Stop | Thesis | Target | R:R |
+|---|---|---|---|---|---|---|---|
+| XOM | Buy | 1000 | $162.90998 | 10% GTC trailing (order `240c38d4`, stop set same session) | **UNDOCUMENTED — no RESEARCH-LOG entry exists for 8/28-9/1; catalyst/thesis unknown** | — | — |
+
+**Note:** Re-entry into XOM after the Aug 27 stop-out, same day-of-week pattern (market buy + same-session GTC trailing stop) as the original Jul 15 entry, suggesting the scheduled market-open/pre-market workflow did run and execute the trade logic correctly — it just never committed its log/research output to this repo. **Flagged for operator: verify whether pre-market research actually ran for 9/1 (check ClickUp history / other storage) since no rationale is recoverable from git.**
+
+### Sep 14 — Midday scan
+No new action. Current state pulled live from Alpaca:
+- **Position:** XOM, 1000 sh @ avg $162.90998, current $164.30, unrealized +$1,390.02 (+0.85%) — well inside all thresholds (no -7% cut, no +15%/+20% tighten; today's -1.02% intraday move is normal noise, not a thesis break)
+- **Stop:** GTC trailing 10% live (order `240c38d4`, stop $152.505, hwm $169.45) — untouched, correctly below price with room
+- **Account:** Equity $1,011,169.24 (+1.12% since launch), cash $846,719.24 (83.7%), deployed 16.3% (1 of 5-6 target positions) — under-deployed, consistent with the pre-gap pattern
+- No losers to cut, no tighten trigger, no sharp/unexplained move warranting Perplexity research today.
+
+**Action taken this session:** backfilled the entire Aug 19 – Sep 1 trade history above from Alpaca order history (see gap note). No live orders were placed or canceled by this session — informational backfill only.

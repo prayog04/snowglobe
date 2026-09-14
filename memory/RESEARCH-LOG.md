@@ -255,3 +255,45 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-09-14 — Pre-market Research
+
+### ⚠️ Logging Gap (7 weeks)
+No RESEARCH-LOG or TRADE-LOG entry exists between 2026-07-24 and today — this scheduled workflow appears not to have run for ~7 weeks. Live Alpaca data shows account activity happened in that window with no corresponding log:
+- XOM position grew from 800 sh @ $144.77 avg (7/24) to **1,000 sh @ $162.90998 avg** now — 200 shares bought at an unlogged price/date, blending the cost basis. No thesis, entry, or stop rationale on file for this add.
+- The GTC trailing-stop order was replaced: current order created 2026-09-01, last updated 2026-09-10, trail 10%, hwm $167.37, stop $150.633 (the pre-gap stop referenced $142.71/hwm $158.57 on the old 800-share cost basis).
+- Cannot reconstruct the missing add's rationale from data on hand — flagging for manual review rather than backfilling a guessed thesis.
+
+### Account (live Alpaca, 2026-09-14)
+- Equity: $1,015,019.24
+- Cash: $846,719.24
+- Buying power: $3,858,116.96 (margin, 4x)
+- Positions: 1 (XOM, 1,000 sh @ $162.90998 avg, current $168.30), market value $168,300 = **16.6%** of equity — still well below 75-85% target
+- Unrealized P&L: +$5,390 (+3.31%); today's intraday: +$2,310 (+1.39%)
+- Open orders: 1 GTC trailing-stop sell, 1,000 sh, trail 10%, hwm $167.37, stop $150.633
+- Daytrade count: not reported by API (0 day trades taken)
+- Trades this week: unknown — cannot reliably count "this week" given the 7-week logging gap; treat weekly counter as reset pending review
+
+### Market Context
+- WTI ~$100-103 (+2-3% today), Brent ~$104-108 (+3%) — continuing a multi-week rally; oilprice.com flags Houthi strikes threatening Saudi exports, Brent briefly near $105 with Mideast crude spiking toward $120 (9/9 headline) — geopolitical risk premium still building, directly supportive of the XOM thesis
+- S&P 500 futures: mixed across sources, roughly flat to -0.8% premarket (~7,600-7,660); one source notes "futures fading ahead of the FOMC"
+- VIX: ~15.8-18.0 depending on snapshot/timestamp — moderate, not elevated
+- Top catalysts: no major single-name catalyst in our lane; Fed decision Wednesday 9/16 is the dominant setup for the week; oil/Hormuz-Houthi geopolitics remains the active energy-sector driver
+- Earnings before open: CBRL, HAIN, CODA, RFIL — none in Energy/Materials/Staples
+- Economic calendar: nothing scheduled today (MarketWatch: "No events scheduled"); August CPI (9/11) and PPI (9/10) already printed; next jobs report 10/2; **FOMC rate decision Wednesday 9/16** — 2 trading days out
+- Sector momentum YTD: Energy #1 and widening (+42-48% YTD per multiple sources, up sharply from the +16-27% range logged 7/24), Materials #2 (+14-17%), Industrials #3 (+12-14%); Financials (+5%) and Consumer Discretionary lagging
+- XOM (existing position): ~$166-168, flat to slightly up; Barclays reaffirmed Buy; Pioneer (XOM subsidiary) launched tender offers for 2030/2031 notes (balance-sheet management, not thesis-relevant); OPEC cut global oil-demand growth forecast (mild headwind, contrasts with the supply-risk rally); Q2 2026 earnings already reported ($14.5B net income, $17.2B FCF) — no new thesis-breaking news
+
+### Trade Ideas
+1. No new name today — Energy thesis (XOM) continues to strengthen on the supply-risk rally, but no second Energy name has a dated, company-specific catalyst today; FOMC Wednesday is 2 days out and argues for not adding new risk into a rate decision.
+2. Materials — #2 YTD sector, no company-specific dated catalyst today; watchlist only.
+3. None of today's confirmed earnings (CBRL, HAIN, CODA, RFIL) sit in our momentum sectors — skip.
+
+### Risk Factors
+- **Process risk (highest priority today):** 7-week logging gap + an unlogged trade that changed the position's cost basis and stop level is a governance failure, not a market risk — needs operator review of what ran/didn't run on schedule between 7/24 and 9/14, and confirmation the 200-share XOM add was an intentional, rule-compliant trade (single position still under the 20% max at 16.6%, but the add's entry/stop process is undocumented)
+- FOMC Wednesday 9/16 — positioning risk into the decision; avoid new adds until past it
+- Oil rally is a double-edged sword for XOM: further Mideast escalation extends the tailwind, but any de-escalation headline (as happened in July) can reverse it quickly — the GTC trailing stop ($150.633, trail 10%) is the defense, no manual action needed unless price approaches it
+- Still only 1 of 5-6 target positions, 16.6% deployed vs. 75-85% target
+
+### Decision
+HOLD — no new trades today. XOM thesis intact (unrealized +3.31% on the new blended cost basis), GTC trailing stop active and appropriately trailing the current high. FOMC is 2 days out — not the time to add new risk. Top priority for next session is resolving the 7-week logging gap and confirming the unlogged 200-share XOM add was intentional and rule-compliant.

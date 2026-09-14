@@ -255,3 +255,31 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-09-14 — Market-Open Check
+
+### ⚠️ CRITICAL: main branch frozen since 7/24, ~90 PRs unmerged
+This branch was cut from `main`, which has not merged a PR since 7/24 (PR #21). Every scheduled run since then (pre-market/market-open/midday/EOD/weekly-review, ~90+ sessions) opened its own PR against stale `main` and none were merged — GitHub shows PRs #59 through #158 all still OPEN. Today's pre-market research already ran on a sibling unmerged branch (PR #158, `claude/confident-hypatia-iz0h1y`) — reusing its findings below rather than re-querying Perplexity. **This is a governance/CI issue (PRs not merging), not a trading issue — needs operator attention on the merge process itself.**
+
+### Account (live Alpaca, 2026-09-14 ~9:40am ET)
+- Equity: $1,015,919.24 | Cash: $846,719.24 | Buying power: $3,860,636.96 (margin, 4x)
+- Positions: 1 (XOM, 1,000 sh @ $162.90998 avg), market value $169,200 = **16.7%** of equity — still well under 75-85% target
+- Unrealized P&L: +$6,250.02 (+3.84%)
+- Open orders: 1 GTC trailing-stop sell, 1,000 sh, trail 10%, hwm $169.45, stop $152.505
+- Quote: bid $168.87 / ask $177.45 (wide spread, ~9:40am ET print)
+
+### Market Context (per PR #158 pre-market research, same day)
+- Energy #1 YTD sector (+42-48%) on Mideast/Houthi supply-risk rally, directly supportive of XOM thesis
+- **FOMC rate decision Wednesday 9/16 — 2 trading days out** — argues against adding new risk now
+- No dated, company-specific catalyst for a second name today (today's confirmed earnings — CBRL, HAIN, CODA, RFIL — are outside Energy/Materials/Staples)
+
+### Trade Ideas
+No new name today — same reasoning as PR #158: FOMC is 2 days out, no second Energy name has an independent dated catalyst, Materials remains watchlist-only.
+
+### Risk Factors
+- Merge-pipeline failure (above) is the top risk today, not the market — audit trail is fragmented across ~90 open PRs instead of one linear history
+- FOMC 9/16 positioning risk
+- Still only 1 of 5-6 target positions, 16.7% deployed vs. 75-85% target
+
+### Decision
+HOLD — no new trades. XOM thesis intact (+3.84% unrealized), GTC trailing stop active and appropriately trailing ($152.505 stop, $169.45 hwm). Not adding risk 2 days ahead of FOMC. Flagging the unmerged-PR backlog as the priority item for operator review, separate from and more urgent than the trading decision.

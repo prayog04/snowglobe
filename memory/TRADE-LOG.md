@@ -46,3 +46,8 @@ No new trades. 1 open position (XOM), thesis intact, GTC trailing stop active (s
 | XOM | 800 | $144.77 | $151.80 | +2.32% | +$5,624.00 (+4.86%) | $136.58 GTC trailing 10% (hwm $151.76) |
 
 **Notes:** Quiet no-trade day, as previewed in the market-open check. XOM continued its run, up 2.3% intraday to $151.80, pushing the trailing stop's high-water mark to $151.76 and the stop itself up to $136.58 — the position is now up nearly 5% unrealized. Portfolio gained $2,680 (+0.27%) on the day, all from XOM's move; cash sat untouched at $884,184 (87.9%). Zero trades today, zero trades this week (0/3), and deployment remains stuck at ~12% vs. the 75-85% target for a third straight session — the bot continues to wait for a dated catalyst outside the weak Tech rally rather than force a trade.
+
+### Sep 14 — Market-open check
+No new trades. 1 open position (XOM, 1,000 sh @ $162.91 avg, live $169.16, +3.84% unrealized), GTC trailing stop active (stop $152.505, hwm $169.45). HOLD — FOMC decision is 2 trading days out (9/16), no dated catalyst for a second name; see RESEARCH-LOG 2026-09-14 for full context.
+
+**⚠️ Operational flag:** `main` has not merged a PR since 7/24 (PR #21). ~90 scheduled-run PRs (#59–#158) covering pre-market/market-open/midday/EOD/weekly-review from 7/25 through today are all still open and unmerged against stale `main`. This branch (and this entry) is itself cut from that stale base — it does not fix the backlog, only documents today's decision on top of live Alpaca truth. Needs operator decision on the merge process before the memory-log audit trail can be made linear again.

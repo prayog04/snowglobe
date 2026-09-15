@@ -255,3 +255,39 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-09-15 — Pre-market Research
+
+### Account
+- Equity: $1,012,409.24
+- Cash: $846,719.24
+- Buying power: $3,850,808.96 (margin, 4x)
+- Positions: 1 (XOM, 1000 sh @ $162.91 avg, current $165.69), unrealized +$2,780 (+1.71%), deployed $165,690 = **16.4%** of equity — still well below 75-85% target
+- Daytrade count: not reported by API (0 day trades taken)
+- Trades this week (since Mon 9/14): 0/3
+- GTC trailing-stop 10% live: stop $152.51, hwm $169.45 (price has pulled back ~2.2% off the hwm; well short of the +15%/+20% tighten thresholds, no stop action needed)
+
+### Market Context
+- WTI ~$100-103 (Brent ~$105-107) — sharp escalation, oil up ~8% this week on continued US-Iran/Strait of Hormuz tension; crossed $100 for the first time in ~4 months
+- S&P 500 futures: down ~0.3-0.6% premarket (~7,600-7,670 depending on feed), Nasdaq 100 futures down ~0.6% — soft tone ahead of the Fed
+- VIX: ~17.1-17.6, up from last week's mid-teens but still moderate
+- Today's catalysts: **FOMC meeting Day 1 (decision tomorrow, 9/16 2pm ET)** — market pricing described as "finely balanced," some sources flagging a real (not token) chance of a hike given hot recent CPI/PPI; this is the dominant macro driver into tomorrow. Also a CLARITY Act cloture vote in the Senate (crypto-relevant, not our lane)
+- Earnings before open: only small/illiquid names (FPS, VRA, BIOX, COE) — nothing in our Energy/Materials/Staples lane, not actionable
+- Economic calendar: CPI (9/11) and PPI (9/10) already printed and came in a touch hot (CPI +0.4% MoM/3.4% YoY, core PPI +0.3%); nothing scheduled today besides Fed Day 1; rate decision is tomorrow
+- Sector momentum YTD: Energy still the dominant #1 leader, roughly +30-46% YTD depending on source (XLE ~+42%); Materials a distant #2 (~+12-17%); Tech recovering some ground (sources conflict, +8% to +28%) but not confirmed as a new leadership shift
+- XOM (existing position): Q2 earnings beat reported 9/8 ($14.5B net income, $3.48 EPS); $1.03/share dividend paid 9/10; new Angola offshore discovery (positive); Joliet, IL refinery (264k bpd) taken offline after a Sunday power outage (headline noise, not thesis-breaking); stock near 52-week highs, up ~40% YTD, tracking the oil rally
+
+### Trade Ideas
+1. No new name today — Energy remains the only sector with a clear, dated, verifiable catalyst (the ongoing oil/Hormuz rally), but adding a second Energy position into a stretched, geopolitically-driven spike the session before FOMC does not clear the entry checklist's risk bar.
+2. Materials — still the distant #2 YTD sector, no company-specific dated catalyst today; watchlist only.
+3. No candidate anywhere clears "specific catalyst + sector momentum + 2:1 R:R" today; **FOMC decision lands tomorrow (9/16, 2pm ET)** — putting fresh capital to work into a "finely balanced" rate decision is exactly the kind of avoidable risk the strategy's patience rule exists for.
+
+### Risk Factors
+- **FOMC rate decision tomorrow (9/16)**: sources describe it as close to a coin-flip on a hike after hot CPI/PPI prints — this is the single biggest near-term risk to any new equity position, ours included; no new entries until the decision and market reaction are known
+- Oil/XOM: the Hormuz risk premium has been the entire thesis; a de-escalation headline could reverse the rally quickly (as happened once before, 7/24). XOM's 10% trailing stop (now at $152.51, hwm $169.45) is the built-in defense — no manual action needed unless price approaches it
+- Joliet refinery outage is a minor operational headline, not thesis-breaking, but worth a follow-up check next session
+- Deployment still low at 16.4% vs. 75-85% target — a chronic pattern, but not a reason to force a trade into FOMC
+- **Operational/data-integrity flag**: no RESEARCH-LOG or TRADE-LOG entries exist between 2026-07-24 and today (2026-09-15) — a 53-day gap with no evidence scheduled runs executed. Live Alpaca order history shows TWO material, unlogged trading events in that gap: the original XOM position (800sh @ $144.77) was stopped out via GTC trailing stop on 2026-08-27 at $156.81 (realized gain, thesis played out), and a fresh XOM position (1000sh @ $162.90998) was opened 2026-09-01 — neither has any corresponding RESEARCH-LOG rationale or TRADE-LOG entry. TRADE-LOG.md still shows the stale 800sh/$144.77 position and will mislead anyone reading it without cross-checking live Alpaca data. Flagging for review; recommend the next market-open/EOD run backfill TRADE-LOG with both missing events.
+
+### Decision
+HOLD — no new trades. XOM thesis intact (oil rally continuing, stop trailing safely below at $152.51); Energy remains the only sector with a real catalyst, but this is not a day to add exposure into a "finely balanced" FOMC decision landing tomorrow. Also flagging a serious operational gap: 53 days with no research/trade logging despite two real trades executing on the account (stop-out 8/27, re-entry 9/1) — sending a ClickUp alert given the severity.

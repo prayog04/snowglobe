@@ -46,3 +46,26 @@ No new trades. 1 open position (XOM), thesis intact, GTC trailing stop active (s
 | XOM | 800 | $144.77 | $151.80 | +2.32% | +$5,624.00 (+4.86%) | $136.58 GTC trailing 10% (hwm $151.76) |
 
 **Notes:** Quiet no-trade day, as previewed in the market-open check. XOM continued its run, up 2.3% intraday to $151.80, pushing the trailing stop's high-water mark to $151.76 and the stop itself up to $136.58 — the position is now up nearly 5% unrealized. Portfolio gained $2,680 (+0.27%) on the day, all from XOM's move; cash sat untouched at $884,184 (87.9%). Zero trades today, zero trades this week (0/3), and deployment remains stuck at ~12% vs. the 75-85% target for a third straight session — the bot continues to wait for a dated catalyst outside the weak Tech rally rather than force a trade.
+
+### Aug 27 — SELL (stop-out, backfilled 2026-09-15, see note)
+| Ticker | Side | Shares | Price | Reason |
+|---|---|---|---|---|
+| XOM | Sell | 800 | $156.81 | GTC trailing stop (10%) triggered automatically |
+
+**Note:** Closed the Jul 15 XOM position via its trailing stop. Realized P&L ~+$9,632 (+8.3%) on the 800sh lot. No research-log or market-open entry exists for this date — discovered via Alpaca closed-orders history during the 2026-09-15 EOD run, itself the first scheduled run since 2026-07-24 (a 53-day gap).
+
+### Sep 01 — BUY (backfilled 2026-09-15, see note)
+| Ticker | Side | Shares | Entry | Stop | Thesis | Target | R:R |
+|---|---|---|---|---|---|---|---|
+| XOM | Buy | 1000 | $162.90998 | 10% trailing GTC (stop $152.68, hwm $169.64 as of 9/15) | Not on file — no research-log or market-open entry exists for this date | — | — |
+
+**Note:** Re-entered XOM after the Aug 27 stop-out. Filled live on Alpaca (2026-09-01 13:43:59 UTC) with trailing stop placed same session, but neither was ever committed to this log. Backfilled from live order history during the 2026-09-15 EOD run. This is the third scheduled-workflow reliability gap on record (after 7/14-7/19 and 7/23) and by far the largest — flagging for urgent review of the scheduling/trigger setup.
+
+### Sep 15 — EOD Snapshot (Day 47, Tuesday)
+**Portfolio:** $1,015,939.24 | **Cash:** $846,719.24 (83.3%) | **Day P&L:** +$4,140.00 (+0.41%) | **Phase P&L:** +$15,939.24 (+1.59%)
+
+| Ticker | Shares | Entry | Close | Day Chg | Unrealized P&L | Stop |
+|---|---|---|---|---|---|---|
+| XOM | 1000 | $162.91 | $169.22 | +2.51% | +$6,310.02 (+3.87%) | $152.68 GTC trailing 10% (hwm $169.64) |
+
+**Notes:** Major logging gap — this is the first entry in this log (and in RESEARCH-LOG.md) since the Jul 24 market-open check; the scheduled workflow appears not to have run for ~53 days (Jul 25 - Sep 14). Two unlogged trades occurred during the blackout, reconstructed from Alpaca's closed-orders history and backfilled above: the original XOM lot (800sh @ $144.77) was stopped out at $156.81 on Aug 27 via its GTC trailing stop (realized ~+$9,632), then a fresh 1000sh XOM position was opened at $162.91 on Sep 1 with a new 10% GTC trailing stop — no thesis or research-log rationale exists for the re-entry. Today (Sep 15) had zero new orders; trades this week (since Mon Sep 14): 0/3. Current XOM position is up 3.87% unrealized ($6,310), stop trailing at $152.68 (hwm $169.64), well below the +15%/+20% tighten thresholds. Day P&L computed from Alpaca's own last_equity (Sep 14 close, $1,011,799.24) since no prior EOD snapshot exists to diff against. Flagging the 53-day operational gap as the top-priority issue — scheduled triggers need verification that they are actually firing going forward.

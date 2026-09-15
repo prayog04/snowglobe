@@ -46,3 +46,18 @@ No new trades. 1 open position (XOM), thesis intact, GTC trailing stop active (s
 | XOM | 800 | $144.77 | $151.80 | +2.32% | +$5,624.00 (+4.86%) | $136.58 GTC trailing 10% (hwm $151.76) |
 
 **Notes:** Quiet no-trade day, as previewed in the market-open check. XOM continued its run, up 2.3% intraday to $151.80, pushing the trailing stop's high-water mark to $151.76 and the stop itself up to $136.58 — the position is now up nearly 5% unrealized. Portfolio gained $2,680 (+0.27%) on the day, all from XOM's move; cash sat untouched at $884,184 (87.9%). Zero trades today, zero trades this week (0/3), and deployment remains stuck at ~12% vs. the 75-85% target for a third straight session — the bot continues to wait for a dated catalyst outside the weak Tech rally rather than force a trade.
+
+### Aug 27 — STOPPED OUT (backfilled 2026-09-15, see note)
+| Ticker | Side | Shares | Entry | Exit | P&L | Reason |
+|---|---|---|---|---|---|---|
+| XOM | Sell (stop) | 800 | $144.77 | $156.81 | +$9,632.00 (+8.32%) | 10% GTC trailing stop triggered |
+
+### Sep 1 — BUY (backfilled 2026-09-15, see note)
+| Ticker | Side | Shares | Entry | Stop | Thesis | Target | R:R |
+|---|---|---|---|---|---|---|---|
+| XOM | Buy | 1000 | $162.90998 | 10% trailing GTC (stop $152.505, hwm $169.45 as of 9/15) | Backfilled — no research rationale on file; entered during the unlogged gap | n/a (unlogged) | n/a |
+
+**Note:** No market-open, pre-market, or trade-log entries exist for 2026-07-25 through 2026-09-14 — a ~7-week scheduled-routine gap (last logged activity: 2026-07-24). Reconstructed both events from live Alpaca order history during the 2026-09-15 market-open run: the original 800sh XOM position (7/15 entry) was stopped out by its own 10% GTC trailing stop on 8/27 @ $156.81 avg (+8.32%), then a fresh 1000sh XOM position was opened 9/1 @ $162.90998 with a new 10% GTC trailing stop placed same-day. Operator notified of the reliability gap this session. See RESEARCH-LOG 2026-09-15 for full context.
+
+### Sep 15 — Market-open check
+No new trades. 1 open position (XOM, 1000sh @ $162.91 avg, current $167.55, +2.85% unrealized), GTC trailing stop active (stop $152.505, hwm $169.45). Trades this week: 0/3. See RESEARCH-LOG 2026-09-15 for full context — HOLD decision; FOMC decision lands tomorrow (9/16), no dated catalyst clears the bar for a new name today, and this is the first session back after the ~7-week logging gap. Deployment still 16.5% vs. 75-85% target — flagged as a post-FOMC decision point for next session.

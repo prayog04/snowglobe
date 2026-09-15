@@ -255,3 +255,24 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-09-15 — Midday Scan Addendum
+
+### Account
+- Equity: $1,015,454.24
+- Cash: $846,719.24
+- Positions: 1 (XOM, 1000 sh @ $162.90998 avg), deployed $168,735 = **16.6%** of equity — well below 75-85% target
+- Trailing stop: GTC 10%, stop $152.676, hwm $169.64; current price ~$168.76, unrealized +3.59%
+
+### Logging-Gap Discovery
+Cross-checked live Alpaca order history against TRADE-LOG/RESEARCH-LOG (both last updated Jul 24) and found two unlogged trades:
+- **Aug 19:** original 800 sh XOM position (bought Jul 15 @ $144.77) stopped out via the 10% GTC trailing stop at $156.81 — realized +$9,632 (+8.32%). Correctly executed per the stop mechanism; just never logged.
+- **Sep 1:** re-entered XOM, 1000 sh @ $162.90998, with a fresh 10% GTC trailing stop. No RESEARCH-LOG entry exists documenting the catalyst/thesis for this re-entry.
+
+No scheduled-workflow memory commits exist between Jul 24 and Sep 15 (~7 weeks) despite live trading activity occurring in that window (git log confirms last memory/ commit is 2026-07-24). This is a significant escalation of the smaller logging gaps flagged in July (7/14-7/19, 7/23) — the automation appears to have gone silent for close to two months while the account kept trading live. Backfilled the two missing trades into TRADE-LOG today; the Sep 1 entry's original thesis/catalyst is not recoverable from Alpaca order data and remains undocumented.
+
+### Today's Scan
+XOM +3.59% unrealized — below both the -7% cut threshold and the +15%/+20% tighten thresholds. No thesis-break evidence. No new trades, no stop changes.
+
+### Decision
+HOLD — no midday action needed on the position itself. Flagging the ~7-week scheduled-workflow gap as the priority item for operator review: need to confirm why pre-market/market-open/EOD/weekly-review routines stopped firing (or stopped persisting) after Jul 24, and backfill/reconcile any other untracked activity in that window.

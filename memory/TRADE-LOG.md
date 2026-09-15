@@ -46,3 +46,18 @@ No new trades. 1 open position (XOM), thesis intact, GTC trailing stop active (s
 | XOM | 800 | $144.77 | $151.80 | +2.32% | +$5,624.00 (+4.86%) | $136.58 GTC trailing 10% (hwm $151.76) |
 
 **Notes:** Quiet no-trade day, as previewed in the market-open check. XOM continued its run, up 2.3% intraday to $151.80, pushing the trailing stop's high-water mark to $151.76 and the stop itself up to $136.58 — the position is now up nearly 5% unrealized. Portfolio gained $2,680 (+0.27%) on the day, all from XOM's move; cash sat untouched at $884,184 (87.9%). Zero trades today, zero trades this week (0/3), and deployment remains stuck at ~12% vs. the 75-85% target for a third straight session — the bot continues to wait for a dated catalyst outside the weak Tech rally rather than force a trade.
+
+### Aug 19 — SELL (backfilled 2026-09-15, see note)
+| Ticker | Side | Shares | Exit | Realized P&L | Reason |
+|---|---|---|---|---|---|
+| XOM | Sell | 800 | $156.81 | +$9,632.00 (+8.32%) | 10% GTC trailing stop triggered |
+
+### Sep 1 — BUY (backfilled 2026-09-15, see note)
+| Ticker | Side | Shares | Entry | Stop | Thesis | Target | R:R |
+|---|---|---|---|---|---|---|---|
+| XOM | Buy | 1000 | $162.90998 | 10% trailing GTC (stop $152.676, hwm $169.64 as of 9/15) | Re-entry into existing Energy-sector thesis (no dated RESEARCH-LOG entry on file for this decision) | Not documented | Not documented |
+
+**Note:** Neither of these trades was logged when it happened — discovered 2026-09-15 during the midday scan by cross-referencing live Alpaca order history against this log, which had not been updated since Jul 24. This is a ~7-week scheduled-workflow reliability gap (no RESEARCH-LOG or TRADE-LOG entries Jul 25–Sep 14) on top of the earlier gaps already flagged in July. No research rationale exists on file for the Sep 1 re-entry decision. Flagging for operator review — see RESEARCH-LOG 2026-09-15 addendum.
+
+### Sep 15 — Midday scan
+No new trades. 1 open position (XOM, 1000 sh @ $162.90998, current ~$168.76, +3.59% unrealized), GTC trailing stop active (stop $152.676, hwm $169.64) — well short of the -7% cut threshold and the +15%/+20% tighten thresholds, no stop action needed. No thesis-break evidence found. Equity $1,015,454.24, cash $846,719.24 — only ~16.6% deployed vs. 75-85% target, still 1 of 5-6 max positions. See RESEARCH-LOG 2026-09-15 for the logging-gap writeup.

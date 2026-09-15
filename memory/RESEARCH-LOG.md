@@ -255,3 +255,42 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-09-15 — Pre-market Research (run inline during market-open; ~7-week logging gap since 2026-07-24)
+
+### Account
+- Equity: $1,014,269.24
+- Cash: $846,719.24
+- Buying power: $3,856,016.96 (margin, 4x)
+- Positions: 1 (XOM, 1000 sh), deployed $167,550 = **16.5%** of equity — well under the 75-85% target, now ~2 months into this gap
+- Daytrade count: not reported by API (0 day trades taken)
+- Trades this week (since Mon): 0/3 — last fill was 2026-09-01
+
+### Reliability Note — 7-week logging gap
+- No RESEARCH-LOG or TRADE-LOG entries and no commits exist between 2026-07-24 and today (git log confirms last merged activity was the 7/24 market-open HOLD). The scheduled routine did not run, or its output never landed, for ~7 weeks.
+- Live Alpaca order history reconstructs what actually happened in the gap, none of it logged at the time:
+  - 2026-08-27: original 800sh XOM position (entered 7/15 @ $144.77) stopped out via the 10% GTC trailing stop at $156.81 avg — realized gain ~+$9,632 (+8.32%). Stop worked exactly as designed with zero manual intervention.
+  - 2026-09-01: fresh entry, 1000sh XOM @ $162.90998 market, with a new 10% GTC trailing stop placed same-day (current stop $152.505, hwm $169.45). No research rationale for this entry is on file — backfilling from live order data only.
+- Correcting an earlier read of this position: it is a clean stop-out + full re-entry, not a partial add with a corrupted cost basis — the numbers reconcile exactly against Alpaca's fill history.
+- Flagging for operator: routine reliability over the past 2 months is broken and needs investigation outside this session.
+
+### Market Context
+- WTI ~$102-103/bbl, Brent ~$107/bbl — both well above the ~$85-95 range seen in the last logged session (7/24), consistent with the Energy rally continuing/extending over the gap
+- S&P 500 futures: ~7,640-7,668, down ~0.3-0.5% premarket
+- VIX: ~16.8-17.6, unremarkable/moderate
+- Today's dominant catalyst: **FOMC decision tomorrow, 2026-09-16** (Sept 15-16 meeting) — this is the single biggest near-term macro risk; August CPI/PPI and Sept 16 retail sales feed directly into it. Elevated Treasury yields and the oil rally are adding to rate-risk concerns.
+- Sector momentum YTD: Energy #1 (+46.4%), Technology #2 (+28.3%), Materials #3 (+12.2%); Consumer Discretionary weakest (-5.1%), Communication Services and Utilities also negative
+- Earnings before open: only a small-cap energy name (Forgent Power Solutions, unconfirmed liquidity/quality) found before-open today; no materials/staples names surfaced — nothing clears the entry bar
+- XOM (existing position): $167.55, near highs on the oil rally; Q2 beat, new Angola discovery, Papua LNG operatorship — no thesis-breaking news; "Hold" analyst rating is the only soft caveat
+
+### Trade Ideas
+1. No new name today — the only dated catalyst found (FPS, energy small-cap) is unverified/illiquid and not a fit; Materials/Staples have no company-specific trigger today.
+2. FOMC decision tomorrow (9/16) argues against opening fresh risk today regardless — better to see the decision and dot plot first, especially while re-establishing trustworthy logging after the gap.
+
+### Risk Factors
+- FOMC 9/16 is tomorrow — the dominant near-term risk; avoid adding new positions into it without a strong dated catalyst
+- Deployment stuck at 16.5% vs. 75-85% target — persistent since before the gap; needs an active decision, not deferral, but not by forcing a trade the day before a Fed decision
+- Logging/scheduling reliability: confirmed ~7-week gap in this routine; operator has been notified this session. Trade history before today should be treated as reconstructed-from-Alpaca, not originally logged, for the gap period.
+
+### Decision
+HOLD — no new trades today. XOM thesis intact (+2.85% unrealized off the 9/1 re-entry), 10% GTC trailing stop active well below current price. No candidate clears the specific-catalyst bar, and FOMC lands tomorrow — not the day to add fresh risk. Priority for next session: reassess deployment as a real decision point post-FOMC, and confirm the scheduled routine is running reliably again.

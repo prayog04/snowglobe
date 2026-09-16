@@ -255,3 +255,45 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-09-16 — Pre-market Research
+
+### Account
+- Equity: $1,014,659.24
+- Cash: $846,719.24
+- Buying power: $3,857,108.96 (margin, 4x)
+- Positions: 1 (XOM, 1000 sh), deployed $167,940 = **16.6%** of equity — still well under the 75-85% target
+- Daytrade count: not reported by API (0 day trades taken)
+- Trades this week (since Mon 9/14): 0/3
+- XOM: 1000sh @ $162.91 avg, current $167.94, unrealized +$5,030 (+3.09%), GTC trailing-stop 10% live (stop $152.68, hwm $169.64) — far below the +15%/+20% tighten thresholds, no stop action needed
+
+### ⚠️ Logging gap discovered (7/25 – 9/15, ~7.5 weeks)
+No RESEARCH-LOG or TRADE-LOG entries exist between 2026-07-24 and today — the scheduled workflows did not run (or did not write) for roughly 7.5 weeks. Live Alpaca order history reconstructs what actually happened, undocumented, in that window:
+- **2026-08-27**: original XOM position (800sh @ $144.77 avg) was stopped out in full at $156.81 via its 7%-trailing GTC stop (tightened from 10%→7% at some point after the +15% trigger, hwm $168.64 at fill) — realized gain ≈ **+$9,632 (+8.3%)**. The account sat 100% in cash briefly after this.
+- **2026-09-01**: new XOM position opened — bought 1000sh @ $162.90998 (market order), with a fresh 10% GTC trailing stop placed the same session (now at $152.68, hwm $169.64).
+- No research rationale, thesis, or trade-log entry exists for either the exit or the re-entry. This is a repeat of the same class of issue flagged 7/20 and 7/24 — this instance is far more severe (7.5 weeks silent vs. a few days).
+- **Not backfilling TRADE-LOG.md in this pre-market run** (out of scope per routine steps) — flagging here for the next market-open/EOD session to backfill both the 8/27 exit and 9/1 entry into TRADE-LOG.md.
+
+### Market Context
+- WTI ~$104-106/bbl, Brent ~$108-109/bbl — both notably elevated vs. the $71-88/$75-95 range seen in July; sources cite ongoing Middle East tensions as a driver. Oil has moved up substantially since our last logged session.
+- S&P 500 futures: mildly negative premarket, roughly -0.4% to -0.5% (E-mini ~7,653-7,664), one outlier source +0.15%
+- VIX: ~17.0-17.5, moderate, slightly elevated intraday
+- **Today's dominant catalyst: FOMC rate decision + press conference this afternoon** — markets focused on forward guidance more than the rate move itself. High-volatility event day.
+- Also on calendar: advance retail sales data. CPI already printed 9/11 (+0.4% m/m, +3.4% y/y — hot); August jobs report already out (unemployment 4.1%, payrolls +162k)
+- No clean before-open earnings calendar available for today (source data incomplete/unavailable)
+- Sector momentum YTD: **Energy #1 at +47.5%** (up sharply from the +16-27% range seen in July — continues to be the strongest sector by a wide margin), Technology #2 (+27.6%, a major reversal from lagging in July), Materials #3 (+11.9%). Laggards: Consumer Discretionary (-7.1%), Utilities (-3.2%), Communication Services (-3.1%)
+- XOM (existing position): $167.94, +1.73% on the day. News: Joliet, IL refinery (264,000 bpd) taken offline after a power outage on Sunday; pricing/results announced for Pioneer Natural Resources note tender offers (routine debt management); Q2 earnings recap ($14.5B / $3.48 EPS) resurfacing in coverage. No thesis-breaking news; Energy sector momentum remains dominant and intact.
+
+### Trade Ideas
+1. No new name today — FOMC decision this afternoon is a major volatility catalyst; opening a new position hours ahead of the Fed's guidance does not clear a disciplined entry bar. Wait for the decision and post-print reaction.
+2. Energy sector still dominant (+47.5% YTD) and XOM thesis intact — no second Energy name identified with an independent, dated catalyst today; watchlist only.
+3. Tech's sharp YTD reversal (#2 sector now, +27.6%) is notable but has no company-specific dated catalyst today and would require a first look at names before considering entry — not actionable pre-FOMC.
+
+### Risk Factors
+- **FOMC decision this afternoon** — binary volatility event; any new position taken today would be exposed to a large same-day swing on the announcement. Existing XOM stop is a live GTC order and needs no manual action regardless of outcome.
+- **7.5-week logging gap (7/25-9/15)** is the most serious issue on file — two live trades (an $9,632 gain realized 8/27, a new 1000sh entry 9/1) executed with zero research-log or trade-log documentation. This indicates the scheduled workflow itself stopped running/writing for an extended period; needs operator attention beyond what this session can fix.
+- Oil's sharp rise since July (WTI $71→~$105) is a tailwind for the Energy thesis but also a inflation risk that could complicate the Fed's messaging today.
+- Deployment remains low (16.6% vs. 75-85% target) — though less stale than the prior multi-session pattern given the position was fully rebuilt 9/1.
+
+### Decision
+HOLD — no new trades today. FOMC rate decision this afternoon is the dominant catalyst; not initiating new positions ahead of it. XOM thesis intact (+3.09% unrealized on the rebuilt position), GTC stop live and appropriately far from price, no action needed. **Flagging the 7.5-week research/trade-log gap as urgent — sending ClickUp alert and recommending TRADE-LOG.md backfill at the next session.**

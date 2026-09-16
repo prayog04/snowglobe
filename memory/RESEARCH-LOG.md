@@ -255,3 +255,36 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-09-16 — Pre-market Research (run inline during market-open; entry was missing)
+
+### Account
+- Equity: $1,012,609.24
+- Cash: $846,719.24
+- Buying power: $3,851,368.96 (margin, 4x)
+- Positions: 1 (XOM, 1000 sh @ $162.90998 avg), deployed $165,890 = **16.4%** of equity — below 75-85% target
+- Daytrade count: not reported by API (0 day trades taken)
+- Trades this week (since Mon 9/14): 0/3
+
+### Market Context
+- WTI ~$103.98 (-1.75%), Brent ~$107.65 (-1.01%) per premarket futures (dated 2026-09-16) — materially higher than the $68-88 range seen through this log's last entry in July; consistent with Energy's continued YTD dominance but no single dated catalyst for today's move was found
+- S&P 500 futures: ~7,607.50, +0.24%
+- VIX: ~17.0-18.4 across sources (some contradictory/stale citations mixed in — same data-quality caveat flagged repeatedly in July)
+- Today's catalysts: none specific to Energy/XOM/CVX found in available sources
+- Earnings before open: Lennar (LEN, timing conflicts across sources), LuxExperience (LUXE), Aeluma (ALMU) — small-caps, none in our Energy/Materials/Staples momentum lane
+- Economic calendar: not confirmed; one source flags a possible FOMC decision "this week" (unconfirmed date) — treat as a caution flag, not verified
+- Sector momentum YTD: Energy #1 by a wide margin (+42-47.5% across sources), Technology #2 (+27.6%), Materials #3 (+11.9%); Consumer Discretionary worst (-7.1%)
+- XOM (existing position): re-entered 1000 sh @ $162.91 on 9/1 after the original 800sh position was stopped out for a gain on 8/27 (7%-tightened trailing stop hit at $156.81); current price $165.89 (+1.83% unrealized), 10% GTC trailing stop active (stop $152.68, hwm $169.64)
+
+### Trade Ideas
+1. No new name today — no dated, company-specific catalyst found for any Energy/Materials/Staples name; today's earnings reporters are unrelated small-caps. Perplexity data quality was again mixed (some stale/contradictory citations), reinforcing the "don't force a trade on unreliable inputs" precedent from 7/24.
+2. Possible FOMC event this week (unconfirmed date) — reason for caution on new adds until confirmed, not itself a trade trigger.
+
+### Risk Factors
+- **Major logging gap discovered**: no RESEARCH-LOG or TRADE-LOG entries exist for 2026-07-25 through 2026-09-15 (~8 weeks), despite the account actively trading in that window (XOM stop-out 8/27 at +8.32%, re-entry 9/1). Reconstructed today from live Alpaca order history and backfilled to TRADE-LOG.md. This is a major escalation of the 2-6 day gaps flagged repeatedly in July — the scheduled workflows likely did not run at all for most of this period. Operator should investigate why.
+- Oil (WTI ~$104) is well above any level seen earlier in this log (~$68-88 through July) — the Energy thesis has evidently continued or intensified while unmonitored; no fresh verification of the underlying driver (Hormuz/Iran or otherwise) was found today, so treat continued XOM upside as unconfirmed by current research rather than assume the original thesis is fully intact.
+- VIX/data-quality caveat persists (contradictory citations mixed with correctly-dated ones) — cross-checked account/position data against live Alpaca, not web search.
+- Possible FOMC this week (unconfirmed) — positioning risk if true.
+
+### Decision
+HOLD — no new trades today. Existing XOM position (16.4% of equity) has an active 10% GTC trailing stop well above any manual-action threshold; no manual stop action needed. No name clears the specific-catalyst bar today. Top priorities for next session: (1) confirm scheduled workflows are actually running daily going forward — an 8-week gap was just discovered and backfilled; (2) re-verify the XOM thesis given oil's large, unexplained move higher since the position was last actively reviewed.

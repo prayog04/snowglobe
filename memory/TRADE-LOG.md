@@ -46,3 +46,25 @@ No new trades. 1 open position (XOM), thesis intact, GTC trailing stop active (s
 | XOM | 800 | $144.77 | $151.80 | +2.32% | +$5,624.00 (+4.86%) | $136.58 GTC trailing 10% (hwm $151.76) |
 
 **Notes:** Quiet no-trade day, as previewed in the market-open check. XOM continued its run, up 2.3% intraday to $151.80, pushing the trailing stop's high-water mark to $151.76 and the stop itself up to $136.58 — the position is now up nearly 5% unrealized. Portfolio gained $2,680 (+0.27%) on the day, all from XOM's move; cash sat untouched at $884,184 (87.9%). Zero trades today, zero trades this week (0/3), and deployment remains stuck at ~12% vs. the 75-85% target for a third straight session — the bot continues to wait for a dated catalyst outside the weak Tech rally rather than force a trade.
+
+### Aug 19 — Stop tightened (backfilled 2026-09-16, see note)
+XOM's 10% GTC trailing stop (from 7/15) was canceled and replaced with a 7% GTC trailing stop, consistent with the strategy's "tighten to 7% at +15%" rule. New stop: trail 7%, hwm $168.64 as of replacement.
+
+**Note:** No research-log entry exists for 8/19; reconstructed from live Alpaca order history during the 2026-09-16 market-open run.
+
+### Aug 27 — SELL, stop triggered (backfilled 2026-09-16, see note)
+| Ticker | Side | Shares | Exit | Stop Type | Orig. Entry | Realized P&L | Hold Period |
+|---|---|---|---|---|---|---|---|
+| XOM | Sell | 800 | $156.81 | 7% GTC trailing stop (tightened 8/19 from 10%, hwm $168.64) | $144.77 (7/15) | +$9,632.00 (+8.32%) | ~6 weeks |
+
+**Note:** Position fully closed when the 7% GTC trailing stop triggered and filled 2026-08-27 13:40 UTC — the stop mechanism worked as designed, no manual action taken (or needed) at the time. Backfilled from live Alpaca order history during the 2026-09-16 market-open run; see Risk Factors in RESEARCH-LOG 2026-09-16 for the logging-gap writeup.
+
+### Sep 1 — BUY (backfilled 2026-09-16, see note)
+| Ticker | Side | Shares | Entry | Stop | Thesis | Target | R:R |
+|---|---|---|---|---|---|---|---|
+| XOM | Buy | 1000 | $162.90998 | 10% trailing GTC (stop $152.676, hwm $169.64 as of 9/16) | Re-entry into Energy-sector leadership after the 8/27 stop-out; Energy remained #1 YTD sector | Not documented — no research-log entry exists for 9/1 | Not documented |
+
+**Note:** Filled live 2026-09-01 13:43:59 UTC; 10% GTC trailing stop placed same session and still working correctly as of 9/16 (status "new", stop $152.676, hwm $169.64). No research-log rationale exists for this entry since no pre-market run occurred that day. Backfilled from live Alpaca order history during the 2026-09-16 market-open run.
+
+### Sep 16 — Market-open check
+No new trades. 1 open position (XOM, 1000 sh @ $162.90998 avg, current ~$165.89, +1.83% unrealized), 10% GTC trailing stop active (stop $152.676, hwm $169.64) — well below the +15%/+20% tighten thresholds, no stop action needed. Trades this week (since Mon 9/14): 0/3. Deployed: $165,890 / $1,012,609.24 equity = **16.4%** — still below the 75-85% target, 1 of 5-6 max positions. See RESEARCH-LOG 2026-09-16 for full context — HOLD decision; today's earnings slate (Lennar, LuxExperience, Aeluma, and other small-caps) has no name in our Energy/Materials/Staples momentum lane, and no fresh XOM/CVX-specific or Hormuz catalyst was found. **Flagging a major logging gap**: no RESEARCH-LOG or TRADE-LOG entries exist between 2026-07-24 and today (~8 weeks) despite real trading activity in that window (XOM stopped out 8/27 for a +8.32% gain, re-entered 9/1) — reconstructed and backfilled today from live Alpaca order history (see entries above).

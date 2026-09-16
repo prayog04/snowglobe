@@ -255,3 +255,20 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-09-16 — Midday Scan (afternoon addendum)
+
+**Gap notice:** no RESEARCH-LOG or TRADE-LOG entries exist between 2026-07-24 and today — see TRADE-LOG 2026-09-16 backfill for the trade lifecycle (7% tighten 8/19, stopped out 8/27 +8.32%, re-entered 1000sh 9/1 @ $162.90998) reconstructed from Alpaca order history. No research/thesis was ever logged for the 9/1 re-entry.
+
+### Account (current)
+- Equity: $1,010,259.24 | Cash: $846,719.24 | Positions: 1 (XOM, 1000 sh, $163,540 = 16.2% deployed)
+- XOM: current ~$163.54, unrealized +$630.02 (+0.39%), GTC 10% trailing stop (stop $152.676, hwm $169.64)
+- Today's move: XOM down ~3.0-3.4% intraday, from prior close $169.32/$169.20 toward ~$163.5-164.4
+
+### Perplexity check — why XOM is down today
+- Broad Energy-sector selling (sector -2.45%, XOM underperforming peers) tied to a crude oil pullback: WTI/Brent pulled back from recent highs after an unexpected crude inventory build and easing Middle East geopolitical risk premium — macro/sector-driven, not company-specific
+- Company-specific news this week is incrementally positive, unrelated to today's dip: Exxon raised its 2030 LNG sales target to 50MT (from 40MT); announced $2.1B tender offer for Pioneer Natural Resources notes
+- No thesis-breaking news found. Position stop ($152.676) sits well below current price; no manual action warranted
+
+### Decision
+HOLD — no cut (unrealized +0.39%, nowhere near -7%), no tighten (nowhere near +15%/+20%), thesis intact (today's weakness is an oil/sector pullback, not company-specific). Documented the 7.5-week TRADE-LOG/RESEARCH-LOG gap for operator review — trading mechanics (stop tighten/fill/re-entry) executed correctly per rulebook during the gap, but zero documentation or commits happened despite real trade activity.

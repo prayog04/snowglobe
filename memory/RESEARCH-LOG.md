@@ -255,3 +255,37 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-09-17 — Pre-market Research (run inline during market-open; entry was missing)
+
+### Account
+- Equity: $1,009,051.74
+- Cash: $846,719.24
+- Buying power: $3,841,407.96 (margin, 4x)
+- Positions: 1 (XOM, 1000 sh @ $162.90998 avg), current $162.33, unrealized -$577.48 (-0.35%); deployed $162,332.50 = **16.1%** of equity — still well under the 75-85% target
+- GTC trailing stop: 10% trail, hwm $169.64, stop $152.676 (~5.9% below current price — no action needed, no rule violation)
+- Daytrade count: not reported by API
+- Trades this week (since Mon 9/14): 0/3
+
+### Market Context
+- WTI ~$101-103/bbl, Brent ~$104-107/bbl — sharp, sustained rally on escalating Middle East shipping attacks and Strait-of-Hormuz transit risk, plus falling global inventories (EIA: -~400M bbl YTD); Brent +56.9% YoY, +16.25% over the past month (TradingEconomics, 9/17)
+- S&P 500 futures: mixed across sources, ~7,600-7,690
+- VIX: ~16-17.2, elevated-but-contained given the oil shock
+- Today's catalysts: post-Fed rate backdrop/yield sensitivity; 8:30am ET Initial Jobless Claims (207K est), Housing Starts, Philly Fed Manufacturing; 10am Pending Home Sales; AI/data-center power-demand trade (Generac-Amazon deal, read-through to Bloom Energy/CoreWeave); crypto-linked names (MARA, IREN) sensitive to rate moves
+- Economic calendar: no CPI/PPI/FOMC today
+- Sector momentum YTD: Energy #1 (+42-43%), Technology #2 (+27.8%), Materials #3 (+11%), Consumer Staples positive; Consumer Discretionary worst (-7.7%), Utilities and Communication Services also negative
+- XOM: trading ~$162-164, down ~3-3.5% intraday despite Energy-sector strength; no thesis-breaking news found — a Rose carbon-capture project (Texas) regulatory approval is the only company-specific item, mildly positive and unrelated to today's pullback
+
+### Trade Ideas
+1. No new name today — Energy remains the #1 YTD sector but XOM's own pullback today has no identified negative catalyst; existing thesis intact, stop mechanism (5.9% away) handles downside risk. No second Energy name has an independent dated catalyst today.
+2. Tech (#2 YTD) — AI/data-center power-demand theme (Generac-Amazon) is live but no single ticker in this lane clears the catalyst + entry/stop/target checklist today; watchlist only.
+3. No other sector shows a dated, company-specific catalyst today.
+
+### Risk Factors
+- **CRITICAL — operational/audit gap:** memory/TRADE-LOG.md and memory/RESEARCH-LOG.md were not updated or committed between 2026-07-24 and today (~8 weeks), yet live Alpaca order history confirms real activity in that window: the original 800sh XOM position's stop was correctly tightened 10%→7% around 8/19 (crossed +15% gain, per strategy rule), filled at $156.81 on 8/27 (+8.29%, closing the position), then XOM was re-bought (1000 sh @ $162.91) on 9/1 with a fresh 10% GTC trailing stop. The trades themselves were rule-compliant; the logging/commit pipeline was not running or was silently failing. Weekly trade-count and sector-strike-count tracking could not be trusted from the log alone for this period — reconciled against live Alpaca order history and backfilled into TRADE-LOG this session. Needs operator investigation into why scheduled runs stopped persisting.
+- Oil's rally is now extreme (WTI >$100, Brent >$104) on active Strait-of-Hormuz disruption — high geopolitical volatility; a de-escalation headline could reverse Energy sharply and fast
+- XOM down 3-3.5% today despite sector strength — a divergence to monitor, though the stop is well clear of price and needs no action
+- Deployment at 16.1% vs. 75-85% target — still well under-deployed, a pattern that predates and persists through the logging gap
+
+### Decision
+HOLD — no new trades today. No dated catalyst clears the specific-catalyst + sector-momentum + 2:1 R:R bar for a new name; existing XOM position and stop are intact and need no action. Backfilled the missed 8/19 stop-tighten, 8/27 stop-out (+8.29%), and 9/1 re-entry into TRADE-LOG this session. Top priority for operator: investigate and fix the ~8-week scheduled-workflow commit/persistence failure before it recurs.

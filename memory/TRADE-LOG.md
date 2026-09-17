@@ -46,3 +46,23 @@ No new trades. 1 open position (XOM), thesis intact, GTC trailing stop active (s
 | XOM | 800 | $144.77 | $151.80 | +2.32% | +$5,624.00 (+4.86%) | $136.58 GTC trailing 10% (hwm $151.76) |
 
 **Notes:** Quiet no-trade day, as previewed in the market-open check. XOM continued its run, up 2.3% intraday to $151.80, pushing the trailing stop's high-water mark to $151.76 and the stop itself up to $136.58 — the position is now up nearly 5% unrealized. Portfolio gained $2,680 (+0.27%) on the day, all from XOM's move; cash sat untouched at $884,184 (87.9%). Zero trades today, zero trades this week (0/3), and deployment remains stuck at ~12% vs. the 75-85% target for a third straight session — the bot continues to wait for a dated catalyst outside the weak Tech rally rather than force a trade.
+
+### Aug 19 — Stop tighten (backfilled 2026-09-17, see note)
+XOM trailing stop tightened from 10% to 7% per strategy rule (position had run to ~+15% unrealized, hwm $166.74). New 7% GTC trailing stop placed on the 800sh position, replacing the 10% stop.
+
+### Aug 27 — SELL, stop-out (backfilled 2026-09-17, see note)
+| Ticker | Side | Shares | Entry | Exit | Realized P&L | R:R |
+|---|---|---|---|---|---|---|
+| XOM | Sell (trailing-stop fill) | 800 | $144.77 | $156.81 | +$9,632.00 (+8.32%) | — |
+
+**Note:** The 7% GTC trailing stop (placed 8/19, hwm ran to $168.64) triggered and filled, closing the entire original XOM position for a realized gain of +8.32%. Trailing-stop mechanics worked exactly as designed — no manual action taken or needed.
+
+### Sep 1 — BUY, new entry (backfilled 2026-09-17, see note)
+| Ticker | Side | Shares | Entry | Stop | Thesis | Target | R:R |
+|---|---|---|---|---|---|---|---|
+| XOM | Buy | 1000 | $162.90998 | 10% trailing GTC (stop $152.676, hwm $169.64 as of 9/17) | Re-entry into Energy-sector momentum leader (YTD #1, since extended to +43-44%) following the 8/27 stop-out; oil/geopolitical risk premium (Strait of Hormuz) persisting | Not logged at entry — no research rationale on file | — |
+
+**Note — reliability gap:** No RESEARCH-LOG or TRADE-LOG entries exist for **any session between 2026-07-24 and 2026-09-17** (~7 weeks, ~35 trading days). In that blind window the bot actually traded twice live on Alpaca: the 8/19 stop tighten + 8/27 stop-out above, and this 9/1 re-entry with a fresh 10% GTC trailing stop — all reconstructed here from Alpaca order history during the 2026-09-17 pre-market run. The 9/1 re-entry has no documented catalyst, entry checklist, or stop/target rationale because no research log was written that day. This is a repeat and much larger instance of the scheduled-workflow reliability gaps first flagged 2026-07-20 and 2026-07-24 — those were single-day gaps; this one is seven weeks. Flagged to the operator; see RESEARCH-LOG 2026-09-17 for full detail.
+
+### Sep 17 — Market-open check (pre-market run)
+No new trades. 1 open position (XOM, 1000 sh @ $162.91, current ~$163.32, unrealized +0.25%), 10% GTC trailing stop active (stop $152.676, hwm $169.64). Trades this week (since Mon 9/14): 0/3. Deployment ~16.2% of equity vs. 75-85% target — persistent under-deployment, now spanning the whole unlogged period too. See RESEARCH-LOG 2026-09-17 for full context, including the ~7-week logging gap backfilled above.

@@ -255,3 +255,44 @@ HOLD — no new trades. Research tooling failed to produce usable market data to
 
 ### Decision
 HOLD — no new trades today. XOM thesis intact and strengthening (+8.03% unrealized, stop trailing safely below at $142.71); today's oil reversal is a risk to monitor, not a thesis-breaker, and the stop is the mechanism that handles it if wrong. No name clears the specific-catalyst + sector-momentum + 2:1 R:R bar — SLB earnings this morning is Energy-sector-relevant but requires waiting for the print. Under-deployment (12.4% vs 75-85%, 0/3 trades this week) is now a 6-session pattern; flagging for next week's session to treat as an active decision point rather than deferring again.
+
+## 2026-09-17 — Pre-market Research
+
+### ⚠️ Reliability gap: ~7 weeks unlogged (2026-07-24 to 2026-09-17)
+No RESEARCH-LOG or TRADE-LOG entry exists for any session in this window — roughly 35 trading days. The scheduled workflow appears not to have run, or not to have logged, for the entire stretch. It was NOT idle: live Alpaca order history shows real trading activity happened with zero documented rationale:
+- **Aug 19:** XOM trailing stop tightened 10%→7% (consistent with the strategy's +15% tighten rule).
+- **Aug 27:** That 7% stop triggered, closing the original 800sh XOM position at $156.81 — realized gain of **+$9,632 (+8.32%)**. Correct mechanical behavior, but never logged.
+- **Sep 1:** New entry — bought 1000sh XOM @ $162.90998, with a fresh 10% GTC trailing stop placed same day. **No catalyst, checklist, or research rationale is on file for this re-entry** — it was reconstructed today purely from Alpaca order history.
+All of the above has been backfilled into TRADE-LOG.md (see Aug 19 / Aug 27 / Sep 1 entries) with a note flagging this as a much larger recurrence of the single-day gaps already flagged on 2026-07-20 and 2026-07-24. Recommend the operator check whether the scheduled trigger for this routine is still firing.
+
+### Account
+- Equity: $1,010,039.24
+- Cash: $846,719.24
+- Buying power: $3,844,172.96 (margin, 4x)
+- Positions: 1 (XOM, 1000 sh), deployed $163,320 = **16.2%** of equity — well below the 75-85% target; only 1 of 5-6 max positions open
+- Daytrade count: not reported by API (0 day trades taken)
+- Trades this week (since Mon 9/14): 0/3
+- XOM: 1000sh @ $162.90998 avg entry (9/1), current $163.32, unrealized +$410.02 (+0.25%) — position is fresh, near breakeven; 10% GTC trailing-stop live (stop $152.676, hwm $169.64), well short of the +15%/+20% tighten thresholds, no stop action needed
+
+### Market Context
+- WTI ~$101-102/bbl, Brent ~$104-106/bbl — both down ~3-4% today but at a much higher plateau than July's $65-90 range; one source flags tanker traffic through the Strait of Hormuz as "severely restricted" with a large Gulf-vs-outside-Hormuz price gap (Basrah Medium at a ~$43 discount to Murban) — the geopolitical risk premium that originally drove the XOM thesis has persisted and grown, not faded
+- S&P 500 futures: ~7,600-7,680, up ~0.25-0.31% premarket
+- VIX: ~16-17.7, down sharply overnight (one source: 17.71→15.96, -9.9%) — vol easing post-FOMC
+- FOMC: Fed hiked 25bp to 3.75-4.00% on 9/16 (unanimous 12-0), the first hike since 2023 — a hawkish surprise given elevated oil/inflation risk; today's macro release is Initial Jobless Claims + Housing Starts at 8:30am ET
+- Sector momentum YTD: Energy still #1 and has extended sharply to **+43-44% YTD** (vs. ~+20-30% in July) — the strongest single-sector move in the account's history; Technology now #2 at +28% YTD; Materials +11-12%; Consumer Discretionary -8%, Communication Services -1 to -4%, Utilities -3% lagging
+- XOM (existing position): reported Q2 2026 earnings 9/8 ($14.5B profit, $3.48 EPS), declared $1.03/share Q3 dividend (44th consecutive annual increase in market commentary), closed Pioneer Natural Resources debt tender offers 9/16, but also had a **Joliet, IL refinery shut down by a power outage on 9/14** — a real operational negative not yet reflected in a notably weaker stock price ($163-169 range holding)
+
+### Trade Ideas
+1. No new name today — Energy's YTD lead has widened further (+43-44%), which supports staying in XOM, but no second Energy ticker has an independent dated catalyst today; adding a second name into the same sector/commodity risk doesn't diversify.
+2. Technology (#2 YTD at +28%) has no company-specific catalyst surfaced today and sits well outside this account's demonstrated Energy/Materials framework — watchlist only, would need a specific trigger before consideration.
+3. XOM itself: no action — position is only 5 sessions old (entered 9/1), near breakeven, stop correctly placed well below market; Joliet outage is a risk to monitor, not yet thesis-breaking.
+
+### Risk Factors
+- The ~7-week logging gap above is the top operational risk this session — a live account traded and re-entered a full position with no documented rationale for over a month; treat as higher priority than any new-trade decision today.
+- Oil at $101-105 is materially elevated vs. July's baseline and reportedly driven by real Hormuz supply disruption, not just headline risk — a de-escalation could unwind the premium quickly (same two-sided risk flagged repeatedly in July); XOM's 10% trailing stop is the defense if it does.
+- Fed just delivered a hawkish surprise (first hike since 2023) into an environment of elevated oil and inflation risk — equity/rate volatility risk into the next few sessions even though VIX dropped post-decision.
+- Joliet refinery outage (9/14) is a name-specific negative for XOM not yet fully priced — watch for follow-on headlines on repair timeline/lost throughput.
+- Deployment at 16.2% vs. 75-85% target, 1 of 5-6 positions, 0/3 trades this week — the under-deployment pattern flagged repeatedly in July has persisted through the unlogged period; now a standing condition rather than a session-by-session anomaly.
+
+### Decision
+HOLD — no new trades today. XOM position (re-entered 9/1, reconstructed into the log today) is intact and near breakeven with its GTC trailing stop correctly in place; no name clears the specific-catalyst + sector-momentum + 2:1 R:R bar for a second position. Today's real action item is operational, not a trade: confirm the scheduled workflow is running reliably going forward given the 7-week logging gap just backfilled.
